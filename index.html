@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>白刀的主页</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%232357d8'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='30' fill='white'%3E白%3C/text%3E%3C/svg%3E"
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        font-family:
+          "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", Arial,
+          sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        background: #f5f7fb;
+        color: #172033;
+        transition:
+          background 280ms ease,
+          color 280ms ease;
+      }
+
+      main {
+        width: min(92vw, 520px);
+        text-align: center;
+        padding: 56px 28px;
+      }
+
+      h1 {
+        margin: 0 0 28px;
+        font-size: clamp(40px, 8vw, 72px);
+        font-weight: 800;
+        line-height: 1.08;
+      }
+
+      button {
+        appearance: none;
+        border: 0;
+        border-radius: 8px;
+        padding: 14px 22px;
+        font-size: 17px;
+        font-weight: 700;
+        color: #ffffff;
+        background: #2357d8;
+        cursor: pointer;
+        box-shadow: 0 10px 24px rgba(35, 87, 216, 0.22);
+        transition:
+          transform 160ms ease,
+          background 160ms ease,
+          box-shadow 160ms ease;
+      }
+
+      button:hover {
+        transform: translateY(-1px);
+        background: #1745b8;
+        box-shadow: 0 12px 28px rgba(35, 87, 216, 0.28);
+      }
+
+      button:active {
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>白刀的主页</h1>
+      <button type="button" id="colorButton">切换背景颜色</button>
+    </main>
+
+    <script>
+      const palettes = [
+        { background: "#f5f7fb", text: "#172033" },
+        { background: "#fff4d8", text: "#242018" },
+        { background: "#e6fff5", text: "#0f2b24" },
+        { background: "#241832", text: "#fff8ef" },
+        { background: "#dff0ff", text: "#10253a" },
+      ];
+
+      let currentIndex = 0;
+      const button = document.querySelector("#colorButton");
+
+      button.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % palettes.length;
+        const palette = palettes[currentIndex];
+        document.body.style.background = palette.background;
+        document.body.style.color = palette.text;
+      });
+    </script>
+  </body>
+</html>
