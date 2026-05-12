@@ -3,99 +3,474 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>白刀的主页</title>
+    <title>白刀的好奇心网站</title>
     <link
       rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%232357d8'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='30' fill='white'%3E白%3C/text%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2318181b'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='30' fill='white'%3E白%3C/text%3E%3C/svg%3E"
     />
     <style>
       :root {
         color-scheme: light;
+        --bg: #fafafa;
+        --text: #09090b;
+        --muted: #52525b;
+        --line: #dedee3;
+        --panel: rgba(255, 255, 255, 0.74);
+        --accent: #2563eb;
+        --accent-soft: rgba(37, 99, 235, 0.12);
+        --shadow: 0 24px 70px rgba(24, 24, 27, 0.12);
         font-family:
-          "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", Arial,
-          sans-serif;
+          "Inter", "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB",
+          Arial, sans-serif;
       }
 
       * {
         box-sizing: border-box;
       }
 
+      html {
+        min-width: 320px;
+      }
+
       body {
         min-height: 100vh;
         margin: 0;
-        display: grid;
-        place-items: center;
-        background: #f5f7fb;
-        color: #172033;
+        overflow-x: hidden;
+        background:
+          radial-gradient(circle at 18% 18%, var(--accent-soft), transparent 28%),
+          linear-gradient(135deg, var(--bg), #ffffff 56%, #f1f5f9);
+        color: var(--text);
         transition:
-          background 280ms ease,
-          color 280ms ease;
+          background 260ms ease,
+          color 260ms ease;
       }
 
-      main {
-        width: min(92vw, 520px);
-        text-align: center;
-        padding: 56px 28px;
-      }
-
-      h1 {
-        margin: 0 0 28px;
-        font-size: clamp(40px, 8vw, 72px);
-        font-weight: 800;
-        line-height: 1.08;
+      a {
+        color: inherit;
+        text-decoration: none;
       }
 
       button {
-        appearance: none;
-        border: 0;
+        font: inherit;
+      }
+
+      .site {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 24px 0 48px;
+      }
+
+      .nav {
+        position: sticky;
+        top: 16px;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 12px 14px;
+        border: 1px solid var(--line);
         border-radius: 8px;
-        padding: 14px 22px;
-        font-size: 17px;
+        background: rgba(255, 255, 255, 0.82);
+        box-shadow: 0 12px 36px rgba(15, 23, 42, 0.08);
+        backdrop-filter: blur(16px);
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 0;
+        font-weight: 800;
+        letter-spacing: 0;
+      }
+
+      .mark {
+        display: grid;
+        width: 32px;
+        height: 32px;
+        place-items: center;
+        border-radius: 8px;
+        background: var(--text);
+        color: var(--bg);
+        font-size: 18px;
+      }
+
+      .nav-link {
+        color: var(--muted);
+        font-size: 14px;
         font-weight: 700;
-        color: #ffffff;
-        background: #2357d8;
+        transition: color 180ms ease;
+      }
+
+      .nav-link:hover {
+        color: var(--text);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.72fr);
+        gap: 42px;
+        align-items: end;
+        min-height: calc(100vh - 148px);
+        padding: 74px 0 42px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 22px;
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 36px;
+        height: 2px;
+        border-radius: 99px;
+        background: var(--accent);
+      }
+
+      h1 {
+        max-width: 780px;
+        margin: 0;
+        font-size: clamp(48px, 9vw, 118px);
+        font-weight: 900;
+        line-height: 0.94;
+        letter-spacing: 0;
+      }
+
+      .intro {
+        max-width: 660px;
+        margin: 30px 0 0;
+        color: var(--muted);
+        font-size: clamp(18px, 2vw, 23px);
+        line-height: 1.75;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 34px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        border: 1px solid transparent;
+        border-radius: 8px;
+        padding: 0 18px;
         cursor: pointer;
-        box-shadow: 0 10px 24px rgba(35, 87, 216, 0.22);
+        font-weight: 800;
         transition:
-          transform 160ms ease,
-          background 160ms ease,
-          box-shadow 160ms ease;
+          border-color 180ms ease,
+          background 180ms ease,
+          color 180ms ease,
+          box-shadow 180ms ease;
       }
 
-      button:hover {
-        transform: translateY(-1px);
-        background: #1745b8;
-        box-shadow: 0 12px 28px rgba(35, 87, 216, 0.28);
+      .button-primary {
+        background: var(--text);
+        color: var(--bg);
+        box-shadow: var(--shadow);
       }
 
-      button:active {
-        transform: translateY(0);
+      .button-primary:hover {
+        background: var(--accent);
+      }
+
+      .button-secondary {
+        border-color: var(--line);
+        background: rgba(255, 255, 255, 0.64);
+        color: var(--text);
+      }
+
+      .button-secondary:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+
+      .side-panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 22px;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(18px);
+      }
+
+      .panel-title {
+        margin: 0 0 22px;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .note-list {
+        display: grid;
+        gap: 16px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .note {
+        display: grid;
+        gap: 7px;
+        padding: 0 0 16px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .note:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .note strong {
+        font-size: 18px;
+      }
+
+      .note span {
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 14px;
+      }
+
+      .card {
+        min-height: 168px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 22px;
+        background: rgba(255, 255, 255, 0.62);
+        transition:
+          border-color 180ms ease,
+          background 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .card:hover {
+        border-color: rgba(37, 99, 235, 0.42);
+        background: rgba(255, 255, 255, 0.86);
+        box-shadow: 0 18px 46px rgba(15, 23, 42, 0.1);
+      }
+
+      .card small {
+        color: var(--accent);
+        font-weight: 900;
+      }
+
+      .card h2 {
+        margin: 28px 0 10px;
+        font-size: 22px;
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        margin-top: 42px;
+        padding-top: 22px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      body.theme-night {
+        --bg: #111113;
+        --text: #fafafa;
+        --muted: #c6c7ce;
+        --line: rgba(255, 255, 255, 0.16);
+        --panel: rgba(24, 24, 27, 0.72);
+        --accent: #7dd3fc;
+        --accent-soft: rgba(125, 211, 252, 0.13);
+        --shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+        background:
+          radial-gradient(circle at 70% 18%, var(--accent-soft), transparent 30%),
+          linear-gradient(135deg, var(--bg), #1f2937 58%, #030712);
+      }
+
+      body.theme-warm {
+        --bg: #fff8ed;
+        --text: #231f1a;
+        --muted: #695f51;
+        --line: #e7d8c4;
+        --panel: rgba(255, 253, 247, 0.78);
+        --accent: #c2410c;
+        --accent-soft: rgba(194, 65, 12, 0.13);
+        --shadow: 0 24px 70px rgba(120, 53, 15, 0.13);
+      }
+
+      body.theme-mint {
+        --bg: #f0fdf7;
+        --text: #08251d;
+        --muted: #3d6658;
+        --line: #c8eadb;
+        --panel: rgba(250, 255, 252, 0.78);
+        --accent: #047857;
+        --accent-soft: rgba(4, 120, 87, 0.12);
+        --shadow: 0 24px 70px rgba(6, 78, 59, 0.13);
+      }
+
+      @media (max-width: 860px) {
+        .site {
+          width: min(100% - 24px, 720px);
+          padding-top: 12px;
+        }
+
+        .hero {
+          grid-template-columns: 1fr;
+          min-height: auto;
+          padding-top: 58px;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        .footer {
+          flex-direction: column;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .nav {
+          top: 8px;
+        }
+
+        .nav-link {
+          display: none;
+        }
+
+        .hero {
+          gap: 28px;
+          padding-top: 44px;
+        }
+
+        h1 {
+          font-size: clamp(44px, 17vw, 68px);
+        }
+
+        .actions {
+          flex-direction: column;
+        }
+
+        .button {
+          width: 100%;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          transition: none !important;
+        }
       }
     </style>
   </head>
   <body>
-    <main>
-      <h1>白刀的主页</h1>
-      <button type="button" id="colorButton">切换背景颜色</button>
-    </main>
+    <div class="site">
+      <header class="nav">
+        <a class="brand" href="https://curiosity.best/" aria-label="打开白刀的好奇心网站">
+          <span class="mark">白</span>
+          <span>Qinyu Home</span>
+        </a>
+        <a class="nav-link" href="https://curiosity.best/">curiosity.best</a>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="hero-title">
+          <div>
+            <p class="eyebrow">白刀的好奇心网站</p>
+            <h1 id="hero-title">把好奇心放在首页。</h1>
+            <p class="intro">
+              这里先作为白刀的个人主页测试场。以后可以慢慢放文章、项目、笔记和一些突然冒出来的问题。
+            </p>
+            <div class="actions">
+              <button class="button button-primary" type="button" id="themeButton">
+                切换背景颜色
+              </button>
+              <a class="button button-secondary" href="https://curiosity.best/">
+                访问主站
+              </a>
+            </div>
+          </div>
+
+          <aside class="side-panel" aria-label="站点方向">
+            <p class="panel-title">Now collecting</p>
+            <ul class="note-list">
+              <li class="note">
+                <strong>想法</strong>
+                <span>还没有被整理好的直觉、片段和问题。</span>
+              </li>
+              <li class="note">
+                <strong>实验</strong>
+                <span>小页面、小工具、小自动化，先跑起来再打磨。</span>
+              </li>
+              <li class="note">
+                <strong>记录</strong>
+                <span>把学到的东西留下来，方便下次接着想。</span>
+              </li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="grid" aria-label="内容板块">
+          <article class="card">
+            <small>01</small>
+            <h2>文章</h2>
+            <p>以后可以放长一点的观察、阅读笔记和个人思考。</p>
+          </article>
+          <article class="card">
+            <small>02</small>
+            <h2>项目</h2>
+            <p>把正在折腾的网站、Agent、自动化工作流整理出来。</p>
+          </article>
+          <article class="card">
+            <small>03</small>
+            <h2>问题</h2>
+            <p>一个问题就是一个入口，先保留，再慢慢追踪答案。</p>
+          </article>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>© 2026 白刀</span>
+        <span>Built for curiosity.best</span>
+      </footer>
+    </div>
 
     <script>
-      const palettes = [
-        { background: "#f5f7fb", text: "#172033" },
-        { background: "#fff4d8", text: "#242018" },
-        { background: "#e6fff5", text: "#0f2b24" },
-        { background: "#241832", text: "#fff8ef" },
-        { background: "#dff0ff", text: "#10253a" },
-      ];
+      const themes = ["", "theme-night", "theme-warm", "theme-mint"];
+      let themeIndex = 0;
 
-      let currentIndex = 0;
-      const button = document.querySelector("#colorButton");
+      document.querySelector("#themeButton").addEventListener("click", () => {
+        document.body.classList.remove(...themes.filter(Boolean));
+        themeIndex = (themeIndex + 1) % themes.length;
 
-      button.addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % palettes.length;
-        const palette = palettes[currentIndex];
-        document.body.style.background = palette.background;
-        document.body.style.color = palette.text;
+        if (themes[themeIndex]) {
+          document.body.classList.add(themes[themeIndex]);
+        }
       });
     </script>
   </body>
