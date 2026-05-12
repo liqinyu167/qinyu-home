@@ -294,42 +294,6 @@
         font-size: 14px;
       }
 
-      body.theme-night {
-        --bg: #111113;
-        --text: #fafafa;
-        --muted: #c6c7ce;
-        --line: rgba(255, 255, 255, 0.16);
-        --panel: rgba(24, 24, 27, 0.72);
-        --accent: #7dd3fc;
-        --accent-soft: rgba(125, 211, 252, 0.13);
-        --shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
-        background:
-          radial-gradient(circle at 70% 18%, var(--accent-soft), transparent 30%),
-          linear-gradient(135deg, var(--bg), #1f2937 58%, #030712);
-      }
-
-      body.theme-warm {
-        --bg: #fff8ed;
-        --text: #231f1a;
-        --muted: #695f51;
-        --line: #e7d8c4;
-        --panel: rgba(255, 253, 247, 0.78);
-        --accent: #c2410c;
-        --accent-soft: rgba(194, 65, 12, 0.13);
-        --shadow: 0 24px 70px rgba(120, 53, 15, 0.13);
-      }
-
-      body.theme-mint {
-        --bg: #f0fdf7;
-        --text: #08251d;
-        --muted: #3d6658;
-        --line: #c8eadb;
-        --panel: rgba(250, 255, 252, 0.78);
-        --accent: #047857;
-        --accent-soft: rgba(4, 120, 87, 0.12);
-        --shadow: 0 24px 70px rgba(6, 78, 59, 0.13);
-      }
-
       @media (max-width: 860px) {
         .site {
           width: min(100% - 24px, 720px);
@@ -461,16 +425,59 @@
     </div>
 
     <script>
-      const themes = ["", "theme-night", "theme-warm", "theme-mint"];
-      let themeIndex = 0;
+      const root = document.documentElement;
+      let lastHue = -1;
+
+      function randomBetween(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      function randomHue() {
+        let hue = randomBetween(0, 359);
+
+        while (Math.abs(hue - lastHue) < 32) {
+          hue = randomBetween(0, 359);
+        }
+
+        lastHue = hue;
+        return hue;
+      }
 
       document.querySelector("#themeButton").addEventListener("click", () => {
-        document.body.classList.remove(...themes.filter(Boolean));
-        themeIndex = (themeIndex + 1) % themes.length;
+        const hue = randomHue();
+        const accentHue = (hue + randomBetween(24, 84)) % 360;
+        const isDark = Math.random() > 0.62;
 
-        if (themes[themeIndex]) {
-          document.body.classList.add(themes[themeIndex]);
-        }
+        const palette = isDark
+          ? {
+              bg: `hsl(${hue} 28% 10%)`,
+              text: "hsl(0 0% 98%)",
+              muted: `hsl(${hue} 16% 78%)`,
+              line: "rgba(255, 255, 255, 0.16)",
+              panel: "rgba(24, 24, 27, 0.72)",
+              accent: `hsl(${accentHue} 84% 72%)`,
+              accentSoft: `hsla(${accentHue}, 84%, 72%, 0.14)`,
+              shadow: "0 24px 70px rgba(0, 0, 0, 0.34)",
+            }
+          : {
+              bg: `hsl(${hue} 72% 97%)`,
+              text: `hsl(${hue} 34% 12%)`,
+              muted: `hsl(${hue} 18% 38%)`,
+              line: `hsl(${hue} 42% 86%)`,
+              panel: "rgba(255, 255, 255, 0.76)",
+              accent: `hsl(${accentHue} 78% 42%)`,
+              accentSoft: `hsla(${accentHue}, 78%, 42%, 0.13)`,
+              shadow: `0 24px 70px hsla(${hue}, 54%, 26%, 0.13)`,
+            };
+
+        root.style.setProperty("--bg", palette.bg);
+        root.style.setProperty("--text", palette.text);
+        root.style.setProperty("--muted", palette.muted);
+        root.style.setProperty("--line", palette.line);
+        root.style.setProperty("--panel", palette.panel);
+        root.style.setProperty("--accent", palette.accent);
+        root.style.setProperty("--accent-soft", palette.accentSoft);
+        root.style.setProperty("--shadow", palette.shadow);
       });
     </script>
   </body>
