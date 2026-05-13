@@ -165,6 +165,15 @@
       "tags": ["免费", "订阅制"]
     },
     {
+      "id": "youmind",
+      "name": "YouMind",
+      "url": "https://youmind.com/zh-CN/prompts",
+      "description": "AI 提示词社区与模板库，提供多场景 prompt 模板和创作灵感，支持中英双语。",
+      "category": "inspiration",
+      "subcategory": "prompt",
+      "tags": ["免费", "中文", "开源"]
+    },
+    {
       "id": "prompthero",
       "name": "PromptHero",
       "url": "https://prompthero.com",
