@@ -66,31 +66,130 @@
       "tags": ["免费", "订阅制", "API", "中文"]
     },
     {
-      "id": "panel-forge",
-      "name": "Panel Forge",
-      "url": "https://panel-forge.example",
-      "description": "AI 分镜草图、对白节奏和漫画页面构图辅助工具。",
+      "id": "midjourney",
+      "name": "Midjourney",
+      "url": "https://www.midjourney.com",
+      "description": "顶级 AI 图像生成工具，以艺术风格和画面质感著称，通过 Discord 指令生图。",
       "category": "tools",
       "subcategory": "image-gen",
-      "tags": ["免费", "中文", "API"]
+      "tags": ["订阅制", "API"]
     },
     {
-      "id": "ink-style-atlas",
-      "name": "墨色风格图鉴",
-      "url": "https://ink-atlas.example",
-      "description": "整理赛璐璐、黑白网点、电影感暗调等漫剧审美参考。",
+      "id": "runway",
+      "name": "Runway",
+      "url": "https://runwayml.com",
+      "description": "AI 视频生成与编辑平台，支持文生视频、运动笔刷、绿幕抠像等专业功能。",
+      "category": "tools",
+      "subcategory": "video-gen",
+      "tags": ["免费", "订阅制", "API"]
+    },
+    {
+      "id": "suno",
+      "name": "Suno",
+      "url": "https://suno.com",
+      "description": "AI 音乐创作平台，输入文字描述即可生成完整歌曲，支持多语言歌词和多种曲风。",
+      "category": "tools",
+      "subcategory": "audio-gen",
+      "tags": ["免费", "订阅制", "中文"]
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "url": "https://cursor.com",
+      "description": "AI 驱动的代码编辑器，内置代码补全、对话式编程和自动重构，基于 VS Code。",
+      "category": "tools",
+      "subcategory": "code-dev",
+      "tags": ["免费", "订阅制", "API", "中文"]
+    },
+    {
+      "id": "deepl",
+      "name": "DeepL",
+      "url": "https://www.deepl.com",
+      "description": "高质量 AI 翻译工具，翻译自然流畅，支持 30+ 语言，写作模式可润色改写。",
+      "category": "tools",
+      "subcategory": "writing",
+      "tags": ["免费", "订阅制", "API", "中文"]
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "url": "https://www.perplexity.ai",
+      "description": "AI 搜索引擎，联网检索后生成带引用来源的回答，适合快速研究和技术调研。",
+      "category": "tools",
+      "subcategory": "search",
+      "tags": ["免费", "订阅制", "API", "中文"]
+    },
+    {
+      "id": "notion",
+      "name": "Notion AI",
+      "url": "https://www.notion.so",
+      "description": "集成 AI 的全能工作空间，支持智能写作、摘要生成、任务管理，文档协作一站搞定。",
+      "category": "tools",
+      "subcategory": "productivity",
+      "tags": ["免费", "订阅制", "中文"]
+    },
+    {
+      "id": "leonardo",
+      "name": "Leonardo.ai",
+      "url": "https://leonardo.ai",
+      "description": "AI 图像创作平台，提供多种风格模型和实时画布，适合游戏资产生成和概念设计。",
       "category": "aesthetics",
       "subcategory": "visual",
-      "tags": ["开源", "中文"]
+      "tags": ["免费", "订阅制", "API"]
     },
     {
-      "id": "cosmos-prompt",
-      "name": "Cosmos Prompt",
-      "url": "https://cosmos-prompt.example",
-      "description": "面向角色设定、世界观和镜头叙事的灵感提示词库。",
+      "id": "fontjoy",
+      "name": "Fontjoy",
+      "url": "https://fontjoy.com",
+      "description": "AI 字体搭配工具，用深度学习生成和谐字体组合，一键获取排版灵感。",
+      "category": "aesthetics",
+      "subcategory": "typography",
+      "tags": ["免费", "开源"]
+    },
+    {
+      "id": "khroma",
+      "name": "Khroma",
+      "url": "https://khroma.co",
+      "description": "AI 配色生成器，根据你的审美偏好训练个性化调色板，无限生成配色方案。",
+      "category": "aesthetics",
+      "subcategory": "color",
+      "tags": ["免费"]
+    },
+    {
+      "id": "pika",
+      "name": "Pika",
+      "url": "https://pika.art",
+      "description": "AI 视频与动效生成工具，支持文字转动画、图片激活、局部编辑等创意动效玩法。",
+      "category": "aesthetics",
+      "subcategory": "motion",
+      "tags": ["免费", "订阅制"]
+    },
+    {
+      "id": "prompthero",
+      "name": "PromptHero",
+      "url": "https://prompthero.com",
+      "description": "AI 提示词社区与搜索引擎，汇集 Midjourney、Stable Diffusion 等平台的高质量 prompt。",
       "category": "inspiration",
       "subcategory": "prompt",
-      "tags": ["订阅制", "移动端"]
+      "tags": ["免费", "中文"]
+    },
+    {
+      "id": "civitai",
+      "name": "Civitai",
+      "url": "https://civitai.com",
+      "description": "最大的 AI 生成艺术社区，分享模型、LoRA 和作品，Stable Diffusion 生态核心阵地。",
+      "category": "inspiration",
+      "subcategory": "showcase",
+      "tags": ["免费", "开源", "API"]
+    },
+    {
+      "id": "learnprompting",
+      "name": "Learn Prompting",
+      "url": "https://learnprompting.org",
+      "description": "开源免费的 Prompt Engineering 教程，从基础到进阶，系统学习与 AI 对话的艺术。",
+      "category": "inspiration",
+      "subcategory": "learning",
+      "tags": ["免费", "开源", "中文"]
     }
   ]
 }
