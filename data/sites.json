@@ -39,6 +39,33 @@
   ],
   "sites": [
     {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "url": "https://chat.openai.com",
+      "description": "OpenAI 推出的 AI 对话助手，支持 GPT-4o、代码执行、联网搜索、图像生成等。",
+      "category": "tools",
+      "subcategory": "chat",
+      "tags": ["免费", "订阅制", "API", "中文"]
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "url": "https://gemini.google.com",
+      "description": "Google 出品的多模态 AI 助手，支持文本、图像、视频理解和生成。",
+      "category": "tools",
+      "subcategory": "chat",
+      "tags": ["免费", "中文", "API"]
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "url": "https://claude.ai",
+      "description": "Anthropic 出品的 AI 助手，擅长长文本理解、代码分析和安全推理。",
+      "category": "tools",
+      "subcategory": "chat",
+      "tags": ["免费", "订阅制", "API", "中文"]
+    },
+    {
       "id": "panel-forge",
       "name": "Panel Forge",
       "url": "https://panel-forge.example",
