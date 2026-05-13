@@ -1,0 +1,69 @@
+{
+  "categories": [
+    {
+      "id": "tools",
+      "label": "工具",
+      "en": "TOOLS",
+      "children": [
+        { "id": "chat", "label": "对话聊天" },
+        { "id": "image-gen", "label": "图像生成" },
+        { "id": "video-gen", "label": "视频生成" },
+        { "id": "audio-gen", "label": "音频生成" },
+        { "id": "code-dev", "label": "编程开发" },
+        { "id": "writing", "label": "写作翻译" },
+        { "id": "search", "label": "搜索研究" },
+        { "id": "productivity", "label": "效率工具" }
+      ]
+    },
+    {
+      "id": "aesthetics",
+      "label": "审美",
+      "en": "AESTHETICS",
+      "children": [
+        { "id": "visual", "label": "视觉风格" },
+        { "id": "typography", "label": "字体排版" },
+        { "id": "color", "label": "配色方案" },
+        { "id": "motion", "label": "动效灵感" }
+      ]
+    },
+    {
+      "id": "inspiration",
+      "label": "灵感",
+      "en": "INSPIRATION",
+      "children": [
+        { "id": "prompt", "label": "提示词库" },
+        { "id": "showcase", "label": "作品展示" },
+        { "id": "learning", "label": "学习资源" }
+      ]
+    }
+  ],
+  "sites": [
+    {
+      "id": "panel-forge",
+      "name": "Panel Forge",
+      "url": "https://panel-forge.example",
+      "description": "AI 分镜草图、对白节奏和漫画页面构图辅助工具。",
+      "category": "tools",
+      "subcategory": "image-gen",
+      "tags": ["免费", "中文", "API"]
+    },
+    {
+      "id": "ink-style-atlas",
+      "name": "墨色风格图鉴",
+      "url": "https://ink-atlas.example",
+      "description": "整理赛璐璐、黑白网点、电影感暗调等漫剧审美参考。",
+      "category": "aesthetics",
+      "subcategory": "visual",
+      "tags": ["开源", "中文"]
+    },
+    {
+      "id": "cosmos-prompt",
+      "name": "Cosmos Prompt",
+      "url": "https://cosmos-prompt.example",
+      "description": "面向角色设定、世界观和镜头叙事的灵感提示词库。",
+      "category": "inspiration",
+      "subcategory": "prompt",
+      "tags": ["订阅制", "移动端"]
+    }
+  ]
+}
