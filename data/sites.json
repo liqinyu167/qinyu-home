@@ -22,6 +22,18 @@
           "label": "视频生成"
         },
         {
+          "id": "audio-gen",
+          "label": "音频生成"
+        },
+        {
+          "id": "code-dev",
+          "label": "编程开发"
+        },
+        {
+          "id": "research",
+          "label": "知识研究"
+        },
+        {
           "id": "misc",
           "label": "杂项"
         }
@@ -45,7 +57,7 @@
       "id": "gemini",
       "name": "Gemini",
       "url": "https://gemini.google.com",
-      "description": "Google 的 Gemini 官方入口，主要承担原厂模型对话与多模态能力，也可以进行图像生成。",
+      "description": "Google 旗舰多模态 AI 助手，支持对话、图像生成、代码编写、联网搜索、语音交互等，是 Gemini 生态的统一入口。",
       "type": "official",
       "primarySection": "official-labs",
       "sections": [
@@ -63,23 +75,34 @@
       ],
       "relations": {
         "products": [
-          "flow"
+          "aistudio",
+          "flow",
+          "whisk",
+          "notebooklm",
+          "gemini-api"
         ],
         "upstream": [],
         "downstream": [
-          "flow"
+          "aistudio",
+          "flow",
+          "whisk",
+          "notebooklm",
+          "gemini-api"
         ],
         "alternatives": [
           "chatgpt"
         ],
         "complements": [
-          "flow"
+          "aistudio",
+          "flow",
+          "notebooklm"
         ]
       },
       "tags": [
         "免费",
-        "中文",
+        "订阅制",
         "API",
+        "中文",
         "官站",
         "对话",
         "图像生成",
@@ -87,10 +110,83 @@
       ]
     },
     {
+      "id": "aistudio",
+      "name": "AI Studio",
+      "url": "https://aistudio.google.com",
+      "description": "Google 面向开发者的 Gemini 模型在线实验室，提供 prompt 工程、模型调优、API 密钥管理，是调用 Gemini API 的官方入口。",
+      "type": "studio",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev",
+        "official-labs"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "image-gen",
+        "audio-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "gemini"
+        ],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "gemini-api"
+        ]
+      },
+      "tags": [
+        "免费",
+        "API",
+        "官站",
+        "编程开发",
+        "Google",
+        "子站"
+      ]
+    },
+    {
+      "id": "gemini-api",
+      "name": "Gemini API",
+      "url": "https://ai.google.dev",
+      "description": "Gemini 模型的开发者 API 平台，提供 REST/gRPC 接口访问 Flash、Pro 等各模型，含免费额度，适合集成到自有产品。",
+      "type": "api-platform",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "image-gen",
+        "audio-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "gemini",
+          "aistudio"
+        ],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "aistudio"
+        ]
+      },
+      "tags": [
+        "免费",
+        "API",
+        "编程开发",
+        "Google",
+        "子站"
+      ]
+    },
+    {
       "id": "flow",
       "name": "Flow",
       "url": "https://labs.google/fx/tools/flow",
-      "description": "Google 的 AI 创意工作室，作为 Gemini / Google AI 生态下的专门创作入口，用于图像、视频与故事创作。",
+      "description": "Google Labs 旗下的 AI 创意工作室，基于 Gemini 和 Imagen，支持图像、视频与故事板的交互式创作，是 Gemini 生态的可视化创作入口。",
       "type": "canvas-native",
       "primarySection": "misc",
       "sections": [
@@ -114,17 +210,189 @@
           "jimeng"
         ],
         "complements": [
+          "gemini",
+          "whisk"
+        ]
+      },
+      "tags": [
+        "免费",
+        "图像生成",
+        "视频生成",
+        "Google",
+        "Flow",
+        "子站"
+      ]
+    },
+    {
+      "id": "whisk",
+      "name": "Whisk",
+      "url": "https://labs.google/whisk",
+      "description": "Google Labs 的视觉混合创意工具，可用图片而非文字作为提示词进行图像重混与再创作，适合设计师快速探索视觉方向。",
+      "type": "canvas-native",
+      "primarySection": "image-gen",
+      "sections": [
+        "image-gen",
+        "misc"
+      ],
+      "capabilities": [
+        "image-gen",
+        "canvas",
+        "workflow"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "gemini"
+        ],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "flow",
+          "gemini"
+        ]
+      },
+      "tags": [
+        "免费",
+        "图像生成",
+        "Google",
+        "Whisk",
+        "子站"
+      ]
+    },
+    {
+      "id": "notebooklm",
+      "name": "NotebookLM",
+      "url": "https://notebooklm.google.com",
+      "description": "Google 的 AI 研究笔记本，可上传文档/网页/视频进行智能摘要、问答与引文定位，还支持生成播客式音频概览。",
+      "type": "official",
+      "primarySection": "research",
+      "sections": [
+        "research",
+        "chat"
+      ],
+      "capabilities": [
+        "chat",
+        "writing",
+        "audio-gen",
+        "search"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "gemini"
+        ],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
           "gemini"
         ]
       },
       "tags": [
         "免费",
         "订阅制",
-        "图像生成",
-        "视频生成",
+        "中文",
+        "官站",
+        "知识研究",
         "Google",
-        "Flow",
-        "杂项",
+        "子站"
+      ]
+    },
+    {
+      "id": "imagen",
+      "name": "Imagen",
+      "url": "https://deepmind.google/technologies/imagen-3/",
+      "description": "Google DeepMind 的文生图模型 Imagen 3，提供顶级图像质量与精准提示跟随能力，目前集成在 Gemini、Whisk、Flow 等产品中。",
+      "type": "model",
+      "primarySection": "image-gen",
+      "sections": [
+        "image-gen"
+      ],
+      "capabilities": [
+        "image-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "gemini"
+        ],
+        "downstream": [
+          "whisk",
+          "flow"
+        ],
+        "alternatives": [],
+        "complements": [
+          "gemini"
+        ]
+      },
+      "tags": [
+        "图像生成",
+        "DeepMind",
+        "Google",
+        "模型"
+      ]
+    },
+    {
+      "id": "veo",
+      "name": "Veo",
+      "url": "https://deepmind.google/technologies/veo/",
+      "description": "Google DeepMind 的文生视频模型 Veo 2，支持生成 1080p 高质量视频，时长超 60 秒，具备影视级镜头控制能力。",
+      "type": "model",
+      "primarySection": "video-gen",
+      "sections": [
+        "video-gen"
+      ],
+      "capabilities": [
+        "video-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "gemini"
+        ],
+        "downstream": [
+          "flow"
+        ],
+        "alternatives": [],
+        "complements": [
+          "imagen",
+          "flow"
+        ]
+      },
+      "tags": [
+        "视频生成",
+        "DeepMind",
+        "Google",
+        "模型"
+      ]
+    },
+    {
+      "id": "musicfx",
+      "name": "MusicFX",
+      "url": "https://aitestkitchen.withgoogle.com/tools/music-fx",
+      "description": "Google AI Test Kitchen 中的 AI 音乐生成工具，由 Lyria（MusicLM）驱动，输入文字描述即可生成音乐片段。",
+      "type": "canvas-native",
+      "primarySection": "audio-gen",
+      "sections": [
+        "audio-gen"
+      ],
+      "capabilities": [
+        "audio-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "gemini"
+        ],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "gemini"
+        ]
+      },
+      "tags": [
+        "免费",
+        "音频生成",
+        "Google",
         "子站"
       ]
     },
