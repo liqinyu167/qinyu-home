@@ -130,12 +130,14 @@
       "relations": {
         "products": [
           "sora",
-          "openai-api"
+          "openai-api",
+          "codex"
         ],
         "upstream": [],
         "downstream": [
           "sora",
-          "openai-api"
+          "openai-api",
+          "codex"
         ],
         "alternatives": [
           "gemini"
@@ -474,6 +476,41 @@
         "编程开发",
         "OpenAI",
         "子站"
+      ]
+    },
+    {
+      "id": "codex",
+      "name": "Codex",
+      "url": "https://chatgpt.com/codex",
+      "description": "OpenAI 的 AI 编程代理，可在云沙箱中并行处理多个编码任务，支持编写功能、修复 Bug、运行测试并提交 PR，深度集成 GitHub。",
+      "type": "canvas-native",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code",
+        "search",
+        "workflow"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "chatgpt"
+        ],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "openai-api",
+          "chatgpt"
+        ]
+      },
+      "tags": [
+        "订阅制",
+        "编程开发",
+        "OpenAI",
+        "子站",
+        "代码"
       ]
     },
     {
