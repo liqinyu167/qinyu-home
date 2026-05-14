@@ -77,7 +77,6 @@
         "products": [
           "aistudio",
           "flow",
-          "whisk",
           "notebooklm",
           "gemini-api"
         ],
@@ -85,7 +84,6 @@
         "downstream": [
           "aistudio",
           "flow",
-          "whisk",
           "notebooklm",
           "gemini-api"
         ],
@@ -186,7 +184,7 @@
       "id": "flow",
       "name": "Flow",
       "url": "https://labs.google/fx/tools/flow",
-      "description": "Google Labs 旗下的 AI 创意工作室，基于 Gemini 和 Imagen，支持图像、视频与故事板的交互式创作，是 Gemini 生态的可视化创作入口。",
+      "description": "Google Labs 旗下的 AI 创意工作室，整合了原 Whisk 的图像重混功能，基于 Gemini 和 Imagen，支持图像、视频与故事板的交互式创作。",
       "type": "canvas-native",
       "primarySection": "misc",
       "sections": [
@@ -210,8 +208,7 @@
           "jimeng"
         ],
         "complements": [
-          "gemini",
-          "whisk"
+          "gemini"
         ]
       },
       "tags": [
@@ -220,42 +217,6 @@
         "视频生成",
         "Google",
         "Flow",
-        "子站"
-      ]
-    },
-    {
-      "id": "whisk",
-      "name": "Whisk",
-      "url": "https://labs.google/whisk",
-      "description": "Google Labs 的视觉混合创意工具，可用图片而非文字作为提示词进行图像重混与再创作，适合设计师快速探索视觉方向。",
-      "type": "canvas-native",
-      "primarySection": "image-gen",
-      "sections": [
-        "image-gen",
-        "misc"
-      ],
-      "capabilities": [
-        "image-gen",
-        "canvas",
-        "workflow"
-      ],
-      "relations": {
-        "products": [],
-        "upstream": [
-          "gemini"
-        ],
-        "downstream": [],
-        "alternatives": [],
-        "complements": [
-          "flow",
-          "gemini"
-        ]
-      },
-      "tags": [
-        "免费",
-        "图像生成",
-        "Google",
-        "Whisk",
         "子站"
       ]
     },
@@ -301,7 +262,7 @@
       "id": "imagen",
       "name": "Imagen",
       "url": "https://deepmind.google/technologies/imagen-3/",
-      "description": "Google DeepMind 的文生图模型 Imagen 3，提供顶级图像质量与精准提示跟随能力，目前集成在 Gemini、Whisk、Flow 等产品中。",
+      "description": "Google DeepMind 的文生图模型 Imagen 3，提供顶级图像质量与精准提示跟随能力，目前集成在 Gemini、Flow 等产品中。",
       "type": "model",
       "primarySection": "image-gen",
       "sections": [
@@ -316,7 +277,6 @@
           "gemini"
         ],
         "downstream": [
-          "whisk",
           "flow"
         ],
         "alternatives": [],
