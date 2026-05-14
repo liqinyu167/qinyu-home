@@ -89,7 +89,8 @@
         ],
         "alternatives": [
           "chatgpt",
-          "grok"
+          "grok",
+          "claude"
         ],
         "complements": [
           "aistudio",
@@ -142,7 +143,8 @@
         ],
         "alternatives": [
           "gemini",
-          "grok"
+          "grok",
+          "claude"
         ],
         "complements": [
           "sora"
@@ -236,7 +238,8 @@
         "alternatives": [
           "chatgpt",
           "gemini",
-          "grok"
+          "grok",
+          "claude"
         ],
         "complements": [
           "jimeng",
@@ -521,7 +524,9 @@
           "aistudio"
         ],
         "downstream": [],
-        "alternatives": [],
+        "alternatives": [
+          "anthropic-api"
+        ],
         "complements": [
           "aistudio"
         ]
@@ -558,7 +563,8 @@
         ],
         "downstream": [],
         "alternatives": [
-          "gemini-api"
+          "gemini-api",
+          "anthropic-api"
         ],
         "complements": [
           "aistudio"
@@ -668,7 +674,8 @@
         "downstream": [],
         "alternatives": [
           "openai-api",
-          "gemini-api"
+          "gemini-api",
+          "anthropic-api"
         ],
         "complements": [
           "coze"
@@ -756,7 +763,8 @@
         "alternatives": [
           "chatgpt",
           "gemini",
-          "doubao"
+          "doubao",
+          "claude"
         ],
         "complements": [
           "x-twitter"
@@ -828,7 +836,8 @@
         "alternatives": [
           "openai-api",
           "gemini-api",
-          "ark"
+          "ark",
+          "anthropic-api"
         ],
         "complements": [
           "grok"
@@ -876,6 +885,91 @@
         "社交",
         "xAI",
         "官站"
+      ]
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "url": "https://claude.ai",
+      "description": "Anthropic 旗下的 AI 助手，以安全对齐与长上下文著称，支持对话、图像分析、代码编写与文档处理，Claude 4 在编程与推理方面表现卓越。",
+      "type": "official",
+      "primarySection": "official-labs",
+      "sections": [
+        "official-labs",
+        "chat",
+        "image-gen"
+      ],
+      "capabilities": [
+        "chat",
+        "image-gen",
+        "code",
+        "writing",
+        "search"
+      ],
+      "relations": {
+        "products": [
+          "anthropic-api"
+        ],
+        "upstream": [],
+        "downstream": [
+          "anthropic-api"
+        ],
+        "alternatives": [
+          "chatgpt",
+          "gemini",
+          "grok",
+          "doubao"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "API",
+        "中文",
+        "官站",
+        "对话",
+        "图像分析",
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "anthropic-api",
+      "name": "Anthropic API",
+      "url": "https://console.anthropic.com",
+      "description": "Anthropic 的开发者 API 平台，提供 Claude 系列模型（claude-4-sonnet、claude-4-opus 等）接口，支持 200K 超长上下文、Tool Use 与流式输出。",
+      "type": "api-platform",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "writing"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "claude"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "openai-api",
+          "gemini-api",
+          "grok-api",
+          "ark"
+        ],
+        "complements": [
+          "claude"
+        ]
+      },
+      "tags": [
+        "免费",
+        "API",
+        "编程开发",
+        "Anthropic",
+        "子站"
       ]
     }
   ]
