@@ -1220,13 +1220,10 @@
       "type": "official",
       "primarySection": "image-gen",
       "sections": [
-        "image-gen",
-        "infinite-canvas"
+        "image-gen"
       ],
       "capabilities": [
         "image-gen",
-        "video-gen",
-        "canvas",
         "workflow"
       ],
       "relations": {
