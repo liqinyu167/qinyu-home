@@ -1061,7 +1061,7 @@
       "id": "rhtv",
       "name": "RHTV",
       "url": "https://rhtv.runninghub.ai",
-      "description": "RunningHub 推出的 AI 无限画布创作工具，支持多步骤工作流与分镜设计，提供提示词生成、可视化流程与 AI 辅助创作，从灵感到成片一站式生成视频与图像。",
+      "description": "RunningHub 推出的 AI 无限画布创作工具，背靠扎实的 ComfyUI 社区，集百家所长，支持多步骤工作流与分镜设计，提供提示词生成、可视化流程与 AI 辅助创作，从灵感到成片一站式生成视频与图像。目前站长认为最完美的画布。",
       "type": "canvas-native",
       "primarySection": "infinite-canvas",
       "sections": [
