@@ -115,8 +115,7 @@
       "type": "studio",
       "primarySection": "code-dev",
       "sections": [
-        "code-dev",
-        "official-labs"
+        "code-dev"
       ],
       "capabilities": [
         "chat",
