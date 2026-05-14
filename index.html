@@ -1380,7 +1380,7 @@
 
         card.innerHTML = `
           <div class="card-head">
-            <img class="site-favicon" src="https://www.google.com/s2/favicons?domain=${domainFromUrl(site.url)}&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
+            <img class="site-favicon" src="assets/favicons/${site.url.replace(/^https?:\/\//, "").split("/")[0].replace(/\./g, "_")}.png" alt="" loading="lazy" onerror="this.style.display='none'">
             <div>
               <h2 class="site-name">${site.name}</h2>
               <div class="domain">${domainFromUrl(site.url)}</div>
