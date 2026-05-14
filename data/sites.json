@@ -1139,6 +1139,197 @@
         "ComfyUI",
         "RunningHub"
       ]
+    },
+    {
+      "id": "lovart",
+      "name": "Lovart",
+      "url": "https://www.lovart.ai",
+      "description": "全球首个 AI 设计 Agent，从 Logo 到完整品牌营销方案一对话搞定，支持包装设计、社交媒体内容、视频广告等，10万+创作者在用。",
+      "type": "canvas-native",
+      "primarySection": "infinite-canvas",
+      "sections": [
+        "infinite-canvas",
+        "image-gen"
+      ],
+      "capabilities": [
+        "image-gen",
+        "video-gen",
+        "canvas",
+        "workflow"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "rhtv",
+          "claude-design"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "订阅制",
+        "英文",
+        "无限画布",
+        "设计",
+        "品牌",
+        "图像生成"
+      ]
+    },
+    {
+      "id": "tapnow",
+      "name": "TapNow",
+      "url": "https://tapnow.ai",
+      "description": "下一代 AI 视觉创作引擎，面向电商广告、短视频和艺术创作，提供 Agent 驱动的无限画布体验，支持从灵感到成片的专业级视觉生产。",
+      "type": "canvas-native",
+      "primarySection": "infinite-canvas",
+      "sections": [
+        "infinite-canvas",
+        "image-gen",
+        "video-gen"
+      ],
+      "capabilities": [
+        "image-gen",
+        "video-gen",
+        "canvas",
+        "workflow"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "rhtv"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "订阅制",
+        "英文",
+        "无限画布",
+        "电商",
+        "视频生成",
+        "图像生成"
+      ]
+    },
+    {
+      "id": "liblib",
+      "name": "LiblibAI 哩布哩布",
+      "url": "https://www.liblib.art",
+      "description": "国内领先的 AI 绘画平台，10万+模型免费下载，原汁原味的 WebUI/ComfyUI 在线体验，模型分享社区+AI 创作工具一体化，旗下 LibTV 提供专业视频创作与无限画布。",
+      "type": "official",
+      "primarySection": "image-gen",
+      "sections": [
+        "image-gen",
+        "infinite-canvas"
+      ],
+      "capabilities": [
+        "image-gen",
+        "video-gen",
+        "canvas",
+        "workflow"
+      ],
+      "relations": {
+        "products": [
+          "libtv"
+        ],
+        "upstream": [],
+        "downstream": [
+          "libtv"
+        ],
+        "alternatives": [],
+        "complements": [
+          "rhtv",
+          "runninghub"
+        ]
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "图像生成",
+        "模型社区",
+        "ComfyUI",
+        "WebUI"
+      ]
+    },
+    {
+      "id": "libtv",
+      "name": "LibTV",
+      "url": "https://liblib.tv",
+      "description": "LiblibAI 旗下专业视频创作工具，基于 ComfyUI 社区的无限画布，提供 AI 视频生成与分镜创作工作流，是 Liblib 生态的视频与画布延伸。",
+      "type": "canvas-native",
+      "primarySection": "infinite-canvas",
+      "sections": [
+        "infinite-canvas",
+        "video-gen"
+      ],
+      "capabilities": [
+        "video-gen",
+        "canvas",
+        "workflow"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "liblib"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "rhtv",
+          "tapnow"
+        ],
+        "complements": [
+          "liblib"
+        ]
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "无限画布",
+        "视频生成",
+        "ComfyUI",
+        "Liblib"
+      ]
+    },
+    {
+      "id": "oiioii",
+      "name": "OiiOii",
+      "url": "https://oiioii.art",
+      "description": "全球首个 AI 动画创作 Agent，动漫特化，从剧本编写、角色设计、场景搭建到视频生成全流程覆盖，30+ AI 模型、140+ 风格一站搞定。",
+      "type": "canvas-native",
+      "primarySection": "infinite-canvas",
+      "sections": [
+        "infinite-canvas",
+        "video-gen",
+        "image-gen"
+      ],
+      "capabilities": [
+        "image-gen",
+        "video-gen",
+        "canvas",
+        "workflow",
+        "writing"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "rhtv"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "无限画布",
+        "动漫",
+        "动画",
+        "视频生成"
+      ]
     }
   ]
 }
