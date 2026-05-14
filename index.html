@@ -782,8 +782,21 @@
     }
 
     .card-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
       padding-left: 11px;
       margin-bottom: 12px;
+    }
+
+    .site-favicon {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      object-fit: contain;
+      background: var(--bg-paper);
     }
 
     .site-name {
@@ -1367,8 +1380,11 @@
 
         card.innerHTML = `
           <div class="card-head">
-            <h2 class="site-name">${site.name}</h2>
-            <div class="domain">${domainFromUrl(site.url)}</div>
+            <img class="site-favicon" src="https://www.google.com/s2/favicons?domain=${domainFromUrl(site.url)}&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
+            <div>
+              <h2 class="site-name">${site.name}</h2>
+              <div class="domain">${domainFromUrl(site.url)}</div>
+            </div>
           </div>
           <p class="desc">${site.description || "暂无描述，等待维护者补完这一格分镜。"}</p>
           <div class="tags">${tags}</div>
