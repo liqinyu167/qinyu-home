@@ -908,11 +908,13 @@
       ],
       "relations": {
         "products": [
-          "anthropic-api"
+          "anthropic-api",
+          "claude-design"
         ],
         "upstream": [],
         "downstream": [
-          "anthropic-api"
+          "anthropic-api",
+          "claude-design"
         ],
         "alternatives": [
           "chatgpt",
@@ -968,6 +970,44 @@
         "免费",
         "API",
         "编程开发",
+        "Anthropic",
+        "子站"
+      ]
+    },
+    {
+      "id": "claude-design",
+      "name": "Claude Design",
+      "url": "https://claude.ai/design",
+      "description": "Anthropic Labs 推出的 AI 设计工具，基于 Claude Opus 4.7 视觉模型，支持创建设计稿、交互原型、演示幻灯片和营销素材，可导出 PPTX 或发送至 Canva，内置品牌设计系统。",
+      "type": "canvas-native",
+      "primarySection": "image-gen",
+      "sections": [
+        "image-gen",
+        "misc"
+      ],
+      "capabilities": [
+        "image-gen",
+        "canvas",
+        "workflow"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "claude"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "flow"
+        ],
+        "complements": [
+          "claude"
+        ]
+      },
+      "tags": [
+        "订阅制",
+        "设计",
+        "原型",
+        "幻灯片",
         "Anthropic",
         "子站"
       ]
