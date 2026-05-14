@@ -80,7 +80,9 @@
           "notebooklm",
           "gemini-api"
         ],
-        "upstream": [],
+        "upstream": [
+          "google"
+        ],
         "downstream": [
           "aistudio",
           "flow",
@@ -1010,6 +1012,40 @@
         "幻灯片",
         "Anthropic",
         "子站"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "url": "https://www.google.com",
+      "description": "全球最大搜索引擎与技术公司，Gemini、DeepMind、YouTube 等产品的母公司，是 Gemini AI 生态的最大上游与分发平台。",
+      "type": "official",
+      "primarySection": "misc",
+      "sections": [
+        "misc"
+      ],
+      "capabilities": [
+        "search"
+      ],
+      "relations": {
+        "products": [
+          "gemini"
+        ],
+        "upstream": [],
+        "downstream": [
+          "gemini"
+        ],
+        "alternatives": [],
+        "complements": [
+          "gemini"
+        ]
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "搜索",
+        "Google",
+        "官站"
       ]
     }
   ]
