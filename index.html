@@ -2026,14 +2026,13 @@
     }
 
     function openGameWindow() {
-      if (!els.gameFrame.src) els.gameFrame.src = els.gameFrame.dataset.src;
+      els.gameFrame.src = els.gameFrame.dataset.src;
       els.gameDialog.showModal();
       closeMobileSidebar();
     }
 
     function closeGameWindow() {
       if (els.gameDialog.open) els.gameDialog.close();
-      els.gameFrame.src = "";
     }
 
     function openRelationDrawer(button) {
@@ -2418,9 +2417,6 @@
       els.gameClose.addEventListener("click", closeGameWindow);
       els.gameDialog.addEventListener("click", (event) => {
         if (event.target === els.gameDialog) closeGameWindow();
-      });
-      els.gameDialog.addEventListener("close", () => {
-        els.gameFrame.src = "";
       });
 
       els.randomButton.addEventListener("click", () => {
