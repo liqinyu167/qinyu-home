@@ -10,6 +10,10 @@
           "label": "官站 / 原厂模型"
         },
         {
+          "id": "infinite-canvas",
+          "label": "无限画布"
+        },
+        {
           "id": "chat",
           "label": "对话入口"
         },
@@ -28,6 +32,10 @@
         {
           "id": "code-dev",
           "label": "编程开发"
+        },
+        {
+          "id": "compute-api",
+          "label": "API（算力服务）"
         },
         {
           "id": "research",
@@ -716,7 +724,8 @@
         ],
         "downstream": [],
         "alternatives": [
-          "jimeng"
+          "jimeng",
+          "rhtv"
         ],
         "complements": [
           "gemini"
@@ -1046,6 +1055,89 @@
         "搜索",
         "Google",
         "官站"
+      ]
+    },
+    {
+      "id": "rhtv",
+      "name": "RHTV",
+      "url": "https://rhtv.runninghub.ai",
+      "description": "RunningHub 推出的 AI 无限画布创作工具，支持多步骤工作流与分镜设计，提供提示词生成、可视化流程与 AI 辅助创作，从灵感到成片一站式生成视频与图像。",
+      "type": "canvas-native",
+      "primarySection": "infinite-canvas",
+      "sections": [
+        "infinite-canvas",
+        "image-gen",
+        "video-gen"
+      ],
+      "capabilities": [
+        "image-gen",
+        "video-gen",
+        "canvas",
+        "workflow"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "runninghub"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "flow"
+        ],
+        "complements": [
+          "runninghub"
+        ]
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "无限画布",
+        "视频生成",
+        "图像生成",
+        "RunningHub"
+      ]
+    },
+    {
+      "id": "runninghub",
+      "name": "RunningHub",
+      "url": "https://www.runninghub.cn",
+      "description": "原生 AI 智能体驱动的一站式内容创作平台，提供 ComfyUI 工作流、模型 API 与算力服务，支持图像与视频生成、AI 应用部署，是 RHTV 的上游算力平台。",
+      "type": "api-platform",
+      "primarySection": "compute-api",
+      "sections": [
+        "compute-api",
+        "code-dev"
+      ],
+      "capabilities": [
+        "image-gen",
+        "video-gen",
+        "code",
+        "workflow"
+      ],
+      "relations": {
+        "products": [
+          "rhtv"
+        ],
+        "upstream": [],
+        "downstream": [
+          "rhtv"
+        ],
+        "alternatives": [
+          "openai-api",
+          "gemini-api",
+          "ark"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "API",
+        "中文",
+        "编程开发",
+        "算力服务",
+        "ComfyUI",
+        "RunningHub"
       ]
     }
   ]
