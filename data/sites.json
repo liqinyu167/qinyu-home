@@ -161,7 +161,7 @@
       "id": "jimeng",
       "name": "即梦",
       "url": "https://www.jimeng.com/",
-      "description": "即梦是面向视觉创作的官方 AI 产品，可进行图像生成与视频生成，其中视频生成是它更突出的强项。",
+      "description": "字节跳动旗下的 AI 视觉创作平台，核心能力为图像与视频生成，视频生成尤为突出，与豆包、扣子构成字节 AIGC 产品矩阵。",
       "type": "official",
       "primarySection": "official-labs",
       "sections": [
@@ -177,21 +177,77 @@
       ],
       "relations": {
         "products": [],
-        "upstream": [],
+        "upstream": [
+          "doubao"
+        ],
         "downstream": [],
         "alternatives": [
-          "flow"
+          "flow",
+          "sora"
         ],
-        "complements": []
+        "complements": [
+          "doubao",
+          "capcut"
+        ]
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "图像生成",
+        "视频生成",
+        "即梦",
+        "字节跳动"
+      ]
+    },
+    {
+      "id": "doubao",
+      "name": "豆包",
+      "url": "https://www.doubao.com",
+      "description": "字节跳动旗下 AI 助手，基于云雀大模型，支持对话、写作、翻译、图像生成与联网搜索，是字节 AI 生态的统一对话入口。",
+      "type": "official",
+      "primarySection": "chat",
+      "sections": [
+        "chat",
+        "image-gen",
+        "writing"
+      ],
+      "capabilities": [
+        "chat",
+        "image-gen",
+        "search",
+        "writing",
+        "voice"
+      ],
+      "relations": {
+        "products": [
+          "jimeng",
+          "coze",
+          "ark"
+        ],
+        "upstream": [],
+        "downstream": [
+          "jimeng",
+          "coze",
+          "ark"
+        ],
+        "alternatives": [
+          "chatgpt",
+          "gemini"
+        ],
+        "complements": [
+          "jimeng",
+          "coze"
+        ]
       },
       "tags": [
         "免费",
         "订阅制",
         "中文",
         "官站",
+        "对话",
         "图像生成",
-        "视频生成",
-        "即梦"
+        "字节跳动"
       ]
     },
     {
@@ -335,6 +391,41 @@
         "图像生成",
         "OpenAI",
         "子站"
+      ]
+    },
+    {
+      "id": "capcut",
+      "name": "剪映",
+      "url": "https://www.capcut.cn",
+      "description": "字节跳动旗下全能视频编辑器，内置 AI 字幕、智能抠图、文本生成视频、AI 配乐等功能，是即梦视频创作的最佳后期搭档。",
+      "type": "canvas-native",
+      "primarySection": "video-gen",
+      "sections": [
+        "video-gen",
+        "misc"
+      ],
+      "capabilities": [
+        "video-gen",
+        "audio-gen",
+        "canvas",
+        "workflow"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "jimeng",
+          "doubao"
+        ]
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "视频生成",
+        "字节跳动"
       ]
     },
     {
@@ -511,6 +602,81 @@
         "OpenAI",
         "子站",
         "代码"
+      ]
+    },
+    {
+      "id": "coze",
+      "name": "扣子 Coze",
+      "url": "https://www.coze.cn",
+      "description": "字节跳动推出的 AI Bot 构建平台，可零代码创建对话机器人、工作流与 AI 应用，支持接入豆包、GPT 等多模型，内置插件市场。",
+      "type": "studio",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev",
+        "chat"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "workflow"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "doubao"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "aistudio"
+        ],
+        "complements": [
+          "doubao",
+          "ark"
+        ]
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "编程开发",
+        "字节跳动",
+        "子站"
+      ]
+    },
+    {
+      "id": "ark",
+      "name": "火山方舟",
+      "url": "https://www.volcengine.com/product/ark",
+      "description": "火山引擎旗下的企业级大模型 API 平台，提供豆包、Doubao-pro 等模型接口，支持 fine-tuning、Prompt 优化与私有化部署。",
+      "type": "api-platform",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "writing"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "doubao"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "openai-api",
+          "gemini-api"
+        ],
+        "complements": [
+          "coze"
+        ]
+      },
+      "tags": [
+        "免费",
+        "API",
+        "编程开发",
+        "字节跳动",
+        "子站"
       ]
     },
     {
