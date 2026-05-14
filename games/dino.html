@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>小恐龙</title>
+	<style>
+		*{
+			box-sizing:border-box;
+		}
+		body{
+			margin:0;
+			min-height:100vh;
+			display:flex;
+			align-items:center;
+			justify-content:center;
+			font-family:Arial,"Microsoft YaHei",sans-serif;
+			background:#f7f7f7;
+			color:#535353;
+			transition:background .8s,color .8s;
+		}
+		body.night{
+			background:#12141d;
+			color:#e8ecff;
+		}
+		.game{
+			width:900px;
+			height:260px;
+			position:relative;
+			overflow:hidden;
+			border-bottom:4px solid currentColor;
+			background:linear-gradient(#fff,#fafafa);
+			transition:background .8s,box-shadow .8s;
+		}
+		body.night .game{
+			background:linear-gradient(#151826,#0d1019);
+			box-shadow:0 20px 60px rgba(0,0,0,.35);
+		}
+		.score{
+			position:absolute;
+			top:16px;
+			right:20px;
+			font-size:22px;
+			letter-spacing:3px;
+			font-weight:bold;
+			z-index:10;
+		}
+		.hint{
+			position:absolute;
+			top:16px;
+			left:20px;
+			font-size:14px;
+			opacity:.7;
+			z-index:10;
+		}
+		.hp{
+			position:absolute;
+			top:42px;
+			left:20px;
+			display:flex;
+			gap:8px;
+			z-index:10;
+		}
+		.heart{
+			width:18px;
+			height:18px;
+			background:#ef4444;
+			transform:rotate(45deg);
+			position:relative;
+		}
+		.heart:before,
+		.heart:after{
+			content:"";
+			position:absolute;
+			width:18px;
+			height:18px;
+			border-radius:50%;
+			background:inherit;
+		}
+		.heart:before{left:-9px;top:0;}
+		.heart:after{left:0;top:-9px;}
+		.heart.lost{
+			background:#9ca3af;
+			opacity:.5;
+		}
+		.ground{
+			position:absolute;
+			left:0;
+			bottom:0;
+			width:1800px;
+			height:4px;
+			background:repeating-linear-gradient(90deg,currentColor 0 30px,transparent 30px 48px);
+			opacity:.35;
+			animation:groundMove 1.2s linear infinite;
+		}
+		@keyframes groundMove{
+			from{transform:translateX(0);}
+			to{transform:translateX(-90px);}
+		}
+		.dino{
+			position:absolute;
+			left:95px;
+			bottom:4px;
+			width:68px;
+			height:72px;
+			z-index:5;
+		}
+		.dino-body{
+			position:absolute;
+			left:8px;
+			bottom:14px;
+			width:44px;
+			height:42px;
+			background:currentColor;
+			border-radius:10px 12px 8px 8px;
+		}
+		.dino-head{
+			position:absolute;
+			left:36px;
+			bottom:43px;
+			width:34px;
+			height:28px;
+			background:currentColor;
+			border-radius:7px 7px 4px 4px;
+		}
+		.dino-head:before{
+			content:"";
+			position:absolute;
+			right:7px;
+			top:7px;
+			width:5px;
+			height:5px;
+			border-radius:50%;
+			background:#fff;
+		}
+		body.night .dino-head:before{
+			background:#12141d;
+		}
+		.dino-mouth{
+			position:absolute;
+			left:59px;
+			bottom:43px;
+			width:18px;
+			height:10px;
+			background:currentColor;
+			border-radius:0 4px 4px 0;
+		}
+		.dino-tail{
+			position:absolute;
+			left:0;
+			bottom:36px;
+			width:26px;
+			height:13px;
+			background:currentColor;
+			clip-path:polygon(0 0,100% 35%,100% 100%);
+		}
+		.dino-arm{
+			position:absolute;
+			left:43px;
+			bottom:33px;
+			width:15px;
+			height:6px;
+			background:currentColor;
+			border-radius:4px;
+		}
+		.leg{
+			position:absolute;
+			bottom:0;
+			width:10px;
+			height:20px;
+			background:currentColor;
+			border-radius:0 0 3px 3px;
+		}
+		.leg.left{left:20px;}
+		.leg.right{left:42px;}
+		.dino.running .leg.left{
+			animation:legRun .22s infinite alternate;
+		}
+		.dino.running .leg.right{
+			animation:legRun .22s infinite alternate-reverse;
+		}
+		@keyframes legRun{
+			from{height:20px;transform:translateY(0);}
+			to{height:12px;transform:translateY(8px);}
+		}
+		.dino.jumping .leg{
+			animation:none;
+			height:18px;
+		}
+		.dino.ducking{
+			height:44px;
+		}
+		.dino.ducking .dino-body{
+			left:10px;
+			bottom:10px;
+			width:58px;
+			height:30px;
+			border-radius:14px 10px 8px 8px;
+		}
+		.dino.ducking .dino-head{
+			left:54px;
+			bottom:28px;
+			width:30px;
+			height:22px;
+		}
+		.dino.ducking .dino-mouth{
+			left:75px;
+			bottom:28px;
+		}
+		.dino.ducking .dino-tail{
+			bottom:26px;
+		}
+		.dino.ducking .dino-arm{
+			display:none;
+		}
+		.dino.ducking .leg{
+			height:12px;
+		}
+		.dino.ducking .leg.left{left:24px;}
+		.dino.ducking .leg.right{left:50px;}
+		.cactus{
+			position:absolute;
+			bottom:4px;
+			width:28px;
+			height:58px;
+			background:currentColor;
+			border-radius:8px 8px 2px 2px;
+			z-index:4;
+		}
+		.cactus:before,
+		.cactus:after{
+			content:"";
+			position:absolute;
+			width:13px;
+			height:28px;
+			background:currentColor;
+			border-radius:7px 7px 0 0;
+		}
+		.cactus:before{
+			left:-12px;
+			top:18px;
+		}
+		.cactus:after{
+			right:-12px;
+			top:28px;
+		}
+		.cactus.small{
+			width:22px;
+			height:42px;
+		}
+		.bird{
+			position:absolute;
+			left:930px;
+			width:52px;
+			height:28px;
+			z-index:4;
+		}
+		.bird:before,
+		.bird:after{
+			content:"";
+			position:absolute;
+			top:8px;
+			width:28px;
+			height:12px;
+			background:currentColor;
+			border-radius:12px 12px 0 0;
+			animation:wing .28s infinite alternate;
+		}
+		.bird:before{
+			left:0;
+			transform-origin:right center;
+		}
+		.bird:after{
+			right:0;
+			transform-origin:left center;
+		}
+		.bird .body{
+			position:absolute;
+			left:19px;
+			top:9px;
+			width:16px;
+			height:12px;
+			background:currentColor;
+			border-radius:50%;
+		}
+		@keyframes wing{
+			from{transform:rotate(22deg);}
+			to{transform:rotate(-28deg);}
+		}
+		.cloud{
+			position:absolute;
+			top:52px;
+			left:900px;
+			width:68px;
+			height:18px;
+			border-radius:20px;
+			background:currentColor;
+			opacity:.12;
+			animation:cloudMove 10s linear infinite;
+		}
+		.cloud:before,
+		.cloud:after{
+			content:"";
+			position:absolute;
+			background:currentColor;
+			border-radius:50%;
+		}
+		.cloud:before{
+			width:26px;
+			height:26px;
+			left:12px;
+			top:-12px;
+		}
+		.cloud:after{
+			width:34px;
+			height:34px;
+			left:30px;
+			top:-19px;
+		}
+		.cloud.two{
+			top:84px;
+			animation-delay:-4s;
+			animation-duration:13s;
+		}
+		@keyframes cloudMove{
+			from{transform:translateX(0);}
+			to{transform:translateX(-1050px);}
+		}
+		.game-over{
+			position:absolute;
+			left:50%;
+			top:50%;
+			transform:translate(-50%,-50%);
+			text-align:center;
+			font-size:28px;
+			font-weight:bold;
+			display:none;
+			z-index:20;
+		}
+		.game-over span{
+			display:block;
+			font-size:14px;
+			font-weight:normal;
+			margin-top:12px;
+			opacity:.7;
+		}
+	</style>
+</head>
+<body>
+	<div class="game" id="game">
+		<div class="hint">空格 / ↑ 跳跃，↓ 下蹲；地面仙人掌跳过，飞鸟可不动、下蹲或跳过</div>
+		<div class="score">00000</div>
+		<div class="hp">
+			<div class="heart"></div>
+			<div class="heart"></div>
+			<div class="heart"></div>
+		</div>
+		<div class="cloud"></div>
+		<div class="cloud two"></div>
+		<div class="dino running" id="dino">
+			<div class="dino-tail"></div>
+			<div class="dino-body"></div>
+			<div class="dino-head"></div>
+			<div class="dino-mouth"></div>
+			<div class="dino-arm"></div>
+			<div class="leg left"></div>
+			<div class="leg right"></div>
+		</div>
+		<div class="ground"></div>
+		<div class="game-over" id="gameOver">GAME OVER<span>按空格重新开始</span></div>
+	</div>
+
+	<script>
+		var game = document.getElementById('game');
+		var dino = document.getElementById('dino');
+		var scoreEl = document.querySelector('.score');
+		var hearts = document.getElementsByClassName('heart');
+		var gameOverEl = document.getElementById('gameOver');
+		var hp = 3;
+		var score = 0;
+		var speed = 8;
+		var isJumping = false;
+		var isDucking = false;
+		var canJump = true;
+		var isGameOver = false;
+		var invincible = false;
+		var obstacles = [];
+		var spawnTimer = 0;
+		var lastTime = performance.now();
+		var dinoBottom = 4;
+		var velocityY = 0;
+		var gravity = 1.15;
+		var fallGravity = 2.35;
+		var jumpPower = 20;
+
+		function padScore(num){
+			return String(Math.floor(num)).padStart(5, '0');
+		}
+
+		function jump(){
+			if(isGameOver){
+				location.reload();
+				return;
+			}
+			if(!canJump || isJumping){return;}
+			isJumping = true;
+			canJump = false;
+			velocityY = jumpPower;
+			dino.classList.add('jumping');
+			dino.classList.remove('running');
+			setTimeout(function(){canJump = true;}, 430);
+		}
+
+		function spawnObstacle(){
+			var item;
+			var roll = Math.random();
+			if(score > 180 && roll > .58){
+				item = document.createElement('div');
+				item.className = 'bird';
+				item.innerHTML = '<div class="body"></div>';
+				item.dataset.type = 'bird';
+				item.style.bottom = Math.random() > .82 ? '118px' : '54px';
+			}else{
+				item = document.createElement('div');
+				item.className = Math.random() > .55 ? 'cactus' : 'cactus small';
+				item.dataset.type = 'cactus';
+			}
+			item.style.left = '930px';
+			game.appendChild(item);
+			obstacles.push(item);
+		}
+
+		function damage(){
+			if(invincible || isGameOver){return;}
+			hp--;
+			if(hearts[hp]){
+				hearts[hp].classList.add('lost');
+			}
+			invincible = true;
+			dino.style.opacity = '.45';
+			setTimeout(function(){
+				invincible = false;
+				dino.style.opacity = '1';
+			}, 900);
+			if(hp <= 0){
+				isGameOver = true;
+				gameOverEl.style.display = 'block';
+				dino.classList.remove('running');
+			}
+		}
+
+		function getDinoRect(){
+			var rect = dino.getBoundingClientRect();
+			if(isDucking && !isJumping){
+				return {
+					left: rect.left + 6,
+					right: rect.right + 12,
+					top: rect.bottom - 42,
+					bottom: rect.bottom - 4
+				};
+			}
+			return {
+				left: rect.left + 10,
+				right: rect.right - 6,
+				top: rect.top + 6,
+				bottom: rect.bottom - 4
+			};
+		}
+
+		function isHit(a, b){
+			var ar = getDinoRect();
+			var br = b.getBoundingClientRect();
+			var shrink = b.dataset.type === 'bird' ? 6 : 8;
+			return ar.left < br.right - shrink &&
+				ar.right > br.left + shrink &&
+				ar.top < br.bottom - shrink &&
+				ar.bottom > br.top + shrink;
+		}
+
+		function updateTheme(){
+			var stage = Math.floor(score / 500);
+			document.body.classList.toggle('night', stage % 2 === 1);
+		}
+
+		function loop(now){
+			var delta = Math.min((now - lastTime) / 16.67, 2);
+			lastTime = now;
+			if(!isGameOver){
+				score += delta;
+				speed = 8 + Math.min(score / 160, 14);
+				scoreEl.textContent = padScore(score);
+				updateTheme();
+
+				if(isJumping){
+					dinoBottom += velocityY * delta;
+					velocityY -= (velocityY > 0 ? gravity : fallGravity) * delta * 1.15;
+					if(dinoBottom <= 4){
+						dinoBottom = 4;
+						velocityY = 0;
+						isJumping = false;
+						dino.classList.remove('jumping');
+						dino.classList.add('running');
+					}
+					dino.style.bottom = dinoBottom + 'px';
+				}
+
+				spawnTimer -= 16.67 * delta;
+				if(spawnTimer <= 0){
+					spawnObstacle();
+					spawnTimer = Math.max(520, 980 - score / 3) + Math.random() * Math.max(260, 720 - score / 4);
+				}
+
+				for(var i = obstacles.length - 1; i >= 0; i--){
+					var item = obstacles[i];
+					var left = parseFloat(item.style.left);
+					left -= speed * delta;
+					item.style.left = left + 'px';
+					if(isHit(dino, item)){
+						damage();
+					}
+					if(left < -80){
+						item.remove();
+						obstacles.splice(i, 1);
+					}
+				}
+			}
+			requestAnimationFrame(loop);
+		}
+
+		document.addEventListener('keydown', function(e){
+			if(e.code === 'Space' || e.code === 'ArrowUp'){
+				e.preventDefault();
+				jump();
+			}
+			if(e.code === 'ArrowDown'){
+				e.preventDefault();
+				if(!isJumping && !isGameOver){
+					isDucking = true;
+					dino.classList.add('ducking');
+				}
+			}
+		});
+
+		document.addEventListener('keyup', function(e){
+			if(e.code === 'ArrowDown'){
+				isDucking = false;
+				dino.classList.remove('ducking');
+			}
+		});
+
+		requestAnimationFrame(loop);
+	</script>
+</body>
+</html>

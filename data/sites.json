@@ -5,200 +5,205 @@
       "label": "工具",
       "en": "TOOLS",
       "children": [
-        { "id": "chat", "label": "对话聊天" },
-        { "id": "image-gen", "label": "图像生成" },
-        { "id": "video-gen", "label": "视频生成" },
-        { "id": "audio-gen", "label": "音频生成" },
-        { "id": "code-dev", "label": "编程开发" },
-        { "id": "writing", "label": "写作翻译" },
-        { "id": "search", "label": "搜索研究" },
-        { "id": "productivity", "label": "效率工具" }
+        {
+          "id": "official-labs",
+          "label": "官站 / 原厂模型"
+        },
+        {
+          "id": "chat",
+          "label": "对话入口"
+        },
+        {
+          "id": "image-gen",
+          "label": "图像生成"
+        },
+        {
+          "id": "video-gen",
+          "label": "视频生成"
+        },
+        {
+          "id": "misc",
+          "label": "杂项"
+        }
       ]
     },
     {
       "id": "aesthetics",
       "label": "审美",
       "en": "AESTHETICS",
-      "children": [
-        { "id": "visual", "label": "视觉风格" },
-        { "id": "typography", "label": "字体排版" },
-        { "id": "color", "label": "配色方案" },
-        { "id": "motion", "label": "动效灵感" }
-      ]
+      "children": []
     },
     {
       "id": "inspiration",
       "label": "灵感",
       "en": "INSPIRATION",
-      "children": [
-        { "id": "prompt", "label": "提示词库" },
-        { "id": "showcase", "label": "作品展示" },
-        { "id": "learning", "label": "学习资源" }
-      ]
+      "children": []
     }
   ],
   "sites": [
     {
-      "id": "chatgpt",
-      "name": "ChatGPT",
-      "url": "https://chat.openai.com",
-      "description": "OpenAI 推出的 AI 对话助手，支持 GPT-4o、代码执行、联网搜索、图像生成等。",
-      "category": "tools",
-      "subcategory": "chat",
-      "tags": ["免费", "订阅制", "API", "中文"]
-    },
-    {
       "id": "gemini",
       "name": "Gemini",
       "url": "https://gemini.google.com",
-      "description": "Google 出品的多模态 AI 助手，支持文本、图像、视频理解和生成。",
-      "category": "tools",
-      "subcategory": "chat",
-      "tags": ["免费", "中文", "API"]
+      "description": "Google 的 Gemini 官方入口，主要承担原厂模型对话与多模态能力，也可以进行图像生成。",
+      "type": "official",
+      "primarySection": "official-labs",
+      "sections": [
+        "official-labs",
+        "chat",
+        "image-gen"
+      ],
+      "capabilities": [
+        "chat",
+        "image-gen",
+        "search",
+        "writing",
+        "code",
+        "voice"
+      ],
+      "relations": {
+        "products": [
+          "flow"
+        ],
+        "upstream": [],
+        "downstream": [
+          "flow"
+        ],
+        "alternatives": [
+          "chatgpt"
+        ],
+        "complements": [
+          "flow"
+        ]
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "API",
+        "官站",
+        "对话",
+        "图像生成",
+        "Google"
+      ]
     },
     {
-      "id": "claude",
-      "name": "Claude",
-      "url": "https://claude.ai",
-      "description": "Anthropic 出品的 AI 助手，擅长长文本理解、代码分析和安全推理。",
-      "category": "tools",
-      "subcategory": "chat",
-      "tags": ["免费", "订阅制", "API", "中文"]
+      "id": "flow",
+      "name": "Flow",
+      "url": "https://labs.google/fx/tools/flow",
+      "description": "Google 的 AI 创意工作室，作为 Gemini / Google AI 生态下的专门创作入口，用于图像、视频与故事创作。",
+      "type": "canvas-native",
+      "primarySection": "misc",
+      "sections": [
+        "misc",
+        "image-gen",
+        "video-gen"
+      ],
+      "capabilities": [
+        "image-gen",
+        "video-gen",
+        "canvas",
+        "workflow"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "gemini"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "jimeng"
+        ],
+        "complements": [
+          "gemini"
+        ]
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "图像生成",
+        "视频生成",
+        "Google",
+        "Flow",
+        "杂项",
+        "子站"
+      ]
     },
     {
-      "id": "midjourney",
-      "name": "Midjourney",
-      "url": "https://www.midjourney.com",
-      "description": "顶级 AI 图像生成工具，以艺术风格和画面质感著称，通过 Discord 指令生图。",
-      "category": "tools",
-      "subcategory": "image-gen",
-      "tags": ["订阅制", "API"]
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "url": "https://chatgpt.com",
+      "description": "OpenAI 的 ChatGPT 官方入口，主要是对话与通用助手，也具备很强的图像生成能力。",
+      "type": "official",
+      "primarySection": "official-labs",
+      "sections": [
+        "official-labs",
+        "chat",
+        "image-gen"
+      ],
+      "capabilities": [
+        "chat",
+        "image-gen",
+        "code",
+        "search",
+        "writing",
+        "voice"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "gemini"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "API",
+        "中文",
+        "官站",
+        "对话",
+        "图像生成",
+        "OpenAI"
+      ]
     },
     {
-      "id": "runway",
-      "name": "Runway",
-      "url": "https://runwayml.com",
-      "description": "AI 视频生成与编辑平台，支持文生视频、运动笔刷、绿幕抠像等专业功能。",
-      "category": "tools",
-      "subcategory": "video-gen",
-      "tags": ["免费", "订阅制", "API"]
-    },
-    {
-      "id": "suno",
-      "name": "Suno",
-      "url": "https://suno.com",
-      "description": "AI 音乐创作平台，输入文字描述即可生成完整歌曲，支持多语言歌词和多种曲风。",
-      "category": "tools",
-      "subcategory": "audio-gen",
-      "tags": ["免费", "订阅制", "中文"]
-    },
-    {
-      "id": "cursor",
-      "name": "Cursor",
-      "url": "https://cursor.com",
-      "description": "AI 驱动的代码编辑器，内置代码补全、对话式编程和自动重构，基于 VS Code。",
-      "category": "tools",
-      "subcategory": "code-dev",
-      "tags": ["免费", "订阅制", "API", "中文"]
-    },
-    {
-      "id": "deepl",
-      "name": "DeepL",
-      "url": "https://www.deepl.com",
-      "description": "高质量 AI 翻译工具，翻译自然流畅，支持 30+ 语言，写作模式可润色改写。",
-      "category": "tools",
-      "subcategory": "writing",
-      "tags": ["免费", "订阅制", "API", "中文"]
-    },
-    {
-      "id": "perplexity",
-      "name": "Perplexity",
-      "url": "https://www.perplexity.ai",
-      "description": "AI 搜索引擎，联网检索后生成带引用来源的回答，适合快速研究和技术调研。",
-      "category": "tools",
-      "subcategory": "search",
-      "tags": ["免费", "订阅制", "API", "中文"]
-    },
-    {
-      "id": "notion",
-      "name": "Notion AI",
-      "url": "https://www.notion.so",
-      "description": "集成 AI 的全能工作空间，支持智能写作、摘要生成、任务管理，文档协作一站搞定。",
-      "category": "tools",
-      "subcategory": "productivity",
-      "tags": ["免费", "订阅制", "中文"]
-    },
-    {
-      "id": "leonardo",
-      "name": "Leonardo.ai",
-      "url": "https://leonardo.ai",
-      "description": "AI 图像创作平台，提供多种风格模型和实时画布，适合游戏资产生成和概念设计。",
-      "category": "aesthetics",
-      "subcategory": "visual",
-      "tags": ["免费", "订阅制", "API"]
-    },
-    {
-      "id": "fontjoy",
-      "name": "Fontjoy",
-      "url": "https://fontjoy.com",
-      "description": "AI 字体搭配工具，用深度学习生成和谐字体组合，一键获取排版灵感。",
-      "category": "aesthetics",
-      "subcategory": "typography",
-      "tags": ["免费", "开源"]
-    },
-    {
-      "id": "khroma",
-      "name": "Khroma",
-      "url": "https://khroma.co",
-      "description": "AI 配色生成器，根据你的审美偏好训练个性化调色板，无限生成配色方案。",
-      "category": "aesthetics",
-      "subcategory": "color",
-      "tags": ["免费"]
-    },
-    {
-      "id": "pika",
-      "name": "Pika",
-      "url": "https://pika.art",
-      "description": "AI 视频与动效生成工具，支持文字转动画、图片激活、局部编辑等创意动效玩法。",
-      "category": "aesthetics",
-      "subcategory": "motion",
-      "tags": ["免费", "订阅制"]
-    },
-    {
-      "id": "youmind",
-      "name": "YouMind",
-      "url": "https://youmind.com/zh-CN/prompts",
-      "description": "AI 提示词社区与模板库，提供多场景 prompt 模板和创作灵感，支持中英双语。",
-      "category": "inspiration",
-      "subcategory": "prompt",
-      "tags": ["免费", "中文", "开源"]
-    },
-    {
-      "id": "prompthero",
-      "name": "PromptHero",
-      "url": "https://prompthero.com",
-      "description": "AI 提示词社区与搜索引擎，汇集 Midjourney、Stable Diffusion 等平台的高质量 prompt。",
-      "category": "inspiration",
-      "subcategory": "prompt",
-      "tags": ["免费", "中文"]
-    },
-    {
-      "id": "civitai",
-      "name": "Civitai",
-      "url": "https://civitai.com",
-      "description": "最大的 AI 生成艺术社区，分享模型、LoRA 和作品，Stable Diffusion 生态核心阵地。",
-      "category": "inspiration",
-      "subcategory": "showcase",
-      "tags": ["免费", "开源", "API"]
-    },
-    {
-      "id": "learnprompting",
-      "name": "Learn Prompting",
-      "url": "https://learnprompting.org",
-      "description": "开源免费的 Prompt Engineering 教程，从基础到进阶，系统学习与 AI 对话的艺术。",
-      "category": "inspiration",
-      "subcategory": "learning",
-      "tags": ["免费", "开源", "中文"]
+      "id": "jimeng",
+      "name": "即梦",
+      "url": "https://www.jimeng.com/",
+      "description": "即梦是面向视觉创作的官方 AI 产品，可进行图像生成与视频生成，其中视频生成是它更突出的强项。",
+      "type": "official",
+      "primarySection": "official-labs",
+      "sections": [
+        "official-labs",
+        "image-gen",
+        "video-gen"
+      ],
+      "capabilities": [
+        "image-gen",
+        "video-gen",
+        "canvas",
+        "workflow"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "flow"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "官站",
+        "图像生成",
+        "视频生成",
+        "即梦"
+      ]
     }
   ]
 }
