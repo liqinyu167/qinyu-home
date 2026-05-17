@@ -100,7 +100,8 @@
         "alternatives": [
           "chatgpt",
           "grok",
-          "claude"
+          "claude",
+          "qwen"
         ],
         "complements": [
           "aistudio",
@@ -154,7 +155,8 @@
         "alternatives": [
           "gemini",
           "grok",
-          "claude"
+          "claude",
+          "qwen"
         ],
         "complements": [
           "sora"
@@ -249,7 +251,8 @@
           "chatgpt",
           "gemini",
           "grok",
-          "claude"
+          "claude",
+          "qwen"
         ],
         "complements": [
           "jimeng",
@@ -497,7 +500,9 @@
           "gemini"
         ],
         "downstream": [],
-        "alternatives": [],
+        "alternatives": [
+          "bailian"
+        ],
         "complements": [
           "gemini-api"
         ]
@@ -535,7 +540,9 @@
         ],
         "downstream": [],
         "alternatives": [
-          "anthropic-api"
+          "anthropic-api",
+          "qwen-api",
+          "dashscope"
         ],
         "complements": [
           "aistudio"
@@ -574,7 +581,9 @@
         "downstream": [],
         "alternatives": [
           "gemini-api",
-          "anthropic-api"
+          "anthropic-api",
+          "qwen-api",
+          "dashscope"
         ],
         "complements": [
           "aistudio"
@@ -609,7 +618,9 @@
           "chatgpt"
         ],
         "downstream": [],
-        "alternatives": [],
+        "alternatives": [
+          "qwen-code"
+        ],
         "complements": [
           "openai-api",
           "chatgpt"
@@ -646,7 +657,8 @@
         ],
         "downstream": [],
         "alternatives": [
-          "aistudio"
+          "aistudio",
+          "bailian"
         ],
         "complements": [
           "doubao",
@@ -685,7 +697,9 @@
         "alternatives": [
           "openai-api",
           "gemini-api",
-          "anthropic-api"
+          "anthropic-api",
+          "qwen-api",
+          "dashscope"
         ],
         "complements": [
           "coze"
@@ -775,7 +789,8 @@
           "chatgpt",
           "gemini",
           "doubao",
-          "claude"
+          "claude",
+          "qwen"
         ],
         "complements": [
           "x-twitter"
@@ -848,7 +863,9 @@
           "openai-api",
           "gemini-api",
           "ark",
-          "anthropic-api"
+          "anthropic-api",
+          "qwen-api",
+          "dashscope"
         ],
         "complements": [
           "grok"
@@ -931,7 +948,8 @@
           "chatgpt",
           "gemini",
           "grok",
-          "doubao"
+          "doubao",
+          "qwen"
         ],
         "complements": []
       },
@@ -971,7 +989,9 @@
           "openai-api",
           "gemini-api",
           "grok-api",
-          "ark"
+          "ark",
+          "qwen-api",
+          "dashscope"
         ],
         "complements": [
           "claude"
@@ -1326,6 +1346,276 @@
         "动漫",
         "动画",
         "视频生成"
+      ]
+    },
+    {
+      "id": "alibaba-cloud",
+      "name": "阿里云",
+      "url": "https://cn.aliyun.com",
+      "description": "阿里巴巴旗下云计算平台，是通义千问/Qwen、百炼与 DashScope 的上游基础设施和企业级 AI 服务入口。",
+      "type": "official",
+      "primarySection": "misc",
+      "sections": [
+        "misc",
+        "compute-api"
+      ],
+      "capabilities": [
+        "search"
+      ],
+      "relations": {
+        "products": [
+          "qwen",
+          "bailian",
+          "dashscope"
+        ],
+        "upstream": [],
+        "downstream": [
+          "qwen",
+          "bailian",
+          "dashscope"
+        ],
+        "alternatives": [],
+        "complements": [
+          "qwen"
+        ]
+      },
+      "tags": [
+        "中文",
+        "云服务",
+        "阿里巴巴",
+        "阿里云",
+        "官站"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "通义千问 Qwen",
+      "url": "https://chat.qwen.ai/",
+      "description": "阿里通义旗下旗舰 AI 助手与 Qwen 生态主入口，支持中文对话、写作、联网搜索、代码、多模态理解与图像等能力。",
+      "type": "official",
+      "primarySection": "official-labs",
+      "sections": [
+        "official-labs",
+        "chat",
+        "image-gen"
+      ],
+      "capabilities": [
+        "chat",
+        "writing",
+        "search",
+        "code",
+        "image-gen",
+        "voice"
+      ],
+      "relations": {
+        "products": [
+          "qwen-api",
+          "bailian",
+          "dashscope",
+          "qwen-code"
+        ],
+        "upstream": [
+          "alibaba-cloud"
+        ],
+        "downstream": [
+          "qwen-api",
+          "bailian",
+          "dashscope",
+          "qwen-code"
+        ],
+        "alternatives": [
+          "chatgpt",
+          "gemini",
+          "claude",
+          "grok",
+          "doubao"
+        ],
+        "complements": [
+          "bailian",
+          "dashscope"
+        ]
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "API",
+        "官站",
+        "对话",
+        "图像生成",
+        "阿里巴巴",
+        "Qwen"
+      ]
+    },
+    {
+      "id": "qwen-api",
+      "name": "Qwen API Platform",
+      "url": "https://qwen.ai/apiplatform",
+      "description": "Qwen 面向开发者的官方 API 入口，提供兼容 OpenAI SDK 的 Qwen 模型调用方式，适合快速接入千问能力。",
+      "type": "api-platform",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev",
+        "compute-api"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "image-gen",
+        "writing"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "qwen"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "openai-api",
+          "gemini-api",
+          "anthropic-api",
+          "grok-api",
+          "ark"
+        ],
+        "complements": [
+          "dashscope",
+          "bailian"
+        ]
+      },
+      "tags": [
+        "免费",
+        "API",
+        "编程开发",
+        "阿里巴巴",
+        "Qwen",
+        "子站"
+      ]
+    },
+    {
+      "id": "bailian",
+      "name": "阿里云百炼",
+      "url": "https://bailian.console.aliyun.com/",
+      "description": "阿里云的一站式大模型开发平台，面向企业和开发者提供 Qwen 模型调用、Agent 应用构建、知识库与模型服务管理。",
+      "type": "studio",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev",
+        "compute-api"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "workflow",
+        "writing",
+        "image-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "alibaba-cloud",
+          "qwen"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "aistudio",
+          "coze"
+        ],
+        "complements": [
+          "dashscope",
+          "qwen-api"
+        ]
+      },
+      "tags": [
+        "免费",
+        "API",
+        "中文",
+        "编程开发",
+        "Agent",
+        "阿里云",
+        "子站"
+      ]
+    },
+    {
+      "id": "dashscope",
+      "name": "DashScope 模型服务灵积",
+      "url": "https://dashscope.aliyun.com/",
+      "description": "阿里云面向开发者的模型服务平台，提供 Qwen/通义系列模型 API、模型体验与调用文档，是千问生态的底层模型服务入口。",
+      "type": "api-platform",
+      "primarySection": "compute-api",
+      "sections": [
+        "compute-api",
+        "code-dev"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "image-gen",
+        "audio-gen",
+        "writing"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "alibaba-cloud",
+          "qwen"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "openai-api",
+          "gemini-api",
+          "anthropic-api",
+          "grok-api",
+          "ark"
+        ],
+        "complements": [
+          "bailian",
+          "qwen-api"
+        ]
+      },
+      "tags": [
+        "API",
+        "中文",
+        "算力服务",
+        "编程开发",
+        "阿里云",
+        "Qwen",
+        "子站"
+      ]
+    },
+    {
+      "id": "qwen-code",
+      "name": "Qwen Code",
+      "url": "https://qwen.ai/qwencode",
+      "description": "Qwen 团队推出的 AI 编程产品入口，围绕千问代码能力提供编码辅助和开发工作流，是 Qwen 生态的代码方向延伸。",
+      "type": "canvas-native",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code",
+        "workflow"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "qwen"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "codex"
+        ],
+        "complements": [
+          "qwen-api",
+          "bailian"
+        ]
+      },
+      "tags": [
+        "编程开发",
+        "代码",
+        "Qwen",
+        "阿里巴巴",
+        "子站"
       ]
     }
   ]
