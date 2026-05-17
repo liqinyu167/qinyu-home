@@ -26,9 +26,10 @@
 
   <link rel="icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/fonts/noto-sans-sc-subset.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/fonts/jetbrains-mono.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/fonts/zcool-xiaowei-subset.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/fonts/noto-sans-sc-subset.css"><link rel="stylesheet" href="/fonts/jetbrains-mono.css"><link rel="stylesheet" href="/fonts/zcool-xiaowei-subset.css"></noscript>
   <style>
     :root {
       --bg-void: #11101b;
@@ -81,7 +82,7 @@
         radial-gradient(circle at 12% 92%, rgba(251, 113, 133, 0.10), transparent 28rem),
         var(--bg-void);
       color: var(--ink-white);
-      font-family: "Noto Sans SC", system-ui, sans-serif;
+      font-family: "Noto Sans SC", system-ui, -apple-system, sans-serif;
       font-size: 16px;
       line-height: 1.6;
     }
