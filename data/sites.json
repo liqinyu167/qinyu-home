@@ -105,7 +105,8 @@
           "chatgpt",
           "grok",
           "claude",
-          "qwen"
+          "qwen",
+          "deepseek"
         ],
         "complements": [
           "aistudio",
@@ -160,7 +161,8 @@
           "gemini",
           "grok",
           "claude",
-          "qwen"
+          "qwen",
+          "deepseek"
         ],
         "complements": [
           "sora"
@@ -256,7 +258,8 @@
           "gemini",
           "grok",
           "claude",
-          "qwen"
+          "qwen",
+          "deepseek"
         ],
         "complements": [
           "jimeng",
@@ -544,9 +547,11 @@
         ],
         "downstream": [],
         "alternatives": [
-          "anthropic-api",
+          "openai-api",
+          "grok-api",
           "qwen-api",
-          "dashscope"
+          "anthropic-api",
+          "deepseek-api"
         ],
         "complements": [
           "aistudio"
@@ -585,9 +590,10 @@
         "downstream": [],
         "alternatives": [
           "gemini-api",
-          "anthropic-api",
+          "grok-api",
           "qwen-api",
-          "dashscope"
+          "anthropic-api",
+          "deepseek-api"
         ],
         "complements": [
           "aistudio"
@@ -794,7 +800,8 @@
           "gemini",
           "doubao",
           "claude",
-          "qwen"
+          "qwen",
+          "deepseek"
         ],
         "complements": [
           "x-twitter"
@@ -864,12 +871,11 @@
         ],
         "downstream": [],
         "alternatives": [
-          "openai-api",
           "gemini-api",
-          "ark",
-          "anthropic-api",
+          "openai-api",
           "qwen-api",
-          "dashscope"
+          "anthropic-api",
+          "deepseek-api"
         ],
         "complements": [
           "grok"
@@ -953,7 +959,8 @@
           "gemini",
           "grok",
           "doubao",
-          "qwen"
+          "qwen",
+          "deepseek"
         ],
         "complements": []
       },
@@ -990,12 +997,11 @@
         ],
         "downstream": [],
         "alternatives": [
-          "openai-api",
           "gemini-api",
+          "openai-api",
           "grok-api",
-          "ark",
           "qwen-api",
-          "dashscope"
+          "deepseek-api"
         ],
         "complements": [
           "claude"
@@ -1432,7 +1438,8 @@
           "gemini",
           "claude",
           "grok",
-          "doubao"
+          "doubao",
+          "deepseek"
         ],
         "complements": [
           "bailian",
@@ -1475,11 +1482,11 @@
         ],
         "downstream": [],
         "alternatives": [
-          "openai-api",
           "gemini-api",
-          "anthropic-api",
+          "openai-api",
           "grok-api",
-          "ark"
+          "anthropic-api",
+          "deepseek-api"
         ],
         "complements": [
           "dashscope",
@@ -1647,6 +1654,83 @@
         "中文",
         "抠图",
         "图像处理"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "url": "https://chat.deepseek.com/",
+      "description": "DeepSeek 官方网页聊天入口，以 V4/R1 系列推理模型著称，支持超长上下文、文件分析、代码生成，免费使用。",
+      "type": "official",
+      "primarySection": "official-labs",
+      "sections": [
+        "official-labs",
+        "chat",
+        "code-dev"
+      ],
+      "capabilities": [
+        "chat",
+        "code"
+      ],
+      "relations": {
+        "products": [
+          "deepseek-api"
+        ],
+        "upstream": [],
+        "downstream": [
+          "deepseek-api"
+        ],
+        "alternatives": [
+          "chatgpt",
+          "qwen",
+          "gemini",
+          "claude",
+          "grok",
+          "doubao"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "推理",
+        "官站"
+      ]
+    },
+    {
+      "id": "deepseek-api",
+      "name": "DeepSeek API",
+      "url": "https://platform.deepseek.com/",
+      "description": "DeepSeek 官方 API 平台，提供 OpenAI 兼容接口，支持 V4/R1 等模型推理调用，开发者密钥管理和用量监控。",
+      "type": "official",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev",
+        "compute-api"
+      ],
+      "capabilities": [
+        "code"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "deepseek"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "gemini-api",
+          "openai-api",
+          "grok-api",
+          "qwen-api",
+          "anthropic-api"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "API",
+        "开发者",
+        "OpenAI兼容",
+        "中文"
       ]
     }
   ]
