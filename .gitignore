@@ -2,3 +2,4 @@
 .playwright-mcp/
 .DS_Store
 stats/
+.hermes/
