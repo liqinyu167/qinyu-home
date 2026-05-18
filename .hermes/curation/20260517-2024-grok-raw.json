@@ -1,0 +1,100 @@
+```json
+[
+  {
+    "name": "Midjourney",
+    "url": "https://www.midjourney.com/",
+    "owner/company": "Midjourney, Inc.",
+    "active_status": "active",
+    "recommended_primary_section": "image-gen",
+    "secondary_sections": ["infinite-canvas"],
+    "capabilities": "高品质艺术图像生成、风格化提示控制、社区驱动创作、网页和Discord支持",
+    "why_add": "图像生成领域标志性工具，补充现有列表中缺少的顶级艺术/电影风格生成器，用户量大且影响力高。",
+    "possible_duplicates_or_related_existing_ids": [],
+    "confidence": "high"
+  },
+  {
+    "name": "Flux",
+    "url": "https://bfl.ai/",
+    "owner/company": "Black Forest Labs",
+    "active_status": "active",
+    "recommended_primary_section": "image-gen",
+    "secondary_sections": [],
+    "capabilities": "先进光真实感图像生成、开源模型支持、高提示遵循性和可控性、API访问",
+    "why_add": "当前最热门开源/高性能图像模型之一，填补列表中缺少的先进光真实和灵活图像生成选项。",
+    "possible_duplicates_or_related_existing_ids": [],
+    "confidence": "high"
+  },
+  {
+    "name": "Ideogram",
+    "url": "https://ideogram.ai/",
+    "owner/company": "Ideogram AI",
+    "active_status": "active",
+    "recommended_primary_section": "image-gen",
+    "secondary_sections": [],
+    "capabilities": "优秀文本渲染图像生成、海报/标志设计、风格化和 remix 工具",
+    "why_add": "在图像中精准文本生成领先，补充设计/图形相关AIGC需求，是当前热门补充。",
+    "possible_duplicates_or_related_existing_ids": [],
+    "confidence": "high"
+  },
+  {
+    "name": "Runway",
+    "url": "https://runwayml.com/",
+    "owner/company": "Runway ML",
+    "active_status": "active",
+    "recommended_primary_section": "video-gen",
+    "secondary_sections": ["image-gen"],
+    "capabilities": "Gen-4视频生成、图像到视频、运动控制和专业编辑工具、电影级输出",
+    "why_add": "专业视频生成领先工具，现有列表缺少强大创意视频工作流补充。",
+    "possible_duplicates_or_related_existing_ids": ["sora", "veo"],
+    "confidence": "high"
+  },
+  {
+    "name": "Kling AI",
+    "url": "https://kling.ai/",
+    "owner/company": "Kuaishou",
+    "active_status": "active",
+    "recommended_primary_section": "video-gen",
+    "secondary_sections": ["image-gen"],
+    "capabilities": "高一致性角色视频生成、1080p输出、图像到视频、动态场景控制",
+    "why_add": "亚洲/全球热门视频生成器，人物一致性和运动质量突出，补充多样化视频选项。",
+    "possible_duplicates_or_related_existing_ids": ["sora", "veo"],
+    "confidence": "high"
+  },
+  {
+    "name": "Luma Dream Machine",
+    "url": "https://dream-machine.lumalabs.ai/",
+    "owner/company": "Luma AI",
+    "active_status": "active",
+    "recommended_primary_section": "video-gen",
+    "secondary_sections": [],
+    "capabilities": "光真实视频生成、流畅动画、图像到视频、创意代理工作流",
+    "why_add": "高质量电影式视频生成热门选择，扩展列表视频生成多样性。",
+    "possible_duplicates_or_related_existing_ids": ["sora", "veo"],
+    "confidence": "high"
+  },
+  {
+    "name": "ElevenLabs",
+    "url": "https://elevenlabs.io/",
+    "owner/company": "ElevenLabs",
+    "active_status": "active",
+    "recommended_primary_section": "audio-gen",
+    "secondary_sections": [],
+    "capabilities": "真实语音克隆、多语言TTS、情感语音生成、语音代理",
+    "why_add": "领先语音/音频生成工具，现有列表audio-gen覆盖不足，此为热门补充。",
+    "possible_duplicates_or_related_existing_ids": ["musicfx"],
+    "confidence": "high"
+  },
+  {
+    "name": "Suno",
+    "url": "https://suno.com/",
+    "owner/company": "Suno Inc.",
+    "active_status": "active",
+    "recommended_primary_section": "audio-gen",
+    "secondary_sections": [],
+    "capabilities": "完整歌曲生成（含歌词和人声）、音乐风格控制、编辑工具",
+    "why_add": "AI音乐创作领先平台，补充audio-gen中完整音乐生成能力，流行度高。",
+    "possible_duplicates_or_related_existing_ids": ["musicfx"],
+    "confidence": "high"
+  }
+]
+```

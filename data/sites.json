@@ -1617,6 +1617,33 @@
         "阿里巴巴",
         "子站"
       ]
+    },
+    {
+      "id": "koukoutu",
+      "name": "抠抠图",
+      "url": "https://www.koukoutu.com/removebgtool/all",
+      "description": "免费在线AI智能抠图工具，一键自动去除背景，支持批量处理，精准识别发丝等复杂边缘，无需专业设计技能即可制作透明底图片。",
+      "type": "official",
+      "primarySection": "image-gen",
+      "sections": [
+        "image-gen"
+      ],
+      "capabilities": [
+        "image-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "抠图",
+        "图像处理"
+      ]
     }
   ]
 }

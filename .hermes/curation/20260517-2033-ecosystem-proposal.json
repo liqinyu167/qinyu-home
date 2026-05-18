@@ -1,0 +1,274 @@
+[
+  {
+    "id": "gpt-image",
+    "name": "GPT Image / DALL·E",
+    "url": "https://openai.com/dall-e-3",
+    "top": "chatgpt",
+    "upstream": [
+      "chatgpt",
+      "openai-api"
+    ],
+    "parent_updates": [
+      "chatgpt",
+      "openai-api"
+    ],
+    "primarySection": "image-gen",
+    "sections": [
+      "image-gen"
+    ],
+    "capabilities": [
+      "image-gen"
+    ],
+    "tags": [
+      "订阅制",
+      "API",
+      "图像生成",
+      "OpenAI",
+      "子站"
+    ],
+    "why": "OpenAI/ChatGPT 生态下的核心图像生成能力，补齐 ChatGPT 金字塔中图像生成节点。",
+    "note": "Grok 给了 official-labs secondary，已按规则移除；不作为塔尖。"
+  },
+  {
+    "id": "whisper",
+    "name": "Whisper",
+    "url": "https://openai.com/research/whisper",
+    "top": "chatgpt",
+    "upstream": [
+      "openai-api",
+      "chatgpt"
+    ],
+    "parent_updates": [
+      "openai-api",
+      "chatgpt"
+    ],
+    "primarySection": "audio-gen",
+    "sections": [
+      "audio-gen",
+      "compute-api"
+    ],
+    "capabilities": [
+      "audio-gen"
+    ],
+    "tags": [
+      "开源",
+      "API",
+      "音频生成",
+      "OpenAI",
+      "模型"
+    ],
+    "why": "OpenAI 语音识别/转写基础模型，作为 OpenAI API 生态下游补齐音频侧能力。",
+    "note": "更偏 STT/模型能力，是否放 audio-gen 需确认。"
+  },
+  {
+    "id": "claude-code",
+    "name": "Claude Code",
+    "url": "https://www.anthropic.com/claude-code",
+    "top": "claude",
+    "upstream": [
+      "claude",
+      "anthropic-api"
+    ],
+    "parent_updates": [
+      "claude",
+      "anthropic-api"
+    ],
+    "primarySection": "code-dev",
+    "sections": [
+      "code-dev"
+    ],
+    "capabilities": [
+      "code"
+    ],
+    "tags": [
+      "订阅制",
+      "编程开发",
+      "Anthropic",
+      "子站"
+    ],
+    "why": "Anthropic/Claude 生态下的官方代码代理工具，补齐 Claude 金字塔的开发工具节点。",
+    "note": "当前已有 claude-design，Claude Code 应单独作为 code-dev 下游。"
+  },
+  {
+    "id": "grok-imagine",
+    "name": "Grok Imagine",
+    "url": "https://x.ai/grok",
+    "top": "grok",
+    "upstream": [
+      "grok",
+      "aurora"
+    ],
+    "parent_updates": [
+      "grok",
+      "aurora",
+      "grok-api"
+    ],
+    "primarySection": "video-gen",
+    "sections": [
+      "video-gen",
+      "image-gen"
+    ],
+    "capabilities": [
+      "image-gen",
+      "video-gen"
+    ],
+    "tags": [
+      "订阅制",
+      "图像生成",
+      "视频生成",
+      "xAI",
+      "子站"
+    ],
+    "why": "xAI/Grok 生态的图像/视频创作能力，可作为 Aurora 向多模态创作的下游延展。",
+    "note": "产品 URL/公开独立入口需人工再核实。"
+  },
+  {
+    "id": "seedance",
+    "name": "Seedance",
+    "url": "https://seed.bytedance.com/",
+    "top": "doubao",
+    "upstream": [
+      "doubao",
+      "jimeng"
+    ],
+    "parent_updates": [
+      "jimeng",
+      "doubao"
+    ],
+    "primarySection": "video-gen",
+    "sections": [
+      "video-gen"
+    ],
+    "capabilities": [
+      "video-gen"
+    ],
+    "tags": [
+      "视频生成",
+      "字节跳动",
+      "模型",
+      "子站"
+    ],
+    "why": "字节视频生成模型能力，作为豆包/即梦视觉创作链路的下游/模型节点。",
+    "note": "入口 URL 与是否适合导航展示需确认；可能更适合作为即梦能力说明而非独立卡片。"
+  },
+  {
+    "id": "runway",
+    "name": "Runway",
+    "url": "https://runwayml.com/",
+    "top": "runway",
+    "upstream": [],
+    "parent_updates": [],
+    "primarySection": "video-gen",
+    "sections": [
+      "video-gen",
+      "image-gen"
+    ],
+    "capabilities": [
+      "video-gen",
+      "image-gen"
+    ],
+    "tags": [
+      "免费",
+      "订阅制",
+      "视频生成",
+      "图像生成"
+    ],
+    "why": "独立视频创作塔尖，可与 Sora/Veo/即梦构成视频生成主干竞品。",
+    "note": "因为无上游母站，加入后它本身可作为新的塔尖。"
+  },
+  {
+    "id": "midjourney",
+    "name": "Midjourney",
+    "url": "https://www.midjourney.com/",
+    "top": "midjourney",
+    "upstream": [],
+    "parent_updates": [],
+    "primarySection": "image-gen",
+    "sections": [
+      "image-gen"
+    ],
+    "capabilities": [
+      "image-gen"
+    ],
+    "tags": [
+      "订阅制",
+      "图像生成",
+      "英文"
+    ],
+    "why": "独立图像生成塔尖，可与 Imagen/GPT Image/即梦/Flux 构成图像生成主干竞品。",
+    "note": "加入后它本身可作为新的塔尖。"
+  },
+  {
+    "id": "luma-dream-machine",
+    "name": "Luma Dream Machine",
+    "url": "https://lumalabs.ai/dream-machine",
+    "top": "luma",
+    "upstream": [],
+    "parent_updates": [],
+    "primarySection": "video-gen",
+    "sections": [
+      "video-gen"
+    ],
+    "capabilities": [
+      "video-gen"
+    ],
+    "tags": [
+      "免费",
+      "订阅制",
+      "视频生成"
+    ],
+    "why": "独立视频生成工具，可作为 Sora/Veo/Runway/Kling 的同类替代。",
+    "note": "非现有塔尖下游，先作为 alternatives。"
+  },
+  {
+    "id": "kling",
+    "name": "Kling AI",
+    "url": "https://klingai.com",
+    "top": "kuaishou",
+    "upstream": [],
+    "parent_updates": [],
+    "primarySection": "video-gen",
+    "sections": [
+      "video-gen",
+      "image-gen"
+    ],
+    "capabilities": [
+      "video-gen",
+      "image-gen"
+    ],
+    "tags": [
+      "免费",
+      "订阅制",
+      "中文",
+      "视频生成",
+      "快手"
+    ],
+    "why": "快手系视频生成入口，适合补充中文视频生成主干竞品。",
+    "note": "不挂到豆包/即梦下游；它是竞品。"
+  },
+  {
+    "id": "pika",
+    "name": "Pika",
+    "url": "https://pika.art",
+    "top": "pika",
+    "upstream": [],
+    "parent_updates": [],
+    "primarySection": "video-gen",
+    "sections": [
+      "video-gen",
+      "image-gen"
+    ],
+    "capabilities": [
+      "video-gen",
+      "image-gen"
+    ],
+    "tags": [
+      "免费",
+      "订阅制",
+      "视频生成",
+      "英文"
+    ],
+    "why": "短视频特效和图生视频工具，作为视频生成生态的补充/竞品。",
+    "note": "非主站下游，作为 alternatives/complements。"
+  }
+]
