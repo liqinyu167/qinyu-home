@@ -22,6 +22,10 @@
           "label": "图像生成"
         },
         {
+          "id": "image-tool",
+          "label": "图像工具"
+        },
+        {
           "id": "video-gen",
           "label": "视频生成"
         },
@@ -1624,9 +1628,9 @@
       "url": "https://www.koukoutu.com/removebgtool/all",
       "description": "免费在线AI智能抠图工具，一键自动去除背景，支持批量处理，精准识别发丝等复杂边缘，无需专业设计技能即可制作透明底图片。",
       "type": "official",
-      "primarySection": "image-gen",
+      "primarySection": "image-tool",
       "sections": [
-        "image-gen"
+        "image-tool"
       ],
       "capabilities": [
         "image-gen"
