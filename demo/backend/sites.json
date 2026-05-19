@@ -1,0 +1,2270 @@
+{
+  "categories": [
+    {
+      "id": "tools",
+      "label": "工具",
+      "en": "TOOLS",
+      "children": [
+        {
+          "id": "official-labs",
+          "label": "官站 / 原厂模型"
+        },
+        {
+          "id": "infinite-canvas",
+          "label": "无限画布"
+        },
+        {
+          "id": "chat",
+          "label": "对话入口"
+        },
+        {
+          "id": "image-gen",
+          "label": "图像生成"
+        },
+        {
+          "id": "image-tool",
+          "label": "图像工具"
+        },
+        {
+          "id": "video-gen",
+          "label": "视频生成"
+        },
+        {
+          "id": "audio-gen",
+          "label": "音频生成"
+        },
+        {
+          "id": "code-dev",
+          "label": "编程开发"
+        },
+        {
+          "id": "compute-api",
+          "label": "API（算力服务）"
+        },
+        {
+          "id": "research",
+          "label": "知识研究"
+        },
+        {
+          "id": "misc",
+          "label": "杂项"
+        }
+      ]
+    },
+    {
+      "id": "aesthetics",
+      "label": "审美",
+      "en": "AESTHETICS",
+      "children": []
+    },
+    {
+      "id": "inspiration",
+      "label": "灵感",
+      "en": "INSPIRATION",
+      "children": []
+    }
+  ],
+  "sites": [
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "url": "https://gemini.google.com",
+      "description": "Google 旗舰多模态 AI 助手，支持对话、图像生成、代码编写、联网搜索、语音交互等，是 Gemini 生态的统一入口。",
+      "type": "official",
+      "primarySection": "official-labs",
+      "sections": [
+        "official-labs",
+        "chat",
+        "image-gen"
+      ],
+      "capabilities": [
+        "chat",
+        "image-gen",
+        "search",
+        "writing",
+        "code",
+        "voice"
+      ],
+      "relations": {
+        "products": [
+          "aistudio",
+          "flow",
+          "notebooklm",
+          "gemini-api"
+        ],
+        "upstream": [
+          "google"
+        ],
+        "downstream": [
+          "aistudio",
+          "flow",
+          "notebooklm",
+          "gemini-api"
+        ],
+        "alternatives": [
+          "chatgpt",
+          "grok",
+          "claude",
+          "qwen",
+          "deepseek",
+          "zhipu"
+        ],
+        "complements": [
+          "aistudio",
+          "flow",
+          "notebooklm"
+        ]
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "API",
+        "中文",
+        "官站",
+        "对话",
+        "图像生成",
+        "Google"
+      ]
+    },
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "url": "https://chatgpt.com",
+      "description": "OpenAI 的旗舰 AI 助手，支持多模态对话、图像生成(DALL·E)、联网搜索、代码执行与语音交互，订阅后可使用 GPT-4o、o3 等高端模型及 Sora 视频生成。",
+      "type": "official",
+      "primarySection": "official-labs",
+      "sections": [
+        "official-labs",
+        "chat",
+        "image-gen"
+      ],
+      "capabilities": [
+        "chat",
+        "image-gen",
+        "code",
+        "search",
+        "writing",
+        "voice"
+      ],
+      "relations": {
+        "products": [
+          "sora",
+          "openai-api",
+          "codex"
+        ],
+        "upstream": [],
+        "downstream": [
+          "sora",
+          "openai-api",
+          "codex"
+        ],
+        "alternatives": [
+          "gemini",
+          "grok",
+          "claude",
+          "qwen",
+          "deepseek",
+          "zhipu"
+        ],
+        "complements": [
+          "sora"
+        ]
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "API",
+        "中文",
+        "官站",
+        "对话",
+        "图像生成",
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "jimeng",
+      "name": "即梦",
+      "url": "https://www.jimeng.com/",
+      "description": "字节跳动旗下的 AI 视觉创作平台，核心能力为图像与视频生成，视频生成尤为突出，与豆包、扣子构成字节 AIGC 产品矩阵。",
+      "type": "official",
+      "primarySection": "official-labs",
+      "sections": [
+        "official-labs",
+        "image-gen",
+        "video-gen"
+      ],
+      "capabilities": [
+        "image-gen",
+        "video-gen",
+        "canvas",
+        "workflow"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "doubao"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "flow",
+          "sora"
+        ],
+        "complements": [
+          "doubao",
+          "capcut"
+        ]
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "图像生成",
+        "视频生成",
+        "即梦",
+        "字节跳动"
+      ]
+    },
+    {
+      "id": "doubao",
+      "name": "豆包",
+      "url": "https://www.doubao.com",
+      "description": "字节跳动旗下 AI 助手，基于云雀大模型，支持对话、写作、翻译、图像生成与联网搜索，是字节 AI 生态的统一对话入口。",
+      "type": "official",
+      "primarySection": "chat",
+      "sections": [
+        "chat",
+        "image-gen",
+        "writing"
+      ],
+      "capabilities": [
+        "chat",
+        "image-gen",
+        "search",
+        "writing",
+        "voice"
+      ],
+      "relations": {
+        "products": [
+          "jimeng",
+          "coze",
+          "ark"
+        ],
+        "upstream": [],
+        "downstream": [
+          "jimeng",
+          "coze",
+          "ark"
+        ],
+        "alternatives": [
+          "chatgpt",
+          "gemini",
+          "grok",
+          "claude",
+          "qwen",
+          "deepseek",
+          "zhipu"
+        ],
+        "complements": [
+          "jimeng",
+          "coze"
+        ]
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "官站",
+        "对话",
+        "图像生成",
+        "字节跳动"
+      ]
+    },
+    {
+      "id": "notebooklm",
+      "name": "NotebookLM",
+      "url": "https://notebooklm.google.com",
+      "description": "Google 的 AI 研究笔记本，可上传文档/网页/视频进行智能摘要、问答与引文定位，还支持生成播客式音频概览。",
+      "type": "official",
+      "primarySection": "research",
+      "sections": [
+        "research",
+        "chat"
+      ],
+      "capabilities": [
+        "chat",
+        "writing",
+        "audio-gen",
+        "search"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "gemini"
+        ],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "gemini"
+        ]
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "官站",
+        "知识研究",
+        "Google",
+        "子站"
+      ]
+    },
+    {
+      "id": "imagen",
+      "name": "Imagen",
+      "url": "https://deepmind.google/technologies/imagen-3/",
+      "description": "Google DeepMind 的文生图模型 Imagen 3，提供顶级图像质量与精准提示跟随能力，目前集成在 Gemini、Flow 等产品中。",
+      "type": "model",
+      "primarySection": "image-gen",
+      "sections": [
+        "image-gen"
+      ],
+      "capabilities": [
+        "image-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "gemini"
+        ],
+        "downstream": [
+          "flow"
+        ],
+        "alternatives": [],
+        "complements": [
+          "gemini"
+        ]
+      },
+      "tags": [
+        "图像生成",
+        "DeepMind",
+        "Google",
+        "模型"
+      ]
+    },
+    {
+      "id": "veo",
+      "name": "Veo",
+      "url": "https://deepmind.google/technologies/veo/",
+      "description": "Google DeepMind 的文生视频模型 Veo 2，支持生成 1080p 高质量视频，时长超 60 秒，具备影视级镜头控制能力。",
+      "type": "model",
+      "primarySection": "video-gen",
+      "sections": [
+        "video-gen"
+      ],
+      "capabilities": [
+        "video-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "gemini"
+        ],
+        "downstream": [
+          "flow"
+        ],
+        "alternatives": [],
+        "complements": [
+          "imagen",
+          "flow"
+        ]
+      },
+      "tags": [
+        "视频生成",
+        "DeepMind",
+        "Google",
+        "模型"
+      ]
+    },
+    {
+      "id": "sora",
+      "name": "Sora",
+      "url": "https://sora.com",
+      "description": "OpenAI 的 AI 视频生成工具，支持文本和图片生成最长 20 秒的高质量视频，提供多种宽高比和镜头控制选项。",
+      "type": "canvas-native",
+      "primarySection": "video-gen",
+      "sections": [
+        "video-gen"
+      ],
+      "capabilities": [
+        "video-gen",
+        "image-gen",
+        "canvas",
+        "workflow"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "chatgpt"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "jimeng",
+          "flow"
+        ],
+        "complements": [
+          "chatgpt"
+        ]
+      },
+      "tags": [
+        "订阅制",
+        "视频生成",
+        "图像生成",
+        "OpenAI",
+        "子站"
+      ]
+    },
+    {
+      "id": "capcut",
+      "name": "剪映",
+      "url": "https://www.capcut.cn",
+      "description": "字节跳动旗下全能视频编辑器，内置 AI 字幕、智能抠图、文本生成视频、AI 配乐等功能，是即梦视频创作的最佳后期搭档。",
+      "type": "canvas-native",
+      "primarySection": "video-gen",
+      "sections": [
+        "video-gen",
+        "misc"
+      ],
+      "capabilities": [
+        "video-gen",
+        "audio-gen",
+        "canvas",
+        "workflow"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "jimeng",
+          "doubao"
+        ]
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "视频生成",
+        "字节跳动"
+      ]
+    },
+    {
+      "id": "musicfx",
+      "name": "MusicFX",
+      "url": "https://aitestkitchen.withgoogle.com/tools/music-fx",
+      "description": "Google AI Test Kitchen 中的 AI 音乐生成工具，由 Lyria（MusicLM）驱动，输入文字描述即可生成音乐片段。",
+      "type": "canvas-native",
+      "primarySection": "audio-gen",
+      "sections": [
+        "audio-gen"
+      ],
+      "capabilities": [
+        "audio-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "gemini"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "suno",
+          "udio"
+        ],
+        "complements": [
+          "gemini"
+        ]
+      },
+      "tags": [
+        "免费",
+        "音频生成",
+        "Google",
+        "子站"
+      ]
+    },
+    {
+      "id": "aistudio",
+      "name": "AI Studio",
+      "url": "https://aistudio.google.com",
+      "description": "Google 面向开发者的 Gemini 模型在线实验室，提供 prompt 工程、模型调优、API 密钥管理，是调用 Gemini API 的官方入口。",
+      "type": "studio",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "image-gen",
+        "audio-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "gemini"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "bailian"
+        ],
+        "complements": [
+          "gemini-api"
+        ]
+      },
+      "tags": [
+        "免费",
+        "API",
+        "官站",
+        "编程开发",
+        "Google",
+        "子站"
+      ]
+    },
+    {
+      "id": "gemini-api",
+      "name": "Gemini API",
+      "url": "https://ai.google.dev",
+      "description": "Gemini 模型的开发者 API 平台，提供 REST/gRPC 接口访问 Flash、Pro 等各模型，含免费额度，适合集成到自有产品。",
+      "type": "api-platform",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "image-gen",
+        "audio-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "gemini",
+          "aistudio"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "openai-api",
+          "grok-api",
+          "qwen-api",
+          "anthropic-api",
+          "deepseek-api"
+        ],
+        "complements": [
+          "aistudio"
+        ]
+      },
+      "tags": [
+        "免费",
+        "API",
+        "编程开发",
+        "Google",
+        "子站"
+      ]
+    },
+    {
+      "id": "openai-api",
+      "name": "OpenAI API",
+      "url": "https://platform.openai.com",
+      "description": "OpenAI 的开发者 API 平台，提供 GPT-4o、o3、DALL·E、Whisper、TTS 等模型接口，含 Playground 在线调试和 fine-tuning 功能。",
+      "type": "api-platform",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "image-gen",
+        "audio-gen",
+        "writing"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "chatgpt"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "gemini-api",
+          "grok-api",
+          "qwen-api",
+          "anthropic-api",
+          "deepseek-api"
+        ],
+        "complements": [
+          "aistudio"
+        ]
+      },
+      "tags": [
+        "免费",
+        "API",
+        "编程开发",
+        "OpenAI",
+        "子站"
+      ]
+    },
+    {
+      "id": "codex",
+      "name": "Codex",
+      "url": "https://chatgpt.com/codex",
+      "description": "OpenAI 的 AI 编程代理，可在云沙箱中并行处理多个编码任务，支持编写功能、修复 Bug、运行测试并提交 PR，深度集成 GitHub。",
+      "type": "canvas-native",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code",
+        "search",
+        "workflow"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "chatgpt"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "qwen-code",
+          "cursor",
+          "codegeex",
+          "claude-code"
+        ],
+        "complements": [
+          "openai-api",
+          "chatgpt"
+        ]
+      },
+      "tags": [
+        "订阅制",
+        "编程开发",
+        "OpenAI",
+        "子站",
+        "代码"
+      ]
+    },
+    {
+      "id": "coze",
+      "name": "扣子 Coze",
+      "url": "https://www.coze.cn",
+      "description": "字节跳动推出的 AI Bot 构建平台，可零代码创建对话机器人、工作流与 AI 应用，支持接入豆包、GPT 等多模型，内置插件市场。",
+      "type": "studio",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev",
+        "chat"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "workflow"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "doubao"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "aistudio",
+          "bailian"
+        ],
+        "complements": [
+          "doubao",
+          "ark"
+        ]
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "编程开发",
+        "字节跳动",
+        "子站"
+      ]
+    },
+    {
+      "id": "ark",
+      "name": "火山方舟",
+      "url": "https://www.volcengine.com/product/ark",
+      "description": "火山引擎旗下的企业级大模型 API 平台，提供豆包、Doubao-pro 等模型接口，支持 fine-tuning、Prompt 优化与私有化部署。",
+      "type": "api-platform",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "writing"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "doubao"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "openai-api",
+          "gemini-api",
+          "anthropic-api",
+          "qwen-api",
+          "dashscope"
+        ],
+        "complements": [
+          "coze"
+        ]
+      },
+      "tags": [
+        "免费",
+        "API",
+        "编程开发",
+        "字节跳动",
+        "子站"
+      ]
+    },
+    {
+      "id": "flow",
+      "name": "Flow",
+      "url": "https://labs.google/fx/tools/flow",
+      "description": "Google Labs 旗下的 AI 创意工作室，整合了原 Whisk 的图像重混功能，基于 Gemini 和 Imagen，支持图像、视频与故事板的交互式创作。",
+      "type": "canvas-native",
+      "primarySection": "misc",
+      "sections": [
+        "misc",
+        "image-gen",
+        "video-gen"
+      ],
+      "capabilities": [
+        "image-gen",
+        "video-gen",
+        "canvas",
+        "workflow"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "gemini"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "jimeng",
+          "rhtv"
+        ],
+        "complements": [
+          "gemini"
+        ]
+      },
+      "tags": [
+        "免费",
+        "图像生成",
+        "视频生成",
+        "Google",
+        "Flow",
+        "子站"
+      ]
+    },
+    {
+      "id": "grok",
+      "name": "Grok",
+      "url": "https://grok.com",
+      "description": "xAI 旗下的 AI 助手，以实时接入 X 平台数据、不受审查限制著称，支持对话、图像生成(Aurora)、代码编写与联网搜索，深度绑定 X 生态。",
+      "type": "official",
+      "primarySection": "official-labs",
+      "sections": [
+        "official-labs",
+        "chat",
+        "image-gen"
+      ],
+      "capabilities": [
+        "chat",
+        "image-gen",
+        "search",
+        "code",
+        "writing"
+      ],
+      "relations": {
+        "products": [
+          "aurora",
+          "grok-api"
+        ],
+        "upstream": [
+          "x-twitter"
+        ],
+        "downstream": [
+          "aurora",
+          "grok-api"
+        ],
+        "alternatives": [
+          "chatgpt",
+          "gemini",
+          "doubao",
+          "claude",
+          "qwen",
+          "deepseek",
+          "zhipu"
+        ],
+        "complements": [
+          "x-twitter"
+        ]
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "API",
+        "中文",
+        "官站",
+        "对话",
+        "图像生成",
+        "xAI"
+      ]
+    },
+    {
+      "id": "aurora",
+      "name": "Aurora",
+      "url": "https://grok.com",
+      "description": "xAI 的文生图模型 Aurora，原生集成在 Grok 中，支持高度逼真的图像生成与风格多样化，无需独立网站即可使用。",
+      "type": "model",
+      "primarySection": "image-gen",
+      "sections": [
+        "image-gen"
+      ],
+      "capabilities": [
+        "image-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "grok"
+        ],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "grok"
+        ]
+      },
+      "tags": [
+        "图像生成",
+        "xAI",
+        "模型",
+        "子站"
+      ]
+    },
+    {
+      "id": "grok-api",
+      "name": "xAI API",
+      "url": "https://api.x.ai",
+      "description": "xAI 的开发者 API 平台，提供 Grok 系列模型（grok-3、grok-3-mini 等）的 REST 接口，兼容 OpenAI SDK，含免费额度。",
+      "type": "api-platform",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "writing"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "grok"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "gemini-api",
+          "openai-api",
+          "qwen-api",
+          "anthropic-api",
+          "deepseek-api"
+        ],
+        "complements": [
+          "grok"
+        ]
+      },
+      "tags": [
+        "免费",
+        "API",
+        "编程开发",
+        "xAI",
+        "子站"
+      ]
+    },
+    {
+      "id": "x-twitter",
+      "name": "X (Twitter)",
+      "url": "https://x.com",
+      "description": "全球社交与实时信息平台，原名 Twitter，被 Elon Musk 收购后更名为 X。Grok 深度集成 X 的实时数据流，是 Grok 最大的上游数据和分发来源。",
+      "type": "official",
+      "primarySection": "misc",
+      "sections": [
+        "chat",
+        "misc"
+      ],
+      "capabilities": [
+        "search"
+      ],
+      "relations": {
+        "products": [
+          "grok"
+        ],
+        "upstream": [],
+        "downstream": [
+          "grok"
+        ],
+        "alternatives": [],
+        "complements": [
+          "grok"
+        ]
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "社交",
+        "xAI",
+        "官站"
+      ]
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "url": "https://claude.ai",
+      "description": "Anthropic 旗下的 AI 助手，以安全对齐与长上下文著称，支持对话、图像分析、代码编写与文档处理，Claude 4 在编程与推理方面表现卓越。",
+      "type": "official",
+      "primarySection": "official-labs",
+      "sections": [
+        "official-labs",
+        "chat",
+        "image-gen"
+      ],
+      "capabilities": [
+        "chat",
+        "image-gen",
+        "code",
+        "writing",
+        "search"
+      ],
+      "relations": {
+        "products": [
+          "anthropic-api",
+          "claude-design",
+          "claude-code"
+        ],
+        "upstream": [],
+        "downstream": [
+          "anthropic-api",
+          "claude-design",
+          "claude-code"
+        ],
+        "alternatives": [
+          "chatgpt",
+          "gemini",
+          "grok",
+          "doubao",
+          "qwen",
+          "deepseek",
+          "zhipu"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "API",
+        "中文",
+        "官站",
+        "对话",
+        "图像分析",
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "anthropic-api",
+      "name": "Anthropic API",
+      "url": "https://console.anthropic.com",
+      "description": "Anthropic 的开发者 API 平台，提供 Claude 系列模型（claude-4-sonnet、claude-4-opus 等）接口，支持 200K 超长上下文、Tool Use 与流式输出。",
+      "type": "api-platform",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "writing"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "claude"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "gemini-api",
+          "openai-api",
+          "grok-api",
+          "qwen-api",
+          "deepseek-api"
+        ],
+        "complements": [
+          "claude"
+        ]
+      },
+      "tags": [
+        "免费",
+        "API",
+        "编程开发",
+        "Anthropic",
+        "子站"
+      ]
+    },
+    {
+      "id": "claude-design",
+      "name": "Claude Design",
+      "url": "https://claude.ai/design",
+      "description": "Anthropic Labs 推出的 AI 设计工具，基于 Claude Opus 4.7 视觉模型，支持创建设计稿、交互原型、演示幻灯片和营销素材，可导出 PPTX 或发送至 Canva，内置品牌设计系统。",
+      "type": "canvas-native",
+      "primarySection": "image-gen",
+      "sections": [
+        "image-gen",
+        "misc"
+      ],
+      "capabilities": [
+        "image-gen",
+        "canvas",
+        "workflow"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "claude"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "flow"
+        ],
+        "complements": [
+          "claude"
+        ]
+      },
+      "tags": [
+        "订阅制",
+        "设计",
+        "原型",
+        "幻灯片",
+        "Anthropic",
+        "子站"
+      ]
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "url": "https://www.google.com",
+      "description": "全球最大搜索引擎与技术公司，Gemini、DeepMind、YouTube 等产品的母公司，是 Gemini AI 生态的最大上游与分发平台。",
+      "type": "official",
+      "primarySection": "misc",
+      "sections": [
+        "misc"
+      ],
+      "capabilities": [
+        "search"
+      ],
+      "relations": {
+        "products": [
+          "gemini"
+        ],
+        "upstream": [],
+        "downstream": [
+          "gemini"
+        ],
+        "alternatives": [],
+        "complements": [
+          "gemini"
+        ]
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "搜索",
+        "Google",
+        "官站"
+      ]
+    },
+    {
+      "id": "rhtv",
+      "name": "RHTV",
+      "url": "https://rhtv.runninghub.ai",
+      "description": "RunningHub 推出的 AI 无限画布创作工具，背靠扎实的 ComfyUI 社区，集百家所长，支持多步骤工作流与分镜设计，提供提示词生成、可视化流程与 AI 辅助创作，从灵感到成片一站式生成视频与图像。目前站长认为最完美的画布。",
+      "type": "canvas-native",
+      "primarySection": "infinite-canvas",
+      "sections": [
+        "infinite-canvas",
+        "image-gen",
+        "video-gen"
+      ],
+      "capabilities": [
+        "image-gen",
+        "video-gen",
+        "canvas",
+        "workflow"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "runninghub"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "flow"
+        ],
+        "complements": [
+          "runninghub"
+        ]
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "无限画布",
+        "视频生成",
+        "图像生成",
+        "RunningHub"
+      ]
+    },
+    {
+      "id": "runninghub",
+      "name": "RunningHub",
+      "url": "https://www.runninghub.cn",
+      "description": "原生 AI 智能体驱动的一站式内容创作平台，提供 ComfyUI 工作流、模型 API 与算力服务，支持图像与视频生成、AI 应用部署，是 RHTV 的上游算力平台。",
+      "type": "api-platform",
+      "primarySection": "compute-api",
+      "sections": [
+        "compute-api",
+        "code-dev"
+      ],
+      "capabilities": [
+        "image-gen",
+        "video-gen",
+        "code",
+        "workflow"
+      ],
+      "relations": {
+        "products": [
+          "rhtv"
+        ],
+        "upstream": [],
+        "downstream": [
+          "rhtv"
+        ],
+        "alternatives": [
+          "openai-api",
+          "gemini-api",
+          "ark"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "API",
+        "中文",
+        "编程开发",
+        "算力服务",
+        "ComfyUI",
+        "RunningHub"
+      ]
+    },
+    {
+      "id": "lovart",
+      "name": "Lovart",
+      "url": "https://www.lovart.ai",
+      "description": "全球首个 AI 设计 Agent，从 Logo 到完整品牌营销方案一对话搞定，支持包装设计、社交媒体内容、视频广告等，10万+创作者在用。",
+      "type": "canvas-native",
+      "primarySection": "infinite-canvas",
+      "sections": [
+        "infinite-canvas",
+        "image-gen"
+      ],
+      "capabilities": [
+        "image-gen",
+        "video-gen",
+        "canvas",
+        "workflow"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "rhtv",
+          "claude-design"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "订阅制",
+        "英文",
+        "无限画布",
+        "设计",
+        "品牌",
+        "图像生成"
+      ]
+    },
+    {
+      "id": "tapnow",
+      "name": "TapNow",
+      "url": "https://tapnow.ai",
+      "description": "下一代 AI 视觉创作引擎，面向电商广告、短视频和艺术创作，提供 Agent 驱动的无限画布体验，支持从灵感到成片的专业级视觉生产。",
+      "type": "canvas-native",
+      "primarySection": "infinite-canvas",
+      "sections": [
+        "infinite-canvas",
+        "image-gen",
+        "video-gen"
+      ],
+      "capabilities": [
+        "image-gen",
+        "video-gen",
+        "canvas",
+        "workflow"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "rhtv"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "订阅制",
+        "英文",
+        "无限画布",
+        "电商",
+        "视频生成",
+        "图像生成"
+      ]
+    },
+    {
+      "id": "liblib",
+      "name": "LiblibAI 哩布哩布",
+      "url": "https://www.liblib.art",
+      "description": "国内领先的 AI 绘画平台，10万+模型免费下载，原汁原味的 WebUI/ComfyUI 在线体验，模型分享社区+AI 创作工具一体化，旗下 LibTV 提供专业视频创作与无限画布。",
+      "type": "official",
+      "primarySection": "image-gen",
+      "sections": [
+        "image-gen"
+      ],
+      "capabilities": [
+        "image-gen",
+        "workflow"
+      ],
+      "relations": {
+        "products": [
+          "libtv"
+        ],
+        "upstream": [],
+        "downstream": [
+          "libtv"
+        ],
+        "alternatives": [],
+        "complements": [
+          "rhtv",
+          "runninghub"
+        ]
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "图像生成",
+        "模型社区",
+        "ComfyUI",
+        "WebUI"
+      ]
+    },
+    {
+      "id": "libtv",
+      "name": "LibTV",
+      "url": "https://liblib.tv",
+      "description": "LiblibAI 旗下专业视频创作工具，基于 ComfyUI 社区的无限画布，提供 AI 视频生成与分镜创作工作流，是 Liblib 生态的视频与画布延伸。",
+      "type": "canvas-native",
+      "primarySection": "infinite-canvas",
+      "sections": [
+        "infinite-canvas",
+        "video-gen"
+      ],
+      "capabilities": [
+        "video-gen",
+        "canvas",
+        "workflow"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "liblib"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "rhtv",
+          "tapnow"
+        ],
+        "complements": [
+          "liblib"
+        ]
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "无限画布",
+        "视频生成",
+        "ComfyUI",
+        "Liblib"
+      ]
+    },
+    {
+      "id": "oiioii",
+      "name": "OiiOii",
+      "url": "https://oiioii.art",
+      "description": "全球首个 AI 动画创作 Agent，动漫特化，从剧本编写、角色设计、场景搭建到视频生成全流程覆盖，30+ AI 模型、140+ 风格一站搞定。",
+      "type": "canvas-native",
+      "primarySection": "infinite-canvas",
+      "sections": [
+        "infinite-canvas",
+        "video-gen",
+        "image-gen"
+      ],
+      "capabilities": [
+        "image-gen",
+        "video-gen",
+        "canvas",
+        "workflow",
+        "writing"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "rhtv"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "无限画布",
+        "动漫",
+        "动画",
+        "视频生成"
+      ]
+    },
+    {
+      "id": "alibaba-cloud",
+      "name": "阿里云",
+      "url": "https://cn.aliyun.com",
+      "description": "阿里巴巴旗下云计算平台，是通义千问/Qwen、百炼与 DashScope 的上游基础设施和企业级 AI 服务入口。",
+      "type": "official",
+      "primarySection": "misc",
+      "sections": [
+        "misc",
+        "compute-api"
+      ],
+      "capabilities": [
+        "search"
+      ],
+      "relations": {
+        "products": [
+          "qwen",
+          "bailian",
+          "dashscope"
+        ],
+        "upstream": [],
+        "downstream": [
+          "qwen",
+          "bailian",
+          "dashscope"
+        ],
+        "alternatives": [],
+        "complements": [
+          "qwen"
+        ]
+      },
+      "tags": [
+        "中文",
+        "云服务",
+        "阿里巴巴",
+        "阿里云",
+        "官站"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "通义千问 Qwen",
+      "url": "https://chat.qwen.ai/",
+      "description": "阿里通义旗下旗舰 AI 助手与 Qwen 生态主入口，支持中文对话、写作、联网搜索、代码、多模态理解与图像等能力。",
+      "type": "official",
+      "primarySection": "official-labs",
+      "sections": [
+        "official-labs",
+        "chat",
+        "image-gen"
+      ],
+      "capabilities": [
+        "chat",
+        "writing",
+        "search",
+        "code",
+        "image-gen",
+        "voice"
+      ],
+      "relations": {
+        "products": [
+          "qwen-api",
+          "bailian",
+          "dashscope",
+          "qwen-code"
+        ],
+        "upstream": [
+          "alibaba-cloud"
+        ],
+        "downstream": [
+          "qwen-api",
+          "bailian",
+          "dashscope",
+          "qwen-code"
+        ],
+        "alternatives": [
+          "chatgpt",
+          "gemini",
+          "claude",
+          "grok",
+          "doubao",
+          "deepseek",
+          "zhipu"
+        ],
+        "complements": [
+          "bailian",
+          "dashscope"
+        ]
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "API",
+        "官站",
+        "对话",
+        "图像生成",
+        "阿里巴巴",
+        "Qwen"
+      ]
+    },
+    {
+      "id": "qwen-api",
+      "name": "Qwen API Platform",
+      "url": "https://qwen.ai/apiplatform",
+      "description": "Qwen 面向开发者的官方 API 入口，提供兼容 OpenAI SDK 的 Qwen 模型调用方式，适合快速接入千问能力。",
+      "type": "api-platform",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev",
+        "compute-api"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "image-gen",
+        "writing"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "qwen"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "gemini-api",
+          "openai-api",
+          "grok-api",
+          "anthropic-api",
+          "deepseek-api"
+        ],
+        "complements": [
+          "dashscope",
+          "bailian"
+        ]
+      },
+      "tags": [
+        "免费",
+        "API",
+        "编程开发",
+        "阿里巴巴",
+        "Qwen",
+        "子站"
+      ]
+    },
+    {
+      "id": "bailian",
+      "name": "阿里云百炼",
+      "url": "https://bailian.console.aliyun.com/",
+      "description": "阿里云的一站式大模型开发平台，面向企业和开发者提供 Qwen 模型调用、Agent 应用构建、知识库与模型服务管理。",
+      "type": "studio",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev",
+        "compute-api"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "workflow",
+        "writing",
+        "image-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "alibaba-cloud",
+          "qwen"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "aistudio",
+          "coze"
+        ],
+        "complements": [
+          "dashscope",
+          "qwen-api"
+        ]
+      },
+      "tags": [
+        "免费",
+        "API",
+        "中文",
+        "编程开发",
+        "Agent",
+        "阿里云",
+        "子站"
+      ]
+    },
+    {
+      "id": "dashscope",
+      "name": "DashScope 模型服务灵积",
+      "url": "https://dashscope.aliyun.com/",
+      "description": "阿里云面向开发者的模型服务平台，提供 Qwen/通义系列模型 API、模型体验与调用文档，是千问生态的底层模型服务入口。",
+      "type": "api-platform",
+      "primarySection": "compute-api",
+      "sections": [
+        "compute-api",
+        "code-dev"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "image-gen",
+        "audio-gen",
+        "writing"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "alibaba-cloud",
+          "qwen"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "openai-api",
+          "gemini-api",
+          "anthropic-api",
+          "grok-api",
+          "ark"
+        ],
+        "complements": [
+          "bailian",
+          "qwen-api"
+        ]
+      },
+      "tags": [
+        "API",
+        "中文",
+        "算力服务",
+        "编程开发",
+        "阿里云",
+        "Qwen",
+        "子站"
+      ]
+    },
+    {
+      "id": "qwen-code",
+      "name": "Qwen Code",
+      "url": "https://qwen.ai/qwencode",
+      "description": "Qwen 团队推出的 AI 编程产品入口，围绕千问代码能力提供编码辅助和开发工作流，是 Qwen 生态的代码方向延伸。",
+      "type": "canvas-native",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code",
+        "workflow"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "qwen"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "codex",
+          "claude-code"
+        ],
+        "complements": [
+          "qwen-api",
+          "bailian"
+        ]
+      },
+      "tags": [
+        "编程开发",
+        "代码",
+        "Qwen",
+        "阿里巴巴",
+        "子站"
+      ]
+    },
+    {
+      "id": "koukoutu",
+      "name": "抠抠图",
+      "url": "https://www.koukoutu.com/removebgtool/all",
+      "description": "免费在线AI智能抠图工具，一键自动去除背景，支持批量处理，精准识别发丝等复杂边缘，无需专业设计技能即可制作透明底图片。",
+      "type": "official",
+      "primarySection": "image-tool",
+      "sections": [
+        "image-tool"
+      ],
+      "capabilities": [
+        "image-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "抠图",
+        "图像处理"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "url": "https://chat.deepseek.com/",
+      "description": "DeepSeek 官方网页聊天入口，以 V4/R1 系列推理模型著称，支持超长上下文、文件分析、代码生成，免费使用。",
+      "type": "official",
+      "primarySection": "official-labs",
+      "sections": [
+        "official-labs",
+        "chat",
+        "code-dev"
+      ],
+      "capabilities": [
+        "chat",
+        "code"
+      ],
+      "relations": {
+        "products": [
+          "deepseek-api"
+        ],
+        "upstream": [],
+        "downstream": [
+          "deepseek-api"
+        ],
+        "alternatives": [
+          "chatgpt",
+          "qwen",
+          "gemini",
+          "claude",
+          "grok",
+          "doubao",
+          "zhipu"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "推理",
+        "官站"
+      ]
+    },
+    {
+      "id": "deepseek-api",
+      "name": "DeepSeek API",
+      "url": "https://platform.deepseek.com/",
+      "description": "DeepSeek 官方 API 平台，提供 OpenAI 兼容接口，支持 V4/R1 等模型推理调用，开发者密钥管理和用量监控。",
+      "type": "official",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev",
+        "compute-api"
+      ],
+      "capabilities": [
+        "code"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "deepseek"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "gemini-api",
+          "openai-api",
+          "grok-api",
+          "qwen-api",
+          "anthropic-api"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "API",
+        "开发者",
+        "OpenAI兼容",
+        "中文"
+      ]
+    },
+    {
+      "id": "zhipu",
+      "name": "智谱清言 ChatGLM",
+      "url": "https://chatglm.cn",
+      "description": "智谱AI 的旗舰 AI 助手，基于 GLM 系列模型，支持对话、AI 画图、AI 生视频、AI 阅读、智能体和云知识库，提供 GLM-5.1 及 GLM-4V 等多模态能力。",
+      "type": "official",
+      "primarySection": "official-labs",
+      "sections": [
+        "official-labs",
+        "chat"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "search",
+        "writing",
+        "voice"
+      ],
+      "relations": {
+        "products": [
+          "bigmodel-api",
+          "codegeex"
+        ],
+        "upstream": [],
+        "downstream": [
+          "bigmodel-api",
+          "codegeex"
+        ],
+        "alternatives": [
+          "chatgpt",
+          "gemini",
+          "grok",
+          "claude",
+          "qwen",
+          "deepseek"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "API",
+        "中文",
+        "官站",
+        "对话",
+        "智谱AI"
+      ]
+    },
+    {
+      "id": "bigmodel-api",
+      "name": "智谱开放平台 BigModel API",
+      "url": "https://open.bigmodel.cn",
+      "description": "智谱AI 的模型开放平台，提供 GLM 系列模型的 API 调用、模型微调、部署等服务，是国内主流的大模型 API 服务商之一。",
+      "type": "api",
+      "primarySection": "compute-api",
+      "sections": [
+        "compute-api",
+        "code-dev"
+      ],
+      "capabilities": [
+        "chat",
+        "code"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "zhipu"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "openai-api",
+          "qwen-api",
+          "deepseek-api",
+          "gemini-api",
+          "anthropic-api"
+        ],
+        "complements": [
+          "zhipu",
+          "codegeex"
+        ]
+      },
+      "tags": [
+        "API",
+        "中文",
+        "智谱AI",
+        "算力"
+      ]
+    },
+    {
+      "id": "codegeex",
+      "name": "CodeGeeX",
+      "url": "https://codegeex.cn",
+      "description": "智谱AI 出品的 AI 编程助手，支持代码自动补全、智能问答、代码翻译和代码审查，可集成 VS Code、JetBrains 等主流 IDE。",
+      "type": "dev-tool",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "zhipu"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "codex",
+          "cursor",
+          "claude-code"
+        ],
+        "complements": [
+          "bigmodel-api"
+        ]
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "编程",
+        "智谱AI"
+      ]
+    },
+    {
+      "id": "midjourney",
+      "name": "Midjourney",
+      "url": "https://www.midjourney.com",
+      "description": "全球领先的 AI 图像生成工具，以高质量艺术级输出著称，通过 Discord 操作，在创意社区拥有极高影响力。",
+      "type": "tool",
+      "primarySection": "image-gen",
+      "sections": [
+        "image-gen"
+      ],
+      "capabilities": [
+        "image-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "imagen",
+          "aurora",
+          "jimeng",
+          "claude-design"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "订阅制",
+        "英文",
+        "图像生成",
+        "Midjourney"
+      ]
+    },
+    {
+      "id": "leonardo-ai",
+      "name": "Leonardo AI",
+      "url": "https://leonardo.ai",
+      "description": "综合 AI 图像与视频创作平台，支持自定义模型训练和多种风格生成，特别适合游戏、概念设计和专业设计领域。",
+      "type": "tool",
+      "primarySection": "image-gen",
+      "sections": [
+        "image-gen",
+        "video-gen"
+      ],
+      "capabilities": [
+        "image-gen",
+        "video-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "midjourney",
+          "ideogram",
+          "flux"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "图像生成"
+      ]
+    },
+    {
+      "id": "ideogram",
+      "name": "Ideogram",
+      "url": "https://ideogram.ai",
+      "description": "以图像中精确渲染文字著称的 AI 生成工具，特别适合海报、Logo 和品牌设计类图像生成场景。",
+      "type": "tool",
+      "primarySection": "image-gen",
+      "sections": [
+        "image-gen"
+      ],
+      "capabilities": [
+        "image-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "midjourney",
+          "leonardo-ai",
+          "imagen"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "图像生成"
+      ]
+    },
+    {
+      "id": "adobe-firefly",
+      "name": "Adobe Firefly",
+      "url": "https://firefly.adobe.com",
+      "description": "Adobe 推出的 AI 图像生成工具，深度集成 Photoshop 等 Creative Cloud 产品，提供商业安全的版权保障。",
+      "type": "tool",
+      "primarySection": "image-gen",
+      "sections": [
+        "image-gen"
+      ],
+      "capabilities": [
+        "image-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "imagen",
+          "aurora",
+          "midjourney",
+          "leonardo-ai"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "订阅制",
+        "英文",
+        "图像生成",
+        "Adobe"
+      ]
+    },
+    {
+      "id": "flux",
+      "name": "Flux / Black Forest Labs",
+      "url": "https://blackforestlabs.ai",
+      "description": "Black Forest Labs 的开源高性能图像生成模型，以真实感和速度著称，提供在线平台 Fal.ai、Replicate 等可体验。",
+      "type": "model",
+      "primarySection": "image-gen",
+      "sections": [
+        "image-gen"
+      ],
+      "capabilities": [
+        "image-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "midjourney",
+          "imagen",
+          "aurora",
+          "ideogram"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "图像生成",
+        "英文",
+        "开源"
+      ]
+    },
+    {
+      "id": "kling",
+      "name": "可灵 Kling AI",
+      "url": "https://kling.kuaishou.com",
+      "description": "快手出品的高质量 AI 视频生成工具，基于自研可灵大模型，以真实物理模拟、动作连贯性和人物一致性著称。",
+      "type": "tool",
+      "primarySection": "video-gen",
+      "sections": [
+        "video-gen",
+        "image-gen"
+      ],
+      "capabilities": [
+        "video-gen",
+        "image-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "veo",
+          "sora",
+          "luma",
+          "pika"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "视频生成",
+        "快手"
+      ]
+    },
+    {
+      "id": "luma",
+      "name": "Luma AI",
+      "url": "https://lumalabs.ai",
+      "description": "AI 视频生成平台 Dream Machine 的创造者，以梦幻风格的高质量视频运动著称，支持文本和图像生成视频。",
+      "type": "tool",
+      "primarySection": "video-gen",
+      "sections": [
+        "video-gen",
+        "image-gen"
+      ],
+      "capabilities": [
+        "video-gen",
+        "image-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "veo",
+          "sora",
+          "kling",
+          "pika"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "订阅制",
+        "英文",
+        "视频生成",
+        "Luma"
+      ]
+    },
+    {
+      "id": "pika",
+      "name": "Pika",
+      "url": "https://pika.art",
+      "description": "专注于快速有趣的 AI 短视频生成工具，提供多种风格模板和简单易用的操作界面，适合社交内容创作。",
+      "type": "tool",
+      "primarySection": "video-gen",
+      "sections": [
+        "video-gen"
+      ],
+      "capabilities": [
+        "video-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "veo",
+          "sora",
+          "kling",
+          "luma"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "视频生成"
+      ]
+    },
+    {
+      "id": "suno",
+      "name": "Suno",
+      "url": "https://suno.com",
+      "description": "领先的 AI 音乐生成平台，支持文本生成带人声和乐器的完整歌曲，是 AI 音乐创作领域的标杆产品。",
+      "type": "tool",
+      "primarySection": "audio-gen",
+      "sections": [
+        "audio-gen"
+      ],
+      "capabilities": [
+        "audio-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "udio",
+          "musicfx"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "音频生成",
+        "音乐"
+      ]
+    },
+    {
+      "id": "udio",
+      "name": "Udio",
+      "url": "https://www.udio.com",
+      "description": "Suno 的主要竞品，提供高质量的 AI 音乐生成，支持多种风格和时长定制，音乐品质细腻丰富。",
+      "type": "tool",
+      "primarySection": "audio-gen",
+      "sections": [
+        "audio-gen"
+      ],
+      "capabilities": [
+        "audio-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "suno",
+          "musicfx"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "音频生成",
+        "音乐"
+      ]
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "url": "https://cursor.com",
+      "description": "AI 原生代码编辑器，深度集成 GPT-4o、Claude 等模型，支持智能代码补全、自然语言编辑和项目级 AI 对话，开发者效率利器。",
+      "type": "dev-tool",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code",
+        "chat"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "codex",
+          "codegeex",
+          "claude-code"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "订阅制",
+        "英文",
+        "编程",
+        "编辑器"
+      ]
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "url": "https://claude.com/product/claude-code",
+      "description": "Anthropic 的 AI 编程代理，支持终端 CLI 操作、VS Code/JetBrains 扩展及 Web 界面，具备代码补全、代码审查、项目级 AI 对话等能力，是 Claude 生态的编程开发核心入口。",
+      "type": "dev-tool",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code",
+        "chat"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "claude"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "codex",
+          "cursor",
+          "qwen-code",
+          "codegeex"
+        ],
+        "complements": [
+          "anthropic-api",
+          "claude-design"
+        ]
+      },
+      "tags": [
+        "订阅制",
+        "英文",
+        "编程",
+        "Anthropic",
+        "子站"
+      ]
+    }
+  ]
+}
