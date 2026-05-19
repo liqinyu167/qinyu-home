@@ -106,7 +106,8 @@
           "grok",
           "claude",
           "qwen",
-          "deepseek"
+          "deepseek",
+          "zhipu"
         ],
         "complements": [
           "aistudio",
@@ -162,7 +163,8 @@
           "grok",
           "claude",
           "qwen",
-          "deepseek"
+          "deepseek",
+          "zhipu"
         ],
         "complements": [
           "sora"
@@ -259,7 +261,8 @@
           "grok",
           "claude",
           "qwen",
-          "deepseek"
+          "deepseek",
+          "zhipu"
         ],
         "complements": [
           "jimeng",
@@ -473,7 +476,10 @@
           "gemini"
         ],
         "downstream": [],
-        "alternatives": [],
+        "alternatives": [
+          "suno",
+          "udio"
+        ],
         "complements": [
           "gemini"
         ]
@@ -629,7 +635,9 @@
         ],
         "downstream": [],
         "alternatives": [
-          "qwen-code"
+          "qwen-code",
+          "cursor",
+          "codegeex"
         ],
         "complements": [
           "openai-api",
@@ -801,7 +809,8 @@
           "doubao",
           "claude",
           "qwen",
-          "deepseek"
+          "deepseek",
+          "zhipu"
         ],
         "complements": [
           "x-twitter"
@@ -960,7 +969,8 @@
           "grok",
           "doubao",
           "qwen",
-          "deepseek"
+          "deepseek",
+          "zhipu"
         ],
         "complements": []
       },
@@ -1439,7 +1449,8 @@
           "claude",
           "grok",
           "doubao",
-          "deepseek"
+          "deepseek",
+          "zhipu"
         ],
         "complements": [
           "bailian",
@@ -1686,7 +1697,8 @@
           "gemini",
           "claude",
           "grok",
-          "doubao"
+          "doubao",
+          "zhipu"
         ],
         "complements": []
       },
@@ -1731,6 +1743,482 @@
         "开发者",
         "OpenAI兼容",
         "中文"
+      ]
+    },
+    {
+      "id": "zhipu",
+      "name": "智谱清言 ChatGLM",
+      "url": "https://chatglm.cn",
+      "description": "智谱AI 的旗舰 AI 助手，基于 GLM 系列模型，支持对话、AI 画图、AI 生视频、AI 阅读、智能体和云知识库，提供 GLM-5.1 及 GLM-4V 等多模态能力。",
+      "type": "official",
+      "primarySection": "official-labs",
+      "sections": [
+        "official-labs",
+        "chat"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "search",
+        "writing",
+        "voice"
+      ],
+      "relations": {
+        "products": [
+          "bigmodel-api",
+          "codegeex"
+        ],
+        "upstream": [],
+        "downstream": [
+          "bigmodel-api",
+          "codegeex"
+        ],
+        "alternatives": [
+          "chatgpt",
+          "gemini",
+          "grok",
+          "claude",
+          "qwen",
+          "deepseek"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "API",
+        "中文",
+        "官站",
+        "对话",
+        "智谱AI"
+      ]
+    },
+    {
+      "id": "bigmodel-api",
+      "name": "智谱开放平台 BigModel API",
+      "url": "https://open.bigmodel.cn",
+      "description": "智谱AI 的模型开放平台，提供 GLM 系列模型的 API 调用、模型微调、部署等服务，是国内主流的大模型 API 服务商之一。",
+      "type": "api",
+      "primarySection": "compute-api",
+      "sections": [
+        "compute-api",
+        "code-dev"
+      ],
+      "capabilities": [
+        "chat",
+        "code"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "zhipu"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "openai-api",
+          "qwen-api",
+          "deepseek-api",
+          "gemini-api",
+          "anthropic-api"
+        ],
+        "complements": [
+          "zhipu",
+          "codegeex"
+        ]
+      },
+      "tags": [
+        "API",
+        "中文",
+        "智谱AI",
+        "算力"
+      ]
+    },
+    {
+      "id": "codegeex",
+      "name": "CodeGeeX",
+      "url": "https://codegeex.cn",
+      "description": "智谱AI 出品的 AI 编程助手，支持代码自动补全、智能问答、代码翻译和代码审查，可集成 VS Code、JetBrains 等主流 IDE。",
+      "type": "dev-tool",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "zhipu"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "codex",
+          "cursor"
+        ],
+        "complements": [
+          "bigmodel-api"
+        ]
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "编程",
+        "智谱AI"
+      ]
+    },
+    {
+      "id": "midjourney",
+      "name": "Midjourney",
+      "url": "https://www.midjourney.com",
+      "description": "全球领先的 AI 图像生成工具，以高质量艺术级输出著称，通过 Discord 操作，在创意社区拥有极高影响力。",
+      "type": "tool",
+      "primarySection": "image-gen",
+      "sections": [
+        "image-gen"
+      ],
+      "capabilities": [
+        "image-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "imagen",
+          "aurora",
+          "jimeng",
+          "claude-design"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "订阅制",
+        "英文",
+        "图像生成",
+        "Midjourney"
+      ]
+    },
+    {
+      "id": "leonardo-ai",
+      "name": "Leonardo AI",
+      "url": "https://leonardo.ai",
+      "description": "综合 AI 图像与视频创作平台，支持自定义模型训练和多种风格生成，特别适合游戏、概念设计和专业设计领域。",
+      "type": "tool",
+      "primarySection": "image-gen",
+      "sections": [
+        "image-gen",
+        "video-gen"
+      ],
+      "capabilities": [
+        "image-gen",
+        "video-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "midjourney",
+          "ideogram",
+          "flux"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "图像生成"
+      ]
+    },
+    {
+      "id": "ideogram",
+      "name": "Ideogram",
+      "url": "https://ideogram.ai",
+      "description": "以图像中精确渲染文字著称的 AI 生成工具，特别适合海报、Logo 和品牌设计类图像生成场景。",
+      "type": "tool",
+      "primarySection": "image-gen",
+      "sections": [
+        "image-gen"
+      ],
+      "capabilities": [
+        "image-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "midjourney",
+          "leonardo-ai",
+          "imagen"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "图像生成"
+      ]
+    },
+    {
+      "id": "adobe-firefly",
+      "name": "Adobe Firefly",
+      "url": "https://firefly.adobe.com",
+      "description": "Adobe 推出的 AI 图像生成工具，深度集成 Photoshop 等 Creative Cloud 产品，提供商业安全的版权保障。",
+      "type": "tool",
+      "primarySection": "image-gen",
+      "sections": [
+        "image-gen"
+      ],
+      "capabilities": [
+        "image-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "imagen",
+          "aurora",
+          "midjourney",
+          "leonardo-ai"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "订阅制",
+        "英文",
+        "图像生成",
+        "Adobe"
+      ]
+    },
+    {
+      "id": "flux",
+      "name": "Flux / Black Forest Labs",
+      "url": "https://blackforestlabs.ai",
+      "description": "Black Forest Labs 的开源高性能图像生成模型，以真实感和速度著称，提供在线平台 Fal.ai、Replicate 等可体验。",
+      "type": "model",
+      "primarySection": "image-gen",
+      "sections": [
+        "image-gen"
+      ],
+      "capabilities": [
+        "image-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "midjourney",
+          "imagen",
+          "aurora",
+          "ideogram"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "图像生成",
+        "英文",
+        "开源"
+      ]
+    },
+    {
+      "id": "kling",
+      "name": "可灵 Kling AI",
+      "url": "https://kling.kuaishou.com",
+      "description": "快手出品的高质量 AI 视频生成工具，基于自研可灵大模型，以真实物理模拟、动作连贯性和人物一致性著称。",
+      "type": "tool",
+      "primarySection": "video-gen",
+      "sections": [
+        "video-gen",
+        "image-gen"
+      ],
+      "capabilities": [
+        "video-gen",
+        "image-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "veo",
+          "sora",
+          "luma",
+          "pika"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "视频生成",
+        "快手"
+      ]
+    },
+    {
+      "id": "luma",
+      "name": "Luma AI",
+      "url": "https://lumalabs.ai",
+      "description": "AI 视频生成平台 Dream Machine 的创造者，以梦幻风格的高质量视频运动著称，支持文本和图像生成视频。",
+      "type": "tool",
+      "primarySection": "video-gen",
+      "sections": [
+        "video-gen",
+        "image-gen"
+      ],
+      "capabilities": [
+        "video-gen",
+        "image-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "veo",
+          "sora",
+          "kling",
+          "pika"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "订阅制",
+        "英文",
+        "视频生成",
+        "Luma"
+      ]
+    },
+    {
+      "id": "pika",
+      "name": "Pika",
+      "url": "https://pika.art",
+      "description": "专注于快速有趣的 AI 短视频生成工具，提供多种风格模板和简单易用的操作界面，适合社交内容创作。",
+      "type": "tool",
+      "primarySection": "video-gen",
+      "sections": [
+        "video-gen"
+      ],
+      "capabilities": [
+        "video-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "veo",
+          "sora",
+          "kling",
+          "luma"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "视频生成"
+      ]
+    },
+    {
+      "id": "suno",
+      "name": "Suno",
+      "url": "https://suno.com",
+      "description": "领先的 AI 音乐生成平台，支持文本生成带人声和乐器的完整歌曲，是 AI 音乐创作领域的标杆产品。",
+      "type": "tool",
+      "primarySection": "audio-gen",
+      "sections": [
+        "audio-gen"
+      ],
+      "capabilities": [
+        "audio-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "udio",
+          "musicfx"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "音频生成",
+        "音乐"
+      ]
+    },
+    {
+      "id": "udio",
+      "name": "Udio",
+      "url": "https://www.udio.com",
+      "description": "Suno 的主要竞品，提供高质量的 AI 音乐生成，支持多种风格和时长定制，音乐品质细腻丰富。",
+      "type": "tool",
+      "primarySection": "audio-gen",
+      "sections": [
+        "audio-gen"
+      ],
+      "capabilities": [
+        "audio-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "suno",
+          "musicfx"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "音频生成",
+        "音乐"
+      ]
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "url": "https://cursor.com",
+      "description": "AI 原生代码编辑器，深度集成 GPT-4o、Claude 等模型，支持智能代码补全、自然语言编辑和项目级 AI 对话，开发者效率利器。",
+      "type": "dev-tool",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code",
+        "chat"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "codex",
+          "codegeex"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "订阅制",
+        "英文",
+        "编程",
+        "编辑器"
       ]
     }
   ]
