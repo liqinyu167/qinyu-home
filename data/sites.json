@@ -637,7 +637,8 @@
         "alternatives": [
           "qwen-code",
           "cursor",
-          "codegeex"
+          "codegeex",
+          "claude-code"
         ],
         "complements": [
           "openai-api",
@@ -956,12 +957,14 @@
       "relations": {
         "products": [
           "anthropic-api",
-          "claude-design"
+          "claude-design",
+          "claude-code"
         ],
         "upstream": [],
         "downstream": [
           "anthropic-api",
-          "claude-design"
+          "claude-design",
+          "claude-code"
         ],
         "alternatives": [
           "chatgpt",
@@ -1625,7 +1628,8 @@
         ],
         "downstream": [],
         "alternatives": [
-          "codex"
+          "codex",
+          "claude-code"
         ],
         "complements": [
           "qwen-api",
@@ -1854,7 +1858,8 @@
         "downstream": [],
         "alternatives": [
           "codex",
-          "cursor"
+          "cursor",
+          "claude-code"
         ],
         "complements": [
           "bigmodel-api"
@@ -2210,7 +2215,8 @@
         "downstream": [],
         "alternatives": [
           "codex",
-          "codegeex"
+          "codegeex",
+          "claude-code"
         ],
         "complements": []
       },
@@ -2219,6 +2225,45 @@
         "英文",
         "编程",
         "编辑器"
+      ]
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "url": "https://claude.com/product/claude-code",
+      "description": "Anthropic 的 AI 编程代理，支持终端 CLI 操作、VS Code/JetBrains 扩展及 Web 界面，具备代码补全、代码审查、项目级 AI 对话等能力，是 Claude 生态的编程开发核心入口。",
+      "type": "dev-tool",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code",
+        "chat"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "claude"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "codex",
+          "cursor",
+          "qwen-code",
+          "codegeex"
+        ],
+        "complements": [
+          "anthropic-api",
+          "claude-design"
+        ]
+      },
+      "tags": [
+        "订阅制",
+        "英文",
+        "编程",
+        "Anthropic",
+        "子站"
       ]
     }
   ]
