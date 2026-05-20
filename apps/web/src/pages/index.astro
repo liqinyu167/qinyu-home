@@ -3579,26 +3579,20 @@
       });
     }
 
-    function renderCards(sites) {
-      els.grid.innerHTML = "";
-      if (!sites.length) {
-        els.grid.style.display = "block";
-        els.grid.innerHTML = `
-          <div class="empty-state">
-            <div>
-              <svg class="empty-ink" viewBox="0 0 96 96" role="img" aria-label="浮动墨滴">
-                <path fill="currentColor" d="M50.7 6.4c8.8 13.6 22.8 28.3 22.8 48.3 0 20.4-12.4 33.4-29.5 33.4-16.5 0-28.7-10.8-28.7-27.4 0-13.2 9-24.6 17.8-35.5 4.9-6.1 9.7-12.1 12.7-18.5 1-2.1 3.6-2.2 4.9-.3Z"/>
-                <path fill="rgba(237,232,245,.78)" d="M33.2 54.5c-1.9 0-3.3-1.6-3-3.5 1.1-7.6 7.1-15.5 12.1-21.9 1.1-1.4 3.3-.4 3 1.4-1.7 10.1-5.5 24-12.1 24Z"/>
-              </svg>
-              <h1 class="empty-title">宇宙正在展开</h1>
-              <p class="empty-subtitle">内容由 AI Agent 持续维护更新中</p>
-            </div>
-          </div>`;
-        return;
-      }
+    function buildCards() {
+      els.grid.innerHTML = `
+        <div class="empty-state">
+          <div>
+            <svg class="empty-ink" viewBox="0 0 96 96" role="img" aria-label="浮动墨滴">
+              <path fill="currentColor" d="M50.7 6.4c8.8 13.6 22.8 28.3 22.8 48.3 0 20.4-12.4 33.4-29.5 33.4-16.5 0-28.7-10.8-28.7-27.4 0-13.2 9-24.6 17.8-35.5 4.9-6.1 9.7-12.1 12.7-18.5 1-2.1 3.6-2.2 4.9-.3Z"/>
+              <path fill="rgba(237,232,245,.78)" d="M33.2 54.5c-1.9 0-3.3-1.6-3-3.5 1.1-7.6 7.1-15.5 12.1-21.9 1.1-1.4 3.3-.4 3 1.4-1.7 10.1-5.5 24-12.1 24Z"/>
+            </svg>
+            <h1 class="empty-title">宇宙正在展开</h1>
+            <p class="empty-subtitle">内容由 AI Agent 持续维护更新中</p>
+          </div>
+        </div>`;
 
-      els.grid.style.display = "";
-      sites.forEach((site, index) => {
+      state.sites.forEach((site) => {
         const card = document.createElement("article");
         card.className = "site-card";
         card.id = `site-${site.id}`;
@@ -3607,7 +3601,6 @@
         card.setAttribute("aria-label", `查看 ${site.name} 详情`);
         card.dataset.id = site.id;
         card.style.setProperty("--cat-color", categoryColors[getSiteCategory(site)] || "var(--ink-accent)");
-        card.style.setProperty("--d", `${0.2 + index * 0.05}s`);
 
         const tags = (site.tags || []).map(renderTag).join("");
 
@@ -3630,12 +3623,35 @@
       });
     }
 
+    function filterCards(sites) {
+      const filteredIds = new Set(sites.map(s => s.id));
+
+      els.grid.querySelectorAll(".site-card").forEach((card) => {
+        card.hidden = !filteredIds.has(card.dataset.id);
+      });
+
+      const empty = els.grid.querySelector(".empty-state");
+      if (!sites.length) {
+        if (empty) empty.hidden = false;
+        els.grid.style.display = "block";
+        return;
+      }
+      if (empty) empty.hidden = true;
+      els.grid.style.display = "";
+    }
+
     function render() {
       const sites = getFilteredSites();
+      if (!els.grid.querySelector(".site-card")) buildCards();
+      filterCards(sites);
+      renderHotStrip();
       if (els.tree.childElementCount) updateTreeState();
       else renderTree();
-      renderHotStrip();
-      renderCards(sites);
+
+      // 同步收藏状态（不重建卡片时类名需手动更新）
+      els.grid.querySelectorAll(".favorite-toggle").forEach((btn) => {
+        btn.classList.toggle("is-saved", state.favorites.has(btn.dataset.id));
+      });
 
       const label = state.favoritesOnly ? "收藏夹" : (state.activeCategory === "all" ? "全部" : getCategoryLabel(state.activeCategory));
       els.activeFilter.textContent = state.search ? `${label} / ${state.search}` : label;
