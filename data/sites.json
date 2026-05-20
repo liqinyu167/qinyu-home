@@ -2265,6 +2265,233 @@
         "Anthropic",
         "子站"
       ]
+    },
+    {
+      "id": "minimax",
+      "name": "MiniMax",
+      "url": "https://www.minimax.io/",
+      "description": "稀宇科技（MiniMax），2022年成立的全栈AI公司，港交所上市。自研MiniMax M2.7文本模型、Hailuo 2.3视频模型、Speech 2.8语音模型等全模态基础模型，旗下拥有海螺AI、MiniMax Agent、Talkie等多款AI原生应用，服务全球超200个国家和地区。",
+      "type": "official",
+      "primarySection": "official-labs",
+      "sections": [
+        "official-labs",
+        "video-gen",
+        "chat",
+        "audio-gen",
+        "compute-api",
+        "code-dev"
+      ],
+      "capabilities": [
+        "chat",
+        "video-gen",
+        "audio-gen",
+        "code",
+        "voice",
+        "search",
+        "writing"
+      ],
+      "relations": {
+        "products": [
+          "hailuo-ai",
+          "minimax-agent",
+          "minimax-api",
+          "talkie"
+        ],
+        "upstream": [],
+        "downstream": [
+          "hailuo-ai",
+          "minimax-agent",
+          "minimax-api",
+          "talkie"
+        ],
+        "alternatives": [
+          "doubao",
+          "qwen",
+          "zhipu",
+          "deepseek"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "API",
+        "中文",
+        "英文",
+        "官站",
+        "对话",
+        "视频生成",
+        "音频生成",
+        "MiniMax"
+      ]
+    },
+    {
+      "id": "hailuo-ai",
+      "name": "海螺AI",
+      "url": "https://hailuoai.video/",
+      "description": "MiniMax旗下AI视频生成平台，支持文本和图像生成高质量视频，物理真实感强、动态表现出色，是国产AI视频生成的标杆产品之一，全球用户超8000万。",
+      "type": "official",
+      "primarySection": "video-gen",
+      "sections": [
+        "video-gen",
+        "audio-gen"
+      ],
+      "capabilities": [
+        "video-gen",
+        "audio-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "minimax"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "jimeng",
+          "kling",
+          "sora",
+          "luma",
+          "veo",
+          "pika"
+        ],
+        "complements": [
+          "capcut"
+        ]
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "英文",
+        "视频生成",
+        "海螺AI",
+        "MiniMax"
+      ]
+    },
+    {
+      "id": "minimax-agent",
+      "name": "MiniMax Agent",
+      "url": "https://agent.minimax.io/",
+      "description": "MiniMax推出的AI智能助手，支持多代理团队协作、复杂任务执行、编程辅助、办公自动化等，深度集成MiniMax全模态模型能力，提供桌面端应用。",
+      "type": "official",
+      "primarySection": "chat",
+      "sections": [
+        "chat",
+        "code-dev"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "writing",
+        "voice",
+        "search"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "minimax"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "chatgpt",
+          "gemini",
+          "doubao",
+          "grok",
+          "claude"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "英文",
+        "对话",
+        "编程开发",
+        "AI助手",
+        "MiniMax"
+      ]
+    },
+    {
+      "id": "minimax-api",
+      "name": "MiniMax API",
+      "url": "https://platform.minimax.io/",
+      "description": "MiniMax面向企业和开发者的开放平台API，提供MiniMax M系列文本模型、Hailuo视频生成、Speech语音合成、Music音乐生成等全栈模型调用服务，支持Token订阅计划。",
+      "type": "official",
+      "primarySection": "compute-api",
+      "sections": [
+        "compute-api",
+        "video-gen",
+        "audio-gen",
+        "chat",
+        "code-dev"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "video-gen",
+        "audio-gen",
+        "voice"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "minimax"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "ark",
+          "bigmodel-api",
+          "dashscope",
+          "openai-api",
+          "gemini-api",
+          "qwen-api",
+          "deepseek-api",
+          "anthropic-api"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "API",
+        "中文",
+        "英文",
+        "算力服务",
+        "视频生成",
+        "音频生成",
+        "MiniMax"
+      ]
+    },
+    {
+      "id": "talkie",
+      "name": "Talkie",
+      "url": "https://talkie-ai.com/",
+      "description": "MiniMax面向海外市场的AI角色陪伴聊天应用，支持个性化虚拟角色创建、多模态情感交互，是全球领先的AI伴侣平台之一。",
+      "type": "official",
+      "primarySection": "chat",
+      "sections": [
+        "chat"
+      ],
+      "capabilities": [
+        "chat",
+        "voice"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "minimax"
+        ],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "对话",
+        "角色扮演",
+        "MiniMax"
+      ]
     }
   ]
 }
