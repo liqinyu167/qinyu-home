@@ -8,4 +8,5 @@ dist/
 .astro/
 __pycache__/
 .venv/
+apps/api/venv/
 backups/
