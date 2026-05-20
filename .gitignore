@@ -10,3 +10,7 @@ __pycache__/
 .venv/
 apps/api/venv/
 backups/
+*.env
+data/clicks.json
+data/clicks.log
+*.tmp
