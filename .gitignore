@@ -3,3 +3,9 @@
 .DS_Store
 stats/
 .hermes/
+node_modules/
+dist/
+.astro/
+__pycache__/
+.venv/
+backups/

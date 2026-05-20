@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>工具箱管理后台</title>
+    <style is:global>
+      :root {
+        color-scheme: light;
+        --bg: #f6f3ee;
+        --surface: #fffaf2;
+        --panel: #ffffff;
+        --line: #ddd5c8;
+        --text: #24201c;
+        --muted: #746b60;
+        --primary: #6f4df6;
+        --primary-dark: #5534c8;
+        --accent: #087f73;
+        --danger: #b23b4a;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      a { color: inherit; text-decoration: none; }
+      button, input, select, textarea { font: inherit; }
+      .app {
+        display: grid;
+        grid-template-columns: 248px minmax(0, 1fr);
+        min-height: 100vh;
+      }
+      .sidebar {
+        padding: 24px 18px;
+        background: #17151d;
+        color: #f9f4ea;
+      }
+      .brand b { display: block; font-size: 18px; }
+      .brand span { display: block; margin-top: 4px; color: #b8afc6; font-size: 13px; }
+      .nav { display: grid; gap: 8px; margin-top: 34px; }
+      .nav a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        border-radius: 8px;
+        color: #cfc6dd;
+      }
+      .nav a[aria-current="page"] { background: #2a2438; color: #ffffff; }
+      .main { min-width: 0; }
+      .topbar {
+        min-height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 14px clamp(18px, 4vw, 36px);
+        border-bottom: 1px solid var(--line);
+        background: rgba(255,250,242,.86);
+        backdrop-filter: blur(16px);
+      }
+      .topbar h1 { margin: 0; font-size: 22px; }
+      .topbar p { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+      .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+      .button {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 0 14px;
+        background: var(--panel);
+        color: var(--text);
+        cursor: pointer;
+      }
+      .button.primary {
+        border-color: var(--primary);
+        background: var(--primary);
+        color: #fff;
+      }
+      .content {
+        padding: 24px clamp(18px, 4vw, 36px) 48px;
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(150px, 1fr));
+        gap: 14px;
+      }
+      .stat, .panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+      }
+      .stat { padding: 18px; }
+      .stat span { color: var(--muted); font-size: 13px; }
+      .stat strong { display: block; margin-top: 8px; font-size: 30px; line-height: 1; }
+      .workspace {
+        display: grid;
+        grid-template-columns: minmax(0, 1.6fr) minmax(320px, .9fr);
+        gap: 16px;
+        margin-top: 18px;
+      }
+      .panel { overflow: hidden; }
+      .panel-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        min-height: 64px;
+        padding: 16px 18px;
+        border-bottom: 1px solid var(--line);
+      }
+      .panel-head h2 { margin: 0; font-size: 17px; }
+      .search {
+        min-height: 40px;
+        width: min(320px, 100%);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 0 12px;
+        background: var(--surface);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+      th, td {
+        padding: 14px 18px;
+        border-bottom: 1px solid #eee7dd;
+        text-align: left;
+        vertical-align: top;
+      }
+      th { color: var(--muted); font-size: 12px; font-weight: 600; }
+      td small { display: block; margin-top: 4px; color: var(--muted); line-height: 1.45; }
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        min-height: 26px;
+        padding: 0 8px;
+        border-radius: 6px;
+        background: #efe9fb;
+        color: var(--primary-dark);
+        font-size: 12px;
+      }
+      form {
+        display: grid;
+        gap: 14px;
+        padding: 18px;
+      }
+      label { display: grid; gap: 6px; color: var(--muted); font-size: 13px; }
+      input, select, textarea {
+        width: 100%;
+        min-height: 44px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 10px 12px;
+        background: var(--surface);
+        color: var(--text);
+      }
+      textarea { min-height: 104px; resize: vertical; line-height: 1.5; }
+      .notice {
+        margin: 0 18px 18px;
+        padding: 12px;
+        border-radius: 8px;
+        background: #eef8f4;
+        color: #1b665e;
+        font-size: 13px;
+        line-height: 1.55;
+      }
+      .empty { padding: 24px; color: var(--muted); }
+
+      @media (max-width: 980px) {
+        .app { grid-template-columns: 1fr; }
+        .sidebar { position: static; }
+        .nav { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .workspace { grid-template-columns: 1fr; }
+        .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+      @media (max-width: 620px) {
+        .topbar { align-items: flex-start; flex-direction: column; }
+        .stats { grid-template-columns: 1fr; }
+        th:nth-child(3), td:nth-child(3) { display: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <b>工具箱后台</b>
+          <span>Hermes 管理工作台</span>
+        </div>
+        <nav class="nav" aria-label="后台导航">
+          <a aria-current="page" href="/">工具管理</a>
+          <a href="/">分类标签</a>
+          <a href="/">数据检查</a>
+        </nav>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <h1>工具管理</h1>
+            <p>先搭好后台界面骨架，下一步接入保存、审核和自动抓取。</p>
+          </div>
+          <div class="actions">
+            <a class="button" href="http://127.0.0.1:4321/">查看前台</a>
+            <button class="button primary" type="button" id="focus-form">新增工具</button>
+          </div>
+        </header>
+
+        <section class="content">
+          <div class="stats" id="stats"></div>
+
+          <div class="workspace">
+            <section class="panel">
+              <div class="panel-head">
+                <h2>工具列表</h2>
+                <input class="search" id="search" type="search" placeholder="搜索名称、描述、标签" />
+              </div>
+              <div id="table-wrap" class="empty">正在加载工具数据...</div>
+            </section>
+
+            <section class="panel" aria-labelledby="form-title">
+              <div class="panel-head">
+                <h2 id="form-title">新增工具草稿</h2>
+              </div>
+              <form id="tool-form">
+                <label>
+                  工具名称
+                  <input name="name" required placeholder="例如 Kimi" />
+                </label>
+                <label>
+                  官网地址
+                  <input name="url" type="url" required placeholder="https://..." />
+                </label>
+                <label>
+                  主分类
+                  <select name="primarySection" id="section-select"></select>
+                </label>
+                <label>
+                  标签
+                  <input name="tags" placeholder="免费, 中文, 写作" />
+                </label>
+                <label>
+                  描述
+                  <textarea name="description" placeholder="一句话说明它适合谁、解决什么问题"></textarea>
+                </label>
+                <button class="button primary" type="submit">保存草稿</button>
+              </form>
+              <p class="notice" id="notice">保存接口还未开启。现在提交会在本页生成草稿反馈，不会写入数据文件。</p>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const API_BASE = window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost'
+        ? 'http://127.0.0.1:8002/api'
+        : '/api';
+
+      const state = { sites: [], categories: [], query: '' };
+      const stats = document.getElementById('stats');
+      const tableWrap = document.getElementById('table-wrap');
+      const search = document.getElementById('search');
+      const sectionSelect = document.getElementById('section-select');
+      const form = document.getElementById('tool-form');
+      const notice = document.getElementById('notice');
+
+      function escapeHtml(value = '') {
+        return String(value).replace(/[&<>"']/g, char => ({
+          '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
+        }[char]));
+      }
+
+      function flatSections() {
+        return state.categories.flatMap(group => [
+          { id: group.id, label: group.label },
+          ...(group.children || [])
+        ]);
+      }
+
+      function renderStats(apiStats) {
+        stats.innerHTML = [
+          ['工具总数', apiStats.total || state.sites.length],
+          ['分类数', flatSections().length],
+          ['标签数', apiStats.tags || 0],
+          ['能力项', apiStats.capabilities || 0],
+        ].map(([label, value]) => `
+          <div class="stat">
+            <span>${label}</span>
+            <strong>${value}</strong>
+          </div>
+        `).join('');
+      }
+
+      function filteredSites() {
+        const query = state.query.trim().toLowerCase();
+        if (!query) return state.sites;
+        return state.sites.filter(site => [site.name, site.description, ...(site.tags || [])].join(' ').toLowerCase().includes(query));
+      }
+
+      function renderTable() {
+        const rows = filteredSites().slice(0, 24);
+        if (!rows.length) {
+          tableWrap.className = 'empty';
+          tableWrap.textContent = '没有匹配的工具。';
+          return;
+        }
+        tableWrap.className = '';
+        tableWrap.innerHTML = `
+          <table>
+            <thead>
+              <tr>
+                <th>名称</th>
+                <th>分类</th>
+                <th>标签</th>
+                <th>状态</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${rows.map(site => `
+                <tr>
+                  <td>
+                    <strong>${escapeHtml(site.name)}</strong>
+                    <small>${escapeHtml(site.description)}</small>
+                  </td>
+                  <td>${escapeHtml(site.primarySectionLabel || site.primarySection)}</td>
+                  <td>${(site.tags || []).slice(0, 3).map(tag => `<span class="pill">${escapeHtml(tag)}</span>`).join(' ')}</td>
+                  <td><span class="pill">已发布</span></td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        `;
+      }
+
+      function renderSelect() {
+        sectionSelect.innerHTML = flatSections().map(section => `
+          <option value="${escapeHtml(section.id)}">${escapeHtml(section.label)}</option>
+        `).join('');
+      }
+
+      async function boot() {
+        try {
+          const [sitesRes, statsRes] = await Promise.all([
+            fetch(`${API_BASE}/sites`),
+            fetch(`${API_BASE}/stats`),
+          ]);
+          const data = await sitesRes.json();
+          const apiStats = await statsRes.json();
+          state.sites = data.sites || [];
+          state.categories = data.categories || [];
+          renderStats(apiStats);
+          renderSelect();
+          renderTable();
+        } catch (error) {
+          tableWrap.className = 'empty';
+          tableWrap.textContent = `无法连接 API：${error.message}`;
+        }
+      }
+
+      search.addEventListener('input', event => {
+        state.query = event.target.value;
+        renderTable();
+      });
+
+      document.getElementById('focus-form').addEventListener('click', () => {
+        form.elements.name.focus();
+      });
+
+      form.addEventListener('submit', event => {
+        event.preventDefault();
+        const data = Object.fromEntries(new FormData(form).entries());
+        notice.textContent = `已生成草稿：${data.name || '未命名工具'}。下一步接入 POST /api/admin/sites 后即可写入数据。`;
+      });
+
+      boot();
+    </script>
+  </body>
+</html>
