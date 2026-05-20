@@ -2492,6 +2492,176 @@
         "角色扮演",
         "MiniMax"
       ]
+    },
+    {
+      "id": "kimi",
+      "name": "Kimi",
+      "url": "https://www.kimi.com/",
+      "description": "月之暗面（Moonshot AI）旗下的旗舰AI助手，以超长上下文处理能力著称，支持多轮对话、深度研究、Agent Swarm多代理协作、代码生成和多模态理解，是中国AI产品中讨论热度最高的产品之一。",
+      "type": "official",
+      "primarySection": "official-labs",
+      "sections": [
+        "official-labs",
+        "chat",
+        "research",
+        "code-dev"
+      ],
+      "capabilities": [
+        "chat",
+        "search",
+        "writing",
+        "code",
+        "voice"
+      ],
+      "relations": {
+        "products": [
+          "kimi-api",
+          "kimi-code",
+          "kimi-audio"
+        ],
+        "upstream": [],
+        "downstream": [
+          "kimi-api",
+          "kimi-code",
+          "kimi-audio"
+        ],
+        "alternatives": [
+          "deepseek",
+          "doubao",
+          "qwen",
+          "zhipu"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "API",
+        "中文",
+        "官站",
+        "对话",
+        "搜索",
+        "长文本",
+        "月之暗面"
+      ]
+    },
+    {
+      "id": "kimi-api",
+      "name": "Kimi API",
+      "url": "https://platform.moonshot.ai/",
+      "description": "月之暗面面向开发者的开放平台API，提供Kimi K2系列模型调用，支持超长上下文、Tool Calling、函数调用和企业级集成。",
+      "type": "official",
+      "primarySection": "compute-api",
+      "sections": [
+        "compute-api",
+        "chat",
+        "code-dev"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "search",
+        "writing"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "kimi"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "ark",
+          "bigmodel-api",
+          "dashscope",
+          "deepseek-api",
+          "qwen-api"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "API",
+        "中文",
+        "算力服务",
+        "Kimi",
+        "月之暗面"
+      ]
+    },
+    {
+      "id": "kimi-code",
+      "name": "Kimi Code",
+      "url": "https://www.kimi.com/",
+      "description": "Kimi内置的AI代码助手，支持代码生成、调试、多文件编辑和自主编程代理，是Kimi生态中的开发工具模块。",
+      "type": "official",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev",
+        "chat"
+      ],
+      "capabilities": [
+        "code",
+        "chat"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "kimi"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "cursor",
+          "codex",
+          "claude-code"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "编程开发",
+        "代码生成",
+        "Kimi",
+        "月之暗面"
+      ]
+    },
+    {
+      "id": "kimi-audio",
+      "name": "Kimi Audio",
+      "url": "https://github.com/MoonshotAI/Kimi-Audio",
+      "description": "月之暗面开源的多模态音频基础模型，支持语音识别、理解、音频对话等能力，是Kimi多模态战略的组成部分。",
+      "type": "official",
+      "primarySection": "audio-gen",
+      "sections": [
+        "audio-gen",
+        "chat"
+      ],
+      "capabilities": [
+        "audio-gen",
+        "voice",
+        "chat"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "kimi"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "musicfx",
+          "suno"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "开源",
+        "中文",
+        "英文",
+        "音频生成",
+        "语音",
+        "Kimi",
+        "月之暗面"
+      ]
     }
   ]
 }
