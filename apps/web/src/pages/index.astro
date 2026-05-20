@@ -573,6 +573,10 @@
       height: calc(100dvh - var(--topbar-h));
       padding: 22px 18px;
       overflow-y: auto;
+      overflow-x: hidden;
+      scrollbar-gutter: stable;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(167, 155, 184, 0.4) rgba(251, 247, 255, 0.04);
       border-right: 1px solid var(--border-ink);
       background:
         linear-gradient(180deg, rgba(19, 17, 31, 0.94), rgba(15, 13, 26, 0.84)),
@@ -594,6 +598,7 @@
     .sidebar-inner {
       position: relative;
       z-index: 1;
+      padding-bottom: 18px;
     }
 
     .side-mark {
@@ -635,6 +640,7 @@
     .subcat-button,
     .side-link {
       position: relative;
+      isolation: isolate;
       display: grid;
       grid-template-columns: 20px minmax(0, 1fr) auto;
       align-items: center;
@@ -647,7 +653,42 @@
       background: transparent;
       color: var(--ink-muted);
       text-align: left;
-      transition: color 0.2s, background 0.2s, border-color 0.2s, text-shadow 0.2s;
+      overflow: hidden;
+      transition: color 0.22s ease, border-color 0.22s ease, text-shadow 0.22s ease;
+    }
+
+    .category-button::before,
+    .subcat-button::before,
+    .side-link::before {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      content: "";
+      background:
+        linear-gradient(90deg, color-mix(in srgb, var(--cat-color, var(--ink-accent)), transparent 82%), transparent 78%);
+      opacity: 0;
+      transition: opacity 0.26s ease;
+    }
+
+    .category-button::after,
+    .subcat-button::after,
+    .side-link::after {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      content: "";
+      background:
+        linear-gradient(90deg, color-mix(in srgb, var(--cat-color, var(--ink-accent)), transparent 66%), transparent 82%);
+      opacity: 0;
+    }
+
+    .category-button > *,
+    .subcat-button > *,
+    .side-link > * {
+      position: relative;
+      z-index: 1;
     }
 
     .category-button {
@@ -670,9 +711,23 @@
     .side-link:hover,
     .side-link.is-active {
       border-left-color: var(--cat-color, var(--ink-accent));
-      background: linear-gradient(90deg, rgba(192, 132, 252, 0.12), transparent 78%);
       color: var(--ink-white);
       text-shadow: 0 0 14px color-mix(in srgb, var(--cat-color, var(--ink-accent)), transparent 35%);
+    }
+
+    .category-button:hover::before,
+    .category-button.is-active::before,
+    .subcat-button:hover::before,
+    .subcat-button.is-active::before,
+    .side-link:hover::before,
+    .side-link.is-active::before {
+      opacity: 1;
+    }
+
+    .category-button.is-pressing::after,
+    .subcat-button.is-pressing::after,
+    .side-link.is-pressing::after {
+      animation: sidePressFade 0.42s ease-out both;
     }
 
     .twist {
@@ -767,23 +822,17 @@
       padding: 4px 0 18px;
       margin-bottom: 6px;
       overflow-x: auto;
-      scrollbar-width: thin;
-      scrollbar-color: rgba(251, 191, 36, 0.48) transparent;
+      overflow-y: hidden;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
     }
 
     .hot-strip::-webkit-scrollbar {
-      height: 8px;
+      display: none;
     }
 
-    .hot-strip::-webkit-scrollbar-track {
-      background: transparent;
-    }
-
-    .hot-strip::-webkit-scrollbar-thumb {
-      border: 2px solid transparent;
-      background:
-        linear-gradient(90deg, rgba(251, 191, 36, 0.68), rgba(251, 113, 133, 0.72), rgba(192, 132, 252, 0.72)) border-box;
-      background-clip: padding-box;
+    .hot-strip:hover {
+      overscroll-behavior-inline: contain;
     }
 
     .hot-chip {
@@ -2370,6 +2419,12 @@
     }
 
     @media (max-width: 980px) {
+      .site-dialog {
+        width: min(94vw, 760px);
+        height: min(88dvh, 760px);
+        max-height: min(88dvh, 760px);
+      }
+
       .site-detail,
       .site-detail.has-relation-panel {
         display: block;
@@ -2377,11 +2432,21 @@
 
       .detail-content {
         grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        overflow-x: hidden;
+        overflow-y: auto;
       }
 
       .detail-copy {
+        grid-template-rows: auto auto auto;
+        min-height: auto;
         border-right: 0;
         border-bottom: 1px solid rgba(251, 247, 255, 0.08);
+      }
+
+      .detail-copy .detail-desc {
+        height: auto;
+        max-height: 180px;
       }
 
       .detail-window {
@@ -2389,27 +2454,117 @@
       }
 
       .detail-graph {
-        min-height: 520px;
+        min-height: auto;
       }
 
       .graph-body {
         grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+      }
+
+      .graph-flow {
+        grid-template-rows: auto 24px auto 24px auto;
+        min-height: 0;
+      }
+
+      .graph-section {
+        min-height: 92px;
       }
 
       .graph-alt-rail {
-        grid-template-rows: auto auto;
+        grid-template-columns: auto minmax(0, 1fr);
+        grid-template-rows: 1fr;
+        align-self: stretch;
+        max-height: none;
+        min-height: 86px;
+        padding: 10px;
       }
 
       .alt-rail-title {
         writing-mode: horizontal-tb;
+        min-width: 54px;
+        min-height: 62px;
       }
 
       .alt-icon-list {
-        grid-auto-flow: row;
-        grid-template-columns: 1fr;
-        justify-content: center;
-        overflow-x: hidden;
-        overflow-y: auto;
+        grid-auto-flow: column;
+        grid-auto-columns: 68px;
+        grid-template-columns: none;
+        align-content: center;
+        justify-content: start;
+        padding-top: 0;
+        overflow-x: auto;
+        overflow-y: hidden;
+      }
+    }
+
+    @media (max-width: 980px) and (orientation: portrait) {
+      .site-dialog {
+        width: min(94vw, 720px);
+        height: min(90dvh, 820px);
+        max-height: min(90dvh, 820px);
+      }
+
+      .detail-window {
+        grid-template-rows: auto minmax(0, 1fr) auto;
+      }
+
+      .detail-content {
+        grid-template-rows: auto auto;
+      }
+
+      .detail-copy {
+        padding: 16px 18px;
+      }
+
+      .detail-copy .detail-desc {
+        max-height: 150px;
+        font-size: 15px;
+        line-height: 1.72;
+      }
+
+      .detail-graph {
+        min-height: auto;
+        padding: 12px 14px 14px;
+      }
+
+      .graph-body {
+        grid-template-rows: auto auto;
+      }
+
+      .graph-flow {
+        grid-template-rows: auto 22px auto 22px auto;
+      }
+
+      .graph-section {
+        grid-template-columns: 112px minmax(0, 1fr);
+        min-height: 86px;
+      }
+
+      .graph-alt-rail {
+        min-height: 78px;
+        gap: 8px;
+      }
+
+      .alt-rail-title {
+        min-width: 48px;
+        min-height: 56px;
+        font-size: 11px;
+      }
+
+      .alt-icon-list {
+        grid-auto-columns: 58px;
+      }
+
+      .alt-icon-node,
+      .alt-icon-empty {
+        width: 58px;
+        height: 58px;
+      }
+
+      .alt-icon-node img {
+        width: 38px;
+        height: 38px;
       }
     }
 
@@ -2499,6 +2654,111 @@
       .relation-panel {
         max-height: min(50vh, 420px);
       }
+
+      .site-dialog {
+        height: 92dvh;
+      }
+
+      .detail-window .detail-top {
+        min-height: 76px;
+        padding: 12px 14px 10px;
+      }
+
+      .detail-title {
+        font-size: clamp(20px, 6vw, 28px);
+      }
+
+      .detail-content {
+        grid-template-rows: auto auto;
+      }
+
+      .detail-copy {
+        padding: 14px;
+      }
+
+      .detail-copy .detail-desc {
+        max-height: 132px;
+        padding: 14px;
+        font-size: 14px;
+      }
+
+      .detail-graph {
+        min-height: auto;
+        padding: 10px 12px 12px;
+      }
+
+      .graph-head small {
+        display: none;
+      }
+
+      .graph-alt-rail {
+        min-height: 70px;
+        padding: 8px;
+      }
+
+      .graph-flow {
+        grid-template-rows: auto 20px auto 20px auto;
+        gap: 5px;
+      }
+
+      .graph-flow::before {
+        left: 16px;
+      }
+
+      .graph-section {
+        grid-template-columns: 1fr;
+        min-height: 0;
+        padding: 10px;
+      }
+
+      .graph-section-label {
+        grid-template-columns: auto minmax(0, 1fr);
+        align-items: baseline;
+        gap: 8px;
+      }
+
+      .graph-section-label strong {
+        font-size: 15px;
+      }
+
+      .graph-section-label span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .graph-downstream .graph-node-list {
+        grid-template-columns: 1fr;
+        padding-left: 0;
+      }
+
+      .alt-rail-title {
+        min-width: 42px;
+        min-height: 52px;
+        padding: 0 5px;
+        font-size: 10px;
+      }
+
+      .alt-icon-list {
+        grid-auto-columns: 52px;
+        gap: 7px;
+      }
+
+      .alt-icon-node,
+      .alt-icon-empty {
+        width: 52px;
+        height: 52px;
+      }
+
+      .alt-icon-node img {
+        width: 34px;
+        height: 34px;
+      }
+
+      .detail-window .detail-actions {
+        min-height: 64px;
+        padding: 9px 14px 12px;
+      }
     }
 
     .empty-state {
@@ -2563,6 +2823,12 @@
       to { opacity: 1; transform: translateX(0); }
     }
 
+    @keyframes sidePressFade {
+      0% { opacity: 0; }
+      18% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
     @keyframes breathe {
       0%, 100% { transform: scale(1); opacity: 0.9; }
       50% { transform: scale(1.05); opacity: 1; }
@@ -2589,7 +2855,21 @@
       }
 
       .hero-visual {
+        justify-self: center;
         min-height: 390px;
+        width: min(100%, 720px);
+        margin-right: 0;
+        margin-left: 0;
+      }
+
+      .aigc-hero-image {
+        right: 50%;
+        left: auto;
+        width: min(112vw, 720px);
+        height: 100%;
+        transform: translateX(50%);
+        object-position: center bottom;
+        mask-image: linear-gradient(180deg, #000 0%, #000 76%, rgba(0, 0, 0, 0.72) 88%, transparent 100%);
       }
 
       .grid {
@@ -2633,7 +2913,12 @@
       }
 
       .hero-visual {
-        min-height: 330px;
+        min-height: clamp(240px, 42dvh, 330px);
+        width: min(100%, 560px);
+      }
+
+      .aigc-hero-image {
+        width: min(122vw, 560px);
       }
 
       .toolbox-section {
@@ -2746,6 +3031,7 @@
         animation-iteration-count: 1 !important;
         transition-duration: 0.001ms !important;
       }
+
     }
   </style>
 </head>
@@ -3200,10 +3486,12 @@
         const button = document.createElement("button");
         button.type = "button";
         button.className = "category-button";
+        button.dataset.category = category.id;
         button.setAttribute("aria-expanded", String(state.expanded.has(category.id)));
         button.innerHTML = `<span aria-hidden="true">◈</span><span>${category.label}<span class="en">${category.en}</span></span><span class="twist" aria-hidden="true">▸</span>`;
         button.classList.toggle("is-active", state.activeCategory === category.id && !state.activeSubcategory && !state.favoritesOnly);
         button.addEventListener("click", () => {
+          playSidePress(button);
           if (state.expanded.has(category.id)) state.expanded.delete(category.id);
           else state.expanded.add(category.id);
           state.activeCategory = category.id;
@@ -3216,6 +3504,7 @@
 
         const list = document.createElement("div");
         list.className = `subcat-list ${state.expanded.has(category.id) ? "is-open" : ""}`;
+        list.dataset.category = category.id;
         const children = category.children && category.children.length ? category.children : [
           { id: `${category.id}-loading`, label: "等待 API 子分类" }
         ];
@@ -3223,11 +3512,14 @@
           const childButton = document.createElement("button");
           childButton.type = "button";
           childButton.className = "subcat-button";
+          childButton.dataset.category = category.id;
+          childButton.dataset.subcategory = child.id;
           childButton.style.animationDelay = `${index * 30}ms`;
           childButton.innerHTML = `<span aria-hidden="true">◆</span><span>${child.label}</span>`;
           childButton.classList.toggle("is-active", state.activeSubcategory === child.id);
           childButton.disabled = child.id.endsWith("-loading");
           childButton.addEventListener("click", () => {
+            playSidePress(childButton);
             state.activeCategory = category.id;
             state.activeSubcategory = child.id;
             state.favoritesOnly = false;
@@ -3241,6 +3533,32 @@
       });
     }
 
+    function updateTreeState() {
+      els.tree.querySelectorAll(".category-button").forEach((button) => {
+        const categoryId = button.dataset.category;
+        const isExpanded = state.expanded.has(categoryId);
+        button.setAttribute("aria-expanded", String(isExpanded));
+        button.classList.toggle("is-active", state.activeCategory === categoryId && !state.activeSubcategory && !state.favoritesOnly);
+      });
+
+      els.tree.querySelectorAll(".subcat-list").forEach((list) => {
+        list.classList.toggle("is-open", state.expanded.has(list.dataset.category));
+      });
+
+      els.tree.querySelectorAll(".subcat-button").forEach((button) => {
+        const isCurrentSubcategory = state.activeCategory === button.dataset.category && state.activeSubcategory === button.dataset.subcategory;
+        button.classList.toggle("is-active", isCurrentSubcategory && !state.favoritesOnly);
+      });
+    }
+
+    function playSidePress(button) {
+      if (!button) return;
+      button.classList.remove("is-pressing");
+      void button.offsetWidth;
+      button.classList.add("is-pressing");
+      window.setTimeout(() => button.classList.remove("is-pressing"), 450);
+    }
+
     function renderHotStrip() {
       const tags = [...new Set(state.sites.flatMap((site) => site.tags || []))].slice(0, 12);
       const fallbackTags = ["免费", "中文", "开源", "API", "移动端", "本地部署"];
@@ -3250,6 +3568,7 @@
         chip.type = "button";
         chip.className = "hot-chip";
         chip.textContent = `# ${tag}`;
+        chip.classList.toggle("is-active", state.search === tag);
         chip.addEventListener("click", () => {
           els.search.value = tag;
           state.search = tag;
@@ -3313,7 +3632,8 @@
 
     function render() {
       const sites = getFilteredSites();
-      renderTree();
+      if (els.tree.childElementCount) updateTreeState();
+      else renderTree();
       renderHotStrip();
       renderCards(sites);
 
@@ -3395,6 +3715,14 @@
         if (!hero || document.body.classList.contains("toolbox-open") || event.deltaY <= 0) return;
         event.preventDefault();
         dismissHero();
+      }, { passive: false });
+
+      els.hotStrip.addEventListener("wheel", (event) => {
+        const overflow = els.hotStrip.scrollWidth - els.hotStrip.clientWidth;
+        if (overflow <= 0) return;
+        event.preventDefault();
+        const delta = Math.abs(event.deltaX) > Math.abs(event.deltaY) ? event.deltaX : event.deltaY;
+        els.hotStrip.scrollBy({ left: delta * 1.2, behavior: "smooth" });
       }, { passive: false });
 
       window.addEventListener("touchstart", (event) => {
