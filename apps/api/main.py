@@ -117,5 +117,4 @@ async def get_admin_overview():
     return {
         "stats": stats,
         "recentSites": data.get("sites", [])[:8],
-        "dataFile": str(DATA_FILE),
     }

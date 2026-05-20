@@ -548,8 +548,7 @@
       "relations": {
         "products": [],
         "upstream": [
-          "gemini",
-          "aistudio"
+          "gemini"
         ],
         "downstream": [],
         "alternatives": [
@@ -1537,7 +1536,6 @@
       "relations": {
         "products": [],
         "upstream": [
-          "alibaba-cloud",
           "qwen"
         ],
         "downstream": [],
@@ -1581,7 +1579,6 @@
       "relations": {
         "products": [],
         "upstream": [
-          "alibaba-cloud",
           "qwen"
         ],
         "downstream": [],
