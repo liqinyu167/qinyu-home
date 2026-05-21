@@ -48,6 +48,10 @@
         {
           "id": "misc",
           "label": "杂项"
+        },
+        {
+          "id": "3d-gen",
+          "label": "3D生成"
         }
       ]
     },
@@ -2658,6 +2662,251 @@
         "语音",
         "Kimi",
         "月之暗面"
+      ]
+    },
+    {
+      "id": "hunyuan",
+      "name": "混元AI",
+      "url": "https://hunyuan.tencent.com",
+      "description": "腾讯混元大模型旗舰入口，由腾讯自主研发的通用大语言模型体系，支持对话、3D生成、视频生成、图像生成、代码编写、联网搜索等多种能力，是腾讯 AI 生态的统一入口。",
+      "type": "official",
+      "primarySection": "official-labs",
+      "sections": [
+        "official-labs",
+        "chat"
+      ],
+      "capabilities": [
+        "chat",
+        "image-gen",
+        "video-gen",
+        "code",
+        "search",
+        "voice"
+      ],
+      "relations": {
+        "products": [
+          "yuanbao",
+          "hunyuan-3d",
+          "hunyuan-video",
+          "codebuddy",
+          "hunyuan-api"
+        ],
+        "upstream": [],
+        "downstream": [
+          "yuanbao",
+          "hunyuan-3d",
+          "hunyuan-video",
+          "codebuddy",
+          "hunyuan-api"
+        ],
+        "alternatives": [
+          "qwen",
+          "chatgpt",
+          "gemini",
+          "grok",
+          "deepseek",
+          "zhipu"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "官站",
+        "对话",
+        "3D生成",
+        "视频生成",
+        "腾讯"
+      ]
+    },
+    {
+      "id": "yuanbao",
+      "name": "腾讯元宝",
+      "url": "https://yuanbao.tencent.com",
+      "description": "腾讯推出的AI智能助手，基于混元大模型，支持对话、搜索、写作、翻译、图像理解等能力，是混元生态的对话产品入口。",
+      "type": "official",
+      "primarySection": "chat",
+      "sections": [
+        "chat",
+        "search"
+      ],
+      "capabilities": [
+        "chat",
+        "search",
+        "writing",
+        "voice"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "hunyuan"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "doubao",
+          "kimi",
+          "qwen",
+          "zhipu"
+        ],
+        "complements": [
+          "hunyuan"
+        ]
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "对话",
+        "搜索",
+        "腾讯",
+        "子站"
+      ]
+    },
+    {
+      "id": "hunyuan-3d",
+      "name": "混元3D",
+      "url": "https://3d.hunyuan.tencent.com",
+      "description": "腾讯混元3D AI创作引擎，基于混元3D生成大模型，支持文生3D、图生3D、3D动画生成、纹理生成、草图生3D、3D人物生成等功能。",
+      "type": "official",
+      "primarySection": "3d-gen",
+      "sections": [
+        "3d-gen",
+        "image-gen"
+      ],
+      "capabilities": [
+        "image-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "hunyuan"
+        ],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "hunyuan"
+        ]
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "3D生成",
+        "腾讯",
+        "子站"
+      ]
+    },
+    {
+      "id": "hunyuan-video",
+      "name": "混元AI视频",
+      "url": "https://video.hunyuan.tencent.com",
+      "description": "腾讯混元AI视频生成平台，基于混元视频生成大模型，支持文生视频、图生视频等高质量视频创作能力。",
+      "type": "official",
+      "primarySection": "video-gen",
+      "sections": [
+        "video-gen"
+      ],
+      "capabilities": [
+        "video-gen"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "hunyuan"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "jimeng",
+          "kling",
+          "luma",
+          "sora"
+        ],
+        "complements": [
+          "hunyuan"
+        ]
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "视频生成",
+        "腾讯",
+        "子站"
+      ]
+    },
+    {
+      "id": "codebuddy",
+      "name": "CodeBuddy",
+      "url": "https://www.codebuddy.cn",
+      "description": "腾讯云推出的AI智能编程IDE，支持Figma设计稿转代码、智能文档生成、自然语言修改、一键部署等能力，集成了混元大模型进行代码辅助。",
+      "type": "official",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code",
+        "writing"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "hunyuan"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "cursor",
+          "claude-code",
+          "qwen-code",
+          "kimi-code"
+        ],
+        "complements": [
+          "hunyuan"
+        ]
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "编程开发",
+        "腾讯",
+        "子站"
+      ]
+    },
+    {
+      "id": "hunyuan-api",
+      "name": "混元API",
+      "url": "https://console.cloud.tencent.com/hunyuan",
+      "description": "腾讯云混元大模型API服务平台，提供混元全系列模型的API调用、Token管理、模型部署、应用集成等企业级AI服务。",
+      "type": "official",
+      "primarySection": "compute-api",
+      "sections": [
+        "compute-api",
+        "code-dev"
+      ],
+      "capabilities": [
+        "chat",
+        "code"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "hunyuan"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "qwen-api",
+          "deepseek-api",
+          "gemini-api",
+          "openai-api",
+          "bigmodel-api"
+        ],
+        "complements": [
+          "hunyuan"
+        ]
+      },
+      "tags": [
+        "API",
+        "中文",
+        "腾讯",
+        "子站"
       ]
     }
   ]
