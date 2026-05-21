@@ -850,38 +850,6 @@
       "weight": 840
     },
     {
-      "id": "aurora",
-      "name": "Aurora",
-      "url": "https://grok.com",
-      "description": "xAI 的文生图模型 Aurora，原生集成在 Grok 中，支持高度逼真的图像生成与风格多样化，无需独立网站即可使用。",
-      "type": "model",
-      "primarySection": "image-gen",
-      "sections": [
-        "image-gen"
-      ],
-      "capabilities": [
-        "image-gen"
-      ],
-      "relations": {
-        "products": [],
-        "upstream": [
-          "grok"
-        ],
-        "downstream": [],
-        "alternatives": [],
-        "complements": [
-          "grok"
-        ]
-      },
-      "tags": [
-        "图像生成",
-        "xAI",
-        "模型",
-        "子站"
-      ],
-      "weight": 245
-    },
-    {
       "id": "grok-api",
       "name": "xAI API",
       "url": "https://api.x.ai",
@@ -2651,45 +2619,6 @@
       "weight": 585
     },
     {
-      "id": "kimi-code",
-      "name": "Kimi Code",
-      "url": "https://www.kimi.com/",
-      "description": "Kimi内置的AI代码助手，支持代码生成、调试、多文件编辑和自主编程代理，是Kimi生态中的开发工具模块。",
-      "type": "official",
-      "primarySection": "code-dev",
-      "sections": [
-        "code-dev",
-        "chat"
-      ],
-      "capabilities": [
-        "code",
-        "chat"
-      ],
-      "relations": {
-        "products": [],
-        "upstream": [
-          "kimi"
-        ],
-        "downstream": [],
-        "alternatives": [
-          "cursor",
-          "codex",
-          "claude-code"
-        ],
-        "complements": []
-      },
-      "tags": [
-        "免费",
-        "订阅制",
-        "中文",
-        "编程开发",
-        "代码生成",
-        "Kimi",
-        "月之暗面"
-      ],
-      "weight": 225
-    },
-    {
       "id": "kimi-audio",
       "name": "Kimi Audio",
       "url": "https://github.com/MoonshotAI/Kimi-Audio",
@@ -2979,6 +2908,27 @@
         "子站"
       ],
       "weight": 335
+    },
+    {
+      "id": "elevenlabs",
+      "name": "ElevenLabs",
+      "url": "https://elevenlabs.io",
+      "description": "领先的 AI 语音合成平台，支持语音克隆、多语言配音、音效生成及 AI 音乐创作，广泛应用于内容创作、教育和娱乐领域。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "audio-gen",
+      "sections": [
+        "audio-gen",
+        "tools"
+      ],
+      "capabilities": [
+        "audio",
+        "music",
+        "tts",
+        "voice-clone"
+      ],
+      "tags": [],
+      "relations": {}
     }
   ]
 }
