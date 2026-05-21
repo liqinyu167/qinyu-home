@@ -175,6 +175,7 @@ class SitePayload(BaseModel):
     capabilities: list[str] = Field(default_factory=list)
     tags: list[str] = Field(default_factory=list)
     relations: dict[str, list[str]] = Field(default_factory=dict)
+    icon: Optional[str] = None
 
 
 def slugify(value: str) -> str:

@@ -3256,6 +3256,7 @@
     }
 
     function faviconPath(site) {
+      if (site.icon) return `assets/favicons/${site.icon}`;
       return `assets/favicons/${site.url.replace(/^https?:\/\//, "").split("/")[0].replace(/\./g, "_")}.png`;
     }
 

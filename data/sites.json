@@ -668,7 +668,8 @@
         "子站",
         "代码"
       ],
-      "weight": 425
+      "weight": 425,
+      "icon": "codex_custom.png"
     },
     {
       "id": "coze",
