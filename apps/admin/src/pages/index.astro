@@ -7,183 +7,996 @@
     <style is:global>
       :root {
         color-scheme: light;
-        --bg: #f6f3ee;
-        --surface: #fffaf2;
-        --panel: #ffffff;
-        --line: #ddd5c8;
-        --text: #24201c;
-        --muted: #746b60;
-        --primary: #6f4df6;
-        --primary-dark: #5534c8;
-        --accent: #087f73;
-        --danger: #b23b4a;
+        --bg: #f5f2ec;
+        --surface: #fffdfa;
+        --surface-2: #f0ebe3;
+        --ink: #211d19;
+        --muted: #71685c;
+        --soft: #9a9083;
+        --line: #ddd4c7;
+        --primary: #5b47d6;
+        --primary-ink: #ffffff;
+        --accent: #0f7c72;
+        --danger: #aa3144;
+        --warn: #a45f12;
+        --shadow: 0 18px 50px rgba(42, 35, 25, 0.11);
+        --radius: 8px;
       }
+
       * { box-sizing: border-box; }
+
+      html { min-width: 320px; }
+
       body {
         margin: 0;
-        min-height: 100vh;
-        background: var(--bg);
-        color: var(--text);
+        min-height: 100dvh;
+        background:
+          linear-gradient(135deg, rgba(91, 71, 214, 0.08), transparent 34%),
+          linear-gradient(315deg, rgba(15, 124, 114, 0.09), transparent 32%),
+          var(--bg);
+        color: var(--ink);
         font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        letter-spacing: 0;
       }
+
       a { color: inherit; text-decoration: none; }
       button, input, select, textarea { font: inherit; }
+
+      button {
+        cursor: pointer;
+        touch-action: manipulation;
+      }
+
+      button:disabled,
+      input:disabled,
+      textarea:disabled,
+      select:disabled {
+        cursor: not-allowed;
+        opacity: 0.55;
+      }
+
+      :focus-visible {
+        outline: 3px solid rgba(91, 71, 214, 0.32);
+        outline-offset: 2px;
+      }
+
       .app {
         display: grid;
-        grid-template-columns: 248px minmax(0, 1fr);
-        min-height: 100vh;
+        grid-template-columns: 252px minmax(0, 1fr);
+        min-height: 100dvh;
       }
+
       .sidebar {
+        position: sticky;
+        top: 0;
+        height: 100dvh;
         padding: 24px 18px;
+        overflow-y: auto;
+        border-right: 1px solid rgba(255, 255, 255, 0.08);
         background: #17151d;
-        color: #f9f4ea;
+        color: #f8f3eb;
       }
-      .brand b { display: block; font-size: 18px; }
-      .brand span { display: block; margin-top: 4px; color: #b8afc6; font-size: 13px; }
-      .nav { display: grid; gap: 8px; margin-top: 34px; }
+
+      .brand {
+        display: grid;
+        gap: 5px;
+        padding: 4px 6px 22px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .brand b {
+        font-size: 18px;
+        line-height: 1.2;
+      }
+
+      .brand span {
+        color: #b8afc6;
+        font-size: 13px;
+      }
+
+      .nav {
+        display: grid;
+        gap: 8px;
+        margin-top: 22px;
+      }
+
       .nav a {
-        min-height: 44px;
-        display: flex;
+        display: grid;
+        grid-template-columns: 8px minmax(0, 1fr);
         align-items: center;
+        gap: 10px;
+        min-height: 44px;
         padding: 0 12px;
-        border-radius: 8px;
-        color: #cfc6dd;
+        border: 1px solid transparent;
+        border-radius: var(--radius);
+        color: #d8cfe5;
+        transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
       }
-      .nav a[aria-current="page"] { background: #2a2438; color: #ffffff; }
-      .main { min-width: 0; }
+
+      .nav a::before {
+        width: 7px;
+        height: 7px;
+        border-radius: 99px;
+        background: currentColor;
+        content: "";
+        opacity: 0.56;
+      }
+
+      .nav a[aria-current="page"],
+      .nav a:hover {
+        border-color: rgba(255, 255, 255, 0.09);
+        background: #282333;
+        color: #ffffff;
+      }
+
+      .sidebar-note {
+        margin: 26px 6px 0;
+        color: #aca2bb;
+        font-size: 12px;
+        line-height: 1.6;
+      }
+
+      .main {
+        min-width: 0;
+        overflow-x: hidden;
+      }
+
       .topbar {
-        min-height: 72px;
+        position: sticky;
+        top: 0;
+        z-index: 10;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 16px;
-        padding: 14px clamp(18px, 4vw, 36px);
-        border-bottom: 1px solid var(--line);
-        background: rgba(255,250,242,.86);
-        backdrop-filter: blur(16px);
+        gap: 18px;
+        min-height: 78px;
+        padding: 16px clamp(18px, 4vw, 38px);
+        border-bottom: 1px solid rgba(221, 212, 199, 0.76);
+        background: rgba(255, 253, 250, 0.84);
+        backdrop-filter: blur(18px);
       }
-      .topbar h1 { margin: 0; font-size: 22px; }
-      .topbar p { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
-      .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+      .topbar h1 {
+        margin: 0;
+        font-size: clamp(22px, 2.4vw, 30px);
+        line-height: 1.12;
+      }
+
+      .topbar p {
+        margin: 6px 0 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .topbar-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 10px;
+      }
+
       .button {
-        min-height: 44px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        border: 1px solid var(--line);
-        border-radius: 8px;
+        gap: 8px;
+        min-height: 44px;
         padding: 0 14px;
-        background: var(--panel);
-        color: var(--text);
-        cursor: pointer;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--surface);
+        color: var(--ink);
+        font-weight: 650;
+        transition: transform 0.18s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
       }
+
+      .button:hover {
+        border-color: rgba(91, 71, 214, 0.32);
+        box-shadow: 0 8px 24px rgba(91, 71, 214, 0.11);
+        transform: translateY(-1px);
+      }
+
       .button.primary {
         border-color: var(--primary);
         background: var(--primary);
-        color: #fff;
+        color: var(--primary-ink);
       }
+
+      .button.danger {
+        border-color: rgba(170, 49, 68, 0.32);
+        color: var(--danger);
+      }
+
+      .button.ghost {
+        background: transparent;
+      }
+
+      .button.small {
+        flex: 0 0 auto;
+        min-height: 36px;
+        padding: 0 10px;
+        font-size: 13px;
+      }
+
       .content {
-        padding: 24px clamp(18px, 4vw, 36px) 48px;
+        padding: 24px clamp(18px, 3.4vw, 38px) 44px;
       }
+
+      .status-line {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        min-height: 42px;
+        margin-bottom: 16px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .status-message {
+        display: inline-flex;
+        align-items: center;
+        min-height: 34px;
+        padding: 0 10px;
+        border: 1px solid rgba(15, 124, 114, 0.18);
+        border-radius: var(--radius);
+        background: rgba(15, 124, 114, 0.08);
+        color: #145f57;
+      }
+
+      .status-message.is-error {
+        border-color: rgba(170, 49, 68, 0.2);
+        background: rgba(170, 49, 68, 0.08);
+        color: var(--danger);
+      }
+
       .stats {
         display: grid;
         grid-template-columns: repeat(4, minmax(150px, 1fr));
         gap: 14px;
       }
-      .stat, .panel {
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--panel);
+
+      .stat,
+      .panel {
+        border: 1px solid rgba(221, 212, 199, 0.92);
+        border-radius: var(--radius);
+        background: rgba(255, 253, 250, 0.86);
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7) inset;
       }
-      .stat { padding: 18px; }
-      .stat span { color: var(--muted); font-size: 13px; }
-      .stat strong { display: block; margin-top: 8px; font-size: 30px; line-height: 1; }
+
+      .stat {
+        display: grid;
+        gap: 8px;
+        min-height: 104px;
+        padding: 18px;
+      }
+
+      .stat span {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .stat strong {
+        font-size: clamp(28px, 4vw, 38px);
+        line-height: 1;
+        font-variant-numeric: tabular-nums;
+      }
+
       .workspace {
         display: grid;
-        grid-template-columns: minmax(0, 1.6fr) minmax(320px, .9fr);
+        grid-template-columns: minmax(0, 1.45fr) minmax(380px, 0.95fr);
         gap: 16px;
         margin-top: 18px;
+        align-items: start;
       }
-      .panel { overflow: hidden; }
+
+      .panel {
+        overflow: hidden;
+      }
+
+      .editor-panel {
+        position: sticky;
+        top: 96px;
+      }
+
       .panel-head {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
         align-items: center;
         gap: 12px;
-        min-height: 64px;
+        min-height: 68px;
         padding: 16px 18px;
-        border-bottom: 1px solid var(--line);
+        border-bottom: 1px solid rgba(221, 212, 199, 0.82);
+        background: rgba(255, 250, 242, 0.72);
       }
-      .panel-head h2 { margin: 0; font-size: 17px; }
-      .search {
-        min-height: 40px;
-        width: min(320px, 100%);
+
+      .panel-head h2 {
+        margin: 0;
+        font-size: 17px;
+        line-height: 1.25;
+      }
+
+      .panel-head p {
+        margin: 4px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.4;
+      }
+
+      .toolbar {
+        display: grid;
+        grid-template-columns: minmax(180px, 1fr) 180px;
+        gap: 10px;
+        padding: 14px 18px;
+        border-bottom: 1px solid rgba(221, 212, 199, 0.72);
+      }
+
+      .view-controls {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        padding: 3px;
         border: 1px solid var(--line);
-        border-radius: 8px;
-        padding: 0 12px;
-        background: var(--surface);
+        border-radius: var(--radius);
+        background: rgba(240, 235, 227, 0.72);
       }
+
+      .view-button {
+        min-height: 34px;
+        border: 0;
+        border-radius: 6px;
+        padding: 0 10px;
+        background: transparent;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 750;
+      }
+
+      .view-button.is-active {
+        background: var(--surface);
+        color: var(--ink);
+        box-shadow: 0 1px 8px rgba(42, 35, 25, 0.08);
+      }
+
+      .field {
+        display: grid;
+        gap: 6px;
+        min-width: 0;
+      }
+
+      .field span {
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 650;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        min-height: 44px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 10px 12px;
+        background: var(--surface);
+        color: var(--ink);
+      }
+
+      textarea {
+        min-height: 112px;
+        resize: vertical;
+        line-height: 1.55;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        color: #aaa096;
+      }
+
+      .table-wrap {
+        max-height: min(68dvh, 760px);
+        overflow: auto;
+        overscroll-behavior: contain;
+      }
+
       table {
         width: 100%;
+        min-width: 940px;
         border-collapse: collapse;
         font-size: 14px;
       }
-      th, td {
+
+      th,
+      td {
         padding: 14px 18px;
-        border-bottom: 1px solid #eee7dd;
+        border-bottom: 1px solid rgba(238, 231, 221, 0.92);
         text-align: left;
-        vertical-align: top;
+        vertical-align: middle;
       }
-      th { color: var(--muted); font-size: 12px; font-weight: 600; }
-      td small { display: block; margin-top: 4px; color: var(--muted); line-height: 1.45; }
+
+      th {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background: rgba(255, 253, 250, 0.96);
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 750;
+      }
+
+      tr {
+        transition: background 0.16s ease;
+      }
+
+      tbody tr:hover {
+        background: rgba(91, 71, 214, 0.045);
+      }
+
+      .icon-cell {
+        width: 74px;
+      }
+
+      .site-icon,
+      .icon-preview-box {
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        border: 1px solid rgba(33, 29, 25, 0.1);
+        border-radius: var(--radius);
+        background:
+          linear-gradient(135deg, rgba(91, 71, 214, 0.08), rgba(15, 124, 114, 0.08)),
+          var(--surface-2);
+      }
+
+      .site-icon {
+        width: 44px;
+        height: 44px;
+      }
+
+      .site-icon img,
+      .icon-preview-box img {
+        width: 72%;
+        height: 72%;
+        object-fit: contain;
+      }
+
+      .site-icon-fallback,
+      .icon-preview-fallback {
+        color: var(--soft);
+        font-size: 11px;
+        font-weight: 750;
+      }
+
+      .site-icon img.is-missing,
+      .icon-preview-box img.is-missing {
+        display: none;
+      }
+
+      .tool-cell {
+        display: grid;
+        gap: 5px;
+        min-width: 240px;
+      }
+
+      .tool-cell strong {
+        font-size: 15px;
+      }
+
+      .tool-cell small {
+        display: -webkit-box;
+        overflow: hidden;
+        color: var(--muted);
+        line-height: 1.45;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+
+      .url-link {
+        color: var(--primary);
+        font-size: 12px;
+        font-weight: 650;
+      }
+
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
       .pill {
         display: inline-flex;
         align-items: center;
         min-height: 26px;
         padding: 0 8px;
+        border: 1px solid rgba(91, 71, 214, 0.14);
         border-radius: 6px;
-        background: #efe9fb;
-        color: var(--primary-dark);
+        background: rgba(91, 71, 214, 0.08);
+        color: #4d3abf;
+        font-size: 12px;
+        white-space: nowrap;
+      }
+
+      .pill.neutral {
+        border-color: rgba(15, 124, 114, 0.15);
+        background: rgba(15, 124, 114, 0.08);
+        color: #156b63;
+      }
+
+      .row-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+      }
+
+      .compact-list {
+        display: grid;
+        gap: 8px;
+        padding: 12px;
+      }
+
+      .compact-row {
+        display: grid;
+        grid-template-columns: 38px minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 10px;
+        min-height: 54px;
+        padding: 7px 9px;
+        border: 1px solid rgba(221, 212, 199, 0.78);
+        border-radius: var(--radius);
+        background: rgba(255, 253, 250, 0.7);
+        transition: background 0.16s ease, border-color 0.16s ease;
+      }
+
+      .compact-row:hover {
+        border-color: rgba(91, 71, 214, 0.22);
+        background: rgba(91, 71, 214, 0.045);
+      }
+
+      .compact-row .site-icon {
+        width: 38px;
+        height: 38px;
+      }
+
+      .compact-main {
+        display: grid;
+        gap: 2px;
+        min-width: 0;
+      }
+
+      .compact-main strong,
+      .compact-main span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .compact-main strong {
+        font-size: 14px;
+      }
+
+      .compact-main span {
+        color: var(--muted);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
         font-size: 12px;
       }
-      form {
+
+      .form {
         display: grid;
         gap: 14px;
         padding: 18px;
       }
-      label { display: grid; gap: 6px; color: var(--muted); font-size: 13px; }
-      input, select, textarea {
-        width: 100%;
-        min-height: 44px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        padding: 10px 12px;
-        background: var(--surface);
-        color: var(--text);
-      }
-      textarea { min-height: 104px; resize: vertical; line-height: 1.5; }
-      .notice {
-        margin: 0 18px 18px;
+
+      .icon-preview {
+        display: grid;
+        grid-template-columns: 64px minmax(0, 1fr);
+        gap: 12px;
+        align-items: center;
         padding: 12px;
-        border-radius: 8px;
-        background: #eef8f4;
-        color: #1b665e;
+        border: 1px solid rgba(221, 212, 199, 0.82);
+        border-radius: var(--radius);
+        background: rgba(240, 235, 227, 0.46);
+      }
+
+      .icon-preview-box {
+        width: 64px;
+        height: 64px;
+      }
+
+      .icon-preview-meta {
+        display: grid;
+        gap: 4px;
+        min-width: 0;
+      }
+
+      .icon-preview-meta strong {
         font-size: 13px;
+      }
+
+      .icon-path {
+        overflow-wrap: anywhere;
+        color: var(--muted);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+        font-size: 12px;
+        line-height: 1.45;
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .relation-editor {
+        display: grid;
+        gap: 12px;
+        padding: 12px;
+        border: 1px solid rgba(221, 212, 199, 0.82);
+        border-radius: var(--radius);
+        background: rgba(240, 235, 227, 0.38);
+      }
+
+      .relation-editor-head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .relation-editor-head strong {
+        display: block;
+        font-size: 13px;
+      }
+
+      .relation-editor-head span {
+        display: block;
+        margin-top: 3px;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.45;
+      }
+
+      .relation-columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .relation-group {
+        display: grid;
+        gap: 8px;
+        min-width: 0;
+      }
+
+      .relation-group-title {
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 750;
+      }
+
+      .relation-list {
+        display: grid;
+        gap: 8px;
+      }
+
+      .relation-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 38px;
+        gap: 8px;
+      }
+
+      .relation-row select {
+        min-height: 38px;
+      }
+
+      .relation-remove {
+        min-height: 38px;
+        border: 1px solid rgba(170, 49, 68, 0.22);
+        border-radius: var(--radius);
+        background: rgba(170, 49, 68, 0.06);
+        color: var(--danger);
+        font-weight: 800;
+      }
+
+      .form-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+        padding-top: 4px;
+      }
+
+      .form-actions-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .helper {
+        margin: 0;
+        color: var(--soft);
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      .empty {
+        padding: 28px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .confirm {
+        width: min(420px, calc(100vw - 32px));
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 0;
+        background: var(--surface);
+        color: var(--ink);
+        box-shadow: var(--shadow);
+      }
+
+      .confirm::backdrop {
+        background: rgba(20, 18, 24, 0.42);
+        backdrop-filter: blur(8px);
+      }
+
+      .confirm-body {
+        display: grid;
+        gap: 10px;
+        padding: 20px;
+      }
+
+      .confirm-body h2 {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      .confirm-body p {
+        margin: 0;
+        color: var(--muted);
         line-height: 1.55;
       }
-      .empty { padding: 24px; color: var(--muted); }
 
-      @media (max-width: 980px) {
-        .app { grid-template-columns: 1fr; }
-        .sidebar { position: static; }
-        .nav { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-        .workspace { grid-template-columns: 1fr; }
-        .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .confirm-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        padding: 14px 20px 18px;
       }
-      @media (max-width: 620px) {
-        .topbar { align-items: flex-start; flex-direction: column; }
-        .stats { grid-template-columns: 1fr; }
-        th:nth-child(3), td:nth-child(3) { display: none; }
+
+      @media (max-width: 1320px) {
+        .workspace {
+          grid-template-columns: 1fr;
+        }
+
+        .editor-panel {
+          position: static;
+        }
+      }
+
+      @media (max-width: 1080px) {
+        .app {
+          grid-template-columns: 1fr;
+        }
+
+        .sidebar {
+          position: static;
+          height: auto;
+        }
+
+        .nav {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .sidebar {
+          padding: 18px clamp(18px, 4vw, 28px);
+        }
+
+        .brand {
+          padding-bottom: 16px;
+        }
+      }
+
+      @media (max-width: 820px) {
+        .topbar {
+          align-items: flex-start;
+          flex-direction: column;
+          position: static;
+          min-height: 0;
+        }
+
+        .topbar-actions {
+          justify-content: flex-start;
+          width: 100%;
+        }
+
+        .button {
+          flex: 1 1 auto;
+        }
+
+        .stats {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .stat {
+          min-height: 88px;
+          padding: 14px;
+        }
+
+        .toolbar,
+        .form-grid,
+        .relation-columns {
+          grid-template-columns: 1fr;
+        }
+
+        .panel-head {
+          grid-template-columns: 1fr;
+        }
+
+        .table-wrap {
+          max-height: min(62dvh, 620px);
+          overflow: auto;
+        }
+
+        table,
+        tbody,
+        tr,
+        td {
+          display: block;
+        }
+
+        table {
+          min-width: 0;
+        }
+
+        thead {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          overflow: hidden;
+          clip: rect(0 0 0 0);
+          white-space: nowrap;
+        }
+
+        tbody {
+          display: grid;
+          gap: 12px;
+          padding: 14px;
+        }
+
+        tr {
+          display: grid;
+          grid-template-columns: 54px minmax(0, 1fr);
+          gap: 10px 12px;
+          padding: 14px;
+          border: 1px solid rgba(221, 212, 199, 0.88);
+          border-radius: var(--radius);
+          background: rgba(255, 253, 250, 0.74);
+        }
+
+        th,
+        td {
+          padding: 0;
+          border-bottom: 0;
+        }
+
+        .icon-cell {
+          grid-row: 1 / span 3;
+          width: auto;
+        }
+
+        .site-icon {
+          width: 52px;
+          height: 52px;
+        }
+
+        td:nth-child(2),
+        td:nth-child(3),
+        td:nth-child(4),
+        td:nth-child(5),
+        td:nth-child(6) {
+          grid-column: 2;
+        }
+
+        td:nth-child(3)::before,
+        td:nth-child(4)::before,
+        td:nth-child(5)::before {
+          display: block;
+          margin-bottom: 6px;
+          color: var(--soft);
+          font-size: 11px;
+          font-weight: 750;
+        }
+
+        td:nth-child(3)::before {
+          content: "权重";
+        }
+
+        td:nth-child(4)::before {
+          content: "分类";
+        }
+
+        td:nth-child(5)::before {
+          content: "标签";
+        }
+
+        .tool-cell {
+          min-width: 0;
+        }
+
+        .row-actions {
+          justify-content: flex-start;
+          padding-top: 2px;
+        }
+
+        .compact-list {
+          padding: 12px;
+        }
+      }
+
+      @media (max-width: 460px) {
+        .stats,
+        .nav {
+          grid-template-columns: 1fr;
+        }
+
+        .content {
+          padding-inline: 14px;
+        }
+
+        .panel-head,
+        .toolbar,
+        .form {
+          padding-inline: 14px;
+        }
+
+        tbody {
+          padding: 12px;
+        }
+
+        tr {
+          grid-template-columns: 46px minmax(0, 1fr);
+          gap: 9px 10px;
+          padding: 12px;
+        }
+
+        .site-icon {
+          width: 46px;
+          height: 46px;
+        }
+
+        .icon-preview {
+          grid-template-columns: 52px minmax(0, 1fr);
+        }
+
+        .icon-preview-box {
+          width: 52px;
+          height: 52px;
+        }
+
+        .compact-row {
+          grid-template-columns: 34px minmax(0, 1fr);
+        }
+
+        .compact-row .site-icon {
+          width: 34px;
+          height: 34px;
+        }
+
+        .compact-row .row-actions {
+          grid-column: 2;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          transition-duration: 0.001ms !important;
+          animation-duration: 0.001ms !important;
+          animation-iteration-count: 1 !important;
+        }
       }
     </style>
   </head>
@@ -196,191 +1009,776 @@
         </div>
         <nav class="nav" aria-label="后台导航">
           <a aria-current="page" href="/">工具管理</a>
-          <a href="/">分类标签</a>
-          <a href="/">数据检查</a>
+          <a href="#editor">编辑器</a>
+          <a href="http://127.0.0.1:4321/">前台预览</a>
         </nav>
+        <p class="sidebar-note">本页直接读写 data/sites.json。生产环境可通过 ADMIN_API_KEY 开启管理密钥。</p>
       </aside>
 
       <main class="main">
         <header class="topbar">
           <div>
             <h1>工具管理</h1>
-            <p>先搭好后台界面骨架，下一步接入保存、审核和自动抓取。</p>
+            <p>管理前台导航站的基础网站数据，支持查询、新增、编辑与删除。</p>
           </div>
-          <div class="actions">
+          <div class="topbar-actions">
             <a class="button" href="http://127.0.0.1:4321/">查看前台</a>
-            <button class="button primary" type="button" id="focus-form">新增工具</button>
+            <button class="button primary" type="button" id="newSiteButton">新增网站</button>
           </div>
         </header>
 
         <section class="content">
+          <div class="status-line">
+            <span id="lastSync">准备连接 API...</span>
+            <span class="status-message" id="statusMessage" hidden></span>
+          </div>
+
           <div class="stats" id="stats"></div>
 
           <div class="workspace">
-            <section class="panel">
+            <section class="panel" aria-labelledby="listTitle">
               <div class="panel-head">
-                <h2>工具列表</h2>
-                <input class="search" id="search" type="search" placeholder="搜索名称、描述、标签" />
+                <div>
+                  <h2 id="listTitle">网站列表</h2>
+                  <p>在列表容器内观察网站，支持详细和简略两种视图。</p>
+                </div>
+                <div class="form-actions-group">
+                  <div class="view-controls" aria-label="列表视图">
+                    <button class="view-button is-active" type="button" data-view="detail">详细</button>
+                    <button class="view-button" type="button" data-view="compact">简略</button>
+                  </div>
+                  <button class="button small ghost" type="button" id="refreshButton">刷新</button>
+                </div>
               </div>
-              <div id="table-wrap" class="empty">正在加载工具数据...</div>
+
+              <div class="toolbar" aria-label="筛选工具">
+                <label class="field">
+                  <span>搜索</span>
+                  <input id="searchInput" type="search" placeholder="名称、描述、标签或网址" autocomplete="off" />
+                </label>
+                <label class="field">
+                  <span>分类</span>
+                  <select id="sectionFilter">
+                    <option value="">全部分类</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="table-wrap" id="tableWrap">
+                <div class="empty">正在加载网站数据...</div>
+              </div>
             </section>
 
-            <section class="panel" aria-labelledby="form-title">
+            <section class="panel editor-panel" id="editor" aria-labelledby="formTitle">
               <div class="panel-head">
-                <h2 id="form-title">新增工具草稿</h2>
+                <div>
+                  <h2 id="formTitle">新增网站</h2>
+                  <p id="formHint">填写基础信息后保存，前台会读取同一份数据。</p>
+                </div>
+                <span class="pill neutral" id="modePill">新建</span>
               </div>
-              <form id="tool-form">
-                <label>
-                  工具名称
-                  <input name="name" required placeholder="例如 Kimi" />
+
+              <form class="form" id="siteForm">
+                <input type="hidden" name="id" />
+
+                <label class="field">
+                  <span>网站名称</span>
+                  <input name="name" required placeholder="例如 Kimi" autocomplete="off" />
                 </label>
-                <label>
-                  官网地址
-                  <input name="url" type="url" required placeholder="https://..." />
+
+                <label class="field">
+                  <span>官网地址</span>
+                  <input name="url" type="url" required placeholder="https://..." autocomplete="off" />
                 </label>
-                <label>
-                  主分类
-                  <select name="primarySection" id="section-select"></select>
+
+                <div class="icon-preview" aria-live="polite">
+                  <div class="icon-preview-box">
+                    <img id="iconPreviewImage" alt="" />
+                    <span class="icon-preview-fallback" id="iconPreviewFallback" hidden>缺图</span>
+                  </div>
+                  <div class="icon-preview-meta">
+                    <strong>网站图标预览</strong>
+                    <span class="icon-path" id="iconPreviewPath">填写官网地址后生成图标路径</span>
+                  </div>
+                </div>
+
+                <div class="form-grid">
+                  <label class="field">
+                    <span>类型</span>
+                    <select name="type">
+                      <option value="official">官方 / 原厂</option>
+                      <option value="tool">工具</option>
+                      <option value="api">API</option>
+                      <option value="creative">创作</option>
+                      <option value="research">研究</option>
+                    </select>
+                  </label>
+
+                  <label class="field">
+                    <span>主分类</span>
+                    <select name="primarySection" id="primarySectionSelect"></select>
+                  </label>
+                </div>
+
+                <label class="field">
+                  <span>排列权重</span>
+                  <input name="weight" type="number" step="1" inputmode="numeric" value="0" />
+                  <p class="helper">整数越大越靠前；相同权重按网站名称字母顺序排列。</p>
                 </label>
-                <label>
-                  标签
-                  <input name="tags" placeholder="免费, 中文, 写作" />
+
+                <label class="field">
+                  <span>关联分类</span>
+                  <input name="sections" placeholder="official-labs, chat, image-gen" />
+                  <p class="helper">多个分类用逗号分隔；保存时会自动包含主分类。</p>
                 </label>
-                <label>
-                  描述
+
+                <label class="field">
+                  <span>标签</span>
+                  <input name="tags" placeholder="免费, 中文, API" />
+                </label>
+
+                <label class="field">
+                  <span>能力</span>
+                  <input name="capabilities" placeholder="chat, image-gen, code" />
+                </label>
+
+                <label class="field">
+                  <span>描述</span>
                   <textarea name="description" placeholder="一句话说明它适合谁、解决什么问题"></textarea>
                 </label>
-                <button class="button primary" type="submit">保存草稿</button>
+
+                <section class="relation-editor" aria-labelledby="relationTitle">
+                  <div class="relation-editor-head">
+                    <div>
+                      <strong id="relationTitle">上下游关系</strong>
+                      <span>编辑时可以查看、替换或新增关联网站，下游会用于前台关系图。</span>
+                    </div>
+                    <button class="button small ghost" type="button" id="addDownstreamButton">新增下游</button>
+                  </div>
+                  <div class="relation-columns">
+                    <div class="relation-group">
+                      <span class="relation-group-title">上游</span>
+                      <label class="field">
+                        <span>上游来源</span>
+                        <select id="upstreamSelect"></select>
+                      </label>
+                      <p class="helper">上游只允许为空或一个，用于表示当前工具的来源 / 底层能力 / 母公司。</p>
+                    </div>
+                    <div class="relation-group">
+                      <span class="relation-group-title">下游</span>
+                      <div class="relation-list" id="downstreamList"></div>
+                    </div>
+                  </div>
+                </section>
+
+                <label class="field">
+                  <span>管理密钥</span>
+                  <input name="adminKey" type="password" placeholder="本地未配置时可留空" autocomplete="current-password" />
+                  <p class="helper">如果后端设置了 ADMIN_API_KEY，请在这里填写。会保存在本机浏览器。</p>
+                </label>
+
+                <div class="form-actions">
+                  <button class="button danger" type="button" id="deleteButton" disabled>删除</button>
+                  <div class="form-actions-group">
+                    <button class="button ghost" type="button" id="resetButton">清空</button>
+                    <button class="button primary" type="submit" id="saveButton">保存网站</button>
+                  </div>
+                </div>
               </form>
-              <p class="notice" id="notice">保存接口还未开启。现在提交会在本页生成草稿反馈，不会写入数据文件。</p>
             </section>
           </div>
         </section>
       </main>
     </div>
 
+    <dialog class="confirm" id="confirmDialog" aria-labelledby="confirmTitle">
+      <div class="confirm-body">
+        <h2 id="confirmTitle">删除这个网站？</h2>
+        <p id="confirmCopy">删除后会立即写入数据文件。</p>
+      </div>
+      <div class="confirm-actions">
+        <button class="button ghost" type="button" id="cancelDeleteButton">取消</button>
+        <button class="button danger" type="button" id="confirmDeleteButton">确认删除</button>
+      </div>
+    </dialog>
+
     <script>
-      const API_BASE = window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost'
-        ? 'http://127.0.0.1:8002/api'
-        : '/api';
+      const API_BASE = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost"
+        ? "http://127.0.0.1:8002/api"
+        : "/api";
+      const ASSET_BASE = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost"
+        ? "http://127.0.0.1:8002/assets"
+        : "/assets";
 
-      const state = { sites: [], categories: [], query: '' };
-      const stats = document.getElementById('stats');
-      const tableWrap = document.getElementById('table-wrap');
-      const search = document.getElementById('search');
-      const sectionSelect = document.getElementById('section-select');
-      const form = document.getElementById('tool-form');
-      const notice = document.getElementById('notice');
+      const state = {
+        sites: [],
+        categories: [],
+        query: "",
+        section: "",
+        view: localStorage.getItem("qinyu_admin_view") || "detail",
+        editingId: "",
+        pendingDeleteId: "",
+        relations: { upstream: [], downstream: [] },
+      };
 
-      function escapeHtml(value = '') {
+      const els = {
+        stats: document.getElementById("stats"),
+        tableWrap: document.getElementById("tableWrap"),
+        search: document.getElementById("searchInput"),
+        sectionFilter: document.getElementById("sectionFilter"),
+        form: document.getElementById("siteForm"),
+        formTitle: document.getElementById("formTitle"),
+        formHint: document.getElementById("formHint"),
+        modePill: document.getElementById("modePill"),
+        primarySection: document.getElementById("primarySectionSelect"),
+        status: document.getElementById("statusMessage"),
+        lastSync: document.getElementById("lastSync"),
+        save: document.getElementById("saveButton"),
+        delete: document.getElementById("deleteButton"),
+        reset: document.getElementById("resetButton"),
+        refresh: document.getElementById("refreshButton"),
+        newSite: document.getElementById("newSiteButton"),
+        viewButtons: document.querySelectorAll(".view-button"),
+        upstreamSelect: document.getElementById("upstreamSelect"),
+        downstreamList: document.getElementById("downstreamList"),
+        addDownstream: document.getElementById("addDownstreamButton"),
+        confirmDialog: document.getElementById("confirmDialog"),
+        confirmCopy: document.getElementById("confirmCopy"),
+        cancelDelete: document.getElementById("cancelDeleteButton"),
+        confirmDelete: document.getElementById("confirmDeleteButton"),
+        iconPreviewImage: document.getElementById("iconPreviewImage"),
+        iconPreviewFallback: document.getElementById("iconPreviewFallback"),
+        iconPreviewPath: document.getElementById("iconPreviewPath"),
+      };
+
+      const storedKey = localStorage.getItem("qinyu_admin_key") || "";
+      els.form.elements.adminKey.value = storedKey;
+
+      function escapeHtml(value = "") {
         return String(value).replace(/[&<>"']/g, char => ({
-          '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#039;",
         }[char]));
+      }
+
+      function splitList(value) {
+        if (Array.isArray(value)) return value.map(String).map(item => item.trim()).filter(Boolean);
+        return String(value || "")
+          .split(/[,，\n]/)
+          .map(item => item.trim())
+          .filter(Boolean);
+      }
+
+      function joinList(value) {
+        return (value || []).join(", ");
+      }
+
+      function domainFromUrl(url) {
+        try {
+          return new URL(url).hostname.replace(/^www\./, "");
+        } catch {
+          return String(url || "").replace(/^https?:\/\//, "").split("/")[0].replace(/^www\./, "");
+        }
+      }
+
+      function faviconFilename(url) {
+        const domain = domainFromUrl(url).trim();
+        return domain ? `${domain.replace(/\./g, "_")}.png` : "";
+      }
+
+      function faviconPath(url) {
+        const filename = faviconFilename(url);
+        return filename ? `${ASSET_BASE}/favicons/${filename}` : "";
+      }
+
+      function expectedFaviconPath(url) {
+        const filename = faviconFilename(url);
+        return filename ? `assets/favicons/${filename}` : "填写官网地址后生成图标路径";
+      }
+
+      function missingIconMarkup() {
+        return `<span class="site-icon-fallback">缺图</span>`;
+      }
+
+      function renderSiteIcon(site) {
+        const src = faviconPath(site.url);
+        if (!src) return `<div class="site-icon">${missingIconMarkup()}</div>`;
+        return `
+          <div class="site-icon" title="${escapeHtml(expectedFaviconPath(site.url))}">
+            <img src="${escapeHtml(src)}" alt="${escapeHtml(site.name)} 图标" loading="lazy" onerror="this.classList.add('is-missing'); this.nextElementSibling.hidden = false;">
+            <span class="site-icon-fallback" hidden>缺图</span>
+          </div>
+        `;
+      }
+
+      function updateIconPreview(url) {
+        const src = faviconPath(url);
+        els.iconPreviewPath.textContent = expectedFaviconPath(url);
+        els.iconPreviewFallback.hidden = Boolean(src);
+        els.iconPreviewImage.classList.remove("is-missing");
+        if (!src) {
+          els.iconPreviewImage.removeAttribute("src");
+          return;
+        }
+        els.iconPreviewImage.src = src;
       }
 
       function flatSections() {
         return state.categories.flatMap(group => [
-          { id: group.id, label: group.label },
-          ...(group.children || [])
+          ...(group.children || []).map(child => ({
+            id: child.id,
+            label: `${group.label} / ${child.label}`,
+          })),
         ]);
       }
 
-      function renderStats(apiStats) {
-        stats.innerHTML = [
-          ['工具总数', apiStats.total || state.sites.length],
-          ['分类数', flatSections().length],
-          ['标签数', apiStats.tags || 0],
-          ['能力项', apiStats.capabilities || 0],
-        ].map(([label, value]) => `
+      function authHeaders() {
+        const key = els.form.elements.adminKey.value.trim();
+        localStorage.setItem("qinyu_admin_key", key);
+        return key ? { Authorization: `Bearer ${key}` } : {};
+      }
+
+      function showStatus(message, type = "ok") {
+        els.status.textContent = message;
+        els.status.hidden = false;
+        els.status.classList.toggle("is-error", type === "error");
+        window.clearTimeout(showStatus.timer);
+        showStatus.timer = window.setTimeout(() => {
+          els.status.hidden = true;
+        }, 4200);
+      }
+
+      function sectionLabel(id) {
+        return flatSections().find(section => section.id === id)?.label || id || "未分类";
+      }
+
+      function compareSites(a, b) {
+        const weightDiff = Number(b.weight || 0) - Number(a.weight || 0);
+        if (weightDiff) return weightDiff;
+        return String(a.name || "").localeCompare(String(b.name || ""), "en", { sensitivity: "base" });
+      }
+
+      function siteLabel(id) {
+        const site = state.sites.find(item => item.id === id);
+        return site ? `${site.name} · ${domainFromUrl(site.url)}` : id;
+      }
+
+      function relationOptions(selected = "") {
+        return [
+          `<option value="">选择网站</option>`,
+          ...state.sites
+            .filter(site => site.id !== state.editingId)
+            .map(site => `
+              <option value="${escapeHtml(site.id)}" ${site.id === selected ? "selected" : ""}>
+                ${escapeHtml(siteLabel(site.id))}
+              </option>
+            `)
+        ].join("");
+      }
+
+      function compactRow(site) {
+        return `
+          <div class="compact-row" data-id="${escapeHtml(site.id)}">
+            ${renderSiteIcon(site)}
+            <div class="compact-main" title="${escapeHtml(site.name)}">
+              <strong>${escapeHtml(domainFromUrl(site.url))}</strong>
+              <span>权重 ${Number(site.weight || 0)}</span>
+            </div>
+            <div class="row-actions">
+              <button class="button small" type="button" data-action="edit" data-id="${escapeHtml(site.id)}">编辑</button>
+              <button class="button small danger" type="button" data-action="delete" data-id="${escapeHtml(site.id)}">删除</button>
+            </div>
+          </div>
+        `;
+      }
+
+      function renderStats(apiStats = {}) {
+        const tags = new Set(state.sites.flatMap(site => site.tags || []));
+        const capabilities = new Set(state.sites.flatMap(site => site.capabilities || []));
+        const stats = [
+          ["网站总数", apiStats.total || state.sites.length],
+          ["分类数", flatSections().length],
+          ["标签数", apiStats.tags || tags.size],
+          ["能力项", apiStats.capabilities || capabilities.size],
+        ];
+        els.stats.innerHTML = stats.map(([label, value]) => `
           <div class="stat">
             <span>${label}</span>
             <strong>${value}</strong>
           </div>
-        `).join('');
+        `).join("");
+      }
+
+      function renderSectionControls() {
+        const options = flatSections().map(section => `
+          <option value="${escapeHtml(section.id)}">${escapeHtml(section.label)}</option>
+        `).join("");
+        els.primarySection.innerHTML = options;
+        els.sectionFilter.innerHTML = `<option value="">全部分类</option>${options}`;
       }
 
       function filteredSites() {
         const query = state.query.trim().toLowerCase();
-        if (!query) return state.sites;
-        return state.sites.filter(site => [site.name, site.description, ...(site.tags || [])].join(' ').toLowerCase().includes(query));
+        return state.sites.filter(site => {
+          const text = [
+            site.id,
+            site.name,
+            site.url,
+            site.description,
+            site.primarySection,
+            ...(site.sections || []),
+            ...(site.tags || []),
+            ...(site.capabilities || []),
+          ].join(" ").toLowerCase();
+          const matchesQuery = !query || text.includes(query);
+          const matchesSection = !state.section || [site.primarySection, ...(site.sections || [])].includes(state.section);
+          return matchesQuery && matchesSection;
+        }).sort(compareSites);
       }
 
       function renderTable() {
-        const rows = filteredSites().slice(0, 24);
+        const rows = filteredSites();
         if (!rows.length) {
-          tableWrap.className = 'empty';
-          tableWrap.textContent = '没有匹配的工具。';
+          els.tableWrap.innerHTML = `<div class="empty">没有匹配的网站。可以调整筛选，或新建一个。</div>`;
           return;
         }
-        tableWrap.className = '';
-        tableWrap.innerHTML = `
+
+        els.tableWrap.dataset.view = state.view;
+        els.viewButtons.forEach(button => {
+          button.classList.toggle("is-active", button.dataset.view === state.view);
+        });
+
+        if (state.view === "compact") {
+          els.tableWrap.innerHTML = `<div class="compact-list">${rows.map(compactRow).join("")}</div>`;
+          return;
+        }
+
+        els.tableWrap.innerHTML = `
           <table>
             <thead>
               <tr>
-                <th>名称</th>
+                <th>图标</th>
+                <th>网站</th>
+                <th>权重</th>
                 <th>分类</th>
                 <th>标签</th>
-                <th>状态</th>
+                <th>操作</th>
               </tr>
             </thead>
             <tbody>
               ${rows.map(site => `
                 <tr>
+                  <td class="icon-cell">${renderSiteIcon(site)}</td>
                   <td>
-                    <strong>${escapeHtml(site.name)}</strong>
-                    <small>${escapeHtml(site.description)}</small>
+                    <div class="tool-cell">
+                      <strong>${escapeHtml(site.name)}</strong>
+                      <small>${escapeHtml(site.description || "暂无描述")}</small>
+                      <a class="url-link" href="${escapeHtml(site.url)}" target="_blank" rel="noreferrer">${escapeHtml(site.url)}</a>
+                    </div>
                   </td>
-                  <td>${escapeHtml(site.primarySectionLabel || site.primarySection)}</td>
-                  <td>${(site.tags || []).slice(0, 3).map(tag => `<span class="pill">${escapeHtml(tag)}</span>`).join(' ')}</td>
-                  <td><span class="pill">已发布</span></td>
+                  <td><span class="pill neutral">${Number(site.weight || 0)}</span></td>
+                  <td><span class="pill neutral">${escapeHtml(sectionLabel(site.primarySection))}</span></td>
+                  <td>
+                    <div class="pill-row">
+                      ${(site.tags || []).slice(0, 4).map(tag => `<span class="pill">${escapeHtml(tag)}</span>`).join("") || `<span class="pill neutral">无标签</span>`}
+                    </div>
+                  </td>
+                  <td>
+                    <div class="row-actions">
+                      <button class="button small" type="button" data-action="edit" data-id="${escapeHtml(site.id)}">编辑</button>
+                      <button class="button small danger" type="button" data-action="delete" data-id="${escapeHtml(site.id)}">删除</button>
+                    </div>
+                  </td>
                 </tr>
-              `).join('')}
+              `).join("")}
             </tbody>
           </table>
         `;
       }
 
-      function renderSelect() {
-        sectionSelect.innerHTML = flatSections().map(section => `
-          <option value="${escapeHtml(section.id)}">${escapeHtml(section.label)}</option>
-        `).join('');
+      function resetForm() {
+        state.editingId = "";
+        state.relations = { upstream: [], downstream: [] };
+        els.form.reset();
+        els.form.elements.adminKey.value = localStorage.getItem("qinyu_admin_key") || "";
+        els.form.elements.type.value = "tool";
+        els.form.elements.weight.value = "0";
+        els.form.elements.primarySection.value = flatSections()[0]?.id || "";
+        els.delete.disabled = true;
+        els.formTitle.textContent = "新增网站";
+        els.formHint.textContent = "填写基础信息后保存，前台会读取同一份数据。";
+        els.modePill.textContent = "新建";
+        updateIconPreview("");
+        renderRelationEditor();
       }
 
-      async function boot() {
+      function editSite(siteId) {
+        const site = state.sites.find(item => item.id === siteId);
+        if (!site) return;
+        state.editingId = site.id;
+        state.relations = {
+          upstream: (site.relations?.upstream || []).slice(0, 1),
+          downstream: [...(site.relations?.downstream || [])],
+        };
+        els.form.elements.id.value = site.id;
+        els.form.elements.name.value = site.name || "";
+        els.form.elements.url.value = site.url || "";
+        els.form.elements.type.value = site.type || "tool";
+        els.form.elements.weight.value = Number(site.weight || 0);
+        els.form.elements.primarySection.value = site.primarySection || flatSections()[0]?.id || "";
+        els.form.elements.sections.value = joinList(site.sections || []);
+        els.form.elements.tags.value = joinList(site.tags || []);
+        els.form.elements.capabilities.value = joinList(site.capabilities || []);
+        els.form.elements.description.value = site.description || "";
+        updateIconPreview(site.url || "");
+        els.delete.disabled = false;
+        els.formTitle.textContent = `编辑 ${site.name}`;
+        els.formHint.textContent = `正在编辑 ID：${site.id}`;
+        els.modePill.textContent = "编辑";
+        renderRelationEditor();
+        document.getElementById("editor").scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      function renderRelationEditor() {
+        renderUpstreamSelect();
+        renderRelationList("downstream", els.downstreamList);
+      }
+
+      function renderUpstreamSelect() {
+        els.upstreamSelect.disabled = !state.editingId;
+        els.upstreamSelect.innerHTML = relationOptions(state.relations.upstream[0] || "");
+      }
+
+      function renderRelationList(key, container) {
+        const ids = state.relations[key] || [];
+        if (!state.editingId) {
+          container.innerHTML = `<p class="helper">保存网站后可编辑关系。</p>`;
+          return;
+        }
+        if (!ids.length) {
+          container.innerHTML = `<p class="helper">暂无${key === "upstream" ? "上游" : "下游"}。</p>`;
+          return;
+        }
+        container.innerHTML = ids.map((id, index) => `
+          <div class="relation-row" data-relation="${key}" data-index="${index}">
+            <select aria-label="${key === "upstream" ? "上游" : "下游"} ${index + 1}">
+              ${relationOptions(id)}
+            </select>
+            <button class="relation-remove" type="button" aria-label="移除关系">×</button>
+          </div>
+        `).join("");
+      }
+
+      function cleanRelations(relations) {
+        const upstream = (relations.upstream || []).filter(Boolean);
+        return {
+          ...relations,
+          upstream: upstream.length ? [upstream[0]] : [],
+          downstream: [...new Set((relations.downstream || []).filter(Boolean))],
+        };
+      }
+
+      function formPayload() {
+        const formData = new FormData(els.form);
+        const primary = String(formData.get("primarySection") || "");
+        const sections = splitList(formData.get("sections"));
+        if (primary && !sections.includes(primary)) sections.unshift(primary);
+        return {
+          id: String(formData.get("id") || "").trim(),
+          name: String(formData.get("name") || "").trim(),
+          url: String(formData.get("url") || "").trim(),
+          type: String(formData.get("type") || "tool").trim(),
+          weight: Number.parseInt(String(formData.get("weight") || "0"), 10) || 0,
+          primarySection: primary,
+          sections,
+          tags: splitList(formData.get("tags")),
+          capabilities: splitList(formData.get("capabilities")),
+          description: String(formData.get("description") || "").trim(),
+          relations: cleanRelations(state.relations),
+        };
+      }
+
+      async function apiRequest(path, options = {}) {
+        const response = await fetch(`${API_BASE}${path}`, {
+          ...options,
+          headers: {
+            "Content-Type": "application/json",
+            ...authHeaders(),
+            ...(options.headers || {}),
+          },
+        });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok) {
+          throw new Error(data.detail || data.message || `请求失败：${response.status}`);
+        }
+        return data;
+      }
+
+      async function loadData({ silent = false } = {}) {
         try {
+          if (!silent) els.tableWrap.innerHTML = `<div class="empty">正在加载网站数据...</div>`;
           const [sitesRes, statsRes] = await Promise.all([
-            fetch(`${API_BASE}/sites`),
-            fetch(`${API_BASE}/stats`),
+            fetch(`${API_BASE}/sites`, { cache: "no-store" }),
+            fetch(`${API_BASE}/stats`, { cache: "no-store" }),
           ]);
           const data = await sitesRes.json();
           const apiStats = await statsRes.json();
           state.sites = data.sites || [];
           state.categories = data.categories || [];
+          renderSectionControls();
           renderStats(apiStats);
-          renderSelect();
           renderTable();
+          els.lastSync.textContent = `已同步 ${state.sites.length} 个网站`;
+          if (!state.editingId) resetForm();
         } catch (error) {
-          tableWrap.className = 'empty';
-          tableWrap.textContent = `无法连接 API：${error.message}`;
+          els.tableWrap.innerHTML = `<div class="empty">无法连接 API：${escapeHtml(error.message)}</div>`;
+          showStatus(error.message, "error");
         }
       }
 
-      search.addEventListener('input', event => {
+      async function saveSite(event) {
+        event.preventDefault();
+        const payload = formPayload();
+        if (!payload.name || !payload.url) {
+          showStatus("请填写网站名称和官网地址。", "error");
+          return;
+        }
+        els.save.disabled = true;
+        try {
+          const editing = Boolean(state.editingId);
+          const path = editing ? `/admin/sites/${encodeURIComponent(state.editingId)}` : "/admin/sites";
+          const method = editing ? "PUT" : "POST";
+          const data = await apiRequest(path, {
+            method,
+            body: JSON.stringify(payload),
+          });
+          showStatus(editing ? "网站已更新。" : "网站已新增。");
+          await loadData({ silent: true });
+          editSite(data.site.id);
+        } catch (error) {
+          showStatus(error.message, "error");
+        } finally {
+          els.save.disabled = false;
+        }
+      }
+
+      function askDelete(siteId) {
+        const site = state.sites.find(item => item.id === siteId);
+        if (!site) return;
+        state.pendingDeleteId = site.id;
+        els.confirmCopy.textContent = `将删除“${site.name}”。这个操作会立即写入 data/sites.json。`;
+        els.confirmDialog.showModal();
+      }
+
+      async function confirmDelete() {
+        if (!state.pendingDeleteId) return;
+        els.confirmDelete.disabled = true;
+        try {
+          await apiRequest(`/admin/sites/${encodeURIComponent(state.pendingDeleteId)}`, { method: "DELETE" });
+          showStatus("网站已删除。");
+          state.pendingDeleteId = "";
+          els.confirmDialog.close();
+          resetForm();
+          await loadData({ silent: true });
+        } catch (error) {
+          showStatus(error.message, "error");
+        } finally {
+          els.confirmDelete.disabled = false;
+        }
+      }
+
+      els.search.addEventListener("input", event => {
         state.query = event.target.value;
         renderTable();
       });
 
-      document.getElementById('focus-form').addEventListener('click', () => {
-        form.elements.name.focus();
+      els.sectionFilter.addEventListener("change", event => {
+        state.section = event.target.value;
+        renderTable();
       });
 
-      form.addEventListener('submit', event => {
-        event.preventDefault();
-        const data = Object.fromEntries(new FormData(form).entries());
-        notice.textContent = `已生成草稿：${data.name || '未命名工具'}。下一步接入 POST /api/admin/sites 后即可写入数据。`;
+      els.viewButtons.forEach(button => {
+        button.addEventListener("click", () => {
+          state.view = button.dataset.view;
+          localStorage.setItem("qinyu_admin_view", state.view);
+          renderTable();
+        });
       });
 
-      boot();
+      els.form.elements.url.addEventListener("input", event => {
+        updateIconPreview(event.target.value);
+      });
+
+      els.iconPreviewImage.addEventListener("load", () => {
+        els.iconPreviewImage.classList.remove("is-missing");
+        els.iconPreviewFallback.hidden = true;
+      });
+
+      els.iconPreviewImage.addEventListener("error", () => {
+        els.iconPreviewImage.classList.add("is-missing");
+        els.iconPreviewFallback.hidden = false;
+      });
+
+      els.tableWrap.addEventListener("click", event => {
+        const button = event.target.closest("button[data-action]");
+        if (!button) return;
+        if (button.dataset.action === "edit") editSite(button.dataset.id);
+        if (button.dataset.action === "delete") askDelete(button.dataset.id);
+      });
+
+      function addRelation(key) {
+        if (!state.editingId) {
+          showStatus("请先选择一个网站，再编辑上下游关系。", "error");
+          return;
+        }
+        state.relations[key] = [...(state.relations[key] || []), ""];
+        renderRelationEditor();
+      }
+
+      els.upstreamSelect.addEventListener("change", event => {
+        state.relations.upstream = event.target.value ? [event.target.value] : [];
+      });
+
+      els.addDownstream.addEventListener("click", () => addRelation("downstream"));
+
+      [els.downstreamList].forEach(container => {
+        container.addEventListener("change", event => {
+          const row = event.target.closest(".relation-row");
+          if (!row) return;
+          const key = row.dataset.relation;
+          const index = Number(row.dataset.index);
+          state.relations[key][index] = event.target.value;
+          state.relations = cleanRelations(state.relations);
+          renderRelationEditor();
+        });
+
+        container.addEventListener("click", event => {
+          const remove = event.target.closest(".relation-remove");
+          if (!remove) return;
+          const row = remove.closest(".relation-row");
+          const key = row.dataset.relation;
+          const index = Number(row.dataset.index);
+          state.relations[key].splice(index, 1);
+          renderRelationEditor();
+        });
+      });
+
+      els.form.addEventListener("submit", saveSite);
+      els.reset.addEventListener("click", resetForm);
+      els.newSite.addEventListener("click", () => {
+        resetForm();
+        document.getElementById("editor").scrollIntoView({ behavior: "smooth", block: "start" });
+        els.form.elements.name.focus();
+      });
+      els.refresh.addEventListener("click", () => loadData());
+      els.delete.addEventListener("click", () => askDelete(state.editingId));
+      els.cancelDelete.addEventListener("click", () => els.confirmDialog.close());
+      els.confirmDelete.addEventListener("click", confirmDelete);
+
+      loadData();
     </script>
   </body>
 </html>

@@ -941,7 +941,7 @@
     .card-head {
       display: flex;
       align-items: flex-start;
-      gap: 10px;
+      gap: 14px;
       padding-left: 11px;
       margin-bottom: 12px;
     }
@@ -952,6 +952,10 @@
       border-radius: 6px;
       flex-shrink: 0;
       object-fit: contain;
+    }
+
+    .card-head > div {
+      min-width: 0;
     }
 
     .site-name {
@@ -968,10 +972,22 @@
     }
 
     .domain {
+      display: inline-flex;
+      max-width: 100%;
       margin-top: 3px;
       color: var(--ink-muted);
       font-family: "JetBrains Mono", monospace;
       font-size: 11px;
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      text-underline-offset: 3px;
+      transition: color 0.2s, text-decoration-color 0.2s;
+    }
+
+    .domain:hover,
+    .domain:focus-visible {
+      color: var(--ink-gold);
+      text-decoration-color: currentColor;
     }
 
     .desc {
@@ -988,11 +1004,18 @@
 
     .tags {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       gap: 7px;
-      height: 30px;
-      margin-bottom: 16px;
-      overflow: hidden;
+      height: 28px;
+      margin-bottom: 12px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+    }
+
+    .tags::-webkit-scrollbar {
+      display: none;
     }
 
     .tag {
@@ -1007,6 +1030,7 @@
       font-family: "JetBrains Mono", monospace;
       font-size: 10px;
       line-height: 1;
+      white-space: nowrap;
     }
 
     .card-actions {
@@ -2769,6 +2793,10 @@
       text-align: center;
     }
 
+    .empty-state[hidden] {
+      display: none;
+    }
+
     .empty-ink {
       width: 80px;
       height: 80px;
@@ -3453,6 +3481,12 @@
       map.querySelectorAll(".map-action").forEach((item) => item.classList.remove("is-active"));
     }
 
+    function compareSites(a, b) {
+      const weightDiff = Number(b.weight || 0) - Number(a.weight || 0);
+      if (weightDiff) return weightDiff;
+      return String(a.name || "").localeCompare(String(b.name || ""), "en", { sensitivity: "base" });
+    }
+
     function getFilteredSites() {
       const query = state.search.trim().toLowerCase();
       return state.sites.filter((site) => {
@@ -3473,7 +3507,7 @@
         const matchesSearch = !query || haystack.includes(query);
         const matchesFavorite = !state.favoritesOnly || state.favorites.has(site.id);
         return matchesCategory && matchesSubcategory && matchesSearch && matchesFavorite;
-      });
+      }).sort(compareSites);
     }
 
     function renderTree() {
@@ -3580,8 +3614,9 @@
     }
 
     function buildCards() {
+      const shouldHideEmpty = state.sites.length > 0;
       els.grid.innerHTML = `
-        <div class="empty-state">
+        <div class="empty-state" ${shouldHideEmpty ? "hidden" : ""}>
           <div>
             <svg class="empty-ink" viewBox="0 0 96 96" role="img" aria-label="浮动墨滴">
               <path fill="currentColor" d="M50.7 6.4c8.8 13.6 22.8 28.3 22.8 48.3 0 20.4-12.4 33.4-29.5 33.4-16.5 0-28.7-10.8-28.7-27.4 0-13.2 9-24.6 17.8-35.5 4.9-6.1 9.7-12.1 12.7-18.5 1-2.1 3.6-2.2 4.9-.3Z"/>
@@ -3609,11 +3644,11 @@
             <img class="site-favicon" src="${faviconPath(site)}" alt="" loading="lazy" onerror="this.style.display='none'">
             <div>
               <h2 class="site-name">${site.name}</h2>
-              <div class="domain">${domainFromUrl(site.url)}</div>
+              <a class="domain" href="${site.url}" target="_blank" rel="noreferrer" aria-label="打开 ${site.name}">${domainFromUrl(site.url)}</a>
             </div>
           </div>
-          <p class="desc">${site.description || "暂无描述，等待维护者补完这一格分镜。"}</p>
           <div class="tags">${tags}</div>
+          <p class="desc">${site.description || "暂无描述，等待维护者补完这一格分镜。"}</p>
           <div class="card-actions">
             <a class="card-action site-link" href="${site.url}" target="_blank" rel="noreferrer" aria-label="打开 ${site.name}">↗</a>
             <button class="card-action favorite-toggle ${state.favorites.has(site.id) ? "is-saved" : ""}" type="button" aria-label="收藏 ${site.name}" data-id="${site.id}">★</button>
@@ -3739,6 +3774,16 @@
         event.preventDefault();
         const delta = Math.abs(event.deltaX) > Math.abs(event.deltaY) ? event.deltaX : event.deltaY;
         els.hotStrip.scrollBy({ left: delta * 1.2, behavior: "smooth" });
+      }, { passive: false });
+
+      els.grid.addEventListener("wheel", (event) => {
+        const tagStrip = event.target.closest(".tags");
+        if (!tagStrip) return;
+        const overflow = tagStrip.scrollWidth - tagStrip.clientWidth;
+        if (overflow <= 0) return;
+        event.preventDefault();
+        const delta = Math.abs(event.deltaX) > Math.abs(event.deltaY) ? event.deltaX : event.deltaY;
+        tagStrip.scrollBy({ left: delta * 1.2, behavior: "smooth" });
       }, { passive: false });
 
       window.addEventListener("touchstart", (event) => {
