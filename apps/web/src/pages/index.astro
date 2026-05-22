@@ -69,14 +69,14 @@
       background: var(--bg-void);
       scroll-behavior: smooth;
       scrollbar-gutter: stable;
-      scrollbar-color: rgba(192, 132, 252, 0.58) rgba(251, 247, 255, 0.04);
-      scrollbar-width: thin;
+      scrollbar-width: none;
     }
 
     body {
       min-height: 100dvh;
       margin: 0;
       overflow-x: hidden;
+      scrollbar-width: none;
       background:
         radial-gradient(circle at 82% 6%, rgba(192, 132, 252, 0.16), transparent 31rem),
         radial-gradient(circle at 12% 92%, rgba(251, 113, 133, 0.10), transparent 28rem),
@@ -87,44 +87,197 @@
       line-height: 1.6;
     }
 
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+      display: none;
+    }
+
     ::-webkit-scrollbar {
       width: 12px;
       height: 12px;
     }
 
     ::-webkit-scrollbar-track {
+      border: 4px solid transparent;
+      border-radius: 999px;
       background:
-        linear-gradient(180deg, rgba(251, 247, 255, 0.035), rgba(251, 247, 255, 0.015)),
-        var(--bg-void);
+        linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(192, 132, 252, 0.035) 50%, rgba(251, 113, 133, 0.035)) padding-box,
+        linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.012)) border-box;
+      background-clip: padding-box, border-box;
+      box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+        inset 0 8px 16px rgba(255, 255, 255, 0.035);
     }
 
     ::-webkit-scrollbar-thumb {
-      border: 3px solid transparent;
+      border: 4px solid transparent;
       border-radius: 999px;
       background:
-        linear-gradient(180deg, rgba(251, 191, 36, 0.78), rgba(192, 132, 252, 0.86) 45%, rgba(251, 113, 133, 0.78)) border-box;
-      background-clip: padding-box;
-      box-shadow: inset 0 0 0 1px rgba(251, 247, 255, 0.16);
+        linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.22) 24%, rgba(192, 132, 252, 0.28) 58%, rgba(251, 113, 133, 0.2)) padding-box,
+        linear-gradient(180deg, rgba(255, 255, 255, 0.28), rgba(192, 132, 252, 0.1)) border-box;
+      background-clip: padding-box, border-box;
+      box-shadow:
+        inset 1px 1px 0 rgba(255, 255, 255, 0.3),
+        inset -1px -1px 0 rgba(80, 38, 132, 0.1),
+        0 4px 12px rgba(192, 132, 252, 0.1);
     }
 
     ::-webkit-scrollbar-thumb:hover {
       background:
-        linear-gradient(180deg, rgba(251, 191, 36, 0.94), rgba(192, 132, 252, 0.98) 48%, rgba(251, 113, 133, 0.92)) border-box;
-      background-clip: padding-box;
+        linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.56) 24%, rgba(192, 132, 252, 0.54) 58%, rgba(251, 113, 133, 0.4)) padding-box,
+        linear-gradient(180deg, rgba(255, 255, 255, 0.74), rgba(192, 132, 252, 0.2)) border-box;
+      background-clip: padding-box, border-box;
+      box-shadow:
+        inset 1px 1px 0 rgba(255, 255, 255, 0.78),
+        inset -1px -1px 0 rgba(80, 38, 132, 0.18),
+        0 8px 22px rgba(192, 132, 252, 0.28);
     }
 
     ::-webkit-scrollbar-corner {
-      background: var(--bg-void);
+      background: transparent;
     }
 
     [data-theme="light"] {
-      scrollbar-color: rgba(128, 78, 191, 0.62) rgba(80, 38, 132, 0.08);
+      scrollbar-color: rgba(128, 78, 191, 0.28) rgba(128, 78, 191, 0.055);
     }
 
     [data-theme="light"] ::-webkit-scrollbar-track {
       background:
-        linear-gradient(180deg, rgba(80, 38, 132, 0.08), rgba(80, 38, 132, 0.035)),
-        var(--bg-void);
+        linear-gradient(180deg, rgba(255, 255, 255, 0.48), rgba(192, 132, 252, 0.055) 50%, rgba(251, 113, 133, 0.045)) padding-box,
+        linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(128, 78, 191, 0.06)) border-box;
+      box-shadow:
+        inset 0 0 0 1px rgba(80, 38, 132, 0.045),
+        inset 0 8px 16px rgba(255, 255, 255, 0.24);
+    }
+
+    [data-theme="light"] ::-webkit-scrollbar-thumb {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0.34) 24%, rgba(192, 132, 252, 0.26) 58%, rgba(251, 113, 133, 0.16)) padding-box,
+        linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(128, 78, 191, 0.12)) border-box;
+      background-clip: padding-box, border-box;
+    }
+
+    [data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.72) 24%, rgba(192, 132, 252, 0.46) 58%, rgba(251, 113, 133, 0.28)) padding-box,
+        linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(128, 78, 191, 0.22)) border-box;
+      background-clip: padding-box, border-box;
+    }
+
+    .relation-panel-list,
+    .site-dialog,
+    .site-detail,
+    .detail-window,
+    .detail-content,
+    .detail-main,
+    .detail-map,
+    .relation-panel,
+    .detail-copy .detail-desc,
+    .detail-copy .detail-tags,
+    .site-dialog .graph-node-list,
+    .site-dialog .alt-icon-list,
+    .graph-node-list,
+    .graph-alt-list,
+    .alt-icon-list {
+      scrollbar-color: rgba(255, 255, 255, 0.28) rgba(255, 255, 255, 0.025);
+      scrollbar-width: thin;
+    }
+
+    .relation-panel-list::-webkit-scrollbar,
+    .site-dialog::-webkit-scrollbar,
+    .site-detail::-webkit-scrollbar,
+    .detail-window::-webkit-scrollbar,
+    .detail-content::-webkit-scrollbar,
+    .detail-main::-webkit-scrollbar,
+    .detail-map::-webkit-scrollbar,
+    .relation-panel::-webkit-scrollbar,
+    .detail-copy .detail-desc::-webkit-scrollbar,
+    .detail-copy .detail-tags::-webkit-scrollbar,
+    .site-dialog .graph-node-list::-webkit-scrollbar,
+    .site-dialog .alt-icon-list::-webkit-scrollbar,
+    .graph-node-list::-webkit-scrollbar,
+    .graph-alt-list::-webkit-scrollbar,
+    .alt-icon-list::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+
+    .relation-panel-list::-webkit-scrollbar-track,
+    .site-dialog::-webkit-scrollbar-track,
+    .site-detail::-webkit-scrollbar-track,
+    .detail-window::-webkit-scrollbar-track,
+    .detail-content::-webkit-scrollbar-track,
+    .detail-main::-webkit-scrollbar-track,
+    .detail-map::-webkit-scrollbar-track,
+    .relation-panel::-webkit-scrollbar-track,
+    .detail-copy .detail-desc::-webkit-scrollbar-track,
+    .detail-copy .detail-tags::-webkit-scrollbar-track,
+    .site-dialog .graph-node-list::-webkit-scrollbar-track,
+    .site-dialog .alt-icon-list::-webkit-scrollbar-track,
+    .graph-node-list::-webkit-scrollbar-track,
+    .graph-alt-list::-webkit-scrollbar-track,
+    .alt-icon-list::-webkit-scrollbar-track {
+      border: 3px solid transparent;
+      border-radius: 999px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(192, 132, 252, 0.03) 50%, rgba(251, 113, 133, 0.028)) padding-box,
+        linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.01)) border-box;
+      background-clip: padding-box, border-box;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.045);
+    }
+
+    .relation-panel-list::-webkit-scrollbar-thumb,
+    .site-dialog::-webkit-scrollbar-thumb,
+    .site-detail::-webkit-scrollbar-thumb,
+    .detail-window::-webkit-scrollbar-thumb,
+    .detail-content::-webkit-scrollbar-thumb,
+    .detail-main::-webkit-scrollbar-thumb,
+    .detail-map::-webkit-scrollbar-thumb,
+    .relation-panel::-webkit-scrollbar-thumb,
+    .detail-copy .detail-desc::-webkit-scrollbar-thumb,
+    .detail-copy .detail-tags::-webkit-scrollbar-thumb,
+    .site-dialog .graph-node-list::-webkit-scrollbar-thumb,
+    .site-dialog .alt-icon-list::-webkit-scrollbar-thumb,
+    .graph-node-list::-webkit-scrollbar-thumb,
+    .graph-alt-list::-webkit-scrollbar-thumb,
+    .alt-icon-list::-webkit-scrollbar-thumb {
+      border: 3px solid transparent;
+      border-radius: 999px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.44), rgba(255, 255, 255, 0.2) 24%, rgba(192, 132, 252, 0.3) 58%, rgba(251, 113, 133, 0.2)) padding-box,
+        linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(192, 132, 252, 0.1)) border-box;
+      background-clip: padding-box, border-box;
+      box-shadow:
+        inset 1px 1px 0 rgba(255, 255, 255, 0.32),
+        inset -1px -1px 0 rgba(80, 38, 132, 0.1),
+        0 5px 14px rgba(192, 132, 252, 0.12);
+    }
+
+    .relation-panel-list::-webkit-scrollbar-thumb:hover,
+    .site-dialog::-webkit-scrollbar-thumb:hover,
+    .site-detail::-webkit-scrollbar-thumb:hover,
+    .detail-window::-webkit-scrollbar-thumb:hover,
+    .detail-content::-webkit-scrollbar-thumb:hover,
+    .detail-main::-webkit-scrollbar-thumb:hover,
+    .detail-map::-webkit-scrollbar-thumb:hover,
+    .relation-panel::-webkit-scrollbar-thumb:hover,
+    .detail-copy .detail-desc::-webkit-scrollbar-thumb:hover,
+    .detail-copy .detail-tags::-webkit-scrollbar-thumb:hover,
+    .site-dialog .graph-node-list::-webkit-scrollbar-thumb:hover,
+    .site-dialog .alt-icon-list::-webkit-scrollbar-thumb:hover,
+    .graph-node-list::-webkit-scrollbar-thumb:hover,
+    .graph-alt-list::-webkit-scrollbar-thumb:hover,
+    .alt-icon-list::-webkit-scrollbar-thumb:hover {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5) 24%, rgba(192, 132, 252, 0.54) 58%, rgba(251, 113, 133, 0.4)) padding-box,
+        linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(192, 132, 252, 0.2)) border-box;
+      background-clip: padding-box, border-box;
+      box-shadow:
+        inset 1px 1px 0 rgba(255, 255, 255, 0.74),
+        inset -1px -1px 0 rgba(80, 38, 132, 0.18),
+        0 8px 22px rgba(192, 132, 252, 0.26);
     }
 
     body::before,
@@ -365,6 +518,7 @@
       grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
       grid-template-rows: auto 1fr;
       min-height: 100dvh;
+      transition: grid-template-columns 0.28s ease;
     }
 
     .topbar {
@@ -398,7 +552,8 @@
     }
 
     .hamburger {
-      display: none;
+      display: inline-grid;
+      place-items: center;
       width: 44px;
       height: 44px;
       border: 1px solid var(--border-ink);
@@ -406,6 +561,14 @@
       background: rgba(255, 255, 255, 0.03);
       font-family: "JetBrains Mono", monospace;
       font-size: 20px;
+      transition: transform 0.22s var(--ease-spring), border-color 0.22s, box-shadow 0.22s;
+    }
+
+    .hamburger:hover,
+    .hamburger[aria-expanded="true"] {
+      transform: translateY(-2px);
+      border-color: rgba(192, 132, 252, 0.52);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.24), 0 0 18px rgba(192, 132, 252, 0.12);
     }
 
     .brand-copy {
@@ -571,18 +734,99 @@
       grid-row: 2;
       width: var(--sidebar-w);
       height: calc(100dvh - var(--topbar-h));
-      padding: 22px 18px;
-      overflow-y: auto;
-      overflow-x: hidden;
+      padding: 0;
+      overflow: hidden;
       scrollbar-gutter: stable;
       scrollbar-width: thin;
-      scrollbar-color: rgba(167, 155, 184, 0.4) rgba(251, 247, 255, 0.04);
+      scrollbar-color: rgba(255, 255, 255, 0.7) rgba(255, 255, 255, 0.08);
       border-right: 1px solid var(--border-ink);
       background:
         linear-gradient(180deg, rgba(19, 17, 31, 0.94), rgba(15, 13, 26, 0.84)),
         repeating-linear-gradient(112deg, rgba(237, 232, 245, 0.03) 0 1px, transparent 1px 13px);
       backdrop-filter: blur(18px);
       animation: sidebarIn 0.5s ease-out 0.1s both;
+      transition: opacity 0.28s ease, transform 0.28s ease;
+    }
+
+    body.sidebar-collapsed .toolbox-section {
+      grid-template-columns: 0 minmax(0, 1fr);
+    }
+
+    body.sidebar-collapsed .sidebar {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateX(calc(-1 * var(--sidebar-w)));
+    }
+
+    body.sidebar-collapsed .main {
+      grid-column: 1 / -1;
+    }
+
+    .sidebar::-webkit-scrollbar {
+      width: 14px;
+    }
+
+    .sidebar::-webkit-scrollbar-track {
+      border: 4px solid transparent;
+      border-radius: 999px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(192, 132, 252, 0.08) 48%, rgba(251, 113, 133, 0.08)) padding-box,
+        linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.02)) border-box;
+      background-clip: padding-box, border-box;
+      box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.1),
+        inset 0 9px 18px rgba(255, 255, 255, 0.08);
+    }
+
+    .sidebar::-webkit-scrollbar-thumb {
+      border: 4px solid transparent;
+      border-radius: 999px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.58) 22%, rgba(192, 132, 252, 0.52) 58%, rgba(251, 113, 133, 0.42)) padding-box,
+        linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(192, 132, 252, 0.22)) border-box;
+      background-clip: padding-box, border-box;
+      box-shadow:
+        inset 1px 1px 0 rgba(255, 255, 255, 0.72),
+        inset -1px -1px 0 rgba(80, 38, 132, 0.18),
+        0 0 0 1px rgba(255, 255, 255, 0.16),
+        0 8px 24px rgba(192, 132, 252, 0.28);
+      backdrop-filter: blur(16px) saturate(1.4);
+    }
+
+    .sidebar::-webkit-scrollbar-thumb:hover {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7) 22%, rgba(192, 132, 252, 0.68) 58%, rgba(251, 113, 133, 0.56)) padding-box,
+        linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(192, 132, 252, 0.34)) border-box;
+      background-clip: padding-box, border-box;
+      box-shadow:
+        inset 1px 1px 0 rgba(255, 255, 255, 0.86),
+        inset -1px -1px 0 rgba(80, 38, 132, 0.2),
+        0 0 0 1px rgba(255, 255, 255, 0.22),
+        0 10px 28px rgba(192, 132, 252, 0.38);
+    }
+
+    [data-theme="light"] .sidebar {
+      scrollbar-color: rgba(255, 255, 255, 0.88) rgba(128, 78, 191, 0.1);
+    }
+
+    [data-theme="light"] .sidebar::-webkit-scrollbar-track {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(192, 132, 252, 0.1) 48%, rgba(251, 113, 133, 0.09)) padding-box,
+        linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(128, 78, 191, 0.1)) border-box;
+      box-shadow:
+        inset 0 0 0 1px rgba(80, 38, 132, 0.08),
+        inset 0 9px 18px rgba(255, 255, 255, 0.42);
+    }
+
+    [data-theme="light"] .sidebar::-webkit-scrollbar-thumb {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.72) 24%, rgba(192, 132, 252, 0.46) 58%, rgba(251, 113, 133, 0.3)) padding-box,
+        linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(128, 78, 191, 0.22)) border-box;
+      background-clip: padding-box, border-box;
+      box-shadow:
+        inset 1px 1px 0 rgba(255, 255, 255, 0.92),
+        inset -1px -1px 0 rgba(80, 38, 132, 0.14),
+        0 8px 24px rgba(128, 78, 191, 0.2);
     }
 
     .sidebar::before {
@@ -598,7 +842,203 @@
     .sidebar-inner {
       position: relative;
       z-index: 1;
-      padding-bottom: 18px;
+      height: 100%;
+      padding: 22px 18px 40px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      scrollbar-width: none;
+    }
+
+    .sidebar-inner::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+
+    .sidebar-glass-scrollbar {
+      position: absolute;
+      top: 18px;
+      right: 6px;
+      bottom: 18px;
+      z-index: 3;
+      width: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 999px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(192, 132, 252, 0.035) 50%, rgba(251, 113, 133, 0.035)),
+        rgba(255, 255, 255, 0.018);
+      box-shadow:
+        inset 1px 1px 0 rgba(255, 255, 255, 0.07),
+        inset -1px -1px 0 rgba(80, 38, 132, 0.1),
+        0 8px 18px rgba(0, 0, 0, 0.12);
+      backdrop-filter: blur(20px) saturate(1.7);
+      opacity: 0.34;
+      pointer-events: none;
+      transition: opacity 0.22s ease, width 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .sidebar-glass-scrollbar::before {
+      position: absolute;
+      top: 6px;
+      left: 2px;
+      width: 2px;
+      height: 42%;
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.28), transparent);
+      content: "";
+    }
+
+    .sidebar-glass-thumb {
+      position: absolute;
+      top: 0;
+      left: 1px;
+      width: 4px;
+      min-height: 54px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 999px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.44), rgba(255, 255, 255, 0.22) 24%, rgba(192, 132, 252, 0.28) 58%, rgba(251, 113, 133, 0.2)),
+        rgba(255, 255, 255, 0.16);
+      box-shadow:
+        inset 1px 1px 0 rgba(255, 255, 255, 0.36),
+        inset -1px -1px 0 rgba(80, 38, 132, 0.12),
+        0 4px 12px rgba(192, 132, 252, 0.12);
+      transform: translateY(var(--sidebar-scroll-thumb-y, 0));
+      transition: width 0.22s ease, background 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, opacity 0.22s ease;
+    }
+
+    .sidebar:hover .sidebar-glass-scrollbar,
+    .sidebar.is-scrolling .sidebar-glass-scrollbar {
+      width: 10px;
+      border-color: rgba(255, 255, 255, 0.12);
+      opacity: 1;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(192, 132, 252, 0.07) 50%, rgba(251, 113, 133, 0.08)),
+        rgba(255, 255, 255, 0.035);
+      box-shadow:
+        inset 1px 1px 0 rgba(255, 255, 255, 0.14),
+        inset -1px -1px 0 rgba(80, 38, 132, 0.16),
+        0 12px 28px rgba(0, 0, 0, 0.22);
+    }
+
+    .sidebar:hover .sidebar-glass-thumb,
+    .sidebar.is-scrolling .sidebar-glass-thumb {
+      width: 6px;
+      border-color: rgba(255, 255, 255, 0.38);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.55) 24%, rgba(192, 132, 252, 0.54) 58%, rgba(251, 113, 133, 0.4)),
+        rgba(255, 255, 255, 0.34);
+      box-shadow:
+        inset 1px 1px 0 rgba(255, 255, 255, 0.82),
+        inset -1px -1px 0 rgba(80, 38, 132, 0.18),
+        0 0 0 1px rgba(255, 255, 255, 0.12),
+        0 8px 22px rgba(192, 132, 252, 0.32);
+    }
+
+    .page-glass-scrollbar {
+      position: fixed;
+      top: calc(var(--topbar-h) + 8px);
+      right: 5px;
+      bottom: 12px;
+      z-index: 50;
+      width: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 999px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(192, 132, 252, 0.035) 50%, rgba(251, 113, 133, 0.035)),
+        rgba(255, 255, 255, 0.018);
+      box-shadow:
+        inset 1px 1px 0 rgba(255, 255, 255, 0.07),
+        inset -1px -1px 0 rgba(80, 38, 132, 0.1),
+        0 8px 18px rgba(0, 0, 0, 0.12);
+      backdrop-filter: blur(20px) saturate(1.7);
+      opacity: 0.34;
+      pointer-events: none;
+      transition: opacity 0.22s ease, width 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .page-glass-thumb {
+      position: absolute;
+      top: 0;
+      left: 1px;
+      width: 4px;
+      min-height: 54px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 999px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.44), rgba(255, 255, 255, 0.22) 24%, rgba(192, 132, 252, 0.28) 58%, rgba(251, 113, 133, 0.2)),
+        rgba(255, 255, 255, 0.16);
+      box-shadow:
+        inset 1px 1px 0 rgba(255, 255, 255, 0.36),
+        inset -1px -1px 0 rgba(80, 38, 132, 0.12),
+        0 4px 12px rgba(192, 132, 252, 0.12);
+      transform: translateY(var(--page-scroll-thumb-y, 0));
+      transition: width 0.22s ease, background 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    body.is-page-scrolling .page-glass-scrollbar,
+    .page-glass-scrollbar:hover {
+      width: 10px;
+      border-color: rgba(255, 255, 255, 0.12);
+      opacity: 1;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(192, 132, 252, 0.07) 50%, rgba(251, 113, 133, 0.08)),
+        rgba(255, 255, 255, 0.035);
+      box-shadow:
+        inset 1px 1px 0 rgba(255, 255, 255, 0.14),
+        inset -1px -1px 0 rgba(80, 38, 132, 0.16),
+        0 12px 28px rgba(0, 0, 0, 0.22);
+    }
+
+    body.is-page-scrolling .page-glass-thumb,
+    .page-glass-scrollbar:hover .page-glass-thumb {
+      width: 6px;
+      border-color: rgba(255, 255, 255, 0.38);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.55) 24%, rgba(192, 132, 252, 0.54) 58%, rgba(251, 113, 133, 0.4)),
+        rgba(255, 255, 255, 0.34);
+      box-shadow:
+        inset 1px 1px 0 rgba(255, 255, 255, 0.82),
+        inset -1px -1px 0 rgba(80, 38, 132, 0.18),
+        0 0 0 1px rgba(255, 255, 255, 0.12),
+        0 8px 22px rgba(192, 132, 252, 0.32);
+    }
+
+    [data-theme="light"] .sidebar-glass-scrollbar {
+      border-color: rgba(128, 78, 191, 0.08);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.48), rgba(192, 132, 252, 0.055) 50%, rgba(251, 113, 133, 0.045)),
+        rgba(255, 255, 255, 0.22);
+      box-shadow:
+        inset 1px 1px 0 rgba(255, 255, 255, 0.38),
+        inset -1px -1px 0 rgba(80, 38, 132, 0.08),
+        0 8px 18px rgba(128, 78, 191, 0.08);
+    }
+
+    [data-theme="light"] .sidebar-glass-thumb {
+      border-color: rgba(255, 255, 255, 0.34);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0.34) 24%, rgba(192, 132, 252, 0.26) 58%, rgba(251, 113, 133, 0.16)),
+        rgba(255, 255, 255, 0.3);
+    }
+
+    [data-theme="light"] .sidebar:hover .sidebar-glass-scrollbar,
+    [data-theme="light"] .sidebar.is-scrolling .sidebar-glass-scrollbar {
+      border-color: rgba(128, 78, 191, 0.12);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(192, 132, 252, 0.1) 50%, rgba(251, 113, 133, 0.08)),
+        rgba(255, 255, 255, 0.42);
+      box-shadow:
+        inset 1px 1px 0 rgba(255, 255, 255, 0.72),
+        inset -1px -1px 0 rgba(80, 38, 132, 0.08),
+        0 12px 28px rgba(128, 78, 191, 0.12);
+    }
+
+    [data-theme="light"] .sidebar:hover .sidebar-glass-thumb,
+    [data-theme="light"] .sidebar.is-scrolling .sidebar-glass-thumb {
+      border-color: rgba(255, 255, 255, 0.72);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.72) 24%, rgba(192, 132, 252, 0.46) 58%, rgba(251, 113, 133, 0.28)),
+        rgba(255, 255, 255, 0.56);
     }
 
     .side-mark {
@@ -630,6 +1070,82 @@
       font-size: 10px;
       letter-spacing: 0.16em;
       text-transform: uppercase;
+    }
+
+    .side-collection {
+      margin-bottom: 12px;
+    }
+
+    .collection-toggle {
+      position: relative;
+      display: grid;
+      grid-template-columns: 20px minmax(0, 1fr) auto;
+      gap: 6px;
+      align-items: center;
+      width: 100%;
+      min-height: 44px;
+      padding: 8px;
+      border: 1px solid rgba(251, 247, 255, 0.08);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(251, 247, 255, 0.045), rgba(192, 132, 252, 0.035)),
+        rgba(15, 13, 26, 0.42);
+      color: var(--ink-white);
+      text-align: left;
+      transition: border-color 0.22s, background 0.22s, transform 0.22s var(--ease-spring);
+    }
+
+    .collection-toggle:hover,
+    .collection-toggle[aria-expanded="true"] {
+      transform: translateY(-1px);
+      border-color: rgba(192, 132, 252, 0.34);
+      background:
+        linear-gradient(135deg, rgba(251, 247, 255, 0.07), rgba(192, 132, 252, 0.06)),
+        rgba(15, 13, 26, 0.55);
+    }
+
+    .collection-title {
+      display: grid;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .collection-title strong {
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .collection-title span {
+      color: var(--ink-muted);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .collection-twist {
+      color: var(--ink-muted);
+      font-family: "JetBrains Mono", monospace;
+      transition: transform 0.22s ease;
+    }
+
+    .collection-toggle[aria-expanded="true"] .collection-twist {
+      transform: rotate(90deg);
+    }
+
+    .side-collection-body {
+      display: grid;
+      gap: 5px;
+      padding: 10px 0 2px;
+    }
+
+    .side-collection-body[hidden] {
+      display: none;
+    }
+
+    .side-collection.is-muted {
+      opacity: 0.72;
     }
 
     .category-root {
@@ -777,6 +1293,11 @@
       grid-template-columns: 20px minmax(0, 1fr);
       font-family: "JetBrains Mono", monospace;
       font-size: 12px;
+    }
+
+    .side-link:disabled {
+      cursor: default;
+      opacity: 0.54;
     }
 
     .main {
@@ -1540,6 +2061,8 @@
     .site-dialog {
       width: min(94vw, 1080px);
       max-height: min(86dvh, 760px);
+      scrollbar-color: rgba(255, 255, 255, 0.28) rgba(255, 255, 255, 0.025);
+      scrollbar-width: thin;
       border: 1px solid rgba(251, 247, 255, 0.12);
       border-radius: 18px;
       background:
@@ -2020,22 +2543,24 @@
       overflow: hidden;
     }
 
-    /* 隐藏详情弹窗内所有滚动条，保留滚动功能 */
+    /* 详情弹窗内的纵向滚动区使用同款轻玻璃滚动条 */
     .site-dialog .graph-node-list,
     .site-dialog .alt-icon-list {
       overflow-y: auto;
-      scrollbar-width: none;
+      scrollbar-color: rgba(255, 255, 255, 0.26) rgba(255, 255, 255, 0.025);
+      scrollbar-width: thin;
     }
     .site-dialog .graph-node-list::-webkit-scrollbar,
     .site-dialog .alt-icon-list::-webkit-scrollbar {
-      display: none;
+      width: 10px;
     }
     .site-dialog .detail-copy .detail-desc {
       overflow-y: auto;
-      scrollbar-width: none;
+      scrollbar-color: rgba(255, 255, 255, 0.24) rgba(255, 255, 255, 0.025);
+      scrollbar-width: thin;
     }
     .site-dialog .detail-copy .detail-desc::-webkit-scrollbar {
-      display: none;
+      width: 10px;
     }
 
     .site-detail,
@@ -2079,6 +2604,8 @@
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: 0;
       min-height: 0;
+      scrollbar-color: rgba(255, 255, 255, 0.28) rgba(255, 255, 255, 0.025);
+      scrollbar-width: thin;
     }
 
     .detail-copy {
@@ -2519,6 +3046,11 @@
         padding-top: 0;
         overflow-x: auto;
         overflow-y: hidden;
+        scrollbar-width: none;
+      }
+
+      .alt-icon-list::-webkit-scrollbar {
+        display: none;
       }
     }
 
@@ -2953,11 +3485,6 @@
         display: block;
       }
 
-      .hamburger {
-        display: inline-grid;
-        place-items: center;
-      }
-
       .brand {
         grid-template-columns: 44px minmax(0, 1fr);
       }
@@ -2998,6 +3525,15 @@
         transform: translateX(-110%);
         transition: transform 0.28s ease;
         animation: none;
+      }
+
+      body.sidebar-collapsed .sidebar {
+        opacity: 1;
+        transform: translateX(-110%);
+      }
+
+      body.sidebar-collapsed .main {
+        grid-column: auto;
       }
 
       .sidebar.is-open {
@@ -3061,6 +3597,14 @@
       }
 
     }
+
+    @media (min-width: 768px) {
+      body.sidebar-collapsed .sidebar {
+        opacity: 0 !important;
+        pointer-events: none;
+        transform: translateX(calc(-1 * var(--sidebar-w))) !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -3087,12 +3631,12 @@
     </div>
   </section>
 
-  <section class="toolbox-section" id="toolbox" aria-label="白刀的AIGC工具箱">
+  <section class="toolbox-section" id="toolbox" aria-label="白刀的AI工具箱">
   <header class="topbar">
     <div class="brand">
-      <button class="hamburger" id="menuButton" type="button" aria-label="打开分类侧栏" aria-controls="sidebar" aria-expanded="false">☰</button>
+      <button class="hamburger" id="menuButton" type="button" aria-label="切换侧栏" aria-controls="sidebar" aria-expanded="true">☰</button>
       <div class="brand-copy">
-        <span class="brand-title">白刀的AIGC工具箱</span>
+        <span class="brand-title">白刀的AI工具箱</span>
         <span class="brand-subtitle">CURIOSITY TOOLBOX</span>
       </div>
     </div>
@@ -3122,14 +3666,69 @@
   <div class="backdrop" id="backdrop" aria-hidden="true"></div>
 
   <aside class="sidebar" id="sidebar" aria-label="分类导航">
-    <div class="sidebar-inner">
+    <div class="sidebar-inner" id="sidebarInner">
       <div class="side-mark">
         <span class="side-kanji">好奇心</span>
         <span class="side-meta">INDEX / PANEL / VOID</span>
       </div>
 
-      <p class="section-title">三大品类</p>
-      <nav id="categoryTree"></nav>
+      <div class="side-collection">
+        <button class="collection-toggle" id="modelsToggle" type="button" aria-expanded="false" aria-controls="modelsCollection">
+          <span aria-hidden="true">◎</span>
+          <span class="collection-title">
+            <strong>模型列表</strong>
+            <span>Model Arena</span>
+          </span>
+          <span class="collection-twist" aria-hidden="true">▸</span>
+        </button>
+        <div class="side-collection-body" id="modelsCollection" hidden>
+          <button class="side-link" type="button" disabled>
+            <span aria-hidden="true">◆</span><span>语言模型（LLM）</span>
+          </button>
+          <button class="side-link" type="button" disabled>
+            <span aria-hidden="true">◆</span><span>图像模型</span>
+          </button>
+          <button class="side-link" type="button" disabled>
+            <span aria-hidden="true">◆</span><span>视频模型</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="side-collection">
+        <button class="collection-toggle" id="websitesToggle" type="button" aria-expanded="true" aria-controls="websitesCollection">
+          <span aria-hidden="true">◈</span>
+          <span class="collection-title">
+            <strong>网站列表</strong>
+            <span>Website Index</span>
+          </span>
+          <span class="collection-twist" aria-hidden="true">▸</span>
+        </button>
+        <div class="side-collection-body" id="websitesCollection">
+          <nav id="categoryTree"></nav>
+        </div>
+      </div>
+
+      <div class="side-collection is-muted">
+        <button class="collection-toggle" id="contentShelfToggle" type="button" aria-expanded="false" aria-controls="contentShelfCollection">
+          <span aria-hidden="true">◇</span>
+          <span class="collection-title">
+            <strong>内容收纳</strong>
+            <span>Content Shelf</span>
+          </span>
+          <span class="collection-twist" aria-hidden="true">▸</span>
+        </button>
+        <div class="side-collection-body" id="contentShelfCollection" hidden>
+          <button class="side-link" type="button" disabled>
+            <span aria-hidden="true">◆</span><span>笔记</span>
+          </button>
+          <button class="side-link" type="button" disabled>
+            <span aria-hidden="true">◆</span><span>模板</span>
+          </button>
+          <button class="side-link" type="button" disabled>
+            <span aria-hidden="true">◆</span><span>素材</span>
+          </button>
+        </div>
+      </div>
 
       <div class="utility-links">
         <p class="section-title">个人入口</p>
@@ -3147,7 +3746,13 @@
         </a>
       </div>
     </div>
+    <div class="sidebar-glass-scrollbar" id="sidebarScrollbar" aria-hidden="true">
+      <span class="sidebar-glass-thumb" id="sidebarScrollThumb"></span>
+    </div>
   </aside>
+  <div class="page-glass-scrollbar" id="pageScrollbar" aria-hidden="true">
+    <span class="page-glass-thumb" id="pageScrollThumb"></span>
+  </div>
 
   <main class="main" id="main">
     <section class="filter-bar" aria-label="当前筛选">
@@ -3201,6 +3806,9 @@
       favorites: new Set(JSON.parse(localStorage.getItem("manga_nav_favorites") || "[]"))
     };
 
+    let sidebarScrollTimer = 0;
+    let pageScrollTimer = 0;
+
     const els = {
       body: document.body,
       tree: document.getElementById("categoryTree"),
@@ -3217,6 +3825,17 @@
       themeToggle: document.getElementById("themeToggle"),
       menuButton: document.getElementById("menuButton"),
       sidebar: document.getElementById("sidebar"),
+      sidebarInner: document.getElementById("sidebarInner"),
+      modelsToggle: document.getElementById("modelsToggle"),
+      modelsCollection: document.getElementById("modelsCollection"),
+      websitesToggle: document.getElementById("websitesToggle"),
+      websitesCollection: document.getElementById("websitesCollection"),
+      contentShelfToggle: document.getElementById("contentShelfToggle"),
+      contentShelfCollection: document.getElementById("contentShelfCollection"),
+      sidebarScrollbar: document.getElementById("sidebarScrollbar"),
+      sidebarScrollThumb: document.getElementById("sidebarScrollThumb"),
+      pageScrollbar: document.getElementById("pageScrollbar"),
+      pageScrollThumb: document.getElementById("pageScrollThumb"),
       backdrop: document.getElementById("backdrop"),
       siteDialog: document.getElementById("siteDialog"),
       siteDetail: document.getElementById("siteDetail"),
@@ -3594,6 +4213,65 @@
       window.setTimeout(() => button.classList.remove("is-pressing"), 450);
     }
 
+    function updateSidebarScrollbar() {
+      const scroller = els.sidebarInner;
+      const track = els.sidebarScrollbar;
+      const thumb = els.sidebarScrollThumb;
+      if (!scroller || !track || !thumb) return;
+
+      const maxScroll = scroller.scrollHeight - scroller.clientHeight;
+      track.hidden = false;
+      const trackHeight = track.clientHeight;
+      if (maxScroll <= 2 || trackHeight <= 0) {
+        track.hidden = true;
+        return;
+      }
+
+      const thumbHeight = Math.max(54, Math.round((scroller.clientHeight / scroller.scrollHeight) * trackHeight));
+      const maxThumbY = Math.max(0, trackHeight - thumbHeight - 2);
+      const thumbY = Math.round((scroller.scrollTop / maxScroll) * maxThumbY);
+      thumb.style.height = `${thumbHeight}px`;
+      thumb.style.setProperty("--sidebar-scroll-thumb-y", `${thumbY}px`);
+    }
+
+    function setSidebarScrolling() {
+      els.sidebar.classList.add("is-scrolling");
+      window.clearTimeout(sidebarScrollTimer);
+      sidebarScrollTimer = window.setTimeout(() => {
+        els.sidebar.classList.remove("is-scrolling");
+      }, 620);
+    }
+
+    function updatePageScrollbar() {
+      const track = els.pageScrollbar;
+      const thumb = els.pageScrollThumb;
+      if (!track || !thumb) return;
+
+      const doc = document.documentElement;
+      const scrollTop = window.scrollY || doc.scrollTop || 0;
+      const maxScroll = Math.max(0, doc.scrollHeight - window.innerHeight);
+      track.hidden = false;
+      const trackHeight = track.clientHeight;
+      if (maxScroll <= 2 || trackHeight <= 0) {
+        track.hidden = true;
+        return;
+      }
+
+      const thumbHeight = Math.max(54, Math.round((window.innerHeight / doc.scrollHeight) * trackHeight));
+      const maxThumbY = Math.max(0, trackHeight - thumbHeight - 2);
+      const thumbY = Math.round((scrollTop / maxScroll) * maxThumbY);
+      thumb.style.height = `${thumbHeight}px`;
+      thumb.style.setProperty("--page-scroll-thumb-y", `${thumbY}px`);
+    }
+
+    function setPageScrolling() {
+      document.body.classList.add("is-page-scrolling");
+      window.clearTimeout(pageScrollTimer);
+      pageScrollTimer = window.setTimeout(() => {
+        document.body.classList.remove("is-page-scrolling");
+      }, 620);
+    }
+
     function renderHotStrip() {
       const tags = [...new Set(state.sites.flatMap((site) => site.tags || []))].slice(0, 12);
       const fallbackTags = ["免费", "中文", "开源", "API", "移动端", "本地部署"];
@@ -3696,12 +4374,24 @@
       els.favoritesButton.classList.toggle("is-active", state.favoritesOnly);
       els.sideFavorites.classList.toggle("is-active", state.favoritesOnly);
       saveFavorites();
+      window.requestAnimationFrame(updateSidebarScrollbar);
+      window.requestAnimationFrame(updatePageScrollbar);
     }
 
     function closeMobileSidebar() {
+      const isMobile = window.matchMedia("(max-width: 767px)").matches;
       els.sidebar.classList.remove("is-open");
       els.backdrop.classList.remove("is-open");
-      els.menuButton.setAttribute("aria-expanded", "false");
+      if (isMobile) els.menuButton.setAttribute("aria-expanded", "false");
+      else updateMenuButtonState();
+    }
+
+    function updateMenuButtonState() {
+      const isMobile = window.matchMedia("(max-width: 767px)").matches;
+      const isExpanded = isMobile
+        ? els.sidebar.classList.contains("is-open")
+        : !document.body.classList.contains("sidebar-collapsed");
+      els.menuButton.setAttribute("aria-expanded", String(isExpanded));
     }
 
     function toggleFavorite(id) {
@@ -3743,6 +4433,7 @@
           }, 560);
         }
         window.scrollTo(0, 0);
+        window.requestAnimationFrame(updatePageScrollbar);
       }
 
       function restoreHero() {
@@ -3756,6 +4447,7 @@
         window.requestAnimationFrame(() => {
           document.body.classList.remove("toolbox-open");
           window.scrollTo(0, 0);
+          updatePageScrollbar();
         });
       }
 
@@ -3776,6 +4468,41 @@
         const delta = Math.abs(event.deltaX) > Math.abs(event.deltaY) ? event.deltaX : event.deltaY;
         els.hotStrip.scrollBy({ left: delta * 1.2, behavior: "smooth" });
       }, { passive: false });
+
+      els.sidebarInner.addEventListener("scroll", () => {
+        updateSidebarScrollbar();
+        setSidebarScrolling();
+      }, { passive: true });
+      window.addEventListener("scroll", () => {
+        updatePageScrollbar();
+        setPageScrolling();
+      }, { passive: true });
+      window.addEventListener("resize", () => {
+        updateSidebarScrollbar();
+        updatePageScrollbar();
+        updateMenuButtonState();
+      });
+
+      els.modelsToggle.addEventListener("click", () => {
+        const isOpen = els.modelsToggle.getAttribute("aria-expanded") === "true";
+        els.modelsToggle.setAttribute("aria-expanded", String(!isOpen));
+        els.modelsCollection.hidden = isOpen;
+        window.requestAnimationFrame(updateSidebarScrollbar);
+      });
+
+      els.websitesToggle.addEventListener("click", () => {
+        const isOpen = els.websitesToggle.getAttribute("aria-expanded") === "true";
+        els.websitesToggle.setAttribute("aria-expanded", String(!isOpen));
+        els.websitesCollection.hidden = isOpen;
+        window.requestAnimationFrame(updateSidebarScrollbar);
+      });
+
+      els.contentShelfToggle.addEventListener("click", () => {
+        const isOpen = els.contentShelfToggle.getAttribute("aria-expanded") === "true";
+        els.contentShelfToggle.setAttribute("aria-expanded", String(!isOpen));
+        els.contentShelfCollection.hidden = isOpen;
+        window.requestAnimationFrame(updateSidebarScrollbar);
+      });
 
       els.grid.addEventListener("wheel", (event) => {
         const tagStrip = event.target.closest(".tags");
@@ -3951,15 +4678,30 @@
       });
 
       els.menuButton.addEventListener("click", () => {
-        const isOpen = els.sidebar.classList.toggle("is-open");
-        els.backdrop.classList.toggle("is-open", isOpen);
-        els.menuButton.setAttribute("aria-expanded", String(isOpen));
+        const isMobile = window.matchMedia("(max-width: 767px)").matches;
+        if (isMobile) {
+          const isOpen = els.sidebar.classList.toggle("is-open");
+          els.backdrop.classList.toggle("is-open", isOpen);
+        } else {
+          document.body.classList.toggle("sidebar-collapsed");
+          els.sidebar.classList.remove("is-open");
+          els.backdrop.classList.remove("is-open");
+        }
+        updateMenuButtonState();
+        window.requestAnimationFrame(updatePageScrollbar);
       });
 
-      els.backdrop.addEventListener("click", closeMobileSidebar);
-      window.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") closeMobileSidebar();
+      els.backdrop.addEventListener("click", () => {
+        closeMobileSidebar();
+        updateMenuButtonState();
       });
+      window.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          closeMobileSidebar();
+          updateMenuButtonState();
+        }
+      });
+      updateMenuButtonState();
     }
 
     function startInkParticles() {

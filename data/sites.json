@@ -130,7 +130,7 @@
         "图像生成",
         "Google"
       ],
-      "weight": 0,
+      "weight": 970,
       "icon": null
     },
     {
@@ -188,7 +188,7 @@
         "图像生成",
         "OpenAI"
       ],
-      "weight": 0,
+      "weight": 1000,
       "icon": null
     },
     {
@@ -234,7 +234,7 @@
         "即梦",
         "字节跳动"
       ],
-      "weight": 0,
+      "weight": 740,
       "icon": null
     },
     {
@@ -292,7 +292,7 @@
         "图像生成",
         "字节跳动"
       ],
-      "weight": 0,
+      "weight": 860,
       "icon": null
     },
     {
@@ -334,7 +334,7 @@
         "Google",
         "子站"
       ],
-      "weight": 0,
+      "weight": 680,
       "icon": null
     },
     {
@@ -406,7 +406,7 @@
         "Google",
         "模型"
       ],
-      "weight": 0,
+      "weight": 525,
       "icon": null
     },
     {
@@ -447,7 +447,7 @@
         "OpenAI",
         "子站"
       ],
-      "weight": 0,
+      "weight": 800,
       "icon": null
     },
     {
@@ -865,7 +865,7 @@
         "图像生成",
         "xAI"
       ],
-      "weight": 0,
+      "weight": 840,
       "icon": null
     },
     {
@@ -999,7 +999,7 @@
         "图像分析",
         "Anthropic"
       ],
-      "weight": 0,
+      "weight": 920,
       "icon": null
     },
     {
@@ -1497,7 +1497,7 @@
         "阿里巴巴",
         "Qwen"
       ],
-      "weight": 0,
+      "weight": 900,
       "icon": null
     },
     {
@@ -1744,7 +1744,7 @@
         "推理",
         "官站"
       ],
-      "weight": 0,
+      "weight": 940,
       "icon": null
     },
     {
@@ -1832,7 +1832,7 @@
         "对话",
         "智谱AI"
       ],
-      "weight": 0,
+      "weight": 570,
       "icon": null
     },
     {
@@ -2112,7 +2112,7 @@
         "视频生成",
         "快手"
       ],
-      "weight": 0,
+      "weight": 720,
       "icon": null
     },
     {
@@ -2149,7 +2149,7 @@
         "视频生成",
         "Luma"
       ],
-      "weight": 0,
+      "weight": 485,
       "icon": null
     },
     {
@@ -2184,7 +2184,7 @@
         "英文",
         "视频生成"
       ],
-      "weight": 0,
+      "weight": 475,
       "icon": null
     },
     {
@@ -2383,7 +2383,7 @@
         "音频生成",
         "MiniMax"
       ],
-      "weight": 0,
+      "weight": 535,
       "icon": null
     },
     {
@@ -2429,7 +2429,7 @@
         "海螺AI",
         "MiniMax"
       ],
-      "weight": 0,
+      "weight": 295,
       "icon": null
     },
     {
@@ -2612,7 +2612,7 @@
         "长文本",
         "月之暗面"
       ],
-      "weight": 0,
+      "weight": 880,
       "icon": null
     },
     {
@@ -2753,7 +2753,7 @@
         "视频生成",
         "腾讯"
       ],
-      "weight": 0,
+      "weight": 545,
       "icon": null
     },
     {
@@ -2870,7 +2870,7 @@
         "腾讯",
         "子站"
       ],
-      "weight": 0,
+      "weight": 275,
       "icon": null
     },
     {
