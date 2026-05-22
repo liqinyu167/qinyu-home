@@ -3586,6 +3586,1026 @@
       }
     }
 
+    /* ─── Model Arena Section & XY Chart Styles ─── */
+    .model-arena-section {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      margin-top: 10px;
+      animation: fadeIn 0.4s ease-out;
+    }
+
+    .model-arena-section[hidden] {
+      display: none !important;
+    }
+
+    .chart-controls-in-axis {
+      position: absolute;
+      bottom: 8px;
+      right: 24px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 10;
+      pointer-events: auto;
+    }
+
+    .control-axis-label {
+      font-size: 11px;
+      color: var(--ink-muted);
+    }
+
+    .axis-control-btn {
+      background: rgba(25, 22, 37, 0.65);
+      border: 1px solid var(--border-ink);
+      border-radius: 999px;
+      padding: 4px 12px;
+      color: var(--ink-muted);
+      font-size: 11px;
+      cursor: pointer;
+      transition: all 0.22s var(--ease-spring);
+    }
+
+    .axis-control-btn:hover {
+      color: var(--ink-white);
+      border-color: var(--ink-accent);
+      background: rgba(192, 132, 252, 0.08);
+      box-shadow: 0 0 10px rgba(192, 132, 252, 0.15);
+    }
+
+    .axis-control-btn.active {
+      color: var(--ink-white);
+      border-color: var(--ink-accent);
+      background: linear-gradient(135deg, rgba(192, 132, 252, 0.25), rgba(251, 113, 133, 0.15));
+      box-shadow: 0 0 15px rgba(192, 132, 252, 0.25);
+    }
+
+
+
+    .arena-chart-container {
+      position: relative;
+      width: 100%;
+      height: calc(100dvh - 280px);
+      min-height: 380px;
+      max-height: 580px;
+      background: rgba(25, 22, 37, 0.35);
+      border: 1px solid var(--border-ink);
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      overflow: hidden;
+      box-shadow: inset 0 0 30px rgba(192, 132, 252, 0.03);
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    }
+
+    .arena-chart-container * {
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    }
+
+    body:has(.is-dragging) {
+      user-select: none !important;
+      -webkit-user-select: none !important;
+    }
+
+
+    @media (min-width: 1200px) {
+      .arena-chart-container {
+        height: calc(100dvh - 300px);
+        max-height: 680px;
+      }
+    }
+
+    @media (min-width: 1600px) {
+      .arena-chart-container {
+        height: calc(100dvh - 320px);
+        max-height: 780px;
+      }
+    }
+
+    .sweet-spot-glow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 35%;
+      height: 35%;
+      background: radial-gradient(circle at 0% 0%, rgba(251, 191, 36, 0.16), transparent 75%);
+      pointer-events: none;
+    }
+
+    .sweet-spot-label {
+      position: absolute;
+      top: 14px;
+      left: 85px;
+      font-size: 11px;
+      color: rgba(251, 191, 36, 0.65);
+      font-family: "JetBrains Mono", monospace;
+      pointer-events: none;
+      text-shadow: 0 0 8px rgba(251, 191, 36, 0.3);
+      z-index: 1;
+    }
+
+    .chart-grid-bg {
+      position: absolute;
+      inset: 0;
+      background-size: 50px 50px;
+      background-image:
+        linear-gradient(to right, rgba(192, 132, 252, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(192, 132, 252, 0.04) 1px, transparent 1px);
+    }
+
+    .chart-y-axis {
+      position: absolute;
+      left: 65px;
+      top: 24px;
+      bottom: 75px;
+      width: 2px;
+      background: linear-gradient(to top, rgba(192, 132, 252, 0.15), rgba(192, 132, 252, 0.75));
+      pointer-events: none;
+    }
+
+    .chart-y-axis::after {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 10px;
+      background-color: #c084fc;
+      clip-path: polygon(50% 0, 0 100%, 100% 100%);
+      filter: drop-shadow(0 0 4px rgba(192, 132, 252, 0.8));
+    }
+
+    .y-axis-tick {
+      position: absolute;
+      right: 0;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      pointer-events: none;
+    }
+
+    .y-axis-tick .tick-label {
+      font-size: 9px;
+      font-family: "JetBrains Mono", monospace;
+      color: var(--ink-muted);
+      transform: translateX(-6px);
+      text-align: right;
+    }
+
+    .y-axis-tick .tick-line {
+      width: 4px;
+      height: 1px;
+      background: rgba(192, 132, 252, 0.4);
+      position: absolute;
+      right: -2px;
+    }
+
+    .chart-x-axis {
+      position: absolute;
+      bottom: 75px;
+      left: 65px;
+      right: 24px;
+      height: 2px;
+      background: linear-gradient(to right, rgba(192, 132, 252, 0.15), rgba(192, 132, 252, 0.75));
+      pointer-events: none;
+    }
+
+    .chart-x-axis::after {
+      content: "";
+      position: absolute;
+      right: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 10px;
+      background-color: #c084fc;
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+      filter: drop-shadow(0 0 4px rgba(192, 132, 252, 0.8));
+    }
+
+    .arena-footer {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 16px;
+      padding: 8px 20px;
+      background: rgba(25, 22, 37, 0.45);
+      border: 1px solid var(--border-ink);
+      border-radius: 999px;
+      backdrop-filter: blur(10px);
+      font-size: 11.5px;
+      color: var(--ink-muted);
+      box-shadow: inset 0 0 20px rgba(192, 132, 252, 0.02);
+    }
+
+    @media (max-width: 767px) {
+      .arena-chart-container {
+        height: calc(100dvh - 260px);
+        min-height: 320px;
+        max-height: 480px;
+      }
+
+      .arena-footer {
+        border-radius: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 12px 16px;
+      }
+    }
+
+    .arena-footer-label {
+      font-weight: 500;
+    }
+
+    .arena-footer-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .footer-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-ink);
+      border-radius: 999px;
+      color: var(--ink-white);
+      text-decoration: none;
+      font-size: 11px;
+      transition: all 0.22s var(--ease-spring);
+    }
+
+    .footer-pill:hover {
+      border-color: var(--ink-accent);
+      background: rgba(192, 132, 252, 0.08);
+      box-shadow: 0 0 10px rgba(192, 132, 252, 0.2);
+      transform: translateY(-1px);
+    }
+
+    .footer-pill img {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      object-fit: contain;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 1px;
+    }
+
+    .axis-label-top {
+      position: absolute;
+      top: -6px;
+      right: 12px;
+      font-size: 10px;
+      color: var(--ink-muted);
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    .axis-label-bottom {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      font-size: 10px;
+      color: var(--ink-muted);
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    .axis-label-left {
+      position: absolute;
+      top: 8px;
+      left: 15px;
+      font-size: 11px;
+      color: var(--ink-muted);
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    .axis-label-right {
+      position: absolute;
+      top: 8px;
+      right: 15px;
+      font-size: 11px;
+      color: var(--ink-muted);
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    .chart-plot-area {
+      position: absolute;
+      top: 30px;
+      bottom: 75px;
+      left: 65px;
+      right: 30px;
+      pointer-events: auto;
+      touch-action: pan-y;
+    }
+
+    /* ─── Model Arena Scrollbar & Zoom ─── */
+    .chart-scroll-zoom-wrapper {
+      position: absolute;
+      bottom: 28px;
+      left: 65px;
+      right: 30px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 15;
+      background: rgba(25, 22, 37, 0.45);
+      border: 1px solid rgba(192, 132, 252, 0.15);
+      border-radius: 999px;
+      backdrop-filter: blur(12px);
+      box-shadow: inset 0 0 10px rgba(192, 132, 252, 0.05), 0 4px 20px rgba(0, 0, 0, 0.35);
+      padding: 0 14px;
+      user-select: none;
+    }
+
+    .chart-scrollbar-container {
+      flex: 1;
+      position: relative;
+      height: 100%;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      user-select: none;
+      touch-action: none;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Add horizontal center groove line using ::before on container */
+    .chart-scrollbar-container::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: rgba(192, 132, 252, 0.15);
+      border-radius: 999px;
+      transition: background 0.2s;
+    }
+
+    .chart-scrollbar-container:hover::before {
+      background: rgba(192, 132, 252, 0.25);
+    }
+
+    .chart-scrollbar-thumb {
+      position: absolute;
+      height: 10px; /* fitting perfectly */
+      background: linear-gradient(90deg, #c084fc, #fb7185);
+      border-radius: 999px;
+      cursor: grab;
+      box-shadow: 0 0 8px rgba(192, 132, 252, 0.45);
+      transition: background 0.2s, box-shadow 0.2s, left 0.1s ease-out, width 0.2s ease-out;
+      z-index: 5;
+    }
+
+    /* Resize Handles on the Scrollbar Thumb */
+    .thumb-handle {
+      position: absolute;
+      top: 50%;
+      width: 14px;
+      height: 14px;
+      background: linear-gradient(135deg, #fb7185, #c084fc);
+      border: 2px solid #191625;
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(192, 132, 252, 0.7), inset 0 0 3px rgba(255, 255, 255, 0.35);
+      cursor: col-resize;
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 0.9;
+      transition: transform 0.22s var(--ease-spring), opacity 0.2s, box-shadow 0.22s var(--ease-spring), background 0.2s;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Inner vertical grip lines for handles */
+    .thumb-handle::after {
+      content: "";
+      width: 4px;
+      height: 6px;
+      border-left: 1px solid rgba(25, 22, 37, 0.65);
+      border-right: 1px solid rgba(25, 22, 37, 0.65);
+      display: block;
+    }
+
+    /* Show handles with enhanced glow when hovering over the scrollbar container or when dragging */
+    .chart-scrollbar-container:hover .thumb-handle,
+    .arena-chart-container.is-dragging .thumb-handle {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1.1);
+      box-shadow: 0 0 12px rgba(192, 132, 252, 0.95), inset 0 0 4px rgba(255, 255, 255, 0.45);
+    }
+
+    .thumb-handle:hover {
+      background: linear-gradient(135deg, #fb7185, #f43f5e);
+      box-shadow: 0 0 16px rgba(251, 113, 133, 1.0), inset 0 0 5px rgba(255, 255, 255, 0.5);
+      transform: translate(-50%, -50%) scale(1.3);
+    }
+
+    .thumb-handle.is-dragging {
+      background: linear-gradient(135deg, #fb7185, #f43f5e);
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1.3);
+      box-shadow: 0 0 20px rgba(251, 113, 133, 1.0), inset 0 0 6px rgba(255, 255, 255, 0.55);
+    }
+
+    .thumb-handle-l {
+      left: 0;
+    }
+
+    .thumb-handle-r {
+      left: 100%;
+    }
+
+    /* Remove ease-out transition when dragging to prevent lag */
+    .arena-chart-container.is-dragging .chart-scrollbar-thumb {
+      transition: none;
+    }
+
+    .chart-scrollbar-container:hover .chart-scrollbar-thumb {
+      box-shadow: 0 0 12px rgba(192, 132, 252, 0.7);
+    }
+
+    .chart-scrollbar-thumb:active {
+      cursor: grabbing !important;
+      background: linear-gradient(90deg, #d8b4fe, #fda4af);
+      box-shadow: 0 0 16px rgba(192, 132, 252, 0.95);
+    }
+
+    /* Divider */
+    .chart-scroll-divider {
+      width: 1px;
+      height: 14px;
+      background: rgba(192, 132, 252, 0.25);
+    }
+
+    /* Zoom Control CSS */
+    .chart-zoom-control {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--ink-muted);
+      font-size: 11px;
+      font-family: "JetBrains Mono", monospace;
+      white-space: nowrap;
+      background: transparent;
+      border: none;
+      padding: 0;
+      backdrop-filter: none;
+      box-shadow: none;
+      user-select: none;
+    }
+
+    .zoom-icon {
+      font-size: 11px;
+      opacity: 0.65;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .zoom-icon:hover {
+      opacity: 1;
+      transform: scale(1.15);
+    }
+
+    .chart-zoom-slider {
+      width: 65px;
+      height: 4px;
+      -webkit-appearance: none;
+      background: rgba(192, 132, 252, 0.2);
+      border-radius: 999px;
+      outline: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .chart-zoom-slider:hover {
+      background: rgba(192, 132, 252, 0.35);
+    }
+
+    .chart-zoom-slider::-webkit-slider-runnable-track {
+      background: transparent;
+      border: none;
+    }
+
+    .chart-zoom-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #c084fc;
+      box-shadow: 0 0 6px #c084fc;
+      cursor: grab;
+      margin-top: -3px; /* vertically center it inside track (4px height track, 10px height thumb) */
+      transition: transform 0.1s, background-color 0.2s;
+    }
+
+    .chart-zoom-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.25);
+      background: #e9d5ff;
+    }
+
+    .chart-zoom-slider::-webkit-slider-thumb:active {
+      cursor: grabbing;
+      background: #fb7185;
+      box-shadow: 0 0 8px #fb7185;
+    }
+
+    .zoom-value {
+      min-width: 66px;
+      font-size: 10px;
+      color: rgba(192, 132, 252, 0.85);
+    }
+
+    /* ─── Model Arena Header Controls ─── */
+    .arena-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 24px;
+      background: rgba(25, 22, 37, 0.45);
+      border: 1px solid var(--border-ink);
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      box-shadow: inset 0 0 20px rgba(192, 132, 252, 0.02);
+      margin-bottom: 12px;
+    }
+
+    .arena-title {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink-white);
+      text-shadow: 0 0 10px rgba(192, 132, 252, 0.25);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .arena-title::before {
+      content: "⚡";
+      color: var(--ink-gold);
+      text-shadow: 0 0 8px var(--ink-gold);
+    }
+
+    .arena-controls {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .control-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .control-label {
+      font-size: 11.5px;
+      color: var(--ink-muted);
+      white-space: nowrap;
+    }
+
+    .control-slider {
+      width: 80px;
+      height: 4px;
+      -webkit-appearance: none;
+      background: rgba(192, 132, 252, 0.2);
+      border-radius: 999px;
+      outline: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .control-slider:hover {
+      background: rgba(192, 132, 252, 0.3);
+    }
+
+    .control-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--ink-accent);
+      box-shadow: 0 0 6px var(--ink-accent);
+      transition: transform 0.1s;
+    }
+
+    .control-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.35);
+    }
+
+    .control-val-indicator {
+      font-size: 10px;
+      color: var(--ink-accent);
+      font-family: "JetBrains Mono", monospace;
+      min-width: 28px;
+    }
+
+    .mode-toggle-group {
+      display: flex;
+      background: rgba(15, 13, 26, 0.5);
+      border-radius: 999px;
+      padding: 2px;
+      border: 0.5px solid rgba(192, 132, 252, 0.15);
+    }
+
+    .mode-toggle-btn {
+      background: transparent;
+      border: 0;
+      border-radius: 999px;
+      padding: 3px 10px;
+      color: var(--ink-muted);
+      font-size: 10px;
+      cursor: pointer;
+      transition: all 0.22s var(--ease-spring);
+    }
+
+    .mode-toggle-btn:hover {
+      color: var(--ink-white);
+    }
+
+    .mode-toggle-btn.active {
+      color: var(--ink-white);
+      background: linear-gradient(135deg, rgba(192, 132, 252, 0.35), rgba(251, 113, 133, 0.25));
+      box-shadow: 0 0 10px rgba(192, 132, 252, 0.25);
+    }
+
+    @media (max-width: 767px) {
+      .arena-top-bar {
+        flex-direction: column;
+        align-items: stretch;
+        border-radius: 12px;
+        gap: 12px;
+        padding: 12px 16px;
+      }
+      .arena-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+      }
+      .control-item {
+        justify-content: space-between;
+      }
+      .control-slider {
+        width: 120px;
+      }
+    }
+
+    .model-capsule {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      display: inline-flex;
+      align-items: center;
+      gap: calc(6px * var(--capsule-scale, 1));
+      padding: calc(4px * var(--capsule-scale, 1)) calc(10px * var(--capsule-scale, 1)) calc(4px * var(--capsule-scale, 1)) calc(6px * var(--capsule-scale, 1));
+      height: calc(26px * var(--capsule-scale, 1));
+      border: 1px solid rgba(192, 132, 252, 0.35);
+      border-radius: 999px;
+      background: rgba(25, 22, 37, 0.85);
+      backdrop-filter: blur(10px);
+      color: var(--ink-white);
+      font-size: calc(12px * var(--capsule-scale, 1));
+      cursor: pointer;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+      white-space: nowrap;
+      user-select: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .arena-chart-container.animate-positions .model-capsule {
+      transition: left 0.6s cubic-bezier(0.25, 1, 0.5, 1), top 0.6s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.2s, box-shadow 0.2s, transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .model-capsule:hover {
+      border-color: var(--ink-accent);
+      box-shadow: 0 0 12px rgba(192, 132, 252, 0.4);
+      transform: translate(-50%, -50%) scale(calc(1.05 / var(--capsule-scale, 1)));
+      z-index: 10;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.28s cubic-bezier(0.34, 1.25, 0.64, 1);
+    }
+
+    .model-capsule.active {
+      border-color: var(--ink-coral);
+      box-shadow: 0 0 15px rgba(251, 113, 133, 0.45);
+      background: rgba(29, 26, 43, 0.95);
+      z-index: 12;
+      transform: translate(-50%, -50%) scale(calc(1.05 / var(--capsule-scale, 1)));
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.28s cubic-bezier(0.34, 1.25, 0.64, 1);
+    }
+
+    .model-capsule:active {
+      transform: translate(-50%, -50%) scale(calc(0.95 / var(--capsule-scale, 1)));
+      transition: transform 0.08s ease;
+    }
+
+    .capsule-logo {
+      width: calc(14px * var(--capsule-scale, 1));
+      height: calc(14px * var(--capsule-scale, 1));
+      border-radius: 50%;
+      object-fit: contain;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 1px;
+      flex-shrink: 0;
+    }
+
+    .capsule-hf-emoji {
+      font-size: calc(12px * var(--capsule-scale, 1));
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    /* ─── Observation Mode: Icon-Only Mode Styles ─── */
+    .observation-icon-only .model-capsule {
+      width: calc(28px * var(--capsule-scale, 1));
+      height: calc(28px * var(--capsule-scale, 1));
+      padding: 0;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .observation-icon-only .model-capsule .capsule-logo {
+      width: calc(18px * var(--capsule-scale, 1));
+      height: calc(18px * var(--capsule-scale, 1));
+    }
+
+    /* Hide text & separate hf emoji in icon-only mode */
+    .observation-icon-only .model-capsule .capsule-name {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(8px);
+      background: rgba(20, 18, 30, 0.96);
+      border: 1px solid var(--border-ink);
+      border-radius: 6px;
+      padding: 4px 10px;
+      color: var(--ink-white);
+      font-size: calc(11px * var(--capsule-scale, 1));
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.15s ease, transform 0.15s ease;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), 0 0 10px rgba(192, 132, 252, 0.15);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .observation-icon-only .model-capsule:hover .capsule-name {
+      opacity: 1;
+      transform: translateX(-50%) translateY(4px);
+    }
+
+    /* Hide standard hf emoji sibling in icon-only mode, it's shown inline in capsule-name tooltip */
+    .observation-icon-only .model-capsule > .capsule-hf-emoji {
+      display: none;
+    }
+
+    .capsule-name-hf-emoji {
+      display: none;
+    }
+
+    .observation-icon-only .model-capsule .capsule-name-hf-emoji {
+      display: inline-block;
+      margin-left: 2px;
+    }
+
+    /* ─── Stacking / Boundary Compressing Styles ─── */
+    .model-capsule.is-stacked {
+      width: calc(26px * var(--capsule-scale, 1));
+      height: calc(26px * var(--capsule-scale, 1));
+      padding: 0;
+      justify-content: center;
+      border-radius: 50%;
+      opacity: 0.35;
+      pointer-events: auto;
+    }
+
+    .model-capsule.is-stacked .capsule-name,
+    .model-capsule.is-stacked > .capsule-hf-emoji {
+      display: none;
+    }
+
+    .model-capsule.is-stacked .capsule-logo {
+      width: calc(16px * var(--capsule-scale, 1));
+      height: calc(16px * var(--capsule-scale, 1));
+    }
+
+    /* Standard mode hover expansion for stacked capsules */
+    :not(.observation-icon-only) > .chart-plot-area > .model-capsule.is-stacked:hover,
+    :not(.observation-icon-only) > .chart-plot-area > .model-capsule.is-stacked.active {
+      opacity: 1;
+      width: auto;
+      height: calc(26px * var(--capsule-scale, 1));
+      padding: calc(4px * var(--capsule-scale, 1)) calc(10px * var(--capsule-scale, 1)) calc(4px * var(--capsule-scale, 1)) calc(6px * var(--capsule-scale, 1));
+      border-radius: 999px;
+      justify-content: flex-start;
+      z-index: 25;
+    }
+
+    :not(.observation-icon-only) > .chart-plot-area > .model-capsule.is-stacked:hover .capsule-name,
+    :not(.observation-icon-only) > .chart-plot-area > .model-capsule.is-stacked.active .capsule-name,
+    :not(.observation-icon-only) > .chart-plot-area > .model-capsule.is-stacked:hover > .capsule-hf-emoji,
+    :not(.observation-icon-only) > .chart-plot-area > .model-capsule.is-stacked.active > .capsule-hf-emoji {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    /* Icon-only mode hover behaviour for stacked capsules */
+    .observation-icon-only .model-capsule.is-stacked:hover,
+    .observation-icon-only .model-capsule.is-stacked.active {
+      opacity: 1;
+      z-index: 25;
+    }
+    .observation-icon-only .model-capsule.is-stacked:hover .capsule-name,
+    .observation-icon-only .model-capsule.is-stacked.active .capsule-name {
+      display: flex;
+      opacity: 1;
+      transform: translateX(-50%) translateY(4px);
+    }
+
+    /* Dragging interaction transition overrides */
+    .arena-chart-container.is-dragging .model-capsule {
+      transition: none !important;
+    }
+    .arena-chart-container.is-dragging .model-popover {
+      transition: none !important;
+    }
+
+    .model-popover {
+      position: absolute;
+      z-index: 100;
+      width: 290px;
+      padding: 16px;
+      background: rgba(29, 26, 43, 0.95);
+      border: 1px solid var(--border-ink);
+      border-radius: 12px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5), 0 0 20px rgba(192, 132, 252, 0.12);
+      backdrop-filter: blur(20px);
+      opacity: 0;
+      transform: scale(0.95) translateY(10px);
+      pointer-events: none;
+      transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), left 0.22s cubic-bezier(0.16, 1, 0.3, 1), top 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .model-popover.show {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+      pointer-events: auto;
+    }
+
+    .popover-close {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      font-size: 20px;
+      color: var(--ink-muted);
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .popover-close:hover {
+      color: var(--ink-coral);
+    }
+
+    .popover-title {
+      margin: 0 0 8px 0;
+      font-size: 16px;
+      font-family: "Noto Sans SC", sans-serif;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-right: 28px; /* Leave space for the absolute-positioned close button */
+    }
+
+    .popover-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: var(--ink-muted);
+      margin-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 8px;
+    }
+
+    .popover-channels {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .channel-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .channel-group-title {
+      font-size: 11px;
+      color: var(--ink-muted);
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .channel-group-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .channel-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 10px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-ink);
+      border-radius: 4px;
+      padding: 3px 8px;
+      color: var(--ink-white);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .channel-pill:hover {
+      border-color: var(--ink-accent);
+      background: rgba(192, 132, 252, 0.12);
+      box-shadow: 0 0 8px rgba(192, 132, 252, 0.2);
+      transform: translateY(-0.5px);
+    }
+
+    .channel-pill-icon {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      object-fit: contain;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 1px;
+      flex-shrink: 0;
+    }
+
+    .hf-badge-link {
+      font-size: 10px;
+      background: rgba(251, 191, 36, 0.15);
+      border: 1px solid rgba(251, 191, 36, 0.3);
+      border-radius: 4px;
+      padding: 2px 6px;
+      color: #fbbf24;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      margin-left: auto;
+    }
+
+    .hf-badge-link:hover {
+      background: rgba(251, 191, 36, 0.25);
+      border-color: #fbbf24;
+    }
+
+    .side-link.model-category-btn.active {
+      background: rgba(192, 132, 252, 0.12);
+      color: var(--ink-accent);
+      border-color: rgba(192, 132, 252, 0.3);
+      font-weight: bold;
+    }
+
+    /* ─── Card Neon Breath Glow Animation ─── */
+    @keyframes highlight-glow {
+      0% {
+        box-shadow: 0 0 0 0px rgba(192, 132, 252, 0.8), 0 0 10px rgba(192, 132, 252, 0.4);
+        border-color: rgba(192, 132, 252, 1);
+      }
+      50% {
+        box-shadow: 0 0 0 10px rgba(192, 132, 252, 0), 0 0 30px rgba(192, 132, 252, 0.8);
+        border-color: rgba(192, 132, 252, 1);
+      }
+      100% {
+        box-shadow: 0 0 0 0px rgba(192, 132, 252, 0), 0 0 0px rgba(192, 132, 252, 0);
+      }
+    }
+
+    .site-card.highlight-flash {
+      animation: highlight-glow 1.5s ease-out 1;
+    }
+
     @media (prefers-reduced-motion: reduce) {
       *,
       *::before,
@@ -3682,13 +4702,13 @@
           <span class="collection-twist" aria-hidden="true">▸</span>
         </button>
         <div class="side-collection-body" id="modelsCollection" hidden>
-          <button class="side-link" type="button" disabled>
+          <button class="side-link model-category-btn" type="button" data-model-category="llm">
             <span aria-hidden="true">◆</span><span>语言模型（LLM）</span>
           </button>
-          <button class="side-link" type="button" disabled>
+          <button class="side-link model-category-btn" type="button" data-model-category="image">
             <span aria-hidden="true">◆</span><span>图像模型</span>
           </button>
-          <button class="side-link" type="button" disabled>
+          <button class="side-link model-category-btn" type="button" data-model-category="video">
             <span aria-hidden="true">◆</span><span>视频模型</span>
           </button>
         </div>
@@ -3763,6 +4783,140 @@
     <section class="hot-strip" id="hotStrip" aria-label="热门标签"></section>
 
     <section class="grid" id="siteGrid" aria-live="polite"></section>
+
+    <!-- 模型大比拼对比面板 -->
+    <section class="model-arena-section" id="modelArenaSection" hidden>
+      <div class="arena-top-bar">
+        <h2 class="arena-title">模型对比大比拼</h2>
+        <div class="arena-controls">
+          <div class="control-item">
+            <span class="control-label">胶囊大小:</span>
+            <input type="range" class="control-slider" id="capsuleSizeSlider" min="0.3" max="1.0" step="0.05" value="1.0">
+            <span class="control-val-indicator" id="capsuleSizeVal">1.0x</span>
+          </div>
+          <div class="control-item">
+            <span class="control-label">观察模式:</span>
+            <div class="mode-toggle-group">
+              <button class="mode-toggle-btn active" id="viewModeStandard" type="button">标准</button>
+              <button class="mode-toggle-btn" id="viewModeIconOnly" type="button">图标</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="arena-chart-container">
+        <div class="sweet-spot-glow"></div>
+        <div class="sweet-spot-label">黄金象限 (高能力 + 低价格/新)</div>
+        <div class="chart-grid-bg"></div>
+
+        <div class="chart-y-axis">
+          <div class="axis-label-top">能力更强 ↑</div>
+          <div class="axis-label-bottom">能力一般</div>
+          <div class="y-axis-tick" style="top: 5%;">
+            <span class="tick-label">1.0</span>
+            <span class="tick-line"></span>
+          </div>
+          <div class="y-axis-tick" style="top: 41.3%;">
+            <span class="tick-label">0.75</span>
+            <span class="tick-line"></span>
+          </div>
+          <div class="y-axis-tick" style="top: 69.2%;">
+            <span class="tick-label">0.5</span>
+            <span class="tick-line"></span>
+          </div>
+          <div class="y-axis-tick" style="top: 87.6%;">
+            <span class="tick-label">0.25</span>
+            <span class="tick-line"></span>
+          </div>
+          <div class="y-axis-tick" style="top: 95%;">
+            <span class="tick-label">0.0</span>
+            <span class="tick-line"></span>
+          </div>
+        </div>
+        <div class="chart-x-axis">
+          <div class="axis-label-left" id="xAxisLabelLeft">便宜 / 免费</div>
+          <div class="axis-label-right" id="xAxisLabelRight">昂贵</div>
+        </div>
+
+        <!-- 切换x轴的对比维度，放在X轴下面右侧（接近箭头处） -->
+        <div class="chart-controls-in-axis">
+          <span class="control-axis-label">对比维度 (X轴)：</span>
+          <button class="axis-control-btn active" id="xModePrice" type="button">模型价格</button>
+          <button class="axis-control-btn" id="xModeDate" type="button">发布时间</button>
+        </div>
+
+        <div class="chart-plot-area" id="chartPlotArea"></div>
+
+        <!-- X轴平行Scrollbar与缩放控制 -->
+        <div class="chart-scroll-zoom-wrapper" id="chartScrollZoomWrapper">
+          <div class="chart-scrollbar-container" id="chartScrollbarContainer">
+            <div class="chart-scrollbar-thumb" id="chartScrollbarThumb">
+              <div class="thumb-handle thumb-handle-l" id="thumbHandleL" title="拖动缩放"></div>
+              <div class="thumb-handle thumb-handle-r" id="thumbHandleR" title="拖动缩放"></div>
+            </div>
+          </div>
+
+          <div class="chart-scroll-divider"></div>
+
+          <div class="chart-zoom-control">
+            <span class="zoom-icon" id="chartZoomIcon" title="双击恢复默认 2.6x">🔍</span>
+            <input type="range" id="chartZoomSlider" class="chart-zoom-slider" min="1.0" max="3.0" step="0.1" value="2.6" title="调节横轴比例：纵览/细览">
+            <span class="zoom-value" id="chartZoomVal">细览 (2.6x)</span>
+          </div>
+        </div>
+
+        <!-- 渠道气泡详情弹窗 - 移入图表容器以精准定位 -->
+        <div class="model-popover" id="modelPopover" hidden>
+          <div class="popover-close" id="popoverClose">&times;</div>
+          <div class="popover-content">
+            <h3 class="popover-title">
+              <span id="popoverModelName"></span>
+              <a class="hf-badge-link" id="popoverHFBadge" target="_blank" rel="noopener" hidden>🤗 开源</a>
+            </h3>
+            <div class="popover-meta">
+              <span>📊 能力评分: <strong id="popoverCapability"></strong></span>
+              <span><span id="popoverXLabel">🏷️ 价格</span>: <strong id="popoverXValue"></strong></span>
+            </div>
+            <div class="popover-channels">
+              <div class="channel-group">
+                <div class="channel-group-title">🌐 官方入口</div>
+                <div class="channel-group-pills" id="channelOfficial"></div>
+              </div>
+              <div class="channel-group">
+                <div class="channel-group-title">🎨 无限画布调用</div>
+                <div class="channel-group-pills" id="channelCanvas"></div>
+              </div>
+              <div class="channel-group">
+                <div class="channel-group-title">⚡ 算力 API 服务</div>
+                <div class="channel-group-pills" id="channelApi"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 底部信息源链接，胶囊体感觉 -->
+      <div class="arena-footer">
+        <span class="arena-footer-label">📊 信息源/基准测试：</span>
+        <div class="arena-footer-pills">
+          <a class="footer-pill" href="https://chat.lmsys.org/" target="_blank" rel="noopener">
+            <img src="assets/favicons/huggingface_co.png" alt="" onerror="this.src='assets/favicons/huggingface_co.png'">
+            <span>LMSYS Chatbot Arena</span>
+          </a>
+          <a class="footer-pill" href="https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard" target="_blank" rel="noopener">
+            <img src="assets/favicons/huggingface_co.png" alt="" onerror="this.src='assets/favicons/huggingface_co.png'">
+            <span>Hugging Face Leaderboard</span>
+          </a>
+          <a class="footer-pill" href="https://github.com/openai/simple-evals" target="_blank" rel="noopener">
+            <img src="assets/favicons/github_com.png" alt="" onerror="this.src='assets/favicons/github_com.png'">
+            <span>OpenAI Simple Evals</span>
+          </a>
+          <a class="footer-pill" href="https://github.com/deepseek-ai/DeepSeek-V3" target="_blank" rel="noopener">
+            <img src="assets/favicons/github_com.png" alt="" onerror="this.src='assets/favicons/github_com.png'">
+            <span>DeepSeek-V3 Repos</span>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
   </section>
 
@@ -3798,12 +4952,22 @@
     const state = {
       categories: MOCK_DATA.categories,
       sites: [],
+      models: [],
       search: "",
       activeCategory: "all",
       activeSubcategory: "",
       favoritesOnly: false,
       expanded: new Set(["tools", "aesthetics", "inspiration"]),
-      favorites: new Set(JSON.parse(localStorage.getItem("manga_nav_favorites") || "[]"))
+      favorites: new Set(JSON.parse(localStorage.getItem("manga_nav_favorites") || "[]")),
+      activeView: "website-index", // "website-index" | "model-arena"
+      activeModelCategory: "llm",   // "llm" | "image" | "video"
+      xAxisMode: "price",           // "price" | "date"
+      activeModelId: null,          // currently open model details popover
+      capsuleSize: 1.0,             // capsule scale multiplier (0.3 - 1.0)
+      observationMode: "standard",  // "standard" | "icon-only"
+      chartScrollOffset: 0,         // horizontal scroll offset (0 to 160)
+      chartZoom: 2.6,               // horizontal scale factor / zoom level (1.0 to 3.0)
+      hasDragged: false             // track if dragging occurred during current gesture
     };
 
     let sidebarScrollTimer = 0;
@@ -3842,7 +5006,35 @@
       dinoGameButton: document.getElementById("dinoGameButton"),
       gameDialog: document.getElementById("gameDialog"),
       gameClose: document.getElementById("gameClose"),
-      gameFrame: document.getElementById("gameFrame")
+      gameFrame: document.getElementById("gameFrame"),
+      modelArenaSection: document.getElementById("modelArenaSection"),
+      chartPlotArea: document.getElementById("chartPlotArea"),
+      chartScrollbarContainer: document.getElementById("chartScrollbarContainer"),
+      chartScrollbarThumb: document.getElementById("chartScrollbarThumb"),
+      thumbHandleL: document.getElementById("thumbHandleL"),
+      thumbHandleR: document.getElementById("thumbHandleR"),
+      chartZoomSlider: document.getElementById("chartZoomSlider"),
+      chartZoomVal: document.getElementById("chartZoomVal"),
+      chartZoomIcon: document.getElementById("chartZoomIcon"),
+      chartGridBg: document.querySelector(".chart-grid-bg"),
+      modelPopover: document.getElementById("modelPopover"),
+      popoverClose: document.getElementById("popoverClose"),
+      xModePrice: document.getElementById("xModePrice"),
+      xModeDate: document.getElementById("xModeDate"),
+      xAxisLabelLeft: document.getElementById("xAxisLabelLeft"),
+      xAxisLabelRight: document.getElementById("xAxisLabelRight"),
+      popoverModelName: document.getElementById("popoverModelName"),
+      popoverHFBadge: document.getElementById("popoverHFBadge"),
+      popoverCapability: document.getElementById("popoverCapability"),
+      popoverXLabel: document.getElementById("popoverXLabel"),
+      popoverXValue: document.getElementById("popoverXValue"),
+      channelOfficial: document.getElementById("channelOfficial"),
+      channelCanvas: document.getElementById("channelCanvas"),
+      channelApi: document.getElementById("channelApi"),
+      capsuleSizeSlider: document.getElementById("capsuleSizeSlider"),
+      capsuleSizeVal: document.getElementById("capsuleSizeVal"),
+      viewModeStandard: document.getElementById("viewModeStandard"),
+      viewModeIconOnly: document.getElementById("viewModeIconOnly")
     };
 
     const categoryColors = {
@@ -4046,7 +5238,7 @@
           </div>
 
           <footer class="detail-actions">
-            <a class="detail-link" href="${site.url}" target="_blank" rel="noreferrer">打开网站 ↗</a>
+            <a class="detail-link" href="${site.url}" target="_blank" rel="noreferrer">🌐 打开网站 ↗</a>
             <button class="detail-favorite ${state.favorites.has(site.id) ? "is-saved" : ""}" type="button" aria-label="收藏 ${site.name}" data-id="${site.id}">★</button>
           </footer>
         </div>
@@ -4143,7 +5335,7 @@
         button.dataset.category = category.id;
         button.setAttribute("aria-expanded", String(state.expanded.has(category.id)));
         button.innerHTML = `<span aria-hidden="true">◈</span><span>${category.label}<span class="en">${category.en}</span></span><span class="twist" aria-hidden="true">▸</span>`;
-        button.classList.toggle("is-active", state.activeCategory === category.id && !state.activeSubcategory && !state.favoritesOnly);
+        button.classList.toggle("is-active", state.activeView === "website-index" && state.activeCategory === category.id && !state.activeSubcategory && !state.favoritesOnly);
         button.addEventListener("click", () => {
           playSidePress(button);
           if (state.expanded.has(category.id)) state.expanded.delete(category.id);
@@ -4151,6 +5343,7 @@
           state.activeCategory = category.id;
           state.activeSubcategory = "";
           state.favoritesOnly = false;
+          state.activeView = "website-index";
           render();
           closeMobileSidebar();
         });
@@ -4170,13 +5363,14 @@
           childButton.dataset.subcategory = child.id;
           childButton.style.animationDelay = `${index * 30}ms`;
           childButton.innerHTML = `<span aria-hidden="true">◆</span><span>${child.label}</span>`;
-          childButton.classList.toggle("is-active", state.activeSubcategory === child.id);
+          childButton.classList.toggle("is-active", state.activeView === "website-index" && state.activeSubcategory === child.id);
           childButton.disabled = child.id.endsWith("-loading");
           childButton.addEventListener("click", () => {
             playSidePress(childButton);
             state.activeCategory = category.id;
             state.activeSubcategory = child.id;
             state.favoritesOnly = false;
+            state.activeView = "website-index";
             render();
             closeMobileSidebar();
           });
@@ -4192,7 +5386,7 @@
         const categoryId = button.dataset.category;
         const isExpanded = state.expanded.has(categoryId);
         button.setAttribute("aria-expanded", String(isExpanded));
-        button.classList.toggle("is-active", state.activeCategory === categoryId && !state.activeSubcategory && !state.favoritesOnly);
+        button.classList.toggle("is-active", state.activeView === "website-index" && state.activeCategory === categoryId && !state.activeSubcategory && !state.favoritesOnly);
       });
 
       els.tree.querySelectorAll(".subcat-list").forEach((list) => {
@@ -4201,7 +5395,7 @@
 
       els.tree.querySelectorAll(".subcat-button").forEach((button) => {
         const isCurrentSubcategory = state.activeCategory === button.dataset.category && state.activeSubcategory === button.dataset.subcategory;
-        button.classList.toggle("is-active", isCurrentSubcategory && !state.favoritesOnly);
+        button.classList.toggle("is-active", state.activeView === "website-index" && isCurrentSubcategory && !state.favoritesOnly);
       });
     }
 
@@ -4354,25 +5548,466 @@
       els.grid.style.display = "";
     }
 
-    function render() {
-      const sites = getFilteredSites();
-      if (!els.grid.querySelector(".site-card")) buildCards();
-      filterCards(sites);
-      renderHotStrip();
-      if (els.tree.childElementCount) updateTreeState();
-      else renderTree();
+    // ─── Model Arena Helper Functions ───
+    function getModelXCoordinate(model, xAxisMode, sortedActiveModels) {
+      // Find the index of the model in the pre-sorted activeModels array
+      const idx = sortedActiveModels.findIndex(m => m.id === model.id);
+      const N = sortedActiveModels.length;
 
-      // 同步收藏状态（不重建卡片时类名需手动更新）
-      els.grid.querySelectorAll(".favorite-toggle").forEach((btn) => {
-        btn.classList.toggle("is-saved", state.favorites.has(btn.dataset.id));
+      // Calculate rank ratio: 0.0 (left-most / newest / cheapest) to 1.0 (right-most)
+      const r = N > 1 ? idx / (N - 1) : 0;
+
+      // Calculate virtual X using a power function:
+      // This spreads the top 20% of models over the first page (0 to 100 units)
+      // and compresses the remaining 80% of models over the second/third pages (100 to 260 units)
+      const virtualX = Math.pow(r, 0.6) * 100 * (state.chartZoom || 2.6);
+
+      // Compute scrolled X by subtracting current scroll offset
+      const scrolledX = virtualX - (state.chartScrollOffset || 0);
+
+      // Edge stacking / asymptotic clamping
+      let displayedX;
+      if (scrolledX >= 0 && scrolledX <= 100) {
+        displayedX = 5 + (scrolledX / 100) * 90; // Linear display between [5%, 95%]
+      } else if (scrolledX > 100) {
+        const overflow = scrolledX - 100;
+        const clampedX = 100 + 4 * (1 - Math.exp(-overflow / 20));
+        displayedX = 5 + (clampedX / 100) * 90; // Stack on the right border: clamp in [95%, 98.6%]
+      } else {
+        const overflow = -scrolledX;
+        const clampedX = 0 - 4 * (1 - Math.exp(-overflow / 20));
+        displayedX = 5 + (clampedX / 100) * 90; // Stack on the left border: clamp in [1.4%, 5%]
+      }
+
+      return { displayedX, scrolledX };
+    }
+
+    function getModelYCoordinate(model) {
+      const minCap = 70; // capability range min
+      const maxCap = 100; // capability range max
+      let capability = model.capability || 0;
+      if (capability < minCap) capability = minCap;
+      if (capability > maxCap) capability = maxCap;
+
+      // ratio: 0.0 (weakest, capability 70) to 1.0 (strongest, capability 100)
+      const ratio = (capability - minCap) / (maxCap - minCap);
+
+      // Apply power-based exponential curve to stretch the top (frontier) differences.
+      // High capability (ratio=1.0) maps to top (5%), low capability (ratio=0.0) maps to bottom (95%)
+      return 95 - Math.pow(ratio, 1.8) * 90;
+    }
+
+    function getModelIcon(model) {
+      if (model.channels?.official?.length) {
+        const site = getSiteById(model.channels.official[0]);
+        if (site) return faviconPath(site);
+      }
+      if (model.channels?.canvas?.length) {
+        const site = getSiteById(model.channels.canvas[0]);
+        if (site) return faviconPath(site);
+      }
+      if (model.channels?.api?.length) {
+        const site = getSiteById(model.channels.api[0]);
+        if (site) return faviconPath(site);
+      }
+      const brandIcons = {
+        "openai": "assets/favicons/chatgpt_com.png",
+        "anthropic": "assets/favicons/claude_ai.png",
+        "google": "assets/favicons/gemini_google_com.png",
+        "deepseek": "assets/favicons/chat_deepseek_com.png",
+        "meta": "assets/favicons/meta_ai.png",
+        "black-forest-labs": "assets/favicons/blackforestlabs_ai.png",
+        "midjourney": "assets/favicons/www_midjourney_com.png",
+        "runway": "assets/favicons/runwayml_com.png",
+        "qwen": "assets/favicons/chat_qwen_ai.png",
+        "kling": "assets/favicons/kling_kuaishou_com.png",
+        "ideogram": "assets/favicons/ideogram_ai.png"
+      };
+      return brandIcons[model.brand] || "assets/favicons/huggingface_co.png";
+    }
+
+    function populateChannelPills(containerEl, siteIds) {
+      containerEl.innerHTML = "";
+      if (!siteIds || siteIds.length === 0) {
+        containerEl.innerHTML = `<span class="channel-pill" style="opacity: 0.5; cursor: default; pointer-events: none;">暂未收录</span>`;
+        return;
+      }
+      siteIds.forEach((sid) => {
+        const site = getSiteById(sid);
+        if (!site) return;
+        const pill = document.createElement("button");
+        pill.type = "button";
+        pill.className = "channel-pill";
+
+        pill.innerHTML = `
+          <span class="channel-pill-fallback-icon" style="display:none; font-size:10px; margin-right:4px;">🌐</span>
+          <img class="channel-pill-icon" src="${faviconPath(site)}" alt="" onerror="this.style.display='none'; this.previousElementSibling.style.display='inline-block';">
+          <span>${site.name}</span>
+        `;
+
+        pill.addEventListener("click", () => {
+          // Open the site detail modal directly
+          openSiteDetail(site);
+        });
+        containerEl.appendChild(pill);
+      });
+    }
+
+    function repositionModelPopover(capsuleEl) {
+      if (els.modelPopover.hidden) return;
+
+      const popoverWidth = els.modelPopover.offsetWidth || 290;
+      const popoverHeight = els.modelPopover.offsetHeight || 280;
+
+      const capsuleRect = capsuleEl.getBoundingClientRect();
+      const containerEl = els.modelArenaSection.querySelector(".arena-chart-container");
+      const containerRect = containerEl.getBoundingClientRect();
+
+      // Calculate center of capsule (invariant under scale/transform)
+      const centerX = capsuleRect.left + capsuleRect.width / 2;
+      const centerY = capsuleRect.top + capsuleRect.height / 2;
+
+      const centerXRel = centerX - containerRect.left;
+      const centerYRel = centerY - containerRect.top;
+
+      // Calculate the final active dimensions of the capsule (when zoomed to 1.05x of full size)
+      const finalActiveWidth = (capsuleEl.offsetWidth / (state.capsuleSize || 1)) * 1.05;
+      const finalActiveHeight = (capsuleEl.offsetHeight / (state.capsuleSize || 1)) * 1.05;
+
+      // Calculate space available on all sides of the active capsule boundaries
+      const spaceRight = containerRect.width - (centerXRel + finalActiveWidth / 2);
+      const spaceLeft = centerXRel - finalActiveWidth / 2;
+      const spaceBottom = containerRect.height - (centerYRel + finalActiveHeight / 2);
+      const spaceTop = centerYRel - finalActiveHeight / 2;
+
+      // Padding threshold (gap + screen margin)
+      const thresholdHorizontal = popoverWidth + 27; // 12px gap + 15px margin
+
+      let placement = 'right'; // default placement
+
+      if (spaceRight >= thresholdHorizontal) {
+        placement = 'right';
+      } else if (spaceLeft >= thresholdHorizontal) {
+        placement = 'left';
+      } else {
+        // Doesn't fit horizontally on either side (e.g., mobile or narrow viewports), place it vertically
+        if (spaceBottom >= spaceTop) {
+          placement = 'bottom';
+        } else {
+          placement = 'top';
+        }
+      }
+
+      let left = 0;
+      let top = 0;
+
+      if (placement === 'right') {
+        left = centerXRel + finalActiveWidth / 2 + 12;
+        top = centerYRel - popoverHeight / 2;
+      } else if (placement === 'left') {
+        left = centerXRel - finalActiveWidth / 2 - popoverWidth - 12;
+        top = centerYRel - popoverHeight / 2;
+      } else if (placement === 'bottom') {
+        left = centerXRel - popoverWidth / 2;
+        top = centerYRel + finalActiveHeight / 2 + 12;
+      } else if (placement === 'top') {
+        left = centerXRel - popoverWidth / 2;
+        top = centerYRel - finalActiveHeight / 2 - popoverHeight - 12;
+      }
+
+      // Clamp to container boundaries to ensure it never overflows
+      const clampedLeft = Math.max(15, Math.min(left, containerRect.width - popoverWidth - 15));
+      const clampedTop = Math.max(15, Math.min(top, containerRect.height - popoverHeight - 15));
+
+      els.modelPopover.style.left = `${clampedLeft}px`;
+      els.modelPopover.style.top = `${clampedTop}px`;
+    }
+
+    function openModelPopover(model, capsuleEl) {
+      document.querySelectorAll(".model-capsule.active").forEach(c => c.classList.remove("active"));
+      capsuleEl.classList.add("active");
+      state.activeModelId = model.id;
+
+      els.popoverModelName.textContent = model.name;
+      if (model.open_source) {
+        els.popoverHFBadge.hidden = false;
+        els.popoverHFBadge.href = model.huggingface_url || "https://huggingface.co";
+      } else {
+        els.popoverHFBadge.hidden = true;
+      }
+
+      els.popoverCapability.textContent = `${model.capability}%`;
+      if (state.xAxisMode === "price") {
+        if (els.popoverXLabel) els.popoverXLabel.textContent = "🏷️ 价格";
+        els.popoverXValue.textContent = model.price === 0 ? "免费" : `$${model.price}/M token`;
+      } else {
+        if (els.popoverXLabel) els.popoverXLabel.textContent = "📅 发布时间";
+        els.popoverXValue.textContent = model.release_date || "未知";
+      }
+
+      populateChannelPills(els.channelOfficial, model.channels?.official);
+      populateChannelPills(els.channelCanvas, model.channels?.canvas);
+      populateChannelPills(els.channelApi, model.channels?.api);
+
+      const wasHidden = els.modelPopover.hidden;
+      if (wasHidden) {
+        // Temporarily disable transition so it jumps to position instantly when opening
+        els.modelPopover.style.transition = "none";
+        els.modelPopover.hidden = false;
+        repositionModelPopover(capsuleEl);
+        // Force reflow
+        els.modelPopover.offsetHeight;
+        // Restore transition
+        els.modelPopover.style.transition = "";
+      } else {
+        repositionModelPopover(capsuleEl);
+      }
+
+      els.modelPopover.classList.add("show");
+    }
+
+    function closeModelPopover() {
+      els.modelPopover.classList.remove("show");
+      document.querySelectorAll(".model-capsule.active").forEach(c => c.classList.remove("active"));
+      state.activeModelId = null;
+      setTimeout(() => {
+        if (!state.activeModelId) {
+          els.modelPopover.hidden = true;
+        }
+      }, 200);
+    }
+
+    function updateModelPositionsOnly() {
+      // 1. Update grid background position
+      if (els.chartGridBg) {
+        const plotWidth = els.chartPlotArea.clientWidth || 1;
+        // Background moves in opposite direction of scroll offset
+        const bgPos = -state.chartScrollOffset * (plotWidth / 100);
+        els.chartGridBg.style.backgroundPositionX = `${bgPos}px`;
+      }
+
+      // Update scrollbar thumb position
+      if (els.chartScrollbarThumb) {
+        const zoom = state.chartZoom || 2.6;
+        const thumbWidthPercent = (1 / zoom) * 100;
+        els.chartScrollbarThumb.style.width = `${thumbWidthPercent}%`;
+
+        const maxScroll = Math.max(0.1, 100 * (zoom - 1));
+        const thumbLeftPercent = (state.chartScrollOffset / maxScroll) * (100 - thumbWidthPercent);
+        els.chartScrollbarThumb.style.left = `${thumbLeftPercent}%`;
+      }
+
+      // Synchronize zoom controls slider and labels
+      const currentZoom = state.chartZoom || 2.6;
+      if (els.chartZoomSlider) {
+        els.chartZoomSlider.value = String(currentZoom);
+      }
+      if (els.chartZoomVal) {
+        const typeText = currentZoom === 1.0 ? "纵览" : currentZoom === 2.6 ? "默认" : "细览";
+        els.chartZoomVal.textContent = `${typeText} (${currentZoom.toFixed(1)}x)`;
+      }
+
+      // 2. Update each model capsule position and stacked states
+      const activeModels = (state.models || []).filter(m => m.category === state.activeModelCategory);
+      // Pre-sort activeModels as we do for rendering
+      if (state.xAxisMode === "price") {
+        activeModels.sort((a, b) => (a.price || 0) - (b.price || 0));
+      } else {
+        activeModels.sort((a, b) => {
+          const dateA = a.release_date || "";
+          const dateB = b.release_date || "";
+          return dateB.localeCompare(dateA);
+        });
+      }
+
+      activeModels.forEach((model) => {
+        const capsule = els.chartPlotArea.querySelector(`.model-capsule[data-id="${model.id}"]`);
+        if (!capsule) return;
+
+        const { displayedX, scrolledX } = getModelXCoordinate(model, state.xAxisMode, activeModels);
+        capsule.style.left = `${displayedX}%`;
+
+        // Update stacked classes
+        const isLeft = scrolledX < 0;
+        const isRight = scrolledX > 100;
+        const isStacked = isLeft || isRight;
+
+        capsule.classList.toggle("is-stacked", isStacked);
+        capsule.classList.toggle("is-stacked-left", isLeft);
+        capsule.classList.toggle("is-stacked-right", isRight);
       });
 
-      const label = state.favoritesOnly ? "收藏夹" : (state.activeCategory === "all" ? "全部" : getCategoryLabel(state.activeCategory));
-      els.activeFilter.textContent = state.search ? `${label} / ${state.search}` : label;
-      els.resultCount.textContent = `${sites.length} SITES`;
-      els.clear.classList.toggle("is-visible", Boolean(state.search));
-      els.favoritesButton.classList.toggle("is-active", state.favoritesOnly);
-      els.sideFavorites.classList.toggle("is-active", state.favoritesOnly);
+      // 3. Update popover position if it's active and shown
+      if (state.activeModelId) {
+        const activeCapsule = els.chartPlotArea.querySelector(`.model-capsule[data-id="${state.activeModelId}"]`);
+        if (activeCapsule) {
+          repositionModelPopover(activeCapsule);
+        }
+      }
+    }
+
+    function renderModelArena() {
+      // Toggle X-axis mode active states
+      els.xModePrice.classList.toggle("active", state.xAxisMode === "price");
+      els.xModeDate.classList.toggle("active", state.xAxisMode === "date");
+
+      // Update axis labels
+      if (state.xAxisMode === "price") {
+        els.xAxisLabelLeft.textContent = "← 便宜 / 免费";
+        els.xAxisLabelRight.textContent = "昂贵";
+      } else {
+        els.xAxisLabelLeft.textContent = "← 最新发布";
+        els.xAxisLabelRight.textContent = "早期型号";
+      }
+
+      // Apply observation mode to container
+      const container = els.modelArenaSection.querySelector(".arena-chart-container");
+      if (container) {
+        container.classList.toggle("observation-icon-only", state.observationMode === "icon-only");
+      }
+
+      // Apply capsule scale
+      els.chartPlotArea.style.setProperty('--capsule-scale', String(state.capsuleSize));
+
+      // Update top controls
+      if (els.capsuleSizeSlider) {
+        els.capsuleSizeSlider.value = String(state.capsuleSize);
+      }
+      if (els.capsuleSizeVal) {
+        els.capsuleSizeVal.textContent = `${state.capsuleSize.toFixed(1)}x`;
+      }
+      if (els.viewModeStandard) {
+        els.viewModeStandard.classList.toggle("active", state.observationMode === "standard");
+      }
+      if (els.viewModeIconOnly) {
+        els.viewModeIconOnly.classList.toggle("active", state.observationMode === "icon-only");
+      }
+
+      // Clear plot area
+      els.chartPlotArea.innerHTML = "";
+
+      const activeModels = (state.models || []).filter(m => m.category === state.activeModelCategory);
+
+      // Pre-sort activeModels as we do for coordinates ranking
+      if (state.xAxisMode === "price") {
+        activeModels.sort((a, b) => (a.price || 0) - (b.price || 0));
+      } else {
+        activeModels.sort((a, b) => {
+          const dateA = a.release_date || "";
+          const dateB = b.release_date || "";
+          return dateB.localeCompare(dateA);
+        });
+      }
+
+      activeModels.forEach((model) => {
+        const yPercent = getModelYCoordinate(model);
+
+        const capsule = document.createElement("div");
+        capsule.className = "model-capsule";
+        if (state.activeModelId === model.id) {
+          capsule.classList.add("active");
+        }
+        capsule.style.top = `${yPercent}%`;
+        capsule.dataset.id = model.id;
+
+        const iconUrl = getModelIcon(model);
+        let hfEmoji = "";
+        if (model.open_source) {
+          hfEmoji = `<span class="capsule-hf-emoji" title="开源模型 (Hugging Face)" data-hf-url="${model.huggingface_url || 'https://huggingface.co'}">🤗</span>`;
+        }
+
+        capsule.innerHTML = `
+          <img class="capsule-logo" src="${iconUrl}" alt="" onerror="this.src='assets/favicons/huggingface_co.png'">
+          <span class="capsule-name">${model.name}${model.open_source ? '<span class="capsule-name-hf-emoji">🤗</span>' : ''}</span>
+          ${hfEmoji}
+        `;
+
+        capsule.addEventListener("click", (e) => {
+          // If we recently dragged, do not trigger popover
+          if (state.hasDragged) return;
+
+          if (e.target.classList.contains("capsule-hf-emoji")) {
+            e.stopPropagation();
+            const url = e.target.dataset.hfUrl;
+            window.open(url, "_blank", "noopener,noreferrer");
+            return;
+          }
+          openModelPopover(model, capsule);
+        });
+
+        els.chartPlotArea.appendChild(capsule);
+      });
+
+      // Synchronize element positions with current scroll offset and set stacked states
+      updateModelPositionsOnly();
+    }
+
+    function render() {
+      if (state.activeView === "model-arena") {
+        if (els.modelsToggle && els.modelsCollection) {
+          els.modelsToggle.setAttribute("aria-expanded", "true");
+          els.modelsCollection.hidden = false;
+        }
+
+        els.grid.style.display = "none";
+        els.hotStrip.style.display = "none";
+        els.modelArenaSection.hidden = false;
+        els.modelArenaSection.style.display = "flex";
+
+        renderModelArena();
+
+        document.querySelectorAll(".model-category-btn").forEach((btn) => {
+          const cat = btn.dataset.modelCategory;
+          btn.classList.toggle("active", state.activeModelCategory === cat);
+        });
+
+        if (els.tree.childElementCount) updateTreeState();
+        else renderTree();
+
+        els.favoritesButton.classList.remove("is-active");
+        els.sideFavorites.classList.remove("is-active");
+
+        const modelCatLabel = state.activeModelCategory === "llm" ? "语言模型（LLM）" :
+                              state.activeModelCategory === "image" ? "图像模型" : "视频模型";
+        els.activeFilter.textContent = `模型大比拼 / ${modelCatLabel}`;
+
+        const activeModelsCount = (state.models || []).filter(m => m.category === state.activeModelCategory).length;
+        els.resultCount.textContent = `${activeModelsCount} MODELS`;
+        els.clear.classList.toggle("is-visible", Boolean(state.search));
+      } else {
+        if (els.websitesToggle && els.websitesCollection) {
+          els.websitesToggle.setAttribute("aria-expanded", "true");
+          els.websitesCollection.hidden = false;
+        }
+
+        els.grid.style.display = "";
+        els.hotStrip.style.display = "";
+        els.modelArenaSection.hidden = true;
+        els.modelArenaSection.style.display = "none";
+        els.modelPopover.hidden = true;
+
+        const sites = getFilteredSites();
+        if (!els.grid.querySelector(".site-card")) buildCards();
+        filterCards(sites);
+        renderHotStrip();
+        if (els.tree.childElementCount) updateTreeState();
+        else renderTree();
+
+        document.querySelectorAll(".model-category-btn").forEach((btn) => {
+          btn.classList.remove("active");
+        });
+
+        els.grid.querySelectorAll(".favorite-toggle").forEach((btn) => {
+          btn.classList.toggle("is-saved", state.favorites.has(btn.dataset.id));
+        });
+
+        const label = state.favoritesOnly ? "收藏夹" : (state.activeCategory === "all" ? "全部" : getCategoryLabel(state.activeCategory));
+        els.activeFilter.textContent = state.search ? `${label} / ${state.search}` : label;
+        els.resultCount.textContent = `${sites.length} SITES`;
+        els.clear.classList.toggle("is-visible", Boolean(state.search));
+        els.favoritesButton.classList.toggle("is-active", state.favoritesOnly);
+        els.sideFavorites.classList.toggle("is-active", state.favoritesOnly);
+      }
       saveFavorites();
       window.requestAnimationFrame(updateSidebarScrollbar);
       window.requestAnimationFrame(updatePageScrollbar);
@@ -4407,9 +6042,11 @@
         const data = await response.json();
         state.categories = data.categories && data.categories.length ? data.categories : MOCK_DATA.categories;
         state.sites = Array.isArray(data.sites) ? data.sites : FALLBACK_SITES;
+        state.models = Array.isArray(data.models) ? data.models : [];
       } catch {
         state.categories = MOCK_DATA.categories;
         state.sites = FALLBACK_SITES;
+        state.models = [];
       }
       render();
     }
@@ -4481,21 +6118,57 @@
         updateSidebarScrollbar();
         updatePageScrollbar();
         updateMenuButtonState();
+        if (state.activeView === "model-arena") {
+          // If popover is open, reposition it relative to the resized viewport
+          if (state.activeModelId) {
+            const activeCapsule = document.querySelector(`.model-capsule[data-id="${state.activeModelId}"]`) as HTMLElement;
+            if (activeCapsule) {
+              repositionModelPopover(activeCapsule);
+            }
+          }
+        }
       });
 
       els.modelsToggle.addEventListener("click", () => {
         const isOpen = els.modelsToggle.getAttribute("aria-expanded") === "true";
         els.modelsToggle.setAttribute("aria-expanded", String(!isOpen));
         els.modelsCollection.hidden = isOpen;
-        window.requestAnimationFrame(updateSidebarScrollbar);
+        if (!isOpen) {
+          state.activeView = "model-arena";
+          if (!state.activeModelCategory) {
+            state.activeModelCategory = "llm";
+          }
+          render();
+        } else {
+          window.requestAnimationFrame(updateSidebarScrollbar);
+        }
       });
 
       els.websitesToggle.addEventListener("click", () => {
         const isOpen = els.websitesToggle.getAttribute("aria-expanded") === "true";
         els.websitesToggle.setAttribute("aria-expanded", String(!isOpen));
         els.websitesCollection.hidden = isOpen;
-        window.requestAnimationFrame(updateSidebarScrollbar);
+        if (!isOpen) {
+          state.activeView = "website-index";
+          render();
+        } else {
+          window.requestAnimationFrame(updateSidebarScrollbar);
+        }
       });
+
+      const brandCopy = document.querySelector(".brand-copy");
+      if (brandCopy) {
+        brandCopy.addEventListener("click", () => {
+          state.activeView = "website-index";
+          state.activeCategory = "all";
+          state.activeSubcategory = "";
+          state.favoritesOnly = false;
+          state.search = "";
+          if (els.search) els.search.value = "";
+          render();
+          closeMobileSidebar();
+        });
+      }
 
       els.contentShelfToggle.addEventListener("click", () => {
         const isOpen = els.contentShelfToggle.getAttribute("aria-expanded") === "true";
@@ -4558,12 +6231,14 @@
 
       els.search.addEventListener("input", (event) => {
         state.search = event.target.value;
+        state.activeView = "website-index";
         render();
       });
 
       els.clear.addEventListener("click", () => {
         els.search.value = "";
         state.search = "";
+        state.activeView = "website-index";
         els.search.focus();
         render();
       });
@@ -4634,6 +6309,7 @@
         state.favoritesOnly = !state.favoritesOnly;
         state.activeCategory = "all";
         state.activeSubcategory = "";
+        state.activeView = "website-index";
         render();
       });
 
@@ -4641,8 +6317,436 @@
         state.favoritesOnly = true;
         state.activeCategory = "all";
         state.activeSubcategory = "";
+        state.activeView = "website-index";
         render();
         closeMobileSidebar();
+      });
+
+      // ─── Model Arena Click & Dismiss Listeners ───
+      document.querySelectorAll(".model-category-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          playSidePress(btn);
+          state.activeView = "model-arena";
+          state.activeModelCategory = btn.dataset.modelCategory;
+          state.chartScrollOffset = 0; // Reset scroll offset on category switch
+          // Hide popover and clear active model ID instantly on category switch
+          els.modelPopover.hidden = true;
+          els.modelPopover.classList.remove("show");
+          state.activeModelId = null;
+          render();
+          closeMobileSidebar();
+        });
+      });
+
+      els.xModePrice.addEventListener("click", () => {
+        els.modelPopover.hidden = true;
+        els.modelPopover.classList.remove("show");
+        state.activeModelId = null;
+        state.chartScrollOffset = 0; // Reset scroll offset on dimension switch
+        const container = els.modelArenaSection.querySelector(".arena-chart-container");
+        container.classList.add("animate-positions");
+        state.xAxisMode = "price";
+        render();
+        setTimeout(() => {
+          container.classList.remove("animate-positions");
+        }, 700);
+      });
+
+      els.xModeDate.addEventListener("click", () => {
+        els.modelPopover.hidden = true;
+        els.modelPopover.classList.remove("show");
+        state.activeModelId = null;
+        state.chartScrollOffset = 0; // Reset scroll offset on dimension switch
+        const container = els.modelArenaSection.querySelector(".arena-chart-container");
+        container.classList.add("animate-positions");
+        state.xAxisMode = "date";
+        render();
+        setTimeout(() => {
+          container.classList.remove("animate-positions");
+        }, 700);
+      });
+
+      // ─── Drag Scrolling on Chart Plot Area ───
+      let isDragging = false;
+      let startX = 0;
+      let startScrollOffset = 0;
+
+      els.chartPlotArea.addEventListener("pointerdown", (e) => {
+        // Only drag with primary mouse button (left-click) or touch
+        if (e.button !== 0 && e.pointerType === "mouse") return;
+
+        isDragging = true;
+        state.hasDragged = false;
+        startX = e.clientX;
+        startScrollOffset = state.chartScrollOffset || 0;
+
+        els.chartPlotArea.style.cursor = "grabbing";
+        els.chartPlotArea.setPointerCapture(e.pointerId);
+
+        const container = els.modelArenaSection.querySelector(".arena-chart-container");
+        if (container) {
+          container.classList.add("is-dragging");
+          container.classList.remove("animate-positions");
+        }
+      });
+
+      els.chartPlotArea.addEventListener("pointermove", (e) => {
+        if (!isDragging) return;
+
+        const deltaX = e.clientX - startX;
+        if (Math.abs(deltaX) > 5) {
+          state.hasDragged = true;
+        }
+
+        const plotWidth = els.chartPlotArea.clientWidth || 1;
+        const deltaVirtual = -(deltaX * 100) / plotWidth;
+
+        const zoom = state.chartZoom || 2.6;
+        const maxScrollOffset = 100 * (zoom - 1);
+        state.chartScrollOffset = Math.max(0, Math.min(maxScrollOffset, startScrollOffset + deltaVirtual));
+
+        updateModelPositionsOnly();
+      });
+
+      const endDrag = (e) => {
+        if (!isDragging) return;
+        isDragging = false;
+        els.chartPlotArea.style.cursor = "";
+        try {
+          els.chartPlotArea.releasePointerCapture(e.pointerId);
+        } catch (_) {}
+
+        const container = els.modelArenaSection.querySelector(".arena-chart-container");
+        if (container) {
+          container.classList.remove("is-dragging");
+        }
+      };
+
+      els.chartPlotArea.addEventListener("pointerup", endDrag);
+      els.chartPlotArea.addEventListener("pointercancel", endDrag);
+
+      // ─── Drag/Click Scrolling on Parallel Scrollbar ───
+      let isScrollDragging = false;
+      let isResizingLeft = false;
+      let isResizingRight = false;
+      let scrollStartX = 0;
+      let scrollStartOffset = 0;
+
+      let startThumbLeft = 0;
+      let startThumbWidth = 0;
+      let startTrackWidth = 0;
+
+      if (els.chartScrollbarThumb && els.chartScrollbarContainer) {
+        // Drag scrolling the thumb itself
+        els.chartScrollbarThumb.addEventListener("pointerdown", (e) => {
+          // Do not scroll if we clicked a handle
+          if (e.target.classList.contains("thumb-handle")) return;
+          e.stopPropagation();
+          if (e.button !== 0 && e.pointerType === "mouse") return;
+
+          isScrollDragging = true;
+          scrollStartX = e.clientX;
+          scrollStartOffset = state.chartScrollOffset || 0;
+
+          els.chartScrollbarThumb.style.cursor = "grabbing";
+          els.chartScrollbarThumb.setPointerCapture(e.pointerId);
+
+          const container = els.modelArenaSection.querySelector(".arena-chart-container");
+          if (container) {
+            container.classList.add("is-dragging");
+            container.classList.remove("animate-positions");
+          }
+        });
+
+        els.chartScrollbarThumb.addEventListener("pointermove", (e) => {
+          if (!isScrollDragging) return;
+
+          const deltaX = e.clientX - scrollStartX;
+          const trackWidth = els.chartScrollbarContainer.clientWidth || 1;
+
+          const zoom = state.chartZoom || 2.6;
+          const thumbWidthPercent = (1 / zoom) * 100;
+          const maxScrollPixels = trackWidth * (1 - thumbWidthPercent / 100);
+
+          if (maxScrollPixels <= 0) return;
+
+          const maxScrollOffset = 100 * (zoom - 1);
+          const deltaOffset = (deltaX / maxScrollPixels) * maxScrollOffset;
+          state.chartScrollOffset = Math.max(0, Math.min(maxScrollOffset, scrollStartOffset + deltaOffset));
+
+          updateModelPositionsOnly();
+        });
+
+        const endScrollDrag = (e) => {
+          if (!isScrollDragging) return;
+          isScrollDragging = false;
+          els.chartScrollbarThumb.style.cursor = "";
+          try {
+            els.chartScrollbarThumb.releasePointerCapture(e.pointerId);
+          } catch (_) {}
+
+          const container = els.modelArenaSection.querySelector(".arena-chart-container");
+          if (container) {
+            container.classList.remove("is-dragging");
+          }
+        };
+
+        els.chartScrollbarThumb.addEventListener("pointerup", endScrollDrag);
+        els.chartScrollbarThumb.addEventListener("pointercancel", endScrollDrag);
+
+        // Resize from LEFT handle
+        if (els.thumbHandleL) {
+          els.thumbHandleL.addEventListener("pointerdown", (e) => {
+            e.stopPropagation();
+            if (e.button !== 0 && e.pointerType === "mouse") return;
+
+            isResizingLeft = true;
+            scrollStartX = e.clientX;
+
+            startTrackWidth = els.chartScrollbarContainer.clientWidth || 1;
+            const trackRect = els.chartScrollbarContainer.getBoundingClientRect();
+            const thumbRect = els.chartScrollbarThumb.getBoundingClientRect();
+
+            startThumbLeft = thumbRect.left - trackRect.left;
+            startThumbWidth = thumbRect.width;
+
+            els.thumbHandleL.classList.add("is-dragging");
+            els.thumbHandleL.setPointerCapture(e.pointerId);
+
+            const container = els.modelArenaSection.querySelector(".arena-chart-container");
+            if (container) {
+              container.classList.add("is-dragging");
+              container.classList.remove("animate-positions");
+            }
+          });
+
+          els.thumbHandleL.addEventListener("pointermove", (e) => {
+            if (!isResizingLeft) return;
+
+            const deltaX = e.clientX - scrollStartX;
+            let newThumbLeft = startThumbLeft + deltaX;
+            const minThumbWidth = startTrackWidth / 3.0; // max zoom 3.0
+            const startThumbRight = startThumbLeft + startThumbWidth;
+
+            // Constrain left edge
+            newThumbLeft = Math.max(0, Math.min(startThumbRight - minThumbWidth, newThumbLeft));
+
+            const newThumbWidth = startThumbRight - newThumbLeft;
+            const newZoom = startTrackWidth / newThumbWidth;
+            const clampedZoom = Math.max(1.0, Math.min(3.0, newZoom));
+
+            state.chartZoom = clampedZoom;
+            state.chartScrollOffset = (newThumbLeft / startTrackWidth) * 100 * clampedZoom;
+
+            // Apply zoom scroll limit constraints
+            const maxScrollOffset = 100 * (clampedZoom - 1);
+            state.chartScrollOffset = Math.max(0, Math.min(maxScrollOffset, state.chartScrollOffset));
+
+            updateModelPositionsOnly();
+          });
+
+          const endResizeLeft = (e) => {
+            if (!isResizingLeft) return;
+            isResizingLeft = false;
+            els.thumbHandleL.classList.remove("is-dragging");
+            try {
+              els.thumbHandleL.releasePointerCapture(e.pointerId);
+            } catch (_) {}
+
+            const container = els.modelArenaSection.querySelector(".arena-chart-container");
+            if (container) {
+              container.classList.remove("is-dragging");
+            }
+          };
+
+          els.thumbHandleL.addEventListener("pointerup", endResizeLeft);
+          els.thumbHandleL.addEventListener("pointercancel", endResizeLeft);
+        }
+
+        // Resize from RIGHT handle
+        if (els.thumbHandleR) {
+          els.thumbHandleR.addEventListener("pointerdown", (e) => {
+            e.stopPropagation();
+            if (e.button !== 0 && e.pointerType === "mouse") return;
+
+            isResizingRight = true;
+            scrollStartX = e.clientX;
+
+            startTrackWidth = els.chartScrollbarContainer.clientWidth || 1;
+            const trackRect = els.chartScrollbarContainer.getBoundingClientRect();
+            const thumbRect = els.chartScrollbarThumb.getBoundingClientRect();
+
+            startThumbLeft = thumbRect.left - trackRect.left;
+            startThumbWidth = thumbRect.width;
+
+            els.thumbHandleR.classList.add("is-dragging");
+            els.thumbHandleR.setPointerCapture(e.pointerId);
+
+            const container = els.modelArenaSection.querySelector(".arena-chart-container");
+            if (container) {
+              container.classList.add("is-dragging");
+              container.classList.remove("animate-positions");
+            }
+          });
+
+          els.thumbHandleR.addEventListener("pointermove", (e) => {
+            if (!isResizingRight) return;
+
+            const deltaX = e.clientX - scrollStartX;
+            const newThumbWidth = Math.max(startTrackWidth / 3.0, Math.min(startTrackWidth - startThumbLeft, startThumbWidth + deltaX));
+
+            const newZoom = startTrackWidth / newThumbWidth;
+            const clampedZoom = Math.max(1.0, Math.min(3.0, newZoom));
+
+            state.chartZoom = clampedZoom;
+            state.chartScrollOffset = (startThumbLeft / startTrackWidth) * 100 * clampedZoom;
+
+            const maxScrollOffset = 100 * (clampedZoom - 1);
+            state.chartScrollOffset = Math.max(0, Math.min(maxScrollOffset, state.chartScrollOffset));
+
+            updateModelPositionsOnly();
+          });
+
+          const endResizeRight = (e) => {
+            if (!isResizingRight) return;
+            isResizingRight = false;
+            els.thumbHandleR.classList.remove("is-dragging");
+            try {
+              els.thumbHandleR.releasePointerCapture(e.pointerId);
+            } catch (_) {}
+
+            const container = els.modelArenaSection.querySelector(".arena-chart-container");
+            if (container) {
+              container.classList.remove("is-dragging");
+            }
+          };
+
+          els.thumbHandleR.addEventListener("pointerup", endResizeRight);
+          els.thumbHandleR.addEventListener("pointercancel", endResizeRight);
+        }
+
+        // Click on track to jump scroll and immediately start drag
+        els.chartScrollbarContainer.addEventListener("pointerdown", (e) => {
+          if (e.target === els.chartScrollbarThumb) return;
+          if (e.target.classList.contains("thumb-handle")) return; // ignore handle clicks
+          if (e.button !== 0 && e.pointerType === "mouse") return;
+
+          const trackRect = els.chartScrollbarContainer.getBoundingClientRect();
+          const trackWidth = trackRect.width || 1;
+
+          const zoom = state.chartZoom || 2.6;
+          const thumbWidthPercent = (1 / zoom) * 100;
+          const thumbWidth = trackWidth * (thumbWidthPercent / 100);
+          const maxScrollPixels = trackWidth - thumbWidth;
+
+          if (maxScrollPixels <= 0) return;
+
+          const clickX = e.clientX - trackRect.left;
+          const targetThumbLeft = clickX - thumbWidth / 2;
+          const ratio = Math.max(0, Math.min(1, targetThumbLeft / maxScrollPixels));
+
+          const maxScrollOffset = 100 * (zoom - 1);
+          state.chartScrollOffset = ratio * maxScrollOffset;
+
+          const container = els.modelArenaSection.querySelector(".arena-chart-container");
+          if (container) {
+            container.classList.add("animate-positions");
+          }
+
+          updateModelPositionsOnly();
+
+          // smooth chain drag
+          isScrollDragging = true;
+          scrollStartX = e.clientX;
+          scrollStartOffset = state.chartScrollOffset;
+          els.chartScrollbarThumb.style.cursor = "grabbing";
+          els.chartScrollbarThumb.setPointerCapture(e.pointerId);
+        });
+      }
+
+      // Global capture phase click interceptor to isolate drag gestures from detail popover clicks
+      document.addEventListener("click", (e) => {
+        if (state.hasDragged) {
+          e.stopPropagation();
+          e.preventDefault();
+          state.hasDragged = false;
+        }
+      }, true);
+
+      if (els.chartZoomSlider) {
+        els.chartZoomSlider.addEventListener("input", (e) => {
+          const newZoom = parseFloat(e.target.value);
+          state.chartZoom = newZoom;
+
+          // Constrain offset
+          const maxScrollOffset = 100 * (newZoom - 1);
+          state.chartScrollOffset = Math.max(0, Math.min(maxScrollOffset, state.chartScrollOffset));
+
+          updateModelPositionsOnly();
+        });
+      }
+
+      if (els.chartZoomIcon) {
+        const resetZoom = () => {
+          state.chartZoom = 2.6;
+          // Constrain offset
+          const maxScrollOffset = 100 * (2.6 - 1);
+          state.chartScrollOffset = Math.max(0, Math.min(maxScrollOffset, state.chartScrollOffset));
+          updateModelPositionsOnly();
+        };
+        els.chartZoomIcon.addEventListener("dblclick", resetZoom);
+        els.chartZoomIcon.addEventListener("click", resetZoom);
+      }
+
+      els.popoverClose.addEventListener("click", () => {
+        closeModelPopover();
+      });
+
+      if (els.capsuleSizeSlider) {
+        els.capsuleSizeSlider.addEventListener("input", (e) => {
+          state.capsuleSize = parseFloat(e.target.value);
+          if (els.capsuleSizeVal) {
+            els.capsuleSizeVal.textContent = `${state.capsuleSize.toFixed(1)}x`;
+          }
+          els.chartPlotArea.style.setProperty('--capsule-scale', String(state.capsuleSize));
+          if (state.activeModelId) {
+            const activeCapsule = els.chartPlotArea.querySelector(`.model-capsule[data-id="${state.activeModelId}"]`);
+            if (activeCapsule) {
+              repositionModelPopover(activeCapsule);
+            }
+          }
+        });
+      }
+
+      if (els.viewModeStandard) {
+        els.viewModeStandard.addEventListener("click", () => {
+          if (state.observationMode === "standard") return;
+          state.observationMode = "standard";
+          renderModelArena();
+        });
+      }
+
+      if (els.viewModeIconOnly) {
+        els.viewModeIconOnly.addEventListener("click", () => {
+          if (state.observationMode === "icon-only") return;
+          state.observationMode = "icon-only";
+          renderModelArena();
+        });
+      }
+
+      document.addEventListener("click", (e) => {
+        if (state.activeView === "model-arena") {
+          if (!e.target.closest(".model-capsule") &&
+              !e.target.closest(".model-popover") &&
+              !e.target.closest(".model-category-btn") &&
+              !e.target.closest(".axis-control-btn") &&
+              !e.target.closest(".control-slider") &&
+              !e.target.closest(".mode-toggle-btn") &&
+              !e.target.closest(".site-dialog") &&
+              !e.target.closest(".game-dialog")) {
+            closeModelPopover();
+          }
+        }
       });
 
       els.dinoGameButton.addEventListener("click", openGameWindow);
@@ -4701,8 +6805,23 @@
           updateMenuButtonState();
         }
       });
+
+      // Prevent accidental text selection while dragging or inside the chart
+      const chartContainer = els.modelArenaSection ? els.modelArenaSection.querySelector(".arena-chart-container") : null;
+      if (chartContainer) {
+        chartContainer.addEventListener("selectstart", (e) => {
+          e.preventDefault();
+        });
+      }
+      window.addEventListener("selectstart", (e) => {
+        if (isDragging || isScrollDragging || isResizingLeft || isResizingRight) {
+          e.preventDefault();
+        }
+      });
+
       updateMenuButtonState();
     }
+
 
     function startInkParticles() {
       const canvas = document.getElementById("inkCanvas");

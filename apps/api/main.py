@@ -62,8 +62,8 @@ def load_sites() -> None:
     if SITES_FILE.exists():
         nav_data = json.loads(SITES_FILE.read_text(encoding="utf-8"))
     else:
-        nav_data = {"categories": [], "sites": []}
-    logger.info(f"sites.json loaded: {len(nav_data.get('sites', []))} sites")
+        nav_data = {"categories": [], "sites": [], "models": []}
+    logger.info(f"sites.json loaded: {len(nav_data.get('sites', []))} sites, {len(nav_data.get('models', []))} models")
 
 
 def load_clicks() -> None:
@@ -304,8 +304,17 @@ async def get_sites(q: str = "", section: str = "", tag: str = ""):
     return {
         "categories": nav_data.get("categories", []),
         "sites": sites,
+        "models": nav_data.get("models", []),
         "total": len(sites),
     }
+
+
+@app.get("/api/models")
+async def get_models(category: str = ""):
+    models = nav_data.get("models", [])
+    if category:
+        models = [m for m in models if m.get("category") == category]
+    return {"models": models, "total": len(models)}
 
 
 @app.get("/api/categories")
