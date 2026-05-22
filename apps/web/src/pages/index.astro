@@ -3602,17 +3602,17 @@
 
     .chart-controls-in-axis {
       position: absolute;
-      bottom: 8px;
-      right: 24px;
+      bottom: 78px;
+      right: 30px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 12px;
       z-index: 10;
       pointer-events: auto;
     }
 
     .control-axis-label {
-      font-size: 11px;
+      font-size: 12px;
       color: var(--ink-muted);
     }
 
@@ -3620,9 +3620,9 @@
       background: rgba(25, 22, 37, 0.65);
       border: 1px solid var(--border-ink);
       border-radius: 999px;
-      padding: 4px 12px;
+      padding: 6px 16px;
       color: var(--ink-muted);
-      font-size: 11px;
+      font-size: 12px;
       cursor: pointer;
       transition: all 0.22s var(--ease-spring);
     }
@@ -3646,14 +3646,13 @@
     .arena-chart-container {
       position: relative;
       width: 100%;
-      height: calc(100dvh - 280px);
-      min-height: 380px;
-      max-height: 580px;
+      height: calc(100dvh - 200px);
+      min-height: 520px;
       background: rgba(25, 22, 37, 0.35);
       border: 1px solid var(--border-ink);
       border-radius: 12px;
       backdrop-filter: blur(10px);
-      overflow: hidden;
+      overflow: visible;
       box-shadow: inset 0 0 30px rgba(192, 132, 252, 0.03);
       user-select: none;
       -webkit-user-select: none;
@@ -3676,15 +3675,15 @@
 
     @media (min-width: 1200px) {
       .arena-chart-container {
-        height: calc(100dvh - 300px);
-        max-height: 680px;
+        height: calc(100dvh - 220px);
+        min-height: 600px;
       }
     }
 
     @media (min-width: 1600px) {
       .arena-chart-container {
-        height: calc(100dvh - 320px);
-        max-height: 780px;
+        height: calc(100dvh - 240px);
+        min-height: 700px;
       }
     }
 
@@ -3718,6 +3717,43 @@
         linear-gradient(to right, rgba(192, 132, 252, 0.04) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(192, 132, 252, 0.04) 1px, transparent 1px);
     }
+
+    .tier-bands {
+      position: absolute;
+      top: 30px;
+      left: 65px;
+      right: 30px;
+      bottom: 100px;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+      border-radius: 4px;
+    }
+
+    .tier-band {
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+
+    .tier-s { top: 0%; height: 22%; background: linear-gradient(180deg, rgba(251, 191, 36, 0.08), rgba(251, 191, 36, 0.03)); }
+    .tier-a { top: 22%; height: 31%; background: linear-gradient(180deg, rgba(192, 132, 252, 0.06), rgba(192, 132, 252, 0.02)); }
+    .tier-b { top: 53%; height: 30%; background: linear-gradient(180deg, rgba(79, 162, 255, 0.05), rgba(79, 162, 255, 0.02)); }
+    .tier-c { top: 83%; height: 17%; background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent); }
+
+    .tier-label {
+      position: absolute;
+      left: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      opacity: 0.35;
+      z-index: 1;
+    }
+    .tier-label-s { top: 9%; color: #fbbf24; }
+    .tier-label-a { top: 36%; color: #c084fc; }
+    .tier-label-b { top: 66%; color: #4fa2ff; }
+    .tier-label-c { top: 89%; color: #a79bb8; }
 
     .chart-y-axis {
       position: absolute;
@@ -3792,38 +3828,47 @@
 
     .arena-footer {
       display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
+      flex-direction: column;
+      gap: 6px;
       margin-top: 16px;
-      padding: 8px 20px;
+      padding: 10px 16px;
       background: rgba(25, 22, 37, 0.45);
       border: 1px solid var(--border-ink);
-      border-radius: 999px;
+      border-radius: 16px;
       backdrop-filter: blur(10px);
       font-size: 11.5px;
       color: var(--ink-muted);
       box-shadow: inset 0 0 20px rgba(192, 132, 252, 0.02);
     }
 
+    .arena-footer-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
     @media (max-width: 767px) {
       .arena-chart-container {
-        height: calc(100dvh - 260px);
-        min-height: 320px;
-        max-height: 480px;
+        height: calc(100dvh - 200px);
+        min-height: 440px;
       }
 
       .arena-footer {
-        border-radius: 16px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-        padding: 12px 16px;
+        border-radius: 14px;
+        padding: 10px 12px;
+        gap: 6px;
+      }
+
+      .arena-footer-row {
+        gap: 6px;
       }
     }
 
     .arena-footer-label {
       font-weight: 500;
+      font-size: 10.5px;
+      white-space: nowrap;
     }
 
     .arena-footer-pills {
@@ -3835,14 +3880,14 @@
     .footer-pill {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 4px 12px;
+      gap: 4px;
+      padding: 3px 10px;
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid var(--border-ink);
       border-radius: 999px;
       color: var(--ink-white);
       text-decoration: none;
-      font-size: 11px;
+      font-size: 10.5px;
       transition: all 0.22s var(--ease-spring);
     }
 
@@ -3905,11 +3950,12 @@
     .chart-plot-area {
       position: absolute;
       top: 30px;
-      bottom: 75px;
+      bottom: 100px;
       left: 65px;
       right: 30px;
       pointer-events: auto;
       touch-action: pan-y;
+      overflow: hidden;
     }
 
     /* ─── Model Arena Scrollbar & Zoom ─── */
@@ -4705,11 +4751,17 @@
           <button class="side-link model-category-btn" type="button" data-model-category="llm">
             <span aria-hidden="true">◆</span><span>语言模型（LLM）</span>
           </button>
-          <button class="side-link model-category-btn" type="button" data-model-category="image">
-            <span aria-hidden="true">◆</span><span>图像模型</span>
+          <button class="side-link model-category-btn" type="button" data-model-category="text-to-image">
+            <span aria-hidden="true">◆</span><span>文生图</span>
           </button>
-          <button class="side-link model-category-btn" type="button" data-model-category="video">
-            <span aria-hidden="true">◆</span><span>视频模型</span>
+          <button class="side-link model-category-btn" type="button" data-model-category="image-editing">
+            <span aria-hidden="true">◆</span><span>图像编辑</span>
+          </button>
+          <button class="side-link model-category-btn" type="button" data-model-category="text-to-video">
+            <span aria-hidden="true">◆</span><span>文生视频</span>
+          </button>
+          <button class="side-link model-category-btn" type="button" data-model-category="image-to-video">
+            <span aria-hidden="true">◆</span><span>图生视频</span>
           </button>
         </div>
       </div>
@@ -4807,28 +4859,38 @@
         <div class="sweet-spot-glow"></div>
         <div class="sweet-spot-label">黄金象限 (高能力 + 低价格/新)</div>
         <div class="chart-grid-bg"></div>
+        <div class="tier-bands">
+          <div class="tier-band tier-s"></div>
+          <div class="tier-band tier-a"></div>
+          <div class="tier-band tier-b"></div>
+          <div class="tier-band tier-c"></div>
+          <span class="tier-label tier-label-s">S</span>
+          <span class="tier-label tier-label-a">A</span>
+          <span class="tier-label tier-label-b">B</span>
+          <span class="tier-label tier-label-c">C</span>
+        </div>
 
         <div class="chart-y-axis">
           <div class="axis-label-top">能力更强 ↑</div>
           <div class="axis-label-bottom">能力一般</div>
           <div class="y-axis-tick" style="top: 5%;">
-            <span class="tick-label">1.0</span>
+            <span class="tick-label">100</span>
             <span class="tick-line"></span>
           </div>
-          <div class="y-axis-tick" style="top: 41.3%;">
-            <span class="tick-label">0.75</span>
+          <div class="y-axis-tick" style="top: 35%;">
+            <span class="tick-label">84</span>
             <span class="tick-line"></span>
           </div>
-          <div class="y-axis-tick" style="top: 69.2%;">
-            <span class="tick-label">0.5</span>
+          <div class="y-axis-tick" style="top: 61%;">
+            <span class="tick-label">68</span>
             <span class="tick-line"></span>
           </div>
-          <div class="y-axis-tick" style="top: 87.6%;">
-            <span class="tick-label">0.25</span>
+          <div class="y-axis-tick" style="top: 81%;">
+            <span class="tick-label">51</span>
             <span class="tick-line"></span>
           </div>
-          <div class="y-axis-tick" style="top: 95%;">
-            <span class="tick-label">0.0</span>
+          <div class="y-axis-tick" style="top: 92%;">
+            <span class="tick-label">35</span>
             <span class="tick-line"></span>
           </div>
         </div>
@@ -4858,9 +4920,9 @@
           <div class="chart-scroll-divider"></div>
 
           <div class="chart-zoom-control">
-            <span class="zoom-icon" id="chartZoomIcon" title="双击恢复默认 2.6x">🔍</span>
-            <input type="range" id="chartZoomSlider" class="chart-zoom-slider" min="1.0" max="3.0" step="0.1" value="2.6" title="调节横轴比例：纵览/细览">
-            <span class="zoom-value" id="chartZoomVal">细览 (2.6x)</span>
+            <span class="zoom-icon" id="chartZoomIcon" title="双击恢复默认 1.0x">🔍</span>
+            <input type="range" id="chartZoomSlider" class="chart-zoom-slider" min="1.0" max="3.0" step="0.1" value="1.0" title="调节横轴比例：纵览/细览">
+            <span class="zoom-value" id="chartZoomVal">纵览 (1.0x)</span>
           </div>
         </div>
 
@@ -4894,26 +4956,14 @@
         </div>
       </div>
 
-      <!-- 底部信息源链接，胶囊体感觉 -->
+      <!-- 底部信息源：单一权威数据源 -->
       <div class="arena-footer">
-        <span class="arena-footer-label">📊 信息源/基准测试：</span>
-        <div class="arena-footer-pills">
-          <a class="footer-pill" href="https://chat.lmsys.org/" target="_blank" rel="noopener">
-            <img src="assets/favicons/huggingface_co.png" alt="" onerror="this.src='assets/favicons/huggingface_co.png'">
-            <span>LMSYS Chatbot Arena</span>
-          </a>
-          <a class="footer-pill" href="https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard" target="_blank" rel="noopener">
-            <img src="assets/favicons/huggingface_co.png" alt="" onerror="this.src='assets/favicons/huggingface_co.png'">
-            <span>Hugging Face Leaderboard</span>
-          </a>
-          <a class="footer-pill" href="https://github.com/openai/simple-evals" target="_blank" rel="noopener">
-            <img src="assets/favicons/github_com.png" alt="" onerror="this.src='assets/favicons/github_com.png'">
-            <span>OpenAI Simple Evals</span>
-          </a>
-          <a class="footer-pill" href="https://github.com/deepseek-ai/DeepSeek-V3" target="_blank" rel="noopener">
-            <img src="assets/favicons/github_com.png" alt="" onerror="this.src='assets/favicons/github_com.png'">
-            <span>DeepSeek-V3 Repos</span>
-          </a>
+        <div class="arena-footer-row" style="justify-content: center;">
+          <span class="arena-footer-label">📊 数据来源</span>
+          <div class="arena-footer-pills">
+            <a class="footer-pill" href="https://artificialanalysis.ai/leaderboards/" target="_blank" rel="noopener">Artificial Analysis</a>
+          </div>
+          <span class="arena-footer-label" style="margin-left: 16px; font-size: 10px; color: var(--ink-muted);">更新于 2026-05-22</span>
         </div>
       </div>
     </section>
@@ -4960,13 +5010,13 @@
       expanded: new Set(["tools", "aesthetics", "inspiration"]),
       favorites: new Set(JSON.parse(localStorage.getItem("manga_nav_favorites") || "[]")),
       activeView: "website-index", // "website-index" | "model-arena"
-      activeModelCategory: "llm",   // "llm" | "image" | "video"
+      activeModelCategory: "llm",   // "llm" | "text-to-image" | "image-editing" | "text-to-video" | "image-to-video"
       xAxisMode: "price",           // "price" | "date"
       activeModelId: null,          // currently open model details popover
       capsuleSize: 1.0,             // capsule scale multiplier (0.3 - 1.0)
       observationMode: "standard",  // "standard" | "icon-only"
       chartScrollOffset: 0,         // horizontal scroll offset (0 to 160)
-      chartZoom: 2.6,               // horizontal scale factor / zoom level (1.0 to 3.0)
+      chartZoom: 1.0,               // horizontal scale factor / zoom level (1.0 to 3.0)
       hasDragged: false             // track if dragging occurred during current gesture
     };
 
@@ -5582,19 +5632,23 @@
       return { displayedX, scrolledX };
     }
 
-    function getModelYCoordinate(model) {
-      const minCap = 70; // capability range min
-      const maxCap = 100; // capability range max
+    function getModelYCoordinate(model, activeModels) {
+      // Per-category scaling: strongest model → top (100%), weakest → bottom (0%)
+      // Compute dynamic range from the active models in the current category
+      const caps = (activeModels || []).map(m => m.capability || 0).filter(c => c > 0);
+      const maxCap = caps.length ? Math.max(...caps) : 100;
+      const minCap = caps.length ? Math.min(...caps) : 35;
+      const range = maxCap - minCap || 1; // avoid divide by zero
+
       let capability = model.capability || 0;
-      if (capability < minCap) capability = minCap;
-      if (capability > maxCap) capability = maxCap;
 
-      // ratio: 0.0 (weakest, capability 70) to 1.0 (strongest, capability 100)
-      const ratio = (capability - minCap) / (maxCap - minCap);
+      // ratio: 0.0 (weakest in category) to 1.0 (strongest in category)
+      const ratio = (capability - minCap) / range;
 
-      // Apply power-based exponential curve to stretch the top (frontier) differences.
-      // High capability (ratio=1.0) maps to top (5%), low capability (ratio=0.0) maps to bottom (95%)
-      return 95 - Math.pow(ratio, 1.8) * 90;
+      // Apply power curve (exponent 1.5) for balanced spread:
+      // Top models get more spacing, bottom compress slightly
+      // Maps to ~5% (top) to ~92% (bottom) of chart height
+      return 92 - Math.pow(ratio, 1.5) * 87;
     }
 
     function getModelIcon(model) {
@@ -5900,7 +5954,8 @@
       }
 
       activeModels.forEach((model) => {
-        const yPercent = getModelYCoordinate(model);
+        const yPercent = getModelYCoordinate(model, activeModels);
+        const { displayedX } = getModelXCoordinate(model, state.xAxisMode, activeModels);
 
         const capsule = document.createElement("div");
         capsule.className = "model-capsule";
@@ -5908,6 +5963,7 @@
           capsule.classList.add("active");
         }
         capsule.style.top = `${yPercent}%`;
+        capsule.style.left = `${displayedX}%`;
         capsule.dataset.id = model.id;
 
         const iconUrl = getModelIcon(model);
@@ -5968,7 +6024,9 @@
         els.sideFavorites.classList.remove("is-active");
 
         const modelCatLabel = state.activeModelCategory === "llm" ? "语言模型（LLM）" :
-                              state.activeModelCategory === "image" ? "图像模型" : "视频模型";
+                              state.activeModelCategory === "text-to-image" ? "文生图" :
+                              state.activeModelCategory === "image-editing" ? "图像编辑" :
+                              state.activeModelCategory === "text-to-video" ? "文生视频" : "图生视频";
         els.activeFilter.textContent = `模型大比拼 / ${modelCatLabel}`;
 
         const activeModelsCount = (state.models || []).filter(m => m.category === state.activeModelCategory).length;
@@ -6371,6 +6429,8 @@
       let startX = 0;
       let startScrollOffset = 0;
 
+      let dragPointerId = null; // track which pointer initiated the drag
+
       els.chartPlotArea.addEventListener("pointerdown", (e) => {
         // Only drag with primary mouse button (left-click) or touch
         if (e.button !== 0 && e.pointerType === "mouse") return;
@@ -6379,9 +6439,12 @@
         state.hasDragged = false;
         startX = e.clientX;
         startScrollOffset = state.chartScrollOffset || 0;
+        dragPointerId = e.pointerId;
 
+        // Don't setPointerCapture yet — defer until we confirm it's a real drag.
+        // This prevents pointer capture from interfering with click events on capsules
+        // (especially on touch devices where finger contact causes tiny movements).
         els.chartPlotArea.style.cursor = "grabbing";
-        els.chartPlotArea.setPointerCapture(e.pointerId);
 
         const container = els.modelArenaSection.querySelector(".arena-chart-container");
         if (container) {
@@ -6394,7 +6457,15 @@
         if (!isDragging) return;
 
         const deltaX = e.clientX - startX;
-        if (Math.abs(deltaX) > 5) {
+        // Use a higher threshold for touch to avoid误触 (accidental drag detection)
+        // Touch: 15px threshold (finger contact area causes small movements)
+        // Mouse: 5px threshold
+        const dragThreshold = e.pointerType === "touch" ? 15 : 5;
+        if (Math.abs(deltaX) > dragThreshold) {
+          // First time crossing the threshold — capture the pointer now that we know it's a real drag
+          if (!state.hasDragged && dragPointerId !== null) {
+            try { els.chartPlotArea.setPointerCapture(dragPointerId); } catch (_) {}
+          }
           state.hasDragged = true;
         }
 
@@ -6415,6 +6486,7 @@
         try {
           els.chartPlotArea.releasePointerCapture(e.pointerId);
         } catch (_) {}
+        dragPointerId = null;
 
         const container = els.modelArenaSection.querySelector(".arena-chart-container");
         if (container) {
