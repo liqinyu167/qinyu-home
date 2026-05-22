@@ -83,11 +83,11 @@
       ],
       "capabilities": [
         "chat",
+        "code",
         "image-gen",
         "search",
-        "writing",
-        "code",
-        "voice"
+        "voice",
+        "writing"
       ],
       "relations": {
         "products": [
@@ -111,7 +111,8 @@
           "claude",
           "qwen",
           "deepseek",
-          "zhipu"
+          "zhipu",
+          "wenxin-yiyan"
         ],
         "complements": [
           "aistudio",
@@ -129,7 +130,8 @@
         "图像生成",
         "Google"
       ],
-      "weight": 970
+      "weight": 0,
+      "icon": null
     },
     {
       "id": "chatgpt",
@@ -145,11 +147,11 @@
       ],
       "capabilities": [
         "chat",
-        "image-gen",
         "code",
+        "image-gen",
         "search",
-        "writing",
-        "voice"
+        "voice",
+        "writing"
       ],
       "relations": {
         "products": [
@@ -169,7 +171,8 @@
           "claude",
           "qwen",
           "deepseek",
-          "zhipu"
+          "zhipu",
+          "wenxin-yiyan"
         ],
         "complements": [
           "sora"
@@ -185,7 +188,8 @@
         "图像生成",
         "OpenAI"
       ],
-      "weight": 1000
+      "weight": 0,
+      "icon": null
     },
     {
       "id": "jimeng",
@@ -200,9 +204,9 @@
         "video-gen"
       ],
       "capabilities": [
+        "canvas",
         "image-gen",
         "video-gen",
-        "canvas",
         "workflow"
       ],
       "relations": {
@@ -213,7 +217,8 @@
         "downstream": [],
         "alternatives": [
           "flow",
-          "sora"
+          "sora",
+          "runway"
         ],
         "complements": [
           "doubao",
@@ -229,7 +234,8 @@
         "即梦",
         "字节跳动"
       ],
-      "weight": 740
+      "weight": 0,
+      "icon": null
     },
     {
       "id": "doubao",
@@ -247,8 +253,8 @@
         "chat",
         "image-gen",
         "search",
-        "writing",
-        "voice"
+        "voice",
+        "writing"
       ],
       "relations": {
         "products": [
@@ -269,7 +275,8 @@
           "claude",
           "qwen",
           "deepseek",
-          "zhipu"
+          "zhipu",
+          "wenxin-yiyan"
         ],
         "complements": [
           "jimeng",
@@ -285,7 +292,8 @@
         "图像生成",
         "字节跳动"
       ],
-      "weight": 860
+      "weight": 0,
+      "icon": null
     },
     {
       "id": "notebooklm",
@@ -299,10 +307,10 @@
         "chat"
       ],
       "capabilities": [
-        "chat",
-        "writing",
         "audio-gen",
-        "search"
+        "chat",
+        "search",
+        "writing"
       ],
       "relations": {
         "products": [],
@@ -310,7 +318,9 @@
           "gemini"
         ],
         "downstream": [],
-        "alternatives": [],
+        "alternatives": [
+          "perplexity"
+        ],
         "complements": [
           "gemini"
         ]
@@ -324,7 +334,8 @@
         "Google",
         "子站"
       ],
-      "weight": 680
+      "weight": 0,
+      "icon": null
     },
     {
       "id": "imagen",
@@ -381,7 +392,9 @@
         "downstream": [
           "flow"
         ],
-        "alternatives": [],
+        "alternatives": [
+          "runway"
+        ],
         "complements": [
           "imagen",
           "flow"
@@ -393,7 +406,8 @@
         "Google",
         "模型"
       ],
-      "weight": 525
+      "weight": 0,
+      "icon": null
     },
     {
       "id": "sora",
@@ -406,9 +420,9 @@
         "video-gen"
       ],
       "capabilities": [
-        "video-gen",
-        "image-gen",
         "canvas",
+        "image-gen",
+        "video-gen",
         "workflow"
       ],
       "relations": {
@@ -419,7 +433,8 @@
         "downstream": [],
         "alternatives": [
           "jimeng",
-          "flow"
+          "flow",
+          "runway"
         ],
         "complements": [
           "chatgpt"
@@ -432,7 +447,8 @@
         "OpenAI",
         "子站"
       ],
-      "weight": 800
+      "weight": 0,
+      "icon": null
     },
     {
       "id": "capcut",
@@ -808,9 +824,9 @@
       ],
       "capabilities": [
         "chat",
+        "code",
         "image-gen",
         "search",
-        "code",
         "writing"
       ],
       "relations": {
@@ -832,7 +848,8 @@
           "claude",
           "qwen",
           "deepseek",
-          "zhipu"
+          "zhipu",
+          "wenxin-yiyan"
         ],
         "complements": [
           "x-twitter"
@@ -848,7 +865,8 @@
         "图像生成",
         "xAI"
       ],
-      "weight": 840
+      "weight": 0,
+      "icon": null
     },
     {
       "id": "grok-api",
@@ -942,10 +960,10 @@
       ],
       "capabilities": [
         "chat",
-        "image-gen",
         "code",
-        "writing",
-        "search"
+        "image-gen",
+        "search",
+        "writing"
       ],
       "relations": {
         "products": [
@@ -966,7 +984,8 @@
           "doubao",
           "qwen",
           "deepseek",
-          "zhipu"
+          "zhipu",
+          "wenxin-yiyan"
         ],
         "complements": []
       },
@@ -980,7 +999,8 @@
         "图像分析",
         "Anthropic"
       ],
-      "weight": 920
+      "weight": 0,
+      "icon": null
     },
     {
       "id": "anthropic-api",
@@ -1429,11 +1449,11 @@
       ],
       "capabilities": [
         "chat",
-        "writing",
-        "search",
         "code",
         "image-gen",
-        "voice"
+        "search",
+        "voice",
+        "writing"
       ],
       "relations": {
         "products": [
@@ -1458,7 +1478,8 @@
           "grok",
           "doubao",
           "deepseek",
-          "zhipu"
+          "zhipu",
+          "wenxin-yiyan"
         ],
         "complements": [
           "bailian",
@@ -1476,7 +1497,8 @@
         "阿里巴巴",
         "Qwen"
       ],
-      "weight": 900
+      "weight": 0,
+      "icon": null
     },
     {
       "id": "qwen-api",
@@ -1711,7 +1733,8 @@
           "claude",
           "grok",
           "doubao",
-          "zhipu"
+          "zhipu",
+          "wenxin-yiyan"
         ],
         "complements": []
       },
@@ -1721,7 +1744,8 @@
         "推理",
         "官站"
       ],
-      "weight": 940
+      "weight": 0,
+      "icon": null
     },
     {
       "id": "deepseek-api",
@@ -1775,8 +1799,8 @@
         "chat",
         "code",
         "search",
-        "writing",
-        "voice"
+        "voice",
+        "writing"
       ],
       "relations": {
         "products": [
@@ -1794,7 +1818,8 @@
           "grok",
           "claude",
           "qwen",
-          "deepseek"
+          "deepseek",
+          "wenxin-yiyan"
         ],
         "complements": []
       },
@@ -1807,7 +1832,8 @@
         "对话",
         "智谱AI"
       ],
-      "weight": 570
+      "weight": 0,
+      "icon": null
     },
     {
       "id": "bigmodel-api",
@@ -2063,8 +2089,8 @@
         "image-gen"
       ],
       "capabilities": [
-        "video-gen",
-        "image-gen"
+        "image-gen",
+        "video-gen"
       ],
       "relations": {
         "products": [],
@@ -2074,7 +2100,8 @@
           "veo",
           "sora",
           "luma",
-          "pika"
+          "pika",
+          "runway"
         ],
         "complements": []
       },
@@ -2085,7 +2112,8 @@
         "视频生成",
         "快手"
       ],
-      "weight": 720
+      "weight": 0,
+      "icon": null
     },
     {
       "id": "luma",
@@ -2099,8 +2127,8 @@
         "image-gen"
       ],
       "capabilities": [
-        "video-gen",
-        "image-gen"
+        "image-gen",
+        "video-gen"
       ],
       "relations": {
         "products": [],
@@ -2110,7 +2138,8 @@
           "veo",
           "sora",
           "kling",
-          "pika"
+          "pika",
+          "runway"
         ],
         "complements": []
       },
@@ -2120,7 +2149,8 @@
         "视频生成",
         "Luma"
       ],
-      "weight": 485
+      "weight": 0,
+      "icon": null
     },
     {
       "id": "pika",
@@ -2143,7 +2173,8 @@
           "veo",
           "sora",
           "kling",
-          "luma"
+          "luma",
+          "runway"
         ],
         "complements": []
       },
@@ -2153,7 +2184,8 @@
         "英文",
         "视频生成"
       ],
-      "weight": 475
+      "weight": 0,
+      "icon": null
     },
     {
       "id": "suno",
@@ -2308,12 +2340,12 @@
         "code-dev"
       ],
       "capabilities": [
-        "chat",
-        "video-gen",
         "audio-gen",
+        "chat",
         "code",
-        "voice",
         "search",
+        "video-gen",
+        "voice",
         "writing"
       ],
       "relations": {
@@ -2334,7 +2366,8 @@
           "doubao",
           "qwen",
           "zhipu",
-          "deepseek"
+          "deepseek",
+          "wenxin-yiyan"
         ],
         "complements": []
       },
@@ -2350,7 +2383,8 @@
         "音频生成",
         "MiniMax"
       ],
-      "weight": 535
+      "weight": 0,
+      "icon": null
     },
     {
       "id": "hailuo-ai",
@@ -2364,8 +2398,8 @@
         "audio-gen"
       ],
       "capabilities": [
-        "video-gen",
-        "audio-gen"
+        "audio-gen",
+        "video-gen"
       ],
       "relations": {
         "products": [],
@@ -2379,7 +2413,8 @@
           "sora",
           "luma",
           "veo",
-          "pika"
+          "pika",
+          "runway"
         ],
         "complements": [
           "capcut"
@@ -2394,7 +2429,8 @@
         "海螺AI",
         "MiniMax"
       ],
-      "weight": 295
+      "weight": 0,
+      "icon": null
     },
     {
       "id": "minimax-agent",
@@ -2539,10 +2575,10 @@
       ],
       "capabilities": [
         "chat",
-        "search",
-        "writing",
         "code",
-        "voice"
+        "search",
+        "voice",
+        "writing"
       ],
       "relations": {
         "products": [
@@ -2560,7 +2596,8 @@
           "deepseek",
           "doubao",
           "qwen",
-          "zhipu"
+          "zhipu",
+          "wenxin-yiyan"
         ],
         "complements": []
       },
@@ -2575,7 +2612,8 @@
         "长文本",
         "月之暗面"
       ],
-      "weight": 880
+      "weight": 0,
+      "icon": null
     },
     {
       "id": "kimi-api",
@@ -2672,10 +2710,10 @@
       ],
       "capabilities": [
         "chat",
-        "image-gen",
-        "video-gen",
         "code",
+        "image-gen",
         "search",
+        "video-gen",
         "voice"
       ],
       "relations": {
@@ -2700,7 +2738,8 @@
           "gemini",
           "grok",
           "deepseek",
-          "zhipu"
+          "zhipu",
+          "wenxin-yiyan"
         ],
         "complements": []
       },
@@ -2714,7 +2753,8 @@
         "视频生成",
         "腾讯"
       ],
-      "weight": 545
+      "weight": 0,
+      "icon": null
     },
     {
       "id": "yuanbao",
@@ -2816,7 +2856,8 @@
           "jimeng",
           "kling",
           "luma",
-          "sora"
+          "sora",
+          "runway"
         ],
         "complements": [
           "hunyuan"
@@ -2829,7 +2870,8 @@
         "腾讯",
         "子站"
       ],
-      "weight": 275
+      "weight": 0,
+      "icon": null
     },
     {
       "id": "codebuddy",
@@ -2930,6 +2972,133 @@
       ],
       "tags": [],
       "relations": {}
+    },
+    {
+      "id": "wenxin-yiyan",
+      "name": "文心一言 ERNIE Bot",
+      "url": "https://yiyan.baidu.com",
+      "description": "百度自研大语言模型旗舰产品（文心大模型），支持对话、写作、图像生成、代码生成、联网搜索、语音交互等多种能力，是百度 AI 生态的核心入口。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "official-labs",
+      "sections": [
+        "official-labs",
+        "chat",
+        "image-gen"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "image-gen",
+        "search",
+        "voice",
+        "writing"
+      ],
+      "tags": [
+        "免费",
+        "中文",
+        "官站",
+        "对话",
+        "百度",
+        "文心一言"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "chatgpt",
+          "qwen",
+          "gemini",
+          "grok",
+          "claude",
+          "doubao",
+          "deepseek",
+          "zhipu",
+          "hunyuan",
+          "kimi",
+          "minimax"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "url": "https://www.perplexity.ai",
+      "description": "全球领先的AI搜索引擎与研究助手，提供带来源引用、深度搜索（Deep Research）和专业模式等能力，是 AI 知识研究领域的重要工具。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "research",
+      "sections": [
+        "research",
+        "chat"
+      ],
+      "capabilities": [
+        "chat",
+        "search",
+        "writing"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "AI搜索",
+        "研究"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "notebooklm"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "runway",
+      "name": "Runway",
+      "url": "https://runwayml.com",
+      "description": "领先的 AI 视频生成与编辑平台，Gen-3/Gen-4 系列模型支持文生视频、图生视频及高级编辑功能，在影视级效果上对标 Sora、Kling 等行业标杆。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "video-gen",
+      "sections": [
+        "video-gen",
+        "image-gen"
+      ],
+      "capabilities": [
+        "canvas",
+        "image-gen",
+        "video-gen",
+        "workflow"
+      ],
+      "tags": [
+        "订阅制",
+        "英文",
+        "视频生成",
+        "Runway"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "sora",
+          "veo",
+          "kling",
+          "luma",
+          "pika",
+          "jimeng",
+          "hailuo-ai",
+          "hunyuan-video"
+        ],
+        "complements": []
+      },
+      "icon": null
     }
   ]
 }
