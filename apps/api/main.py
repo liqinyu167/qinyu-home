@@ -21,6 +21,7 @@ from watchdog.observers.polling import PollingObserver
 ROOT_DIR = Path(__file__).resolve().parents[2]
 DATA_DIR = ROOT_DIR / "data"
 SITES_FILE = DATA_DIR / "sites.json"
+MODELS_FILE = DATA_DIR / "models.json"
 CLICKS_LOG = DATA_DIR / "clicks.log"
 CLICKS_CACHE = DATA_DIR / "clicks.json"
 ADMIN_KEY = os.environ.get("ADMIN_API_KEY", "")
@@ -57,13 +58,22 @@ def atomic_write(data: Any, path: Path) -> None:
 
 
 # ─── Data Loading ────────────────────────────────────────────────────
-def load_sites() -> None:
+def load_data() -> None:
     global nav_data
+    # Load sites (categories + sites)
     if SITES_FILE.exists():
         nav_data = json.loads(SITES_FILE.read_text(encoding="utf-8"))
     else:
-        nav_data = {"categories": [], "sites": [], "models": []}
-    logger.info(f"sites.json loaded: {len(nav_data.get('sites', []))} sites, {len(nav_data.get('models', []))} models")
+        nav_data = {"categories": [], "sites": []}
+    # Merge models from separate file
+    if MODELS_FILE.exists():
+        models_data = json.loads(MODELS_FILE.read_text(encoding="utf-8"))
+        nav_data["models"] = models_data.get("models", [])
+        if "models_updated" in models_data:
+            nav_data["models_updated"] = models_data["models_updated"]
+    else:
+        nav_data.setdefault("models", [])
+    logger.info(f"data loaded: {len(nav_data.get('sites', []))} sites, {len(nav_data.get('models', []))} models")
 
 
 def load_clicks() -> None:
@@ -100,11 +110,11 @@ async def flush_clicks() -> None:
 
 
 # ─── Watchdog Hot Reload ─────────────────────────────────────────────
-class SitesFileHandler(FileSystemEventHandler):
+class DataFileHandler(FileSystemEventHandler):
     def on_modified(self, event):
         if _hot_reload_disabled:
             return
-        if event.src_path and event.src_path.endswith("sites.json"):
+        if event.src_path and (event.src_path.endswith("sites.json") or event.src_path.endswith("models.json")):
             asyncio.run(_hot_reload())
 
 
@@ -114,8 +124,8 @@ async def _hot_reload():
         return
     async with write_lock:
         try:
-            load_sites()
-            logger.info("♻️  sites.json 热更新完成")
+            load_data()
+            logger.info("♻️  data/*.json 热更新完成")
         except Exception as e:
             logger.error(f"热更新失败: {e}")
 
@@ -237,7 +247,9 @@ def persist_nav_data() -> None:
     global _hot_reload_disabled
     _hot_reload_disabled = True
     try:
-        atomic_write(nav_data, SITES_FILE)
+        # Only write sites-related data to sites.json (categories + sites)
+        sites_only = {k: nav_data[k] for k in ["categories", "sites"] if k in nav_data}
+        atomic_write(sites_only, SITES_FILE)
     finally:
         _hot_reload_disabled = False
 
@@ -246,11 +258,11 @@ def persist_nav_data() -> None:
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Startup
-    load_sites()
+    load_data()
     load_clicks()
 
     observer = PollingObserver()
-    observer.schedule(SitesFileHandler(), str(DATA_DIR), recursive=False)
+    observer.schedule(DataFileHandler(), str(DATA_DIR), recursive=False)
     observer.start()
     logger.info("watchdog 文件监听已启动 (data/)")
 
@@ -444,6 +456,6 @@ async def delete_site(site_id: str, _=Depends(require_admin)):
 
 @app.post("/api/admin/reload")
 async def admin_reload(_=Depends(require_admin)):
-    """Force reload sites.json from disk."""
+    """Force reload data files from disk."""
     await _hot_reload()
-    return {"status": "ok", "sites": len(nav_data.get("sites", []))}
+    return {"status": "ok", "sites": len(nav_data.get("sites", [])), "models": len(nav_data.get("models", []))}
