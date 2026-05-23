@@ -4418,17 +4418,9 @@
       transform: translateX(-50%) translateY(4px);
     }
 
-    /* Hide standard hf emoji sibling in icon-only mode, it's shown inline in capsule-name tooltip */
+    /* In icon-only mode, show hf emoji after the name tooltip */
     .observation-icon-only .model-capsule > .capsule-hf-emoji {
-      display: none;
-    }
-
-    .capsule-name-hf-emoji {
-      display: none;
-    }
-
-    .observation-icon-only .model-capsule .capsule-name-hf-emoji {
-      display: inline-block;
+      display: inline;
       margin-left: 2px;
     }
 
@@ -5974,7 +5966,7 @@
 
         capsule.innerHTML = `
           <img class="capsule-logo" src="${iconUrl}" alt="" onerror="this.src='assets/favicons/huggingface_co.png'">
-          <span class="capsule-name">${model.name}${model.open_source ? '<span class="capsule-name-hf-emoji">🤗</span>' : ''}</span>
+          <span class="capsule-name">${model.name}</span>
           ${hfEmoji}
         `;
 
