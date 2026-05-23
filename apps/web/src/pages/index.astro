@@ -4209,6 +4209,16 @@
       text-shadow: 0 0 8px var(--ink-gold);
     }
 
+    .arena-os-legend {
+      font-size: 10px;
+      font-weight: 400;
+      color: var(--ink-muted);
+      background: rgba(251, 191, 36, 0.1);
+      padding: 1px 6px;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+
     .arena-controls {
       display: flex;
       align-items: center;
@@ -4835,7 +4845,7 @@
     <!-- 模型大比拼对比面板 -->
     <section class="model-arena-section" id="modelArenaSection" hidden>
       <div class="arena-top-bar">
-        <h2 class="arena-title">模型对比大比拼</h2>
+        <h2 class="arena-title">模型对比大比拼<span class="arena-os-legend">🤗 开源</span></h2>
         <div class="arena-controls">
           <div class="control-item">
             <span class="control-label">胶囊大小:</span>
@@ -5965,7 +5975,7 @@
         const iconUrl = getModelIcon(model);
         let hfEmoji = "";
         if (model.open_source) {
-          hfEmoji = `<span class="capsule-hf-emoji" title="开源模型 (Hugging Face)" data-hf-url="${model.huggingface_url || 'https://huggingface.co'}">🤗开源</span>`;
+          hfEmoji = `<span class="capsule-hf-emoji" title="开源模型 (Hugging Face)" data-hf-url="${model.huggingface_url || 'https://huggingface.co'}">🤗</span>`;
         }
 
         capsule.innerHTML = `
