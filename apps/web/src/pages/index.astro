@@ -4601,13 +4601,16 @@
     }
 
     .hf-badge-link {
-      font-size: 11px;
+      font-size: 10px;
+      background: rgba(251, 191, 36, 0.15);
+      border: 1px solid rgba(251, 191, 36, 0.3);
+      border-radius: 4px;
+      padding: 2px 6px;
       color: #fbbf24;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
-      gap: 2px;
-      white-space: nowrap;
+      margin-left: auto;
     }
 
     .hf-badge-link[hidden] {
@@ -4615,7 +4618,8 @@
     }
 
     .hf-badge-link:hover {
-      color: #fcd34d;
+      background: rgba(251, 191, 36, 0.25);
+      border-color: #fbbf24;
     }
 
     .side-link.model-category-btn.active {
@@ -5961,7 +5965,7 @@
         const iconUrl = getModelIcon(model);
         let hfEmoji = "";
         if (model.open_source) {
-          hfEmoji = `<span class="capsule-hf-emoji" title="开源模型 (Hugging Face)" data-hf-url="${model.huggingface_url || 'https://huggingface.co'}">🤗</span>`;
+          hfEmoji = `<span class="capsule-hf-emoji" title="开源模型 (Hugging Face)" data-hf-url="${model.huggingface_url || 'https://huggingface.co'}">🤗开源</span>`;
         }
 
         capsule.innerHTML = `
