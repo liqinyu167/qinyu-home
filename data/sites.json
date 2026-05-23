@@ -3268,7 +3268,7 @@
       "open_source": false,
       "capability": 100,
       "price": 4.35,
-      "release_date": "2026-04-23",
+      "release_date": "2026-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -3287,7 +3287,7 @@
       "open_source": false,
       "capability": 98,
       "price": 4.35,
-      "release_date": "2026-04-23",
+      "release_date": "2026-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -3306,7 +3306,7 @@
       "open_source": false,
       "capability": 95,
       "price": 4.1,
-      "release_date": "2026-04-16",
+      "release_date": "2026-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -3325,7 +3325,7 @@
       "open_source": false,
       "capability": 95,
       "price": 1.74,
-      "release_date": "2026-02-19",
+      "release_date": "2026-02",
       "category": "llm",
       "channels": {
         "official": [
@@ -3344,7 +3344,7 @@
       "open_source": false,
       "capability": 95,
       "price": 4.35,
-      "release_date": "2026-04-23",
+      "release_date": "2026-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -3363,7 +3363,7 @@
       "open_source": false,
       "capability": 95,
       "price": 1.43,
-      "release_date": "2026-05-20",
+      "release_date": "2026-05",
       "category": "llm",
       "channels": {
         "official": [
@@ -3384,7 +3384,7 @@
       "open_source": false,
       "capability": 92,
       "price": 1.31,
-      "release_date": "2026-05-19",
+      "release_date": "2026-05",
       "category": "llm",
       "channels": {
         "official": [
@@ -3403,7 +3403,7 @@
       "open_source": true,
       "capability": 90,
       "price": 0.7,
-      "release_date": "2026-04-10",
+      "release_date": "2026-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -3422,7 +3422,7 @@
       "open_source": false,
       "capability": 90,
       "price": 0.71,
-      "release_date": "2026-04-20",
+      "release_date": "2026-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -3439,7 +3439,7 @@
       "open_source": false,
       "capability": 90,
       "price": 1.87,
-      "release_date": "2026-05-15",
+      "release_date": "2026-05",
       "category": "llm",
       "channels": {
         "official": [
@@ -3456,7 +3456,7 @@
       "open_source": false,
       "capability": 88,
       "price": 0.64,
-      "release_date": "2026-04-17",
+      "release_date": "2026-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -3475,7 +3475,7 @@
       "open_source": false,
       "capability": 87,
       "price": 0.0,
-      "release_date": "2026-05-21",
+      "release_date": "2026-05",
       "category": "llm",
       "channels": {
         "official": [
@@ -3492,7 +3492,7 @@
       "open_source": false,
       "capability": 87,
       "price": 4.1,
-      "release_date": "2026-04-16",
+      "release_date": "2026-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -3511,7 +3511,7 @@
       "open_source": false,
       "capability": 87,
       "price": 2.46,
-      "release_date": "2026-02-17",
+      "release_date": "2026-02",
       "category": "llm",
       "channels": {
         "official": [
@@ -3530,7 +3530,7 @@
       "open_source": true,
       "capability": 87,
       "price": 0.71,
-      "release_date": "2026-04-24",
+      "release_date": "2026-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -3549,7 +3549,7 @@
       "open_source": true,
       "capability": 85,
       "price": 0.9,
-      "release_date": "2026-04-08",
+      "release_date": "2026-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -3568,7 +3568,7 @@
       "open_source": false,
       "capability": 85,
       "price": 4.35,
-      "release_date": "2026-04-23",
+      "release_date": "2026-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -3587,7 +3587,7 @@
       "open_source": false,
       "capability": 83,
       "price": 0.43,
-      "release_date": "2026-04-02",
+      "release_date": "2026-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -3606,7 +3606,7 @@
       "open_source": true,
       "capability": 83,
       "price": 0.71,
-      "release_date": "2026-04-24",
+      "release_date": "2026-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -3625,7 +3625,7 @@
       "open_source": true,
       "capability": 83,
       "price": 0.66,
-      "release_date": "2026-02-11",
+      "release_date": "2026-02",
       "category": "llm",
       "channels": {
         "official": [
@@ -3644,7 +3644,7 @@
       "open_source": true,
       "capability": 83,
       "price": 0.22,
-      "release_date": "2026-03-18",
+      "release_date": "2026-03",
       "category": "llm",
       "channels": {
         "official": [
@@ -3663,7 +3663,7 @@
       "open_source": false,
       "capability": 82,
       "price": 0.39,
-      "release_date": "2026-04-15",
+      "release_date": "2026-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -3680,7 +3680,7 @@
       "open_source": false,
       "capability": 82,
       "price": 0.65,
-      "release_date": "2026-03-17",
+      "release_date": "2026-03",
       "category": "llm",
       "channels": {
         "official": [
@@ -3699,7 +3699,7 @@
       "open_source": false,
       "capability": 80,
       "price": 2.17,
-      "release_date": "2026-03-05",
+      "release_date": "2026-03",
       "category": "llm",
       "channels": {
         "official": [
@@ -3718,7 +3718,7 @@
       "open_source": true,
       "capability": 78,
       "price": 0.45,
-      "release_date": "2026-02-11",
+      "release_date": "2026-02",
       "category": "llm",
       "channels": {
         "official": [
@@ -3737,7 +3737,7 @@
       "open_source": true,
       "capability": 78,
       "price": 0.06,
-      "release_date": "2026-04-24",
+      "release_date": "2026-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -3756,7 +3756,7 @@
       "open_source": true,
       "capability": 77,
       "price": 0.08,
-      "release_date": "2026-04-24",
+      "release_date": "2026-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -3775,7 +3775,7 @@
       "open_source": false,
       "capability": 77,
       "price": 0.9,
-      "release_date": "2026-04-25",
+      "release_date": "2026-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -3792,7 +3792,7 @@
       "open_source": false,
       "capability": 75,
       "price": 0.34,
-      "release_date": "2026-03-27",
+      "release_date": "2026-03",
       "category": "llm",
       "channels": {
         "official": [
@@ -3809,7 +3809,7 @@
       "open_source": false,
       "capability": 73,
       "price": 2.46,
-      "release_date": "2026-02-17",
+      "release_date": "2026-02",
       "category": "llm",
       "channels": {
         "official": [
@@ -3828,7 +3828,7 @@
       "open_source": false,
       "capability": 73,
       "price": 0.18,
-      "release_date": "2026-03-05",
+      "release_date": "2026-03",
       "category": "llm",
       "channels": {
         "official": [
@@ -3847,7 +3847,7 @@
       "open_source": false,
       "capability": 73,
       "price": 0.64,
-      "release_date": "2026-04-17",
+      "release_date": "2026-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -3866,7 +3866,7 @@
       "open_source": false,
       "capability": 72,
       "price": 0.37,
-      "release_date": "2026-04-22",
+      "release_date": "2026-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -3883,7 +3883,7 @@
       "open_source": false,
       "capability": 72,
       "price": 0.0,
-      "release_date": "2026-02-18",
+      "release_date": "2026-02",
       "category": "llm",
       "channels": {
         "official": [
@@ -3900,7 +3900,7 @@
       "open_source": false,
       "capability": 72,
       "price": 1.31,
-      "release_date": "2026-05-19",
+      "release_date": "2026-05",
       "category": "llm",
       "channels": {
         "official": [
@@ -3919,7 +3919,7 @@
       "open_source": false,
       "capability": 70,
       "price": 0.14,
-      "release_date": "2026-05-10",
+      "release_date": "2026-05",
       "category": "llm",
       "channels": {
         "official": [
@@ -3936,7 +3936,7 @@
       "open_source": true,
       "capability": 65,
       "price": 0.71,
-      "release_date": "2026-04-24",
+      "release_date": "2026-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -3955,7 +3955,7 @@
       "open_source": false,
       "capability": 65,
       "price": 2.1,
-      "release_date": "2026-05-12",
+      "release_date": "2026-05",
       "category": "llm",
       "channels": {
         "official": [
@@ -3972,7 +3972,7 @@
       "open_source": false,
       "capability": 65,
       "price": 0.0,
-      "release_date": "2026-05-13",
+      "release_date": "2026-05",
       "category": "llm",
       "channels": {
         "official": [
@@ -3989,7 +3989,7 @@
       "open_source": true,
       "capability": 65,
       "price": 0.84,
-      "release_date": "2026-02-16",
+      "release_date": "2026-02",
       "category": "llm",
       "channels": {
         "official": [
@@ -4008,7 +4008,7 @@
       "open_source": false,
       "capability": 65,
       "price": 0.3,
-      "release_date": "2026-02-15",
+      "release_date": "2026-02",
       "category": "llm",
       "channels": {
         "official": [
@@ -4027,7 +4027,7 @@
       "open_source": false,
       "capability": 63,
       "price": 0.0,
-      "release_date": "2026-01-20",
+      "release_date": "2026-01",
       "category": "llm",
       "channels": {
         "official": [
@@ -4046,7 +4046,7 @@
       "open_source": false,
       "capability": 63,
       "price": 1.55,
-      "release_date": "2025-09-20",
+      "release_date": "2025-09",
       "category": "llm",
       "channels": {
         "official": [
@@ -4065,7 +4065,7 @@
       "open_source": false,
       "capability": 63,
       "price": 0.18,
-      "release_date": "2026-03-05",
+      "release_date": "2026-03",
       "category": "llm",
       "channels": {
         "official": [
@@ -4084,7 +4084,7 @@
       "open_source": false,
       "capability": 63,
       "price": 0.65,
-      "release_date": "2026-03-17",
+      "release_date": "2026-03",
       "category": "llm",
       "channels": {
         "official": [
@@ -4103,7 +4103,7 @@
       "open_source": false,
       "capability": 62,
       "price": 0.49,
-      "release_date": "2026-04-28",
+      "release_date": "2026-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -4120,7 +4120,7 @@
       "open_source": false,
       "capability": 62,
       "price": 0.0,
-      "release_date": "2026-05-20",
+      "release_date": "2026-05",
       "category": "llm",
       "channels": {
         "official": [
@@ -4137,7 +4137,7 @@
       "open_source": false,
       "capability": 62,
       "price": 0.82,
-      "release_date": "2026-03-15",
+      "release_date": "2026-03",
       "category": "llm",
       "channels": {
         "official": [
@@ -4154,7 +4154,7 @@
       "open_source": true,
       "capability": 60,
       "price": 0.06,
-      "release_date": "2026-04-24",
+      "release_date": "2026-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -4173,7 +4173,7 @@
       "open_source": false,
       "capability": 60,
       "price": 0.28,
-      "release_date": "2026-05-08",
+      "release_date": "2026-05",
       "category": "llm",
       "channels": {
         "official": [
@@ -4190,7 +4190,7 @@
       "open_source": false,
       "capability": 58,
       "price": 0.43,
-      "release_date": "2025-12-17",
+      "release_date": "2025-12",
       "category": "llm",
       "channels": {
         "official": [
@@ -4209,7 +4209,7 @@
       "open_source": false,
       "capability": 58,
       "price": 1.34,
-      "release_date": "2025-07-01",
+      "release_date": "2025-07",
       "category": "llm",
       "channels": {
         "official": [
@@ -4228,7 +4228,7 @@
       "open_source": false,
       "capability": 57,
       "price": 0.22,
-      "release_date": "2026-05-21",
+      "release_date": "2026-05",
       "category": "llm",
       "channels": {
         "official": [
@@ -4245,7 +4245,7 @@
       "open_source": false,
       "capability": 55,
       "price": 0.2,
-      "release_date": "2026-04-10",
+      "release_date": "2026-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -4262,7 +4262,7 @@
       "open_source": false,
       "capability": 55,
       "price": 0.14,
-      "release_date": "2026-04-18",
+      "release_date": "2026-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -4279,7 +4279,7 @@
       "open_source": true,
       "capability": 53,
       "price": 0.11,
-      "release_date": "2026-02-16",
+      "release_date": "2026-02",
       "category": "llm",
       "channels": {
         "official": [
@@ -4298,7 +4298,7 @@
       "open_source": false,
       "capability": 52,
       "price": 0.14,
-      "release_date": "2026-05-13",
+      "release_date": "2026-05",
       "category": "llm",
       "channels": {
         "official": [
@@ -4315,7 +4315,7 @@
       "open_source": false,
       "capability": 52,
       "price": 0.64,
-      "release_date": "2026-04-17",
+      "release_date": "2026-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -4334,7 +4334,7 @@
       "open_source": true,
       "capability": 52,
       "price": 0.42,
-      "release_date": "2026-02-16",
+      "release_date": "2026-02",
       "category": "llm",
       "channels": {
         "official": [
@@ -4353,7 +4353,7 @@
       "open_source": false,
       "capability": 50,
       "price": 0.12,
-      "release_date": "2026-02-10",
+      "release_date": "2026-02",
       "category": "llm",
       "channels": {
         "official": [
@@ -4370,7 +4370,7 @@
       "open_source": false,
       "capability": 48,
       "price": 1.14,
-      "release_date": "2026-02-15",
+      "release_date": "2026-02",
       "category": "llm",
       "channels": {
         "official": [
@@ -4389,7 +4389,7 @@
       "open_source": false,
       "capability": 47,
       "price": 0.43,
-      "release_date": "2026-04-30",
+      "release_date": "2026-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -4406,7 +4406,7 @@
       "open_source": false,
       "capability": 47,
       "price": 0.2,
-      "release_date": "2026-05-15",
+      "release_date": "2026-05",
       "category": "llm",
       "channels": {
         "official": [
@@ -4423,7 +4423,7 @@
       "open_source": true,
       "capability": 45,
       "price": 1.64,
-      "release_date": "2025-01-20",
+      "release_date": "2025-01",
       "category": "llm",
       "channels": {
         "official": [
@@ -4442,7 +4442,7 @@
       "open_source": false,
       "capability": 38,
       "price": 0.65,
-      "release_date": "2026-03-17",
+      "release_date": "2026-03",
       "category": "llm",
       "channels": {
         "official": [
@@ -4461,7 +4461,7 @@
       "open_source": true,
       "capability": 30,
       "price": 0,
-      "release_date": "",
+      "release_date": "2025-03",
       "category": "llm",
       "channels": {
         "official": [
@@ -4478,7 +4478,7 @@
       "open_source": true,
       "capability": 30,
       "price": 0.34,
-      "release_date": "",
+      "release_date": "2025-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -4495,7 +4495,7 @@
       "open_source": true,
       "capability": 30,
       "price": 0.6,
-      "release_date": "",
+      "release_date": "2025-03",
       "category": "llm",
       "channels": {
         "official": [
@@ -4512,7 +4512,7 @@
       "open_source": true,
       "capability": 30,
       "price": 0.0,
-      "release_date": "",
+      "release_date": "2025-02",
       "category": "llm",
       "channels": {
         "official": [
@@ -4529,7 +4529,7 @@
       "open_source": true,
       "capability": 30,
       "price": 0.52,
-      "release_date": "",
+      "release_date": "2024-12",
       "category": "llm",
       "channels": {
         "official": [
@@ -4546,7 +4546,7 @@
       "open_source": true,
       "capability": 28,
       "price": 3.13,
-      "release_date": "",
+      "release_date": "2024-07",
       "category": "llm",
       "channels": {
         "official": [
@@ -4563,7 +4563,7 @@
       "open_source": true,
       "capability": 28,
       "price": 0,
-      "release_date": "",
+      "release_date": "2025-03",
       "category": "llm",
       "channels": {
         "official": [
@@ -4580,7 +4580,7 @@
       "open_source": true,
       "capability": 28,
       "price": 0.52,
-      "release_date": "",
+      "release_date": "2025-03",
       "category": "llm",
       "channels": {
         "official": [
@@ -4597,7 +4597,7 @@
       "open_source": true,
       "capability": 27,
       "price": 0.03,
-      "release_date": "",
+      "release_date": "2025-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -4614,7 +4614,7 @@
       "open_source": true,
       "capability": 27,
       "price": 0,
-      "release_date": "",
+      "release_date": "2025-01",
       "category": "llm",
       "channels": {
         "official": [
@@ -4631,7 +4631,7 @@
       "open_source": true,
       "capability": 27,
       "price": 0.2,
-      "release_date": "",
+      "release_date": "2024-11",
       "category": "llm",
       "channels": {
         "official": [
@@ -4648,7 +4648,7 @@
       "open_source": true,
       "capability": 27,
       "price": 0.73,
-      "release_date": "",
+      "release_date": "2025-01",
       "category": "llm",
       "channels": {
         "official": [
@@ -4665,7 +4665,7 @@
       "open_source": true,
       "capability": 27,
       "price": 0,
-      "release_date": "",
+      "release_date": "2025-01",
       "category": "llm",
       "channels": {
         "official": [
@@ -4682,7 +4682,7 @@
       "open_source": true,
       "capability": 27,
       "price": 0.18,
-      "release_date": "",
+      "release_date": "2025-03",
       "category": "llm",
       "channels": {
         "official": [
@@ -4699,7 +4699,7 @@
       "open_source": true,
       "capability": 27,
       "price": 0.32,
-      "release_date": "",
+      "release_date": "2025-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -4716,7 +4716,7 @@
       "open_source": true,
       "capability": 25,
       "price": 0,
-      "release_date": "",
+      "release_date": "2025-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -4733,7 +4733,7 @@
       "open_source": true,
       "capability": 25,
       "price": 0,
-      "release_date": "",
+      "release_date": "2025-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -4750,7 +4750,7 @@
       "open_source": true,
       "capability": 25,
       "price": 0.72,
-      "release_date": "",
+      "release_date": "2025-01",
       "category": "llm",
       "channels": {
         "official": [
@@ -4767,7 +4767,7 @@
       "open_source": true,
       "capability": 25,
       "price": 0.36,
-      "release_date": "",
+      "release_date": "2025-03",
       "category": "llm",
       "channels": {
         "official": [
@@ -4784,7 +4784,7 @@
       "open_source": true,
       "capability": 25,
       "price": 0,
-      "release_date": "",
+      "release_date": "2025-03",
       "category": "llm",
       "channels": {
         "official": [
@@ -4801,7 +4801,7 @@
       "open_source": true,
       "capability": 25,
       "price": 0.24,
-      "release_date": "",
+      "release_date": "2025-03",
       "category": "llm",
       "channels": {
         "official": [
@@ -4818,7 +4818,7 @@
       "open_source": true,
       "capability": 25,
       "price": 0.15,
-      "release_date": "",
+      "release_date": "2024-11",
       "category": "llm",
       "channels": {
         "official": [
@@ -4835,7 +4835,7 @@
       "open_source": true,
       "capability": 25,
       "price": 0.05,
-      "release_date": "",
+      "release_date": "2025-03",
       "category": "llm",
       "channels": {
         "official": [
@@ -4852,7 +4852,7 @@
       "open_source": true,
       "capability": 25,
       "price": 0,
-      "release_date": "",
+      "release_date": "2025-03",
       "category": "llm",
       "channels": {
         "official": [
@@ -4869,7 +4869,7 @@
       "open_source": true,
       "capability": 25,
       "price": 0,
-      "release_date": "",
+      "release_date": "2025-01",
       "category": "llm",
       "channels": {
         "official": [
@@ -4886,7 +4886,7 @@
       "open_source": true,
       "capability": 23,
       "price": 0.6,
-      "release_date": "",
+      "release_date": "2024-12",
       "category": "llm",
       "channels": {
         "official": [
@@ -4903,7 +4903,7 @@
       "open_source": true,
       "capability": 23,
       "price": 0,
-      "release_date": "",
+      "release_date": "2025-02",
       "category": "llm",
       "channels": {
         "official": [
@@ -4920,7 +4920,7 @@
       "open_source": true,
       "capability": 23,
       "price": 0,
-      "release_date": "",
+      "release_date": "2025-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -4937,7 +4937,7 @@
       "open_source": true,
       "capability": 23,
       "price": 0.18,
-      "release_date": "",
+      "release_date": "2025-03",
       "category": "llm",
       "channels": {
         "official": [
@@ -4954,7 +4954,7 @@
       "open_source": true,
       "capability": 23,
       "price": 0.22,
-      "release_date": "",
+      "release_date": "2025-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -4971,7 +4971,7 @@
       "open_source": true,
       "capability": 22,
       "price": 3.25,
-      "release_date": "",
+      "release_date": "2025-03",
       "category": "llm",
       "channels": {
         "official": [
@@ -4988,7 +4988,7 @@
       "open_source": true,
       "capability": 22,
       "price": 1.2,
-      "release_date": "",
+      "release_date": "2024-11",
       "category": "llm",
       "channels": {
         "official": [
@@ -5005,7 +5005,7 @@
       "open_source": true,
       "capability": 22,
       "price": 0,
-      "release_date": "",
+      "release_date": "2026-05",
       "category": "llm",
       "channels": {
         "official": [
@@ -5022,7 +5022,7 @@
       "open_source": true,
       "capability": 20,
       "price": 0.06,
-      "release_date": "",
+      "release_date": "2025-03",
       "category": "llm",
       "channels": {
         "official": [
@@ -5039,7 +5039,7 @@
       "open_source": true,
       "capability": 20,
       "price": 0.0,
-      "release_date": "",
+      "release_date": "2025-05",
       "category": "llm",
       "channels": {
         "official": [
@@ -5056,7 +5056,7 @@
       "open_source": true,
       "capability": 20,
       "price": 0,
-      "release_date": "",
+      "release_date": "2025-01",
       "category": "llm",
       "channels": {
         "official": [
@@ -5073,7 +5073,7 @@
       "open_source": true,
       "capability": 20,
       "price": 1.38,
-      "release_date": "",
+      "release_date": "2024-09",
       "category": "llm",
       "channels": {
         "official": [
@@ -5090,7 +5090,7 @@
       "open_source": true,
       "capability": 18,
       "price": 0.1,
-      "release_date": "",
+      "release_date": "2024-11",
       "category": "llm",
       "channels": {
         "official": [
@@ -5107,7 +5107,7 @@
       "open_source": true,
       "capability": 18,
       "price": 2.6,
-      "release_date": "",
+      "release_date": "2025-02",
       "category": "llm",
       "channels": {
         "official": [
@@ -5124,7 +5124,7 @@
       "open_source": true,
       "capability": 18,
       "price": 0.08,
-      "release_date": "",
+      "release_date": "2025-02",
       "category": "llm",
       "channels": {
         "official": [
@@ -5141,7 +5141,7 @@
       "open_source": true,
       "capability": 18,
       "price": 0.01,
-      "release_date": "",
+      "release_date": "2025-04",
       "category": "llm",
       "channels": {
         "official": [
@@ -5158,7 +5158,7 @@
       "open_source": true,
       "capability": 17,
       "price": 0.04,
-      "release_date": "",
+      "release_date": "2025-03",
       "category": "llm",
       "channels": {
         "official": [
@@ -5175,7 +5175,7 @@
       "open_source": true,
       "capability": 17,
       "price": 0.16,
-      "release_date": "",
+      "release_date": "2024-12",
       "category": "llm",
       "channels": {
         "official": [
@@ -5192,7 +5192,7 @@
       "open_source": true,
       "capability": 17,
       "price": 0.03,
-      "release_date": "",
+      "release_date": "2024-12",
       "category": "llm",
       "channels": {
         "official": [
@@ -5209,7 +5209,7 @@
       "open_source": true,
       "capability": 17,
       "price": 0.0,
-      "release_date": "",
+      "release_date": "2025-01",
       "category": "llm",
       "channels": {
         "official": [
@@ -5226,7 +5226,7 @@
       "open_source": true,
       "capability": 17,
       "price": 0,
-      "release_date": "",
+      "release_date": "2025-03",
       "category": "llm",
       "channels": {
         "official": [
@@ -5243,7 +5243,7 @@
       "open_source": true,
       "capability": 17,
       "price": 0.26,
-      "release_date": "",
+      "release_date": "2025-03",
       "category": "llm",
       "channels": {
         "official": [
@@ -5260,7 +5260,7 @@
       "open_source": false,
       "capability": 90,
       "price": 211.0,
-      "release_date": "",
+      "release_date": "2026-04",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5277,7 +5277,7 @@
       "open_source": false,
       "capability": 78,
       "price": 133.0,
-      "release_date": "",
+      "release_date": "2025-12",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5294,7 +5294,7 @@
       "open_source": false,
       "capability": 77,
       "price": 67.0,
-      "release_date": "",
+      "release_date": "2026-02",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5311,7 +5311,7 @@
       "open_source": false,
       "capability": 70,
       "price": 134.0,
-      "release_date": "",
+      "release_date": "2025-11",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5328,7 +5328,7 @@
       "open_source": false,
       "capability": 66,
       "price": 50.0,
-      "release_date": "",
+      "release_date": "2026-03",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5345,7 +5345,7 @@
       "open_source": false,
       "capability": 66,
       "price": 70.0,
-      "release_date": "",
+      "release_date": "2025-12",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5362,7 +5362,7 @@
       "open_source": false,
       "capability": 66,
       "price": 30.0,
-      "release_date": "",
+      "release_date": "2025-09",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5379,7 +5379,7 @@
       "open_source": false,
       "capability": 65,
       "price": 0,
-      "release_date": "",
+      "release_date": "2026-05",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5396,7 +5396,7 @@
       "open_source": false,
       "capability": 65,
       "price": 30.0,
-      "release_date": "",
+      "release_date": "2025-11",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5413,7 +5413,7 @@
       "open_source": false,
       "capability": 64,
       "price": 40.0,
-      "release_date": "",
+      "release_date": "2026-05",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5430,7 +5430,7 @@
       "open_source": false,
       "capability": 64,
       "price": 60.0,
-      "release_date": "",
+      "release_date": "2025-11",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5447,7 +5447,7 @@
       "open_source": false,
       "capability": 64,
       "price": 20.0,
-      "release_date": "",
+      "release_date": "2026-01",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5464,7 +5464,7 @@
       "open_source": false,
       "capability": 63,
       "price": 30.0,
-      "release_date": "",
+      "release_date": "2026-04",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5481,7 +5481,7 @@
       "open_source": false,
       "capability": 62,
       "price": 100.0,
-      "release_date": "",
+      "release_date": "2026-05",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5498,7 +5498,7 @@
       "open_source": false,
       "capability": 62,
       "price": 60.0,
-      "release_date": "",
+      "release_date": "2025-06",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5515,7 +5515,7 @@
       "open_source": false,
       "capability": 61,
       "price": 40.0,
-      "release_date": "",
+      "release_date": "2025-12",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5532,7 +5532,7 @@
       "open_source": false,
       "capability": 60,
       "price": 8.0,
-      "release_date": "",
+      "release_date": "2025-12",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5549,7 +5549,7 @@
       "open_source": false,
       "capability": 60,
       "price": 39.0,
-      "release_date": "",
+      "release_date": "2025-08",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5566,7 +5566,7 @@
       "open_source": false,
       "capability": 60,
       "price": 20.0,
-      "release_date": "",
+      "release_date": "2025-12",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5583,7 +5583,7 @@
       "open_source": false,
       "capability": 60,
       "price": 12.0,
-      "release_date": "",
+      "release_date": "2025-11",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5600,7 +5600,7 @@
       "open_source": false,
       "capability": 59,
       "price": 30.0,
-      "release_date": "",
+      "release_date": "2025-04",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5617,7 +5617,7 @@
       "open_source": false,
       "capability": 59,
       "price": 30.0,
-      "release_date": "",
+      "release_date": "2025-11",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5634,7 +5634,7 @@
       "open_source": false,
       "capability": 58,
       "price": 40.4,
-      "release_date": "",
+      "release_date": "2026-05",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5651,7 +5651,7 @@
       "open_source": false,
       "capability": 58,
       "price": 21.0,
-      "release_date": "",
+      "release_date": "2025-09",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5668,7 +5668,7 @@
       "open_source": false,
       "capability": 57,
       "price": 5.0,
-      "release_date": "",
+      "release_date": "2025-12",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5685,7 +5685,7 @@
       "open_source": false,
       "capability": 57,
       "price": 30.0,
-      "release_date": "",
+      "release_date": "2026-01",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5702,7 +5702,7 @@
       "open_source": false,
       "capability": 56,
       "price": 35.0,
-      "release_date": "",
+      "release_date": "2025-10",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5719,7 +5719,7 @@
       "open_source": false,
       "capability": 56,
       "price": 167.0,
-      "release_date": "",
+      "release_date": "2025-04",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5736,7 +5736,7 @@
       "open_source": false,
       "capability": 56,
       "price": 30.0,
-      "release_date": "",
+      "release_date": "2025-12",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5753,7 +5753,7 @@
       "open_source": false,
       "capability": 56,
       "price": 14.0,
-      "release_date": "",
+      "release_date": "2025-07",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5770,7 +5770,7 @@
       "open_source": false,
       "capability": 56,
       "price": 250.0,
-      "release_date": "",
+      "release_date": "2026-02",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5787,7 +5787,7 @@
       "open_source": false,
       "capability": 55,
       "price": 40.0,
-      "release_date": "",
+      "release_date": "2026-02",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5804,7 +5804,7 @@
       "open_source": false,
       "capability": 55,
       "price": 40.0,
-      "release_date": "",
+      "release_date": "2026-05",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5821,7 +5821,7 @@
       "open_source": false,
       "capability": 55,
       "price": 15.0,
-      "release_date": "",
+      "release_date": "2026-01",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5838,7 +5838,7 @@
       "open_source": false,
       "capability": 55,
       "price": 100.0,
-      "release_date": "",
+      "release_date": "2025-09",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5855,7 +5855,7 @@
       "open_source": false,
       "capability": 54,
       "price": 40.0,
-      "release_date": "",
+      "release_date": "2026-05",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5872,7 +5872,7 @@
       "open_source": false,
       "capability": 54,
       "price": 80.0,
-      "release_date": "",
+      "release_date": "2025-05",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5889,7 +5889,7 @@
       "open_source": false,
       "capability": 54,
       "price": 40.0,
-      "release_date": "",
+      "release_date": "2026-04",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5906,7 +5906,7 @@
       "open_source": false,
       "capability": 54,
       "price": 86.7,
-      "release_date": "",
+      "release_date": "2025-08",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5923,7 +5923,7 @@
       "open_source": false,
       "capability": 53,
       "price": 64.0,
-      "release_date": "",
+      "release_date": "2026-04",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5940,7 +5940,7 @@
       "open_source": false,
       "capability": 53,
       "price": 35.0,
-      "release_date": "",
+      "release_date": "2026-02",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5957,7 +5957,7 @@
       "open_source": false,
       "capability": 52,
       "price": 17.9,
-      "release_date": "",
+      "release_date": "2025-08",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5974,7 +5974,7 @@
       "open_source": false,
       "capability": 52,
       "price": 40.0,
-      "release_date": "",
+      "release_date": "2024-12",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -5991,7 +5991,7 @@
       "open_source": false,
       "capability": 52,
       "price": 40.0,
-      "release_date": "",
+      "release_date": "2025-06",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6008,7 +6008,7 @@
       "open_source": false,
       "capability": 52,
       "price": 30.0,
-      "release_date": "",
+      "release_date": "2026-01",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6025,7 +6025,7 @@
       "open_source": false,
       "capability": 52,
       "price": 90.0,
-      "release_date": "",
+      "release_date": "2026-01",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6042,7 +6042,7 @@
       "open_source": false,
       "capability": 51,
       "price": 25.0,
-      "release_date": "",
+      "release_date": "2026-01",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6059,7 +6059,7 @@
       "open_source": false,
       "capability": 51,
       "price": 5.0,
-      "release_date": "",
+      "release_date": "2025-12",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6076,7 +6076,7 @@
       "open_source": false,
       "capability": 51,
       "price": 26.0,
-      "release_date": "",
+      "release_date": "2026-04",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6093,7 +6093,7 @@
       "open_source": false,
       "capability": 50,
       "price": 0,
-      "release_date": "",
+      "release_date": "2026-02",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6110,7 +6110,7 @@
       "open_source": false,
       "capability": 50,
       "price": 20.0,
-      "release_date": "",
+      "release_date": "2026-05",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6127,7 +6127,7 @@
       "open_source": false,
       "capability": 49,
       "price": 60.0,
-      "release_date": "",
+      "release_date": "2024-11",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6144,7 +6144,7 @@
       "open_source": false,
       "capability": 49,
       "price": 40.0,
-      "release_date": "",
+      "release_date": "2025-05",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6161,7 +6161,7 @@
       "open_source": false,
       "capability": 48,
       "price": 30.0,
-      "release_date": "",
+      "release_date": "2025-08",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6178,7 +6178,7 @@
       "open_source": false,
       "capability": 48,
       "price": 11.0,
-      "release_date": "",
+      "release_date": "2025-10",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6195,7 +6195,7 @@
       "open_source": false,
       "capability": 48,
       "price": 11.0,
-      "release_date": "",
+      "release_date": "2026-01",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6212,7 +6212,7 @@
       "open_source": false,
       "capability": 48,
       "price": 40.0,
-      "release_date": "",
+      "release_date": "2024-10",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6229,7 +6229,7 @@
       "open_source": false,
       "capability": 47,
       "price": 30.0,
-      "release_date": "",
+      "release_date": "2026-01",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6246,7 +6246,7 @@
       "open_source": false,
       "capability": 47,
       "price": 20.0,
-      "release_date": "",
+      "release_date": "2025-06",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6263,7 +6263,7 @@
       "open_source": false,
       "capability": 47,
       "price": 60.0,
-      "release_date": "",
+      "release_date": "2025-03",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6280,7 +6280,7 @@
       "open_source": false,
       "capability": 46,
       "price": 5.0,
-      "release_date": "",
+      "release_date": "2025-12",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6297,7 +6297,7 @@
       "open_source": false,
       "capability": 46,
       "price": 40.0,
-      "release_date": "",
+      "release_date": "2025-10",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6314,7 +6314,7 @@
       "open_source": false,
       "capability": 46,
       "price": 50.0,
-      "release_date": "",
+      "release_date": "2024-08",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6331,7 +6331,7 @@
       "open_source": false,
       "capability": 46,
       "price": 26.0,
-      "release_date": "",
+      "release_date": "2025-09",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6348,7 +6348,7 @@
       "open_source": false,
       "capability": 45,
       "price": 19.0,
-      "release_date": "",
+      "release_date": "2024-12",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6365,7 +6365,7 @@
       "open_source": false,
       "capability": 45,
       "price": 100.0,
-      "release_date": "",
+      "release_date": "2025-09",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6382,7 +6382,7 @@
       "open_source": false,
       "capability": 45,
       "price": 40.0,
-      "release_date": "",
+      "release_date": "2024-10",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6399,7 +6399,7 @@
       "open_source": false,
       "capability": 45,
       "price": 14.0,
-      "release_date": "",
+      "release_date": "2026-01",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6416,7 +6416,7 @@
       "open_source": false,
       "capability": 45,
       "price": 80.0,
-      "release_date": "",
+      "release_date": "2024-08",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6433,7 +6433,7 @@
       "open_source": false,
       "capability": 44,
       "price": 20.0,
-      "release_date": "",
+      "release_date": "2025-08",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6450,7 +6450,7 @@
       "open_source": false,
       "capability": 44,
       "price": 24.0,
-      "release_date": "",
+      "release_date": "2025-04",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6467,7 +6467,7 @@
       "open_source": false,
       "capability": 43,
       "price": 50.0,
-      "release_date": "",
+      "release_date": "2024-08",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6484,7 +6484,7 @@
       "open_source": false,
       "capability": 43,
       "price": 10.0,
-      "release_date": "",
+      "release_date": "2025-02",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6501,7 +6501,7 @@
       "open_source": false,
       "capability": 43,
       "price": 12.0,
-      "release_date": "",
+      "release_date": "2025-04",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6518,7 +6518,7 @@
       "open_source": false,
       "capability": 42,
       "price": 50.0,
-      "release_date": "",
+      "release_date": "2026-01",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6535,7 +6535,7 @@
       "open_source": false,
       "capability": 41,
       "price": 1.7,
-      "release_date": "",
+      "release_date": "2025-02",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6552,7 +6552,7 @@
       "open_source": false,
       "capability": 40,
       "price": 0,
-      "release_date": "",
+      "release_date": "2025-11",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6569,7 +6569,7 @@
       "open_source": false,
       "capability": 40,
       "price": 10.0,
-      "release_date": "",
+      "release_date": "2026-01",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6586,7 +6586,7 @@
       "open_source": false,
       "capability": 40,
       "price": 130.0,
-      "release_date": "",
+      "release_date": "2025-12",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6603,7 +6603,7 @@
       "open_source": false,
       "capability": 39,
       "price": 25.0,
-      "release_date": "",
+      "release_date": "2025-07",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6620,7 +6620,7 @@
       "open_source": false,
       "capability": 39,
       "price": 25.0,
-      "release_date": "",
+      "release_date": "2024-08",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6637,7 +6637,7 @@
       "open_source": false,
       "capability": 38,
       "price": 76.2,
-      "release_date": "",
+      "release_date": "2024-12",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6654,7 +6654,7 @@
       "open_source": false,
       "capability": 38,
       "price": 65.0,
-      "release_date": "",
+      "release_date": "2024-10",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6671,7 +6671,7 @@
       "open_source": false,
       "capability": 38,
       "price": 0,
-      "release_date": "",
+      "release_date": "2025-10",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6688,7 +6688,7 @@
       "open_source": false,
       "capability": 37,
       "price": 40.0,
-      "release_date": "",
+      "release_date": "2024-10",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6705,7 +6705,7 @@
       "open_source": false,
       "capability": 36,
       "price": 39.0,
-      "release_date": "",
+      "release_date": "2025-05",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6722,7 +6722,7 @@
       "open_source": false,
       "capability": 35,
       "price": 10.5,
-      "release_date": "",
+      "release_date": "2024-09",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6739,7 +6739,7 @@
       "open_source": false,
       "capability": 35,
       "price": 76.2,
-      "release_date": "",
+      "release_date": "2024-06",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6756,7 +6756,7 @@
       "open_source": false,
       "capability": 35,
       "price": 0,
-      "release_date": "",
+      "release_date": "2025-06",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6773,7 +6773,7 @@
       "open_source": false,
       "capability": 34,
       "price": 0,
-      "release_date": "",
+      "release_date": "2025-04",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6790,7 +6790,7 @@
       "open_source": false,
       "capability": 33,
       "price": 3.0,
-      "release_date": "",
+      "release_date": "2024-08",
       "category": "text-to-image",
       "channels": {
         "official": [
@@ -6807,7 +6807,7 @@
       "open_source": false,
       "capability": 77,
       "price": 133.0,
-      "release_date": "",
+      "release_date": "2025-12",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -6824,7 +6824,7 @@
       "open_source": false,
       "capability": 76,
       "price": 211.0,
-      "release_date": "",
+      "release_date": "2026-04",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -6841,7 +6841,7 @@
       "open_source": false,
       "capability": 73,
       "price": 134.0,
-      "release_date": "",
+      "release_date": "2025-11",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -6858,7 +6858,7 @@
       "open_source": false,
       "capability": 73,
       "price": 67.0,
-      "release_date": "",
+      "release_date": "2026-02",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -6875,7 +6875,7 @@
       "open_source": false,
       "capability": 71,
       "price": 90.0,
-      "release_date": "",
+      "release_date": "2025-01",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -6892,7 +6892,7 @@
       "open_source": false,
       "capability": 70,
       "price": 20.0,
-      "release_date": "",
+      "release_date": "2026-01",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -6909,7 +6909,7 @@
       "open_source": false,
       "capability": 68,
       "price": 0,
-      "release_date": "",
+      "release_date": "2026-05",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -6926,7 +6926,7 @@
       "open_source": false,
       "capability": 68,
       "price": 30.0,
-      "release_date": "",
+      "release_date": "2025-11",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -6943,7 +6943,7 @@
       "open_source": false,
       "capability": 67,
       "price": 50.0,
-      "release_date": "",
+      "release_date": "2026-03",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -6960,7 +6960,7 @@
       "open_source": false,
       "capability": 66,
       "price": 100.0,
-      "release_date": "",
+      "release_date": "2026-05",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -6977,7 +6977,7 @@
       "open_source": false,
       "capability": 65,
       "price": 40.0,
-      "release_date": "",
+      "release_date": "2026-05",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -6994,7 +6994,7 @@
       "open_source": false,
       "capability": 64,
       "price": 40.0,
-      "release_date": "",
+      "release_date": "2025-12",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7011,7 +7011,7 @@
       "open_source": false,
       "capability": 63,
       "price": 12.0,
-      "release_date": "",
+      "release_date": "2025-11",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7028,7 +7028,7 @@
       "open_source": false,
       "capability": 62,
       "price": 60.0,
-      "release_date": "",
+      "release_date": "2025-06",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7045,7 +7045,7 @@
       "open_source": false,
       "capability": 62,
       "price": 30.0,
-      "release_date": "",
+      "release_date": "2026-01",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7062,7 +7062,7 @@
       "open_source": false,
       "capability": 61,
       "price": 30.0,
-      "release_date": "",
+      "release_date": "2026-04",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7079,7 +7079,7 @@
       "open_source": false,
       "capability": 60,
       "price": 64.0,
-      "release_date": "",
+      "release_date": "2026-04",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7096,7 +7096,7 @@
       "open_source": false,
       "capability": 59,
       "price": 60.0,
-      "release_date": "",
+      "release_date": "2025-11",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7113,7 +7113,7 @@
       "open_source": false,
       "capability": 58,
       "price": 14.0,
-      "release_date": "",
+      "release_date": "2025-07",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7130,7 +7130,7 @@
       "open_source": false,
       "capability": 58,
       "price": 30.0,
-      "release_date": "",
+      "release_date": "2025-09",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7147,7 +7147,7 @@
       "open_source": false,
       "capability": 57,
       "price": 20.0,
-      "release_date": "",
+      "release_date": "2025-12",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7164,7 +7164,7 @@
       "open_source": false,
       "capability": 56,
       "price": 8.0,
-      "release_date": "",
+      "release_date": "2025-12",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7181,7 +7181,7 @@
       "open_source": false,
       "capability": 55,
       "price": 60.0,
-      "release_date": "",
+      "release_date": "2025-03",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7198,7 +7198,7 @@
       "open_source": false,
       "capability": 54,
       "price": 40.0,
-      "release_date": "",
+      "release_date": "2025-06",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7215,7 +7215,7 @@
       "open_source": false,
       "capability": 53,
       "price": 100.0,
-      "release_date": "",
+      "release_date": "2025-09",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7232,7 +7232,7 @@
       "open_source": false,
       "capability": 52,
       "price": 0,
-      "release_date": "",
+      "release_date": "2025-04",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7249,7 +7249,7 @@
       "open_source": false,
       "capability": 52,
       "price": 167.0,
-      "release_date": "",
+      "release_date": "2025-04",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7266,7 +7266,7 @@
       "open_source": false,
       "capability": 51,
       "price": 35.0,
-      "release_date": "",
+      "release_date": "2025-10",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7283,7 +7283,7 @@
       "open_source": false,
       "capability": 50,
       "price": 19.0,
-      "release_date": "",
+      "release_date": "2024-12",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7300,7 +7300,7 @@
       "open_source": false,
       "capability": 49,
       "price": 40.0,
-      "release_date": "",
+      "release_date": "2024-10",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7317,7 +7317,7 @@
       "open_source": false,
       "capability": 48,
       "price": 30.0,
-      "release_date": "",
+      "release_date": "2025-08",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7334,7 +7334,7 @@
       "open_source": false,
       "capability": 48,
       "price": 50.0,
-      "release_date": "",
+      "release_date": "2024-08",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7351,7 +7351,7 @@
       "open_source": false,
       "capability": 47,
       "price": 65.0,
-      "release_date": "",
+      "release_date": "2024-10",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7368,7 +7368,7 @@
       "open_source": false,
       "capability": 46,
       "price": 0,
-      "release_date": "",
+      "release_date": "2025-10",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7385,7 +7385,7 @@
       "open_source": false,
       "capability": 45,
       "price": 25.0,
-      "release_date": "",
+      "release_date": "2024-08",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7402,7 +7402,7 @@
       "open_source": false,
       "capability": 44,
       "price": 80.0,
-      "release_date": "",
+      "release_date": "2024-08",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7419,7 +7419,7 @@
       "open_source": false,
       "capability": 43,
       "price": 40.0,
-      "release_date": "",
+      "release_date": "2024-10",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7436,7 +7436,7 @@
       "open_source": false,
       "capability": 42,
       "price": 76.2,
-      "release_date": "",
+      "release_date": "2024-12",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7453,7 +7453,7 @@
       "open_source": false,
       "capability": 42,
       "price": 3.0,
-      "release_date": "",
+      "release_date": "2024-08",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7470,7 +7470,7 @@
       "open_source": false,
       "capability": 41,
       "price": 10.5,
-      "release_date": "",
+      "release_date": "2024-09",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7487,7 +7487,7 @@
       "open_source": false,
       "capability": 40,
       "price": 0,
-      "release_date": "",
+      "release_date": "2025-04",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7504,7 +7504,7 @@
       "open_source": false,
       "capability": 39,
       "price": 40.0,
-      "release_date": "",
+      "release_date": "2024-12",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7521,7 +7521,7 @@
       "open_source": false,
       "capability": 38,
       "price": 0,
-      "release_date": "",
+      "release_date": "2025-06",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7538,7 +7538,7 @@
       "open_source": false,
       "capability": 38,
       "price": 24.0,
-      "release_date": "",
+      "release_date": "2025-04",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7555,7 +7555,7 @@
       "open_source": false,
       "capability": 37,
       "price": 76.2,
-      "release_date": "",
+      "release_date": "2024-06",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7572,7 +7572,7 @@
       "open_source": false,
       "capability": 36,
       "price": 40.0,
-      "release_date": "",
+      "release_date": "2024-10",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7589,7 +7589,7 @@
       "open_source": false,
       "capability": 35,
       "price": 39.0,
-      "release_date": "",
+      "release_date": "2025-05",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7606,7 +7606,7 @@
       "open_source": false,
       "capability": 34,
       "price": 10.0,
-      "release_date": "",
+      "release_date": "2025-02",
       "category": "image-editing",
       "channels": {
         "official": [
@@ -7623,7 +7623,7 @@
       "open_source": false,
       "capability": 69,
       "price": 0,
-      "release_date": "",
+      "release_date": "2026-03",
       "category": "text-to-video",
       "channels": {
         "official": [
@@ -7640,7 +7640,7 @@
       "open_source": false,
       "capability": 68,
       "price": 0,
-      "release_date": "",
+      "release_date": "2026-04",
       "category": "text-to-video",
       "channels": {
         "official": [
@@ -7657,7 +7657,7 @@
       "open_source": false,
       "capability": 50,
       "price": 24.0,
-      "release_date": "",
+      "release_date": "2026-01",
       "category": "text-to-video",
       "channels": {
         "official": [
@@ -7674,7 +7674,7 @@
       "open_source": false,
       "capability": 50,
       "price": 16.8,
-      "release_date": "",
+      "release_date": "2026-02",
       "category": "text-to-video",
       "channels": {
         "official": [
@@ -7691,7 +7691,7 @@
       "open_source": false,
       "capability": 49,
       "price": 20.16,
-      "release_date": "",
+      "release_date": "2026-02",
       "category": "text-to-video",
       "channels": {
         "official": [
@@ -7708,7 +7708,7 @@
       "open_source": false,
       "capability": 48,
       "price": 0,
-      "release_date": "",
+      "release_date": "2025-12",
       "category": "text-to-video",
       "channels": {
         "official": [
@@ -7725,7 +7725,7 @@
       "open_source": false,
       "capability": 47,
       "price": 0,
-      "release_date": "",
+      "release_date": "2025-12",
       "category": "text-to-video",
       "channels": {
         "official": [
@@ -7742,7 +7742,7 @@
       "open_source": false,
       "capability": 46,
       "price": 4.2,
-      "release_date": "",
+      "release_date": "2026-01",
       "category": "text-to-video",
       "channels": {
         "official": [
@@ -7759,7 +7759,7 @@
       "open_source": false,
       "capability": 45,
       "price": 9.0,
-      "release_date": "",
+      "release_date": "2026-01",
       "category": "text-to-video",
       "channels": {
         "official": [
@@ -7776,7 +7776,7 @@
       "open_source": false,
       "capability": 43,
       "price": 12.0,
-      "release_date": "",
+      "release_date": "2025-12",
       "category": "text-to-video",
       "channels": {
         "official": [
@@ -7793,7 +7793,7 @@
       "open_source": false,
       "capability": 42,
       "price": 8.0,
-      "release_date": "",
+      "release_date": "2026-01",
       "category": "text-to-video",
       "channels": {
         "official": [
@@ -7810,7 +7810,7 @@
       "open_source": false,
       "capability": 40,
       "price": 0,
-      "release_date": "",
+      "release_date": "2025-09",
       "category": "text-to-video",
       "channels": {
         "official": [
@@ -7827,7 +7827,7 @@
       "open_source": false,
       "capability": 38,
       "price": 5.0,
-      "release_date": "",
+      "release_date": "2026-02",
       "category": "text-to-video",
       "channels": {
         "official": [
@@ -7844,7 +7844,7 @@
       "open_source": false,
       "capability": 37,
       "price": 4.2,
-      "release_date": "",
+      "release_date": "2026-01",
       "category": "text-to-video",
       "channels": {
         "official": [
@@ -7861,7 +7861,7 @@
       "open_source": false,
       "capability": 35,
       "price": 0.3,
-      "release_date": "",
+      "release_date": "2026-05",
       "category": "text-to-video",
       "channels": {
         "official": [
@@ -7878,7 +7878,7 @@
       "open_source": false,
       "capability": 33,
       "price": 10.0,
-      "release_date": "",
+      "release_date": "2025-10",
       "category": "text-to-video",
       "channels": {
         "official": [
@@ -7895,7 +7895,7 @@
       "open_source": false,
       "capability": 64,
       "price": 0,
-      "release_date": "",
+      "release_date": "2026-03",
       "category": "image-to-video",
       "channels": {
         "official": [
@@ -7912,7 +7912,7 @@
       "open_source": false,
       "capability": 61,
       "price": 0,
-      "release_date": "",
+      "release_date": "2026-04",
       "category": "image-to-video",
       "channels": {
         "official": [
@@ -7929,7 +7929,7 @@
       "open_source": false,
       "capability": 49,
       "price": 4.2,
-      "release_date": "",
+      "release_date": "2026-01",
       "category": "image-to-video",
       "channels": {
         "official": [
@@ -7946,7 +7946,7 @@
       "open_source": false,
       "capability": 48,
       "price": 9.0,
-      "release_date": "",
+      "release_date": "2026-01",
       "category": "image-to-video",
       "channels": {
         "official": [
@@ -7963,7 +7963,7 @@
       "open_source": false,
       "capability": 48,
       "price": 24.0,
-      "release_date": "",
+      "release_date": "2026-01",
       "category": "image-to-video",
       "channels": {
         "official": [
@@ -7980,7 +7980,7 @@
       "open_source": false,
       "capability": 47,
       "price": 16.8,
-      "release_date": "",
+      "release_date": "2026-02",
       "category": "image-to-video",
       "channels": {
         "official": [
@@ -7997,7 +7997,7 @@
       "open_source": false,
       "capability": 45,
       "price": 5.0,
-      "release_date": "",
+      "release_date": "2026-02",
       "category": "image-to-video",
       "channels": {
         "official": [
@@ -8014,7 +8014,7 @@
       "open_source": false,
       "capability": 43,
       "price": 12.0,
-      "release_date": "",
+      "release_date": "2025-12",
       "category": "image-to-video",
       "channels": {
         "official": [
@@ -8031,7 +8031,7 @@
       "open_source": false,
       "capability": 42,
       "price": 0,
-      "release_date": "",
+      "release_date": "2025-12",
       "category": "image-to-video",
       "channels": {
         "official": [
@@ -8048,7 +8048,7 @@
       "open_source": false,
       "capability": 40,
       "price": 8.0,
-      "release_date": "",
+      "release_date": "2026-01",
       "category": "image-to-video",
       "channels": {
         "official": [
@@ -8065,7 +8065,7 @@
       "open_source": false,
       "capability": 39,
       "price": 20.16,
-      "release_date": "",
+      "release_date": "2026-02",
       "category": "image-to-video",
       "channels": {
         "official": [
@@ -8082,7 +8082,7 @@
       "open_source": false,
       "capability": 38,
       "price": 0,
-      "release_date": "",
+      "release_date": "2025-09",
       "category": "image-to-video",
       "channels": {
         "official": [
@@ -8099,7 +8099,7 @@
       "open_source": false,
       "capability": 36,
       "price": 0.3,
-      "release_date": "",
+      "release_date": "2026-05",
       "category": "image-to-video",
       "channels": {
         "official": [
@@ -8116,7 +8116,7 @@
       "open_source": false,
       "capability": 33,
       "price": 4.2,
-      "release_date": "",
+      "release_date": "2026-01",
       "category": "image-to-video",
       "channels": {
         "official": [
@@ -8126,5 +8126,6 @@
         "api": []
       }
     }
-  ]
+  ],
+  "models_updated": "2026-05-22"
 }
