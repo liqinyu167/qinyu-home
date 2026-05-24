@@ -3258,6 +3258,16 @@
         "免费"
       ],
       "description": "Krea AI 实时图像生成"
+    },
+    {
+      "id": "stitch",
+      "name": "Stitch",
+      "url": "https://stitch.withgoogle.com",
+      "category": "tools",
+      "primarySection": "image-tool",
+      "sections": ["image-tool"],
+      "type": "official",
+      "description": "Google Labs 推出的 AI 原生 UI/UX 设计工具。通过自然语言描述、手绘线框图或截图即可生成可编辑的移动端和网页端界面，支持导出为 Figma 或 HTML 代码。"
     }
   ]
 }
