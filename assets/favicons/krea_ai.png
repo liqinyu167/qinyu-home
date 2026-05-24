@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="touch-manipulation antialiased">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Google Tag Manager -->
+		<script>
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, 'script', 'dataLayer', 'GTM-W98JT22L');
+		</script>
+		<!-- End Google Tag Manager -->
+
+		<link
+			rel="icon"
+			href="./favicon/favicon-32.png"
+			type="image/png"
+			sizes="32x32"
+			media="(prefers-color-scheme: light)"
+		/>
+		<link
+			rel="icon"
+			href="./favicon/favicon-32-dark.png"
+			type="image/png"
+			sizes="32x32"
+			media="(prefers-color-scheme: dark)"
+		/>
+		<link
+			rel="icon"
+			href="./favicon/favicon-64.png"
+			type="image/png"
+			sizes="64x64"
+			media="(prefers-color-scheme: light)"
+		/>
+		<link
+			rel="icon"
+			href="./favicon/favicon-64-dark.png"
+			type="image/png"
+			sizes="64x64"
+			media="(prefers-color-scheme: dark)"
+		/>
+		<link
+			rel="icon"
+			href="./favicon/favicon-128.png"
+			type="image/png"
+			sizes="128x128"
+			media="(prefers-color-scheme: light)"
+		/>
+		<link
+			rel="icon"
+			href="./favicon/favicon-128-dark.png"
+			type="image/png"
+			sizes="128x128"
+			media="(prefers-color-scheme: dark)"
+		/>
+		<link
+			rel="icon"
+			href="./favicon/favicon-192.png"
+			type="image/png"
+			sizes="192x192"
+			media="(prefers-color-scheme: light)"
+		/>
+		<link
+			rel="icon"
+			href="./favicon/favicon-192-dark.png"
+			type="image/png"
+			sizes="192x192"
+			media="(prefers-color-scheme: dark)"
+		/>
+
+		<!-- Preload critical Suisse Intl fonts -->
+		<link
+			rel="preload"
+			href="./fonts/SuisseIntl-Regular-WebM.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="preload"
+			href="./fonts/SuisseIntl-Medium-WebM.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="preload"
+			href="./fonts/SuisseIntl-SemiBold-WebM.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="preload"
+			href="./fonts/SuisseIntl-Bold-WebM.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin="anonymous"
+		/>
+
+		<link rel="stylesheet" href="./fonts/fonts.css" />
+
+		<script>
+			// I would keep this here since this runs before the page is rendered
+			(function () {
+				function applyTheme(theme) {
+					document.documentElement.classList.toggle('dark', theme === 'dark');
+					document.documentElement.style.colorScheme = theme;
+				}
+				var themePreference = localStorage.getItem('theme-preference');
+				var userTheme;
+				if (themePreference === 'light' || themePreference === 'dark') {
+					userTheme = themePreference;
+				} else if (themePreference === 'system') {
+					// User explicitly chose 'system' - respect system preference
+					var systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+					userTheme = systemPrefersLight ? 'light' : 'dark';
+				} else {
+					// No preference set - default to dark
+					userTheme = 'dark';
+				}
+				applyTheme(userTheme);
+				window
+					.matchMedia('(prefers-color-scheme: dark)')
+					.addEventListener('change', function (event) {
+						var pref = localStorage.getItem('theme-preference');
+						if (!pref || pref === 'system') {
+							applyTheme(event.matches ? 'dark' : 'light');
+						}
+					});
+			})();
+
+			// if (!Array.prototype.toReversed) {
+			// 	Array.prototype.toReversed = function () {
+			// 		const newArray = [...this];
+			// 		return newArray.reverse();
+			// 	};
+			// }
+		</script>
+
+		<script>
+			!(function (c, n) {
+				var hostname = (window.location.hostname || '').toLowerCase();
+				var isDubProdHostname = hostname === 'krea.ai' || hostname === 'www.krea.ai';
+				if (!isDubProdHostname) return;
+				var dubPublishableKey = 'dub_pk_6Z5NWTxR8kLjbIJaPFRkX5vL';
+				if (!dubPublishableKey) return;
+
+				c[n] =
+					c[n] ||
+					function () {
+						(c[n].q = c[n].q || []).push(arguments);
+					};
+				['trackClick', 'trackLead', 'trackSale'].forEach(
+					(t) => (c[n][t] = (...a) => c[n](t, ...a))
+				);
+				var s = document.createElement('script');
+				s.defer = 1;
+				s.src = 'https://www.dubcdn.com/analytics/script.conversion-tracking.js';
+				s.setAttribute('data-publishable-key', dubPublishableKey);
+				s.setAttribute(
+					'data-domains',
+					'{"refer":"links.krea.ai","outbound":["www.krea.ai","docs.krea.ai"]}'
+				);
+				document.head.appendChild(s);
+			})(window, 'dubAnalytics');
+		</script>
+
+		<!-- Google One Tap -->
+		<script src="https://accounts.google.com/gsi/client" async defer></script>
+
+		<meta name="darkreader-lock" />
+
+		<!--12qhfyh--><!--[0--><!--]--> <!--[0--><meta name="apple-itunes-app" content="app-id=6742134132"/><!--]--><!----><!--1j96wlh--><meta name="robots" content="noindex, nofollow"/><!----><title>Krea</title>
+		<link href="./_app/2d1460aecceb82a5/immutable/assets/AuthForm.B5nOJgiJ.css" rel="stylesheet">
+		<link href="./_app/2d1460aecceb82a5/immutable/assets/0.Cs62R1MO.css" rel="stylesheet">
+	</head>
+
+	<body class="dark:bg-primary-950 bg-white">
+		<!-- Google Tag Manager (noscript) -->
+		<noscript
+			><iframe
+				src="https://www.googletagmanager.com/ns.html?id=GTM-W98JT22L"
+				height="0"
+				width="0"
+				style="display: none; visibility: hidden"
+			></iframe
+		></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		<div><!--[--><!--[0--><!--[--><!--[-1--><!--]--><!----> <!--[-1--><!--]--> <main class="app"><!--[--><!--[-1--><!--[--><main class="dark:text-primary-0 text-primary-1000 bg-primary-0 dark:bg-primary-950 flex h-svh w-full flex-col items-center justify-center text-center"><!--[2--><h1 class="mb-8 max-w-lg text-5xl leading-13 font-medium tracking-tight">The page you’re looking for can’t be found.</h1> <a href="/" class="bg-action text-primary-0 group hover:bg-action-hover flex items-center justify-center gap-2 rounded-full px-5 py-2 font-medium transition-transform duration-100 ease-out hover:scale-[1.02] active:scale-100">Go back to home <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-arrow-up-right h-5 w-5  group-hover:scale-105"><!--[--><!----><path d="M7 7h10v10"><!----></path><!----><!----><path d="M7 17 17 7"><!----></path><!----><!--]--><!--[--><!--[--><!--]--><!--]--></svg><!----></a><!--]--></main><!--]--><!--]--><!--]--></main>  <!----> <section aria-label="Notifications alt+T" tabindex="-1" aria-live="polite" aria-relevant="additions text" aria-atomic="false" class="svelte-14wlss8"><!--[-1--><!--]--></section><!----><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_1haq4wz = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						env: {"PUBLIC_GOOGLE_CLIENT_ID":"297816800793-8hu38dghmjsaegjo6juqsg8ltjm284pn.apps.googleusercontent.com","PUBLIC_TURNSTILE_EMAIL_KEY":"0x4AAAAAAARCAQia-P1X7s4C","PUBLIC_POSTHOG_API_KEY":"phc_kyzaz2uOZkTGjBpixpJPev9B8cusob2snVtgYXoIn96","PUBLIC_UNIFY_INTENT_WRITE_KEY":"u_X5g8qCpH_3FdrDXNuN2CmhwWcfs2yAf1fUHwntta7","PUBLIC_STRIPE_PRICING_TABLE_ID":"prctbl_1NWGGHEv2gutweVt1KWNHSd2","PUBLIC_STRIPE_PUBLISHABLE_KEY":"pk_live_51LPa3lEv2gutweVtFEiXL9FNjFW49XMEfF8XwAI8HN1tqR1eFDv7onDBdAKmfahG7wB84fGqSIFXHj1JbM55LbRp00s9A5T2Nl","PUBLIC_FLAG_ENABLE_COLLABORATION":"false","PUBLIC_SUPABASE_ANON_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlzcyI6InN1cGFiYXNlIiwiaWF0IjoxNzc1Mjc4ODU3LCJleHAiOjE5MzI5NTg4NTd9.NUiqEOd__QsCCMjo3D1zrCAda5dLV2F5p6Kf584sZKc","PUBLIC_FORGE_BASE_URL":"https://forge.krea.ai","PUBLIC_K8S_SUPABASE_URL":"https://www.krea.ai","PUBLIC_ENABLE_CANVAS_DEBUGGER":"","PUBLIC_DUB_PUBLISHABLE_KEY":"dub_pk_6Z5NWTxR8kLjbIJaPFRkX5vL"}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("./_app/2d1460aecceb82a5/immutable/entry/start.BI71dlSY.js"),
+						import("./_app/2d1460aecceb82a5/immutable/entry/app.C83R9SmJ.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 1],
+							data: [{type:"data",data:{session:void 0},uses:{url:1}}],
+							form: null,
+							error: {message:"Not Found"},
+							status: 404
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
