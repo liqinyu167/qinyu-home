@@ -5555,8 +5555,14 @@
             <p class="empty-subtitle">内容由 AI Agent 持续维护更新中</p>
           </div>
         </div>`;
+    }
 
-      state.sites.forEach((site) => {
+    function ensureCards(sites) {
+      const existingIds = new Set();
+      els.grid.querySelectorAll(".site-card").forEach(c => existingIds.add(c.dataset.id));
+      const toBuild = sites.filter(s => !existingIds.has(s.id));
+      const frag = document.createDocumentFragment();
+      toBuild.forEach((site) => {
         const card = document.createElement("article");
         card.className = "site-card";
         card.id = `site-${site.id}`;
@@ -5565,9 +5571,7 @@
         card.setAttribute("aria-label", `查看 ${site.name} 详情`);
         card.dataset.id = site.id;
         card.style.setProperty("--cat-color", categoryColors[getSiteCategory(site)] || "var(--ink-accent)");
-
         const tags = (site.tags || []).map(renderTag).join("");
-
         card.innerHTML = `
           <div class="card-head">
             <img class="site-favicon" src="${faviconPath(site)}" alt="" loading="lazy" onerror="this.style.display='none'">
@@ -5583,8 +5587,9 @@
             <button class="card-action favorite-toggle ${state.favorites.has(site.id) ? "is-saved" : ""}" type="button" aria-label="收藏 ${site.name}" data-id="${site.id}">★</button>
           </div>
         `;
-        els.grid.appendChild(card);
+        frag.appendChild(card);
       });
+      if (toBuild.length) els.grid.appendChild(frag);
     }
 
     function filterCards(sites) {
@@ -6051,7 +6056,8 @@
         els.modelPopover.hidden = true;
 
         const sites = getFilteredSites();
-        if (!els.grid.querySelector(".site-card")) buildCards();
+        if (!els.grid.querySelector(".site-card, .empty-state")) buildCards();
+        ensureCards(sites);
         filterCards(sites);
         renderHotStrip();
         if (els.tree.childElementCount) updateTreeState();
