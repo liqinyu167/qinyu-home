@@ -5593,7 +5593,7 @@
         const tags = (site.tags || []).map(renderTag).join("");
         card.innerHTML = `
           <div class="card-head">
-            <img class="site-favicon" data-src="${faviconPath(site)}" alt="" onerror="this.style.display='none'">
+            <img class="site-favicon" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'/%3E" data-src="${faviconPath(site)}" alt="" onerror="this.style.display='none'">
             <div>
               <h2 class="site-name">${site.name}</h2>
               <a class="domain" href="${site.url}" target="_blank" rel="noreferrer" aria-label="打开 ${site.name}">${domainFromUrl(site.url)}</a>
