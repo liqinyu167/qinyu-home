@@ -5127,6 +5127,25 @@
       return `assets/favicons/${site.url.replace(/^https?:\/\//, "").split("/")[0].replace(/\./g, "_")}.png`;
     }
 
+    // ─── Favicon lazy loading via IntersectionObserver ───
+    const faviconObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          if (img.dataset.src) {
+            img.src = img.dataset.src;
+            img.removeAttribute("data-src");
+          }
+          faviconObserver.unobserve(img);
+        }
+      });
+    }, { rootMargin: "120px" });
+
+    function observeFavicons(container) {
+      const imgs = (container instanceof Node ? container : document).querySelectorAll(".site-favicon[data-src]");
+      imgs.forEach(img => faviconObserver.observe(img));
+    }
+
     function getCategoryLabel(id) {
       const category = state.categories.find((item) => item.id === id);
       return category ? `${category.label} ${category.en}` : "全部";
@@ -5574,7 +5593,7 @@
         const tags = (site.tags || []).map(renderTag).join("");
         card.innerHTML = `
           <div class="card-head">
-            <img class="site-favicon" src="${faviconPath(site)}" alt="" loading="lazy" onerror="this.style.display='none'">
+            <img class="site-favicon" data-src="${faviconPath(site)}" alt="" onerror="this.style.display='none'">
             <div>
               <h2 class="site-name">${site.name}</h2>
               <a class="domain" href="${site.url}" target="_blank" rel="noreferrer" aria-label="打开 ${site.name}">${domainFromUrl(site.url)}</a>
@@ -5589,7 +5608,10 @@
         `;
         frag.appendChild(card);
       });
-      if (toBuild.length) els.grid.appendChild(frag);
+      if (toBuild.length) {
+        els.grid.appendChild(frag);
+        observeFavicons(frag);
+      }
     }
 
     function filterCards(sites) {
