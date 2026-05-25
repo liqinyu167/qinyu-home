@@ -5901,19 +5901,6 @@
       "description": "创意练习与头脑风暴游戏集"
     },
     {
-      "id": "designinspiration",
-      "name": "Design Inspiration",
-      "url": "https://www.designspiration.com",
-      "category": "inspiration",
-      "primarySection": "idea-tools",
-      "sections": [
-        "idea-tools",
-        "graphic-design"
-      ],
-      "type": "platform",
-      "description": "按颜色/风格搜索的设计灵感平台"
-    },
-    {
       "id": "niice",
       "name": "Niice",
       "url": "https://niice.co",
