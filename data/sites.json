@@ -3343,6 +3343,729 @@
       ],
       "type": "official",
       "description": "Google Labs 推出的 AI 原生 UI/UX 设计工具。通过自然语言描述、手绘线框图或截图即可生成可编辑的移动端和网页端界面，支持导出为 Figma 或 HTML 代码。"
+    },
+    {
+      "id": "wikipedia-en",
+      "name": "Wikipedia (EN)",
+      "url": "https://en.wikipedia.org/wiki/Special:Random",
+      "description": "英文维基百科随机页面——全球最大的人类知识库，每次刷新都是一次知识碰撞。灵感板块的标杆站点。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "inspiration",
+      "sections": [
+        "inspiration"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "百科",
+        "随机",
+        "知识"
+      ],
+      "relations": {
+        "products": [
+          "wikidata",
+          "wikimedia-commons",
+          "wikiquote"
+        ],
+        "upstream": [],
+        "downstream": [
+          "wikidata",
+          "wikimedia-commons",
+          "wikiquote"
+        ],
+        "alternatives": [],
+        "complements": [
+          "wikipedia-zh"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "wikipedia-zh",
+      "name": "维基百科 (中文)",
+      "url": "https://zh.wikipedia.org/wiki/Special:Random",
+      "description": "中文维基百科随机页面——全球最大中文知识库，覆盖古今中外。母语可达的深度知识随机碰撞。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "inspiration",
+      "sections": [
+        "inspiration"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "中文",
+        "百科",
+        "随机",
+        "知识"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "wikipedia-en"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "wikidata",
+      "name": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Special:Random",
+      "description": "维基数据随机查询——结构化知识图谱，以数据形式展示万物关联。灵感来自数据的意外连接。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "inspiration",
+      "sections": [
+        "inspiration"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "数据",
+        "知识图谱",
+        "随机"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "wikipedia-en"
+        ],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "wikipedia-en"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "wikimedia-commons",
+      "name": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/Special:Random",
+      "description": "维基共享资源随机浏览——数百万免费使用的图片、音频、视频文件，万物视觉记录。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "inspiration",
+      "sections": [
+        "inspiration"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "图片",
+        "媒体",
+        "随机"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "wikipedia-en"
+        ],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "wikipedia-en"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "wikiquote",
+      "name": "Wikiquote",
+      "url": "https://en.wikiquote.org/wiki/Special:Random",
+      "description": "维基语录随机——古今中外名言警句，一句话可能触发一个创意。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "inspiration",
+      "sections": [
+        "inspiration"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "语录",
+        "名言",
+        "随机"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "wikipedia-en"
+        ],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "wikipedia-en"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "atlas-obscura",
+      "name": "Atlas Obscura",
+      "url": "https://www.atlasobscura.com/random",
+      "description": "全球奇异目的地指南——从废弃游乐场到地下墓穴，发现世界上被遗忘的角落。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "inspiration",
+      "sections": [
+        "inspiration"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "探索",
+        "旅行",
+        "奇观"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "internet-archive",
+      "name": "Internet Archive",
+      "url": "https://archive.org/details/random",
+      "description": "互联网档案馆随机资源——数字时代的亚历山大图书馆，从经典电影到古老软件的随机漫游。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "inspiration",
+      "sections": [
+        "inspiration"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "档案",
+        "数字",
+        "历史"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "mapcrunch",
+      "name": "MapCrunch",
+      "url": "https://www.mapcrunch.com/",
+      "description": "随机街景探索——随机跳转到全球任一角落的Google街景。下一秒你可能在冰岛、撒哈拉或东京。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "inspiration",
+      "sections": [
+        "inspiration"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "街景",
+        "探索",
+        "随机"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "gutenberg",
+      "name": "Project Gutenberg",
+      "url": "https://www.gutenberg.org/ebooks/search/?sort_order=random",
+      "description": "古登堡计划随机书——7万+免费电子书，随机翻开一本经典，可能是文学、科学或哲学。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "inspiration",
+      "sections": [
+        "inspiration"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "图书",
+        "文学",
+        "经典"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "aeon",
+      "name": "Aeon",
+      "url": "https://aeon.co/",
+      "description": "深度思想长文平台——哲学、科学、艺术、社会的跨学科深度文章，触发思维碰撞。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "inspiration",
+      "sections": [
+        "inspiration"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "思想",
+        "深度",
+        "跨学科"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "quanta-magazine",
+      "name": "Quanta Magazine",
+      "url": "https://www.quantamagazine.org/",
+      "description": "前沿科学深度报道——用最清晰的语言解释物理学、数学、生物学的最新突破。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "inspiration",
+      "sections": [
+        "inspiration"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "科学",
+        "数学",
+        "物理"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "marginalian",
+      "name": "The Marginalian",
+      "url": "https://www.themarginalian.org/",
+      "description": "跨学科思想博客——文学、科学、哲学、艺术的交叉地带，原名Brain Pickings。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "inspiration",
+      "sections": [
+        "inspiration"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "思想",
+        "文学",
+        "哲学"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "artstation",
+      "name": "ArtStation",
+      "url": "https://www.artstation.com/",
+      "description": "全球顶级概念艺术与3D作品集平台。电影、游戏、动画行业的概念艺术家首选展示平台，作品完成度极高。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "aesthetics",
+      "sections": [
+        "aesthetics"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "概念艺术",
+        "3D",
+        "作品集"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "behance",
+          "deviantart"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "behance",
+      "name": "Behance",
+      "url": "https://www.behance.net/",
+      "description": "Adobe旗下综合设计作品集平台。涵盖UI/UX、平面设计、插画、摄影、动态设计等全品类。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "aesthetics",
+      "sections": [
+        "aesthetics"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "设计",
+        "作品集",
+        "UI/UX"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "artstation",
+          "dribbble"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "dribbble",
+      "name": "Dribbble",
+      "url": "https://dribbble.com/",
+      "description": "全球设计师UI/UX设计作品社区。以界面设计、图标、动效设计见长，作品精致完成度高。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "aesthetics",
+      "sections": [
+        "aesthetics"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "UI设计",
+        "交互",
+        "作品集"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "behance"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "unsplash",
+      "name": "Unsplash",
+      "url": "https://unsplash.com/",
+      "description": "高质量免费摄影作品库。全球摄影师贡献的高清作品，每张都是可用于商业的成品。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "aesthetics",
+      "sections": [
+        "aesthetics"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "摄影",
+        "图片",
+        "素材"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "pexels"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "pexels",
+      "name": "Pexels",
+      "url": "https://www.pexels.com/",
+      "description": "免费高质量摄影与视频素材库。提供海量商用级高清照片和视频片段。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "aesthetics",
+      "sections": [
+        "aesthetics"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "摄影",
+        "视频",
+        "素材"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "unsplash"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "awwwards",
+      "name": "Awwwards",
+      "url": "https://www.awwwards.com/",
+      "description": "全球最佳网页设计评选平台。每日精选优秀网页设计作品，是网页设计师的审美标杆。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "aesthetics",
+      "sections": [
+        "aesthetics"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "网页设计",
+        "评选",
+        "UI"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "zcool",
+      "name": "站酷 (ZCOOL)",
+      "url": "https://www.zcool.com.cn/",
+      "description": "中国最大设计师社区。涵盖平面、UI、插画、摄影、工业设计等全品类，中文设计师首选作品集平台。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "aesthetics",
+      "sections": [
+        "aesthetics"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "中文",
+        "设计",
+        "作品集",
+        "社区"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "behance"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "pixiv",
+      "name": "Pixiv",
+      "url": "https://www.pixiv.net/",
+      "description": "日本最大插画/漫画/小说创作社区。以二次元、日系插画见长，汇聚全球顶级画师作品。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "aesthetics",
+      "sections": [
+        "aesthetics"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "日文",
+        "中文",
+        "插画",
+        "漫画",
+        "二次元"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "deviantart"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "500px",
+      "name": "500px",
+      "url": "https://500px.com/",
+      "description": "全球顶尖摄影社区。专业摄影师作品展示平台，以风光、人像、街拍摄影见长。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "aesthetics",
+      "sections": [
+        "aesthetics"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "摄影",
+        "社区",
+        "作品集"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "unsplash"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "deviantart",
+      "name": "DeviantArt",
+      "url": "https://www.deviantart.com/",
+      "description": "全球最大艺术创作社区。涵盖数字艺术、传统绘画、摄影、AI艺术等全品类的创作者平台。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "aesthetics",
+      "sections": [
+        "aesthetics"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "艺术",
+        "社区",
+        "数字艺术"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "artstation",
+          "pixiv"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "fwa",
+      "name": "FWA (Favourite Website Awards)",
+      "url": "https://thefwa.com/",
+      "description": "数字创意与交互设计颁奖平台。展示全球最具创新性的网页、App和数字体验。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "aesthetics",
+      "sections": [
+        "aesthetics"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "交互设计",
+        "创意",
+        "评选"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "awwwards"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "gracg",
+      "name": "涂鸦王国",
+      "url": "https://www.gracg.com/",
+      "description": "中国原创插画师社区。汇聚国内优秀插画、原画、漫画作品，中文插画师的创作沃土。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "aesthetics",
+      "sections": [
+        "aesthetics"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "中文",
+        "插画",
+        "原创",
+        "社区"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "zcool",
+          "pixiv"
+        ],
+        "complements": []
+      },
+      "icon": null
     }
   ]
 }
