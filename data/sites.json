@@ -3380,7 +3380,8 @@
           "wikipedia-zh"
         ]
       },
-      "icon": null
+      "icon": null,
+      "category": "inspiration"
     },
     {
       "id": "wikipedia-zh",
@@ -3410,7 +3411,8 @@
           "wikipedia-en"
         ]
       },
-      "icon": null
+      "icon": null,
+      "category": "inspiration"
     },
     {
       "id": "wikidata",
@@ -3442,7 +3444,8 @@
           "wikipedia-en"
         ]
       },
-      "icon": null
+      "icon": null,
+      "category": "inspiration"
     },
     {
       "id": "wikimedia-commons",
@@ -3474,7 +3477,8 @@
           "wikipedia-en"
         ]
       },
-      "icon": null
+      "icon": null,
+      "category": "inspiration"
     },
     {
       "id": "wikiquote",
@@ -3506,7 +3510,8 @@
           "wikipedia-en"
         ]
       },
-      "icon": null
+      "icon": null,
+      "category": "inspiration"
     },
     {
       "id": "atlas-obscura",
@@ -3534,7 +3539,8 @@
         "alternatives": [],
         "complements": []
       },
-      "icon": null
+      "icon": null,
+      "category": "inspiration"
     },
     {
       "id": "internet-archive",
@@ -3562,7 +3568,8 @@
         "alternatives": [],
         "complements": []
       },
-      "icon": null
+      "icon": null,
+      "category": "inspiration"
     },
     {
       "id": "mapcrunch",
@@ -3590,7 +3597,8 @@
         "alternatives": [],
         "complements": []
       },
-      "icon": null
+      "icon": null,
+      "category": "inspiration"
     },
     {
       "id": "gutenberg",
@@ -3618,7 +3626,8 @@
         "alternatives": [],
         "complements": []
       },
-      "icon": null
+      "icon": null,
+      "category": "inspiration"
     },
     {
       "id": "aeon",
@@ -3646,7 +3655,8 @@
         "alternatives": [],
         "complements": []
       },
-      "icon": null
+      "icon": null,
+      "category": "inspiration"
     },
     {
       "id": "quanta-magazine",
@@ -3674,7 +3684,8 @@
         "alternatives": [],
         "complements": []
       },
-      "icon": null
+      "icon": null,
+      "category": "inspiration"
     },
     {
       "id": "marginalian",
@@ -3702,7 +3713,8 @@
         "alternatives": [],
         "complements": []
       },
-      "icon": null
+      "icon": null,
+      "category": "inspiration"
     },
     {
       "id": "artstation",
@@ -3733,7 +3745,8 @@
         ],
         "complements": []
       },
-      "icon": null
+      "icon": null,
+      "category": "aesthetics"
     },
     {
       "id": "behance",
@@ -3764,7 +3777,8 @@
         ],
         "complements": []
       },
-      "icon": null
+      "icon": null,
+      "category": "aesthetics"
     },
     {
       "id": "dribbble",
@@ -3794,7 +3808,8 @@
         ],
         "complements": []
       },
-      "icon": null
+      "icon": null,
+      "category": "aesthetics"
     },
     {
       "id": "unsplash",
@@ -3824,7 +3839,8 @@
         ],
         "complements": []
       },
-      "icon": null
+      "icon": null,
+      "category": "aesthetics"
     },
     {
       "id": "pexels",
@@ -3854,7 +3870,8 @@
         ],
         "complements": []
       },
-      "icon": null
+      "icon": null,
+      "category": "aesthetics"
     },
     {
       "id": "awwwards",
@@ -3882,7 +3899,8 @@
         "alternatives": [],
         "complements": []
       },
-      "icon": null
+      "icon": null,
+      "category": "aesthetics"
     },
     {
       "id": "zcool",
@@ -3912,7 +3930,8 @@
         ],
         "complements": []
       },
-      "icon": null
+      "icon": null,
+      "category": "aesthetics"
     },
     {
       "id": "pixiv",
@@ -3943,7 +3962,8 @@
         ],
         "complements": []
       },
-      "icon": null
+      "icon": null,
+      "category": "aesthetics"
     },
     {
       "id": "500px",
@@ -3973,7 +3993,8 @@
         ],
         "complements": []
       },
-      "icon": null
+      "icon": null,
+      "category": "aesthetics"
     },
     {
       "id": "deviantart",
@@ -4004,7 +4025,8 @@
         ],
         "complements": []
       },
-      "icon": null
+      "icon": null,
+      "category": "aesthetics"
     },
     {
       "id": "fwa",
@@ -4034,7 +4056,8 @@
         ],
         "complements": []
       },
-      "icon": null
+      "icon": null,
+      "category": "aesthetics"
     },
     {
       "id": "gracg",
@@ -4065,7 +4088,8 @@
         ],
         "complements": []
       },
-      "icon": null
+      "icon": null,
+      "category": "aesthetics"
     }
   ]
 }
