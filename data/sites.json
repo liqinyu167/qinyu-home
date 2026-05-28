@@ -59,13 +59,43 @@
       "id": "aesthetics",
       "label": "审美",
       "en": "AESTHETICS",
-      "children": []
+      "children": [
+        {
+          "id": "comprehensive-gallery",
+          "label": "综合画廊"
+        },
+        {
+          "id": "design-showcase",
+          "label": "设计作品"
+        },
+        {
+          "id": "photography",
+          "label": "摄影"
+        },
+        {
+          "id": "illustration",
+          "label": "插画漫画"
+        }
+      ]
     },
     {
       "id": "inspiration",
       "label": "灵感",
       "en": "INSPIRATION",
-      "children": []
+      "children": [
+        {
+          "id": "encyclopedia-random",
+          "label": "百科随机"
+        },
+        {
+          "id": "deep-ideas",
+          "label": "深度思想"
+        },
+        {
+          "id": "serendipity",
+          "label": "跨界发现"
+        }
+      ]
     }
   ],
   "sites": [
@@ -3351,9 +3381,9 @@
       "description": "英文维基百科随机页面——全球最大的人类知识库，每次刷新都是一次知识碰撞。灵感板块的标杆站点。",
       "type": "official",
       "weight": 0,
-      "primarySection": "inspiration",
+      "primarySection": "encyclopedia-random",
       "sections": [
-        "inspiration"
+        "encyclopedia-random"
       ],
       "capabilities": [],
       "tags": [
@@ -3390,9 +3420,9 @@
       "description": "中文维基百科随机页面——全球最大中文知识库，覆盖古今中外。母语可达的深度知识随机碰撞。",
       "type": "official",
       "weight": 0,
-      "primarySection": "inspiration",
+      "primarySection": "encyclopedia-random",
       "sections": [
-        "inspiration"
+        "encyclopedia-random"
       ],
       "capabilities": [],
       "tags": [
@@ -3421,9 +3451,9 @@
       "description": "维基数据随机查询——结构化知识图谱，以数据形式展示万物关联。灵感来自数据的意外连接。",
       "type": "official",
       "weight": 0,
-      "primarySection": "inspiration",
+      "primarySection": "encyclopedia-random",
       "sections": [
-        "inspiration"
+        "encyclopedia-random"
       ],
       "capabilities": [],
       "tags": [
@@ -3454,9 +3484,9 @@
       "description": "维基共享资源随机浏览——数百万免费使用的图片、音频、视频文件，万物视觉记录。",
       "type": "official",
       "weight": 0,
-      "primarySection": "inspiration",
+      "primarySection": "encyclopedia-random",
       "sections": [
-        "inspiration"
+        "encyclopedia-random"
       ],
       "capabilities": [],
       "tags": [
@@ -3487,9 +3517,9 @@
       "description": "维基语录随机——古今中外名言警句，一句话可能触发一个创意。",
       "type": "official",
       "weight": 0,
-      "primarySection": "inspiration",
+      "primarySection": "encyclopedia-random",
       "sections": [
-        "inspiration"
+        "encyclopedia-random"
       ],
       "capabilities": [],
       "tags": [
@@ -3520,9 +3550,9 @@
       "description": "全球奇异目的地指南——从废弃游乐场到地下墓穴，发现世界上被遗忘的角落。",
       "type": "official",
       "weight": 0,
-      "primarySection": "inspiration",
+      "primarySection": "serendipity",
       "sections": [
-        "inspiration"
+        "serendipity"
       ],
       "capabilities": [],
       "tags": [
@@ -3549,9 +3579,9 @@
       "description": "互联网档案馆随机资源——数字时代的亚历山大图书馆，从经典电影到古老软件的随机漫游。",
       "type": "official",
       "weight": 0,
-      "primarySection": "inspiration",
+      "primarySection": "serendipity",
       "sections": [
-        "inspiration"
+        "serendipity"
       ],
       "capabilities": [],
       "tags": [
@@ -3578,9 +3608,9 @@
       "description": "随机街景探索——随机跳转到全球任一角落的Google街景。下一秒你可能在冰岛、撒哈拉或东京。",
       "type": "official",
       "weight": 0,
-      "primarySection": "inspiration",
+      "primarySection": "serendipity",
       "sections": [
-        "inspiration"
+        "serendipity"
       ],
       "capabilities": [],
       "tags": [
@@ -3607,9 +3637,9 @@
       "description": "古登堡计划随机书——7万+免费电子书，随机翻开一本经典，可能是文学、科学或哲学。",
       "type": "official",
       "weight": 0,
-      "primarySection": "inspiration",
+      "primarySection": "serendipity",
       "sections": [
-        "inspiration"
+        "serendipity"
       ],
       "capabilities": [],
       "tags": [
@@ -3636,9 +3666,9 @@
       "description": "深度思想长文平台——哲学、科学、艺术、社会的跨学科深度文章，触发思维碰撞。",
       "type": "official",
       "weight": 0,
-      "primarySection": "inspiration",
+      "primarySection": "deep-ideas",
       "sections": [
-        "inspiration"
+        "deep-ideas"
       ],
       "capabilities": [],
       "tags": [
@@ -3665,9 +3695,9 @@
       "description": "前沿科学深度报道——用最清晰的语言解释物理学、数学、生物学的最新突破。",
       "type": "official",
       "weight": 0,
-      "primarySection": "inspiration",
+      "primarySection": "deep-ideas",
       "sections": [
-        "inspiration"
+        "deep-ideas"
       ],
       "capabilities": [],
       "tags": [
@@ -3694,9 +3724,9 @@
       "description": "跨学科思想博客——文学、科学、哲学、艺术的交叉地带，原名Brain Pickings。",
       "type": "official",
       "weight": 0,
-      "primarySection": "inspiration",
+      "primarySection": "deep-ideas",
       "sections": [
-        "inspiration"
+        "deep-ideas"
       ],
       "capabilities": [],
       "tags": [
@@ -3723,9 +3753,9 @@
       "description": "全球顶级概念艺术与3D作品集平台。电影、游戏、动画行业的概念艺术家首选展示平台，作品完成度极高。",
       "type": "official",
       "weight": 0,
-      "primarySection": "aesthetics",
+      "primarySection": "comprehensive-gallery",
       "sections": [
-        "aesthetics"
+        "comprehensive-gallery"
       ],
       "capabilities": [],
       "tags": [
@@ -3755,9 +3785,9 @@
       "description": "Adobe旗下综合设计作品集平台。涵盖UI/UX、平面设计、插画、摄影、动态设计等全品类。",
       "type": "official",
       "weight": 0,
-      "primarySection": "aesthetics",
+      "primarySection": "comprehensive-gallery",
       "sections": [
-        "aesthetics"
+        "comprehensive-gallery"
       ],
       "capabilities": [],
       "tags": [
@@ -3787,9 +3817,9 @@
       "description": "全球设计师UI/UX设计作品社区。以界面设计、图标、动效设计见长，作品精致完成度高。",
       "type": "official",
       "weight": 0,
-      "primarySection": "aesthetics",
+      "primarySection": "design-showcase",
       "sections": [
-        "aesthetics"
+        "design-showcase"
       ],
       "capabilities": [],
       "tags": [
@@ -3818,9 +3848,9 @@
       "description": "高质量免费摄影作品库。全球摄影师贡献的高清作品，每张都是可用于商业的成品。",
       "type": "official",
       "weight": 0,
-      "primarySection": "aesthetics",
+      "primarySection": "photography",
       "sections": [
-        "aesthetics"
+        "photography"
       ],
       "capabilities": [],
       "tags": [
@@ -3849,9 +3879,9 @@
       "description": "免费高质量摄影与视频素材库。提供海量商用级高清照片和视频片段。",
       "type": "official",
       "weight": 0,
-      "primarySection": "aesthetics",
+      "primarySection": "photography",
       "sections": [
-        "aesthetics"
+        "photography"
       ],
       "capabilities": [],
       "tags": [
@@ -3880,9 +3910,9 @@
       "description": "全球最佳网页设计评选平台。每日精选优秀网页设计作品，是网页设计师的审美标杆。",
       "type": "official",
       "weight": 0,
-      "primarySection": "aesthetics",
+      "primarySection": "design-showcase",
       "sections": [
-        "aesthetics"
+        "design-showcase"
       ],
       "capabilities": [],
       "tags": [
@@ -3909,9 +3939,9 @@
       "description": "中国最大设计师社区。涵盖平面、UI、插画、摄影、工业设计等全品类，中文设计师首选作品集平台。",
       "type": "official",
       "weight": 0,
-      "primarySection": "aesthetics",
+      "primarySection": "design-showcase",
       "sections": [
-        "aesthetics"
+        "design-showcase"
       ],
       "capabilities": [],
       "tags": [
@@ -3940,9 +3970,9 @@
       "description": "日本最大插画/漫画/小说创作社区。以二次元、日系插画见长，汇聚全球顶级画师作品。",
       "type": "official",
       "weight": 0,
-      "primarySection": "aesthetics",
+      "primarySection": "illustration",
       "sections": [
-        "aesthetics"
+        "illustration"
       ],
       "capabilities": [],
       "tags": [
@@ -3972,9 +4002,9 @@
       "description": "全球顶尖摄影社区。专业摄影师作品展示平台，以风光、人像、街拍摄影见长。",
       "type": "official",
       "weight": 0,
-      "primarySection": "aesthetics",
+      "primarySection": "photography",
       "sections": [
-        "aesthetics"
+        "photography"
       ],
       "capabilities": [],
       "tags": [
@@ -4003,9 +4033,9 @@
       "description": "全球最大艺术创作社区。涵盖数字艺术、传统绘画、摄影、AI艺术等全品类的创作者平台。",
       "type": "official",
       "weight": 0,
-      "primarySection": "aesthetics",
+      "primarySection": "comprehensive-gallery",
       "sections": [
-        "aesthetics"
+        "comprehensive-gallery"
       ],
       "capabilities": [],
       "tags": [
@@ -4035,9 +4065,9 @@
       "description": "数字创意与交互设计颁奖平台。展示全球最具创新性的网页、App和数字体验。",
       "type": "official",
       "weight": 0,
-      "primarySection": "aesthetics",
+      "primarySection": "comprehensive-gallery",
       "sections": [
-        "aesthetics"
+        "comprehensive-gallery"
       ],
       "capabilities": [],
       "tags": [
@@ -4066,9 +4096,9 @@
       "description": "中国原创插画师社区。汇聚国内优秀插画、原画、漫画作品，中文插画师的创作沃土。",
       "type": "official",
       "weight": 0,
-      "primarySection": "aesthetics",
+      "primarySection": "illustration",
       "sections": [
-        "aesthetics"
+        "illustration"
       ],
       "capabilities": [],
       "tags": [
