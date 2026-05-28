@@ -878,14 +878,12 @@
       ],
       "relations": {
         "products": [
-          "aurora",
           "grok-api"
         ],
         "upstream": [
           "x-twitter"
         ],
         "downstream": [
-          "aurora",
           "grok-api"
         ],
         "alternatives": [
@@ -2004,7 +2002,6 @@
         "downstream": [],
         "alternatives": [
           "imagen",
-          "aurora",
           "jimeng",
           "claude-design"
         ],
@@ -2106,7 +2103,6 @@
         "downstream": [],
         "alternatives": [
           "imagen",
-          "aurora",
           "midjourney",
           "leonardo-ai"
         ],
@@ -2141,7 +2137,6 @@
         "alternatives": [
           "midjourney",
           "imagen",
-          "aurora",
           "ideogram"
         ],
         "complements": []
@@ -2673,13 +2668,11 @@
       "relations": {
         "products": [
           "kimi-api",
-          "kimi-code",
           "kimi-audio"
         ],
         "upstream": [],
         "downstream": [
           "kimi-api",
-          "kimi-code",
           "kimi-audio"
         ],
         "alternatives": [
@@ -2993,8 +2986,7 @@
         "alternatives": [
           "cursor",
           "claude-code",
-          "qwen-code",
-          "kimi-code"
+          "qwen-code"
         ],
         "complements": [
           "hunyuan"
