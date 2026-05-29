@@ -6439,11 +6439,14 @@
         });
       }
 
-      // 进入工具箱按钮 → 关闭封面，露出个人简介
+      // 进入工具箱按钮 → 关闭封面并直接跳到工具箱
       const heroScrollBtn = document.getElementById("heroScrollBtn");
       if (heroScrollBtn) {
         heroScrollBtn.addEventListener("click", () => {
-          dismissHero();
+          dismissHero({ instant: true });
+          window.setTimeout(() => {
+            document.getElementById("toolbox")?.scrollIntoView({ behavior: "smooth", block: "start" });
+          }, 100);
         });
       }
 
