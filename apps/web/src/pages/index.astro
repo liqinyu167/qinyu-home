@@ -4677,14 +4677,13 @@
         transform: translateX(calc(-1 * var(--sidebar-w))) !important;
       }
     }
-  /* ===== 个人简介（工具箱内子页面，与模型大比拼同级） ===== */
+  /* ===== 个人简介（工具箱常驻顶部板块） ===== */
 .personal-section {
   position: relative;
   width: 100%;
-  padding: 3rem 2rem;
+  padding: 2.5rem 2rem;
   background: linear-gradient(180deg, var(--bg-void) 0%, #1a1535 50%, var(--bg-void) 100%);
   overflow: hidden;
-  border-bottom: 1px solid var(--border-ink);
 }
 .personal-bg-particles {
   position: absolute;
@@ -4804,9 +4803,6 @@
   color: var(--ink-muted);
   line-height: 1.6;
   margin: 0;
-}
-.personal-section[hidden] {
-  display: none !important;
 }
 </style>
 </head>
@@ -4970,6 +4966,41 @@
   </div>
 
   <main class="main" id="main">
+    <!-- 个人简介（工具箱常驻顶部板块，打开工具箱即见） -->
+    <section class="personal-section" id="personalSection" aria-label="白刀的个人简介">
+      <div class="personal-bg-particles"></div>
+      <div class="personal-container">
+        <div class="personal-avatar">
+          <span class="avatar-kanji">白</span>
+        </div>
+        <h1 class="personal-name">白刀</h1>
+        <p class="personal-tagline">好奇心是唯一的指南针</p>
+        <div class="personal-divider">
+          <span class="divider-dot">◇</span>
+        </div>
+        <p class="personal-bio">
+          把 AI 工具链当乐高玩的全栈选手。<br>
+          从模型部署到前端像素，从 API 中间件到静态站点，
+          相信好工具能撬动好创意。
+        </p>
+        <div class="personal-links">
+          <a class="personal-link-btn" href="https://github.com/liqinyu167" target="_blank" rel="noopener">
+            <span class="link-icon">◆</span>
+            <span>GitHub</span>
+          </a>
+          <a class="personal-link-btn" href="https://curiosity.best" target="_blank" rel="noopener">
+            <span class="link-icon">◇</span>
+            <span>curiosity.best</span>
+          </a>
+        </div>
+        <div class="personal-project">
+          <span class="project-badge">答辩项目</span>
+          <h2 class="project-title">NovelSmith</h2>
+          <p class="project-desc">AI 小说生产流水线编辑器 — 把 18 Agent 流程做成可视化节点编辑器</p>
+        </div>
+      </div>
+    </section>
+
     <section class="filter-bar" aria-label="当前筛选">
       <div class="breadcrumb">BAIDAO AIGC TOOLBOX / <span class="active-filter" id="activeFilter">全部</span></div>
       <div class="result-count" id="resultCount">0 SITES</div>
@@ -5111,41 +5142,6 @@
       </div>
     </section>
   </main>
-
-  <!-- 个人介绍（类模型大比拼的子页面，通过侧栏切换） -->
-  <section class="personal-section" id="personalSection" hidden aria-label="白刀的个人简介">
-    <div class="personal-bg-particles"></div>
-    <div class="personal-container">
-      <div class="personal-avatar">
-        <span class="avatar-kanji">白</span>
-      </div>
-      <h1 class="personal-name">白刀</h1>
-      <p class="personal-tagline">好奇心是唯一的指南针</p>
-      <div class="personal-divider">
-        <span class="divider-dot">◇</span>
-      </div>
-      <p class="personal-bio">
-        把 AI 工具链当乐高玩的全栈选手。<br>
-        从模型部署到前端像素，从 API 中间件到静态站点，
-        相信好工具能撬动好创意。
-      </p>
-      <div class="personal-links">
-        <a class="personal-link-btn" href="https://github.com/liqinyu167" target="_blank" rel="noopener">
-          <span class="link-icon">◆</span>
-          <span>GitHub</span>
-        </a>
-        <a class="personal-link-btn" href="https://curiosity.best" target="_blank" rel="noopener">
-          <span class="link-icon">◇</span>
-          <span>curiosity.best</span>
-        </a>
-      </div>
-      <div class="personal-project">
-        <span class="project-badge">答辩项目</span>
-        <h2 class="project-title">NovelSmith</h2>
-        <p class="project-desc">AI 小说生产流水线编辑器 — 把 18 Agent 流程做成可视化节点编辑器</p>
-      </div>
-    </div>
-  </section>
   </section>
 
   <dialog class="site-dialog" id="siteDialog" aria-labelledby="siteDialogTitle">
@@ -5187,7 +5183,7 @@
       favoritesOnly: false,
       expanded: new Set(["tools", "aesthetics", "inspiration"]),
       favorites: new Set(JSON.parse(localStorage.getItem("manga_nav_favorites") || "[]")),
-      activeView: "website-index", // "website-index" | "model-arena" | "personal"
+      activeView: "website-index", // "website-index" | "model-arena"
       activeModelCategory: "llm",   // "llm" | "text-to-image" | "image-editing" | "text-to-video" | "image-to-video"
       xAxisMode: "price",           // "price" | "date"
       activeModelId: null,          // currently open model details popover
@@ -5236,7 +5232,6 @@
       gameClose: document.getElementById("gameClose"),
       gameFrame: document.getElementById("gameFrame"),
       modelArenaSection: document.getElementById("modelArenaSection"),
-      personalSection: document.getElementById("personalSection"),
       chartPlotArea: document.getElementById("chartPlotArea"),
       chartScrollbarContainer: document.getElementById("chartScrollbarContainer"),
       chartScrollbarThumb: document.getElementById("chartScrollbarThumb"),
@@ -6215,7 +6210,6 @@
         els.hotStrip.style.display = "none";
         els.modelArenaSection.hidden = false;
         els.modelArenaSection.style.display = "flex";
-        els.personalSection.hidden = true;
 
         renderModelArena();
 
@@ -6238,23 +6232,6 @@
 
         const activeModelsCount = (state.models || []).filter(m => m.category === state.activeModelCategory).length;
         els.resultCount.textContent = `${activeModelsCount} MODELS`;
-      } else if (state.activeView === "personal") {
-        // 个人介绍视图
-        els.grid.style.display = "none";
-        els.hotStrip.style.display = "none";
-        els.modelArenaSection.hidden = true;
-        els.modelArenaSection.style.display = "none";
-        els.personalSection.hidden = false;
-
-        document.querySelectorAll(".model-category-btn").forEach((btn) => {
-          btn.classList.remove("active");
-        });
-
-        els.activeFilter.textContent = "个人简介";
-        els.resultCount.textContent = "BAIDAO";
-        els.clear.classList.toggle("is-visible", Boolean(state.search));
-        els.favoritesButton.classList.remove("is-active");
-        els.sideFavorites.classList.remove("is-active");
       } else {
         // 网站列表视图（默认）
         if (els.websitesToggle && els.websitesCollection) {
@@ -6266,7 +6243,6 @@
         els.hotStrip.style.display = "";
         els.modelArenaSection.hidden = true;
         els.modelArenaSection.style.display = "none";
-        els.personalSection.hidden = true;
         els.modelPopover.hidden = true;
 
         const sites = getFilteredSites();
@@ -7064,12 +7040,18 @@
         if (event.target === els.gameDialog) closeGameWindow();
       });
 
-      // 个人介绍 → 切换视图（跟模型大比拼逻辑一致）
+      // 个人介绍 → 滚动到常驻顶部板块
       const personalBtn = document.getElementById("personalIntroBtn");
       if (personalBtn) {
         personalBtn.addEventListener("click", () => {
-          state.activeView = "personal";
-          render();
+          const section = document.getElementById("personalSection");
+          if (section) {
+            section.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+          if (!document.body.classList.contains("toolbox-open")) {
+            document.body.classList.add("toolbox-open");
+            document.querySelector(".hero")?.setAttribute("aria-hidden", "true");
+          }
           closeMobileSidebar();
         });
       }
