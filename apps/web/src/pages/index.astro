@@ -4677,7 +4677,7 @@
         transform: translateX(calc(-1 * var(--sidebar-w))) !important;
       }
     }
-  /* ===== 个人简介（扁平面板，位于封面与工具箱之间） ===== */
+  /* ===== 个人简介（工具箱内子页面，与模型大比拼同级） ===== */
 .personal-section {
   position: relative;
   width: 100%;
@@ -4805,7 +4805,9 @@
   line-height: 1.6;
   margin: 0;
 }
-/* 始终可见的扁平面板，无切换逻辑 */
+.personal-section[hidden] {
+  display: none !important;
+}
 </style>
 </head>
 <body>
@@ -4821,49 +4823,14 @@
       <p class="hero-kicker">BAIDAO / AIGC TOOLBOX</p>
       <h1 class="hero-title" id="heroTitle">你需要的只有好奇心</h1>
       <p class="hero-subtitle">Curiosity Is All You Need</p>
-      <button class="hero-scroll" id="heroScrollBtn" type="button">
+      <a class="hero-scroll" href="#toolbox">
         <span aria-hidden="true">▾</span>
         <span>进入工具箱</span>
-      </button>
+      </a>
     </div>
 
     <div class="hero-visual" aria-label="AIGC 主视觉">
       <img class="aigc-hero-image" src="assets/cover-aigc.png" alt="AIGC 少女主视觉">
-    </div>
-  </section>
-
-  <!-- 个人简介扁平面板（封面下方可见） -->
-  <section class="personal-section" id="personalSection" aria-label="白刀的个人简介">
-    <div class="personal-bg-particles"></div>
-    <div class="personal-container">
-      <div class="personal-avatar">
-        <span class="avatar-kanji">白</span>
-      </div>
-      <h1 class="personal-name">白刀</h1>
-      <p class="personal-tagline">好奇心是唯一的指南针</p>
-      <div class="personal-divider">
-        <span class="divider-dot">◇</span>
-      </div>
-      <p class="personal-bio">
-        把 AI 工具链当乐高玩的全栈选手。<br>
-        从模型部署到前端像素，从 API 中间件到静态站点，
-        相信好工具能撬动好创意。
-      </p>
-      <div class="personal-links">
-        <a class="personal-link-btn" href="https://github.com/liqinyu167" target="_blank" rel="noopener">
-          <span class="link-icon">◆</span>
-          <span>GitHub</span>
-        </a>
-        <a class="personal-link-btn" href="https://curiosity.best" target="_blank" rel="noopener">
-          <span class="link-icon">◇</span>
-          <span>curiosity.best</span>
-        </a>
-      </div>
-      <div class="personal-project">
-        <span class="project-badge">答辩项目</span>
-        <h2 class="project-title">NovelSmith</h2>
-        <p class="project-desc">AI 小说生产流水线编辑器 — 把 18 Agent 流程做成可视化节点编辑器</p>
-      </div>
     </div>
   </section>
 
@@ -5144,6 +5111,41 @@
       </div>
     </section>
   </main>
+
+  <!-- 个人介绍（类模型大比拼的子页面，通过侧栏切换） -->
+  <section class="personal-section" id="personalSection" hidden aria-label="白刀的个人简介">
+    <div class="personal-bg-particles"></div>
+    <div class="personal-container">
+      <div class="personal-avatar">
+        <span class="avatar-kanji">白</span>
+      </div>
+      <h1 class="personal-name">白刀</h1>
+      <p class="personal-tagline">好奇心是唯一的指南针</p>
+      <div class="personal-divider">
+        <span class="divider-dot">◇</span>
+      </div>
+      <p class="personal-bio">
+        把 AI 工具链当乐高玩的全栈选手。<br>
+        从模型部署到前端像素，从 API 中间件到静态站点，
+        相信好工具能撬动好创意。
+      </p>
+      <div class="personal-links">
+        <a class="personal-link-btn" href="https://github.com/liqinyu167" target="_blank" rel="noopener">
+          <span class="link-icon">◆</span>
+          <span>GitHub</span>
+        </a>
+        <a class="personal-link-btn" href="https://curiosity.best" target="_blank" rel="noopener">
+          <span class="link-icon">◇</span>
+          <span>curiosity.best</span>
+        </a>
+      </div>
+      <div class="personal-project">
+        <span class="project-badge">答辩项目</span>
+        <h2 class="project-title">NovelSmith</h2>
+        <p class="project-desc">AI 小说生产流水线编辑器 — 把 18 Agent 流程做成可视化节点编辑器</p>
+      </div>
+    </div>
+  </section>
   </section>
 
   <dialog class="site-dialog" id="siteDialog" aria-labelledby="siteDialogTitle">
@@ -5185,7 +5187,7 @@
       favoritesOnly: false,
       expanded: new Set(["tools", "aesthetics", "inspiration"]),
       favorites: new Set(JSON.parse(localStorage.getItem("manga_nav_favorites") || "[]")),
-      activeView: "website-index", // "website-index" | "model-arena"
+      activeView: "website-index", // "website-index" | "model-arena" | "personal"
       activeModelCategory: "llm",   // "llm" | "text-to-image" | "image-editing" | "text-to-video" | "image-to-video"
       xAxisMode: "price",           // "price" | "date"
       activeModelId: null,          // currently open model details popover
@@ -5234,6 +5236,7 @@
       gameClose: document.getElementById("gameClose"),
       gameFrame: document.getElementById("gameFrame"),
       modelArenaSection: document.getElementById("modelArenaSection"),
+      personalSection: document.getElementById("personalSection"),
       chartPlotArea: document.getElementById("chartPlotArea"),
       chartScrollbarContainer: document.getElementById("chartScrollbarContainer"),
       chartScrollbarThumb: document.getElementById("chartScrollbarThumb"),
@@ -6212,6 +6215,7 @@
         els.hotStrip.style.display = "none";
         els.modelArenaSection.hidden = false;
         els.modelArenaSection.style.display = "flex";
+        els.personalSection.hidden = true;
 
         renderModelArena();
 
@@ -6234,15 +6238,25 @@
 
         const activeModelsCount = (state.models || []).filter(m => m.category === state.activeModelCategory).length;
         els.resultCount.textContent = `${activeModelsCount} MODELS`;
-        els.clear.classList.toggle("is-visible", Boolean(state.search));
-      } else {
-        // 退出个人模式
-        document.body.classList.remove("personal-active");
-        const ps = document.getElementById("personalSection");
-        if (ps) ps.hidden = true;
-        document.getElementById("toolbox").style.display = "";
-        document.querySelectorAll(".side-link.is-active").forEach(b => b.classList.remove("is-active"));
+      } else if (state.activeView === "personal") {
+        // 个人介绍视图
+        els.grid.style.display = "none";
+        els.hotStrip.style.display = "none";
+        els.modelArenaSection.hidden = true;
+        els.modelArenaSection.style.display = "none";
+        els.personalSection.hidden = false;
 
+        document.querySelectorAll(".model-category-btn").forEach((btn) => {
+          btn.classList.remove("active");
+        });
+
+        els.activeFilter.textContent = "个人简介";
+        els.resultCount.textContent = "BAIDAO";
+        els.clear.classList.toggle("is-visible", Boolean(state.search));
+        els.favoritesButton.classList.remove("is-active");
+        els.sideFavorites.classList.remove("is-active");
+      } else {
+        // 网站列表视图（默认）
         if (els.websitesToggle && els.websitesCollection) {
           els.websitesToggle.setAttribute("aria-expanded", "true");
           els.websitesCollection.hidden = false;
@@ -6252,6 +6266,7 @@
         els.hotStrip.style.display = "";
         els.modelArenaSection.hidden = true;
         els.modelArenaSection.style.display = "none";
+        els.personalSection.hidden = true;
         els.modelPopover.hidden = true;
 
         const sites = getFilteredSites();
@@ -7049,19 +7064,12 @@
         if (event.target === els.gameDialog) closeGameWindow();
       });
 
-      // 个人介绍按钮 → 平滑滚动到简介面板
+      // 个人介绍 → 切换视图（跟模型大比拼逻辑一致）
       const personalBtn = document.getElementById("personalIntroBtn");
       if (personalBtn) {
         personalBtn.addEventListener("click", () => {
-          const section = document.getElementById("personalSection");
-          if (section) {
-            section.scrollIntoView({ behavior: "smooth", block: "start" });
-          }
-          // 如果封面还开着，先关闭
-          if (!document.body.classList.contains("toolbox-open")) {
-            document.body.classList.add("toolbox-open");
-            document.querySelector(".hero")?.setAttribute("aria-hidden", "true");
-          }
+          state.activeView = "personal";
+          render();
           closeMobileSidebar();
         });
       }
