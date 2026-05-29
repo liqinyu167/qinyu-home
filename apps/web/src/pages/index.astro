@@ -4677,14 +4677,11 @@
         transform: translateX(calc(-1 * var(--sidebar-w))) !important;
       }
     }
-  /* ===== 个人主页 ===== */
+  /* ===== 个人简介（扁平面板，位于封面与工具箱之间） ===== */
 .personal-section {
   position: relative;
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 6rem 2rem;
+  width: 100%;
+  padding: 3rem 2rem;
   background: linear-gradient(180deg, var(--bg-void) 0%, #1a1535 50%, var(--bg-void) 100%);
   overflow: hidden;
   border-bottom: 1px solid var(--border-ink);
@@ -4702,6 +4699,7 @@
   position: relative;
   z-index: 1;
   max-width: 640px;
+  margin: 0 auto;
   text-align: center;
 }
 .personal-avatar {
@@ -4807,18 +4805,7 @@
   line-height: 1.6;
   margin: 0;
 }
-.personal-section[hidden] {
-  display: none !important;
-}
-.personal-section:not([hidden]) {
-  display: flex !important;
-}
-body.personal-active .toolbox-section {
-  display: none !important;
-}
-.personal-active .hero-scroll {
-  display: none;
-}
+/* 始终可见的扁平面板，无切换逻辑 */
 </style>
 </head>
 <body>
@@ -4834,10 +4821,10 @@ body.personal-active .toolbox-section {
       <p class="hero-kicker">BAIDAO / AIGC TOOLBOX</p>
       <h1 class="hero-title" id="heroTitle">你需要的只有好奇心</h1>
       <p class="hero-subtitle">Curiosity Is All You Need</p>
-      <a class="hero-scroll" href="#toolbox">
+      <button class="hero-scroll" id="heroScrollBtn" type="button">
         <span aria-hidden="true">▾</span>
         <span>进入工具箱</span>
-      </a>
+      </button>
     </div>
 
     <div class="hero-visual" aria-label="AIGC 主视觉">
@@ -4845,8 +4832,8 @@ body.personal-active .toolbox-section {
     </div>
   </section>
 
-  <!-- 个人主页区域（默认隐藏，点击侧栏"个人介绍"显示） -->
-  <section class="personal-section" id="personalSection" hidden aria-label="白刀的个人主页">
+  <!-- 个人简介扁平面板（封面下方可见） -->
+  <section class="personal-section" id="personalSection" aria-label="白刀的个人简介">
     <div class="personal-bg-particles"></div>
     <div class="personal-container">
       <div class="personal-avatar">
@@ -6452,6 +6439,14 @@ body.personal-active .toolbox-section {
         });
       }
 
+      // 进入工具箱按钮 → 关闭封面，露出个人简介
+      const heroScrollBtn = document.getElementById("heroScrollBtn");
+      if (heroScrollBtn) {
+        heroScrollBtn.addEventListener("click", () => {
+          dismissHero();
+        });
+      }
+
       els.contentShelfToggle.addEventListener("click", () => {
         const isOpen = els.contentShelfToggle.getAttribute("aria-expanded") === "true";
         els.contentShelfToggle.setAttribute("aria-expanded", String(!isOpen));
@@ -7051,17 +7046,19 @@ body.personal-active .toolbox-section {
         if (event.target === els.gameDialog) closeGameWindow();
       });
 
-      // 个人介绍按钮
+      // 个人介绍按钮 → 平滑滚动到简介面板
       const personalBtn = document.getElementById("personalIntroBtn");
       if (personalBtn) {
         personalBtn.addEventListener("click", () => {
-          document.body.classList.add("personal-active");
-          document.getElementById("personalSection").hidden = false;
-          document.getElementById("toolbox").style.display = "none";
-          // 更新侧栏高亮
-          document.querySelectorAll(".side-link.is-active").forEach(b => b.classList.remove("is-active"));
-          personalBtn.classList.add("is-active");
-          window.scrollTo({ top: 0, behavior: "smooth" });
+          const section = document.getElementById("personalSection");
+          if (section) {
+            section.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+          // 如果封面还开着，先关闭
+          if (!document.body.classList.contains("toolbox-open")) {
+            document.body.classList.add("toolbox-open");
+            document.querySelector(".hero")?.setAttribute("aria-hidden", "true");
+          }
           closeMobileSidebar();
         });
       }
