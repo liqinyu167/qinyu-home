@@ -4677,7 +4677,134 @@
         transform: translateX(calc(-1 * var(--sidebar-w))) !important;
       }
     }
-  </style>
+  /* ===== 个人简介（工具箱常驻顶部板块） ===== */
+.personal-section {
+  position: relative;
+  width: 100%;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(180deg, var(--bg-void) 0%, #1a1535 50%, var(--bg-void) 100%);
+  overflow: hidden;
+}
+.personal-bg-particles {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 30%, rgba(192,132,252,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(251,113,133,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(251,191,36,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+.personal-container {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+.personal-avatar {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--ink-accent), var(--ink-coral));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 40px rgba(192,132,252,0.3);
+}
+.avatar-kanji {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 2.5rem;
+  color: var(--bg-void);
+  font-weight: 700;
+}
+.personal-name {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 3rem;
+  color: var(--ink-white);
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.05em;
+}
+.personal-tagline {
+  font-size: 1.1rem;
+  color: var(--ink-accent);
+  margin: 0 0 1.5rem;
+  font-style: italic;
+}
+.personal-divider {
+  margin: 0 auto 1.5rem;
+  width: 3rem;
+  text-align: center;
+}
+.divider-dot {
+  color: var(--ink-gold);
+  font-size: 1.2rem;
+}
+.personal-bio {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--ink-muted);
+  margin: 0 0 2rem;
+}
+.personal-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+.personal-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 999px;
+  background: rgba(192,132,252,0.1);
+  border: 1px solid rgba(192,132,252,0.2);
+  color: var(--ink-white);
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.personal-link-btn:hover {
+  background: rgba(192,132,252,0.2);
+  border-color: var(--ink-accent);
+  box-shadow: 0 0 20px rgba(192,132,252,0.2);
+  transform: translateY(-2px);
+}
+.link-icon {
+  color: var(--ink-accent);
+}
+.personal-project {
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: rgba(192,132,252,0.05);
+  border: 1px solid rgba(192,132,252,0.12);
+}
+.project-badge {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(251,191,36,0.15);
+  color: var(--ink-gold);
+  font-size: 0.8rem;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.project-title {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 1.8rem;
+  color: var(--ink-white);
+  margin: 0 0 0.5rem;
+}
+.project-desc {
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+</style>
 </head>
 <body>
   <script>
@@ -4744,6 +4871,32 @@
         <span class="side-meta">INDEX / PANEL / VOID</span>
       </div>
 
+      <!-- 内容收纳 — 移到最上面 -->
+      <div class="side-collection is-muted" style="order:-3">
+        <button class="collection-toggle" id="contentShelfToggle" type="button" aria-expanded="true" aria-controls="contentShelfCollection">
+          <span aria-hidden="true">◇</span>
+          <span class="collection-title">
+            <strong>内容收纳</strong>
+            <span>Content Shelf</span>
+          </span>
+          <span class="collection-twist" aria-hidden="true">▸</span>
+        </button>
+        <div class="side-collection-body" id="contentShelfCollection">
+          <button class="side-link" type="button" id="personalIntroBtn">
+            <span aria-hidden="true">◆</span><span>个人介绍</span>
+          </button>
+          <button class="side-link" type="button" disabled>
+            <span aria-hidden="true">◆</span><span>笔记</span>
+          </button>
+          <button class="side-link" type="button" disabled>
+            <span aria-hidden="true">◆</span><span>模板</span>
+          </button>
+          <button class="side-link" type="button" disabled>
+            <span aria-hidden="true">◆</span><span>素材</span>
+          </button>
+        </div>
+      </div>
+
       <div class="side-collection">
         <button class="collection-toggle" id="modelsToggle" type="button" aria-expanded="false" aria-controls="modelsCollection">
           <span aria-hidden="true">◎</span>
@@ -4786,27 +4939,7 @@
         </div>
       </div>
 
-      <div class="side-collection is-muted">
-        <button class="collection-toggle" id="contentShelfToggle" type="button" aria-expanded="false" aria-controls="contentShelfCollection">
-          <span aria-hidden="true">◇</span>
-          <span class="collection-title">
-            <strong>内容收纳</strong>
-            <span>Content Shelf</span>
-          </span>
-          <span class="collection-twist" aria-hidden="true">▸</span>
-        </button>
-        <div class="side-collection-body" id="contentShelfCollection" hidden>
-          <button class="side-link" type="button" disabled>
-            <span aria-hidden="true">◆</span><span>笔记</span>
-          </button>
-          <button class="side-link" type="button" disabled>
-            <span aria-hidden="true">◆</span><span>模板</span>
-          </button>
-          <button class="side-link" type="button" disabled>
-            <span aria-hidden="true">◆</span><span>素材</span>
-          </button>
-        </div>
-      </div>
+
 
       <div class="utility-links">
         <p class="section-title">个人入口</p>
@@ -4833,6 +4966,41 @@
   </div>
 
   <main class="main" id="main">
+    <!-- 个人简介（工具箱常驻顶部板块，打开工具箱即见） -->
+    <section class="personal-section" id="personalSection" aria-label="白刀的个人简介">
+      <div class="personal-bg-particles"></div>
+      <div class="personal-container">
+        <div class="personal-avatar">
+          <span class="avatar-kanji">白</span>
+        </div>
+        <h1 class="personal-name">白刀</h1>
+        <p class="personal-tagline">好奇心是唯一的指南针</p>
+        <div class="personal-divider">
+          <span class="divider-dot">◇</span>
+        </div>
+        <p class="personal-bio">
+          把 AI 工具链当乐高玩的全栈选手。<br>
+          从模型部署到前端像素，从 API 中间件到静态站点，
+          相信好工具能撬动好创意。
+        </p>
+        <div class="personal-links">
+          <a class="personal-link-btn" href="https://github.com/liqinyu167" target="_blank" rel="noopener">
+            <span class="link-icon">◆</span>
+            <span>GitHub</span>
+          </a>
+          <a class="personal-link-btn" href="https://curiosity.best" target="_blank" rel="noopener">
+            <span class="link-icon">◇</span>
+            <span>curiosity.best</span>
+          </a>
+        </div>
+        <div class="personal-project">
+          <span class="project-badge">答辩项目</span>
+          <h2 class="project-title">NovelSmith</h2>
+          <p class="project-desc">AI 小说生产流水线编辑器 — 把 18 Agent 流程做成可视化节点编辑器</p>
+        </div>
+      </div>
+    </section>
+
     <section class="filter-bar" aria-label="当前筛选">
       <div class="breadcrumb">BAIDAO AIGC TOOLBOX / <span class="active-filter" id="activeFilter">全部</span></div>
       <div class="result-count" id="resultCount">0 SITES</div>
@@ -5610,7 +5778,7 @@
       });
       if (toBuild.length) {
         els.grid.appendChild(frag);
-        observeFavicons(frag);
+        observeFavicons(els.grid);
       }
     }
 
@@ -6064,8 +6232,8 @@
 
         const activeModelsCount = (state.models || []).filter(m => m.category === state.activeModelCategory).length;
         els.resultCount.textContent = `${activeModelsCount} MODELS`;
-        els.clear.classList.toggle("is-visible", Boolean(state.search));
       } else {
+        // 网站列表视图（默认）
         if (els.websitesToggle && els.websitesCollection) {
           els.websitesToggle.setAttribute("aria-expanded", "true");
           els.websitesCollection.hidden = false;
@@ -6259,6 +6427,17 @@
           if (els.search) els.search.value = "";
           render();
           closeMobileSidebar();
+        });
+      }
+
+      // 进入工具箱按钮 → 关闭封面并直接跳到工具箱
+      const heroScrollBtn = document.getElementById("heroScrollBtn");
+      if (heroScrollBtn) {
+        heroScrollBtn.addEventListener("click", () => {
+          dismissHero({ instant: true });
+          window.setTimeout(() => {
+            document.getElementById("toolbox")?.scrollIntoView({ behavior: "smooth", block: "start" });
+          }, 100);
         });
       }
 
@@ -6860,6 +7039,22 @@
       els.gameDialog.addEventListener("click", (event) => {
         if (event.target === els.gameDialog) closeGameWindow();
       });
+
+      // 个人介绍 → 滚动到常驻顶部板块
+      const personalBtn = document.getElementById("personalIntroBtn");
+      if (personalBtn) {
+        personalBtn.addEventListener("click", () => {
+          const section = document.getElementById("personalSection");
+          if (section) {
+            section.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+          if (!document.body.classList.contains("toolbox-open")) {
+            document.body.classList.add("toolbox-open");
+            document.querySelector(".hero")?.setAttribute("aria-hidden", "true");
+          }
+          closeMobileSidebar();
+        });
+      }
 
       els.randomButton.addEventListener("click", () => {
         let cards = [...document.querySelectorAll(".site-card")];
