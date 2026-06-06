@@ -3387,15 +3387,19 @@
       ],
       "relations": {
         "products": [
+          "wikipedia-zh",
           "wikidata",
           "wikimedia-commons",
-          "wikiquote"
+          "wikiquote",
+          "wiktionary-en"
         ],
         "upstream": [],
         "downstream": [
+          "wikipedia-zh",
           "wikidata",
           "wikimedia-commons",
-          "wikiquote"
+          "wikiquote",
+          "wiktionary-en"
         ],
         "alternatives": [],
         "complements": [
@@ -3411,7 +3415,7 @@
       "url": "https://zh.wikipedia.org/wiki/Special:Random",
       "description": "中文维基百科随机页面——全球最大中文知识库，覆盖古今中外。母语可达的深度知识随机碰撞。",
       "type": "official",
-      "weight": 0,
+      "weight": 10,
       "primarySection": "encyclopedia-random",
       "sections": [
         "encyclopedia-random"
@@ -3426,11 +3430,16 @@
       ],
       "relations": {
         "products": [],
-        "upstream": [],
-        "downstream": [],
-        "alternatives": [],
-        "complements": [
+        "upstream": [
           "wikipedia-en"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "wikipedia-en"
+        ],
+        "complements": [
+          "wikidata",
+          "wiktionary-en"
         ]
       },
       "icon": null,
@@ -3463,7 +3472,8 @@
         "downstream": [],
         "alternatives": [],
         "complements": [
-          "wikipedia-en"
+          "wikipedia-en",
+          "wikipedia-zh"
         ]
       },
       "icon": null,
@@ -3559,7 +3569,10 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [],
-        "complements": []
+        "complements": [
+          "internet-archive",
+          "mapcrunch"
+        ]
       },
       "icon": null,
       "category": "inspiration"
@@ -3567,7 +3580,7 @@
     {
       "id": "internet-archive",
       "name": "Internet Archive",
-      "url": "https://archive.org/details/random",
+      "url": "https://archive.org/details/",
       "description": "互联网档案馆随机资源——数字时代的亚历山大图书馆，从经典电影到古老软件的随机漫游。",
       "type": "official",
       "weight": 0,
@@ -3588,7 +3601,11 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [],
-        "complements": []
+        "complements": [
+          "atlas-obscura",
+          "gutenberg",
+          "mapcrunch"
+        ]
       },
       "icon": null,
       "category": "inspiration"
@@ -3617,7 +3634,9 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [],
-        "complements": []
+        "complements": [
+          "atlas-obscura"
+        ]
       },
       "icon": null,
       "category": "inspiration"
@@ -3646,7 +3665,9 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [],
-        "complements": []
+        "complements": [
+          "internet-archive"
+        ]
       },
       "icon": null,
       "category": "inspiration"
@@ -3675,7 +3696,11 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [],
-        "complements": []
+        "complements": [
+          "marginalian",
+          "quanta-magazine",
+          "pdr"
+        ]
       },
       "icon": null,
       "category": "inspiration"
@@ -3704,7 +3729,11 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [],
-        "complements": []
+        "complements": [
+          "aeon",
+          "marginalian",
+          "nautilus"
+        ]
       },
       "icon": null,
       "category": "inspiration"
@@ -3733,7 +3762,12 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [],
-        "complements": []
+        "complements": [
+          "aeon",
+          "quanta-magazine",
+          "pdr",
+          "longform"
+        ]
       },
       "icon": null,
       "category": "inspiration"
@@ -3763,7 +3797,8 @@
         "downstream": [],
         "alternatives": [
           "behance",
-          "deviantart"
+          "deviantart",
+          "cara"
         ],
         "complements": []
       },
@@ -3794,8 +3829,8 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [
-          "artstation",
-          "dribbble"
+          "dribbble",
+          "artstation"
         ],
         "complements": []
       },
@@ -3826,7 +3861,8 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [
-          "behance"
+          "behance",
+          "awwwards"
         ],
         "complements": []
       },
@@ -3857,9 +3893,12 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [
-          "pexels"
+          "pexels",
+          "500px"
         ],
-        "complements": []
+        "complements": [
+          "magnum"
+        ]
       },
       "icon": null,
       "category": "aesthetics"
@@ -3888,7 +3927,8 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [
-          "unsplash"
+          "unsplash",
+          "500px"
         ],
         "complements": []
       },
@@ -3918,7 +3958,11 @@
         "products": [],
         "upstream": [],
         "downstream": [],
-        "alternatives": [],
+        "alternatives": [
+          "dribbble",
+          "cssda",
+          "fwa"
+        ],
         "complements": []
       },
       "icon": null,
@@ -3948,9 +3992,12 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [
-          "behance"
+          "pixiv",
+          "gracg"
         ],
-        "complements": []
+        "complements": [
+          "lofter"
+        ]
       },
       "icon": null,
       "category": "aesthetics"
@@ -3980,9 +4027,13 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [
-          "deviantart"
+          "deviantart",
+          "gracg",
+          "lofter"
         ],
-        "complements": []
+        "complements": [
+          "zcool"
+        ]
       },
       "icon": null,
       "category": "aesthetics"
@@ -4011,9 +4062,13 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [
-          "unsplash"
+          "unsplash",
+          "pexels",
+          "flickr"
         ],
-        "complements": []
+        "complements": [
+          "magnum"
+        ]
       },
       "icon": null,
       "category": "aesthetics"
@@ -4074,7 +4129,8 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [
-          "awwwards"
+          "awwwards",
+          "cssda"
         ],
         "complements": []
       },
@@ -4105,13 +4161,1183 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [
+          "pixiv",
           "zcool",
+          "lofter"
+        ],
+        "complements": []
+      },
+      "icon": null,
+      "category": "aesthetics"
+    },
+    {
+      "id": "colossal",
+      "name": "Colossal",
+      "url": "https://www.thisiscolossal.com",
+      "description": "全球顶级当代视觉艺术、工艺与设计策展博客，每日更新，作品完成度极高。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "serendipity",
+      "sections": [
+        "serendipity"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "策展",
+        "视觉艺术",
+        "每日更新"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "aeon",
+          "marginalian"
+        ]
+      },
+      "icon": null,
+      "category": "inspiration"
+    },
+    {
+      "id": "siteinspire",
+      "name": "Siteinspire",
+      "url": "https://www.siteinspire.com",
+      "description": "高质量网页设计策展画廊，按风格/类型筛选，设计师灵感库。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "design-showcase",
+      "sections": [
+        "design-showcase"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "网页设计",
+        "策展"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "awwwards",
+          "dribbble"
+        ],
+        "complements": [
+          "fwa",
+          "cssda"
+        ]
+      },
+      "icon": null,
+      "category": "aesthetics"
+    },
+    {
+      "id": "1x",
+      "name": "1x.com",
+      "url": "https://1x.com",
+      "description": "严格策展的全球摄影师作品精选，质量远超一般图库，有中文界面。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "photography",
+      "sections": [
+        "photography"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "中文",
+        "英文",
+        "摄影",
+        "策展"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "unsplash",
+          "500px",
+          "pexels"
+        ],
+        "complements": [
+          "magnum"
+        ]
+      },
+      "icon": null,
+      "category": "aesthetics"
+    },
+    {
+      "id": "its-nice-that",
+      "name": "It's Nice That",
+      "url": "https://www.itsnicethat.com",
+      "description": "每日创意项目与新兴设计师策展，涵盖平面/动画/插画/产品设计。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "design-showcase",
+      "sections": [
+        "design-showcase"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "创意",
+        "策展",
+        "每日更新"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "awwwards",
+          "behance"
+        ],
+        "complements": []
+      },
+      "icon": null,
+      "category": "aesthetics"
+    },
+    {
+      "id": "sspai",
+      "name": "少数派",
+      "url": "https://sspai.com",
+      "description": "中文深度数字生活与效率思考平台，社区创作质量高，知乎/小红书讨论活跃。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "deep-ideas",
+      "sections": [
+        "deep-ideas"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "中文",
+        "深度",
+        "数字生活",
+        "效率"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "marginalian",
+          "quanta-magazine"
+        ]
+      },
+      "icon": null,
+      "category": "inspiration"
+    },
+    {
+      "id": "hyperallergic",
+      "name": "Hyperallergic",
+      "url": "https://hyperallergic.com",
+      "description": "当代艺术批评、新闻与深度文化思考，与 Aeon/Quanta 形成艺术-科学互补。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "deep-ideas",
+      "sections": [
+        "deep-ideas"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "艺术",
+        "批评",
+        "文化",
+        "深度"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "aeon"
+        ],
+        "complements": [
+          "quanta-magazine",
+          "colossal"
+        ]
+      },
+      "icon": null,
+      "category": "inspiration"
+    },
+    {
+      "id": "wiktionary-en",
+      "name": "Wiktionary (EN)",
+      "url": "https://en.wiktionary.org/wiki/Special:Random",
+      "description": "词源学随机发现，从单词词根到文化演变的跨语言知识碰撞，Wikipedia 家族自然延伸。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "encyclopedia-random",
+      "sections": [
+        "encyclopedia-random"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "百科",
+        "词源",
+        "随机",
+        "知识"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "wikipedia-en"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "wikidata"
+        ],
+        "complements": [
+          "wikipedia-en",
+          "wikipedia-zh"
+        ]
+      },
+      "icon": null,
+      "category": "inspiration"
+    },
+    {
+      "id": "ggac",
+      "name": "GGAC",
+      "url": "https://www.ggac.com",
+      "description": "全球游戏美术概念大赛与作品社区，中国最活跃的游戏美术创作者平台，3A级品质作品展示。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "illustration",
+      "sections": [
+        "illustration"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "中文",
+        "英文",
+        "游戏美术",
+        "概念艺术",
+        "作品集"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "pixiv",
+          "gracg"
+        ],
+        "complements": []
+      },
+      "icon": null,
+      "category": "aesthetics"
+    },
+    {
+      "id": "magnum",
+      "name": "Magnum Photos",
+      "url": "https://www.magnumphotos.com",
+      "description": "马格南图片社，全球最权威的纪实摄影机构，收录近一个世纪的殿堂级摄影作品与专题报道。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "photography",
+      "sections": [
+        "photography"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "摄影",
+        "纪实",
+        "马格南"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "unsplash",
+          "500px",
+          "flickr"
+        ]
+      },
+      "icon": null,
+      "category": "aesthetics"
+    },
+    {
+      "id": "cargo",
+      "name": "Cargo",
+      "url": "https://cargo.site",
+      "description": "创意作品集建站平台，被大量设计师、艺术家和创意工作室使用，站点设计感极强，是发现独立创作的优质社区。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "comprehensive-gallery",
+      "sections": [
+        "comprehensive-gallery"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "作品集",
+        "创意",
+        "建站"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "behance"
+        ],
+        "complements": []
+      },
+      "icon": null,
+      "category": "aesthetics"
+    },
+    {
+      "id": "cssda",
+      "name": "CSS Design Awards",
+      "url": "https://www.cssdesignawards.com",
+      "description": "全球网页设计奖项与展示平台，每日评选最佳网页设计作品，是了解前沿 Web 设计趋势的窗口。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "design-showcase",
+      "sections": [
+        "design-showcase"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "网页设计",
+        "奖项",
+        "策展"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "awwwards",
+          "dribbble"
+        ],
+        "complements": [
+          "fwa"
+        ]
+      },
+      "icon": null,
+      "category": "aesthetics"
+    },
+    {
+      "id": "pdr",
+      "name": "Public Domain Review",
+      "url": "https://publicdomainreview.org",
+      "description": "公共领域艺术、文学与知识策展，从古籍插画到科学手稿，展现人类文明的视觉遗产与思想脉络。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "deep-ideas",
+      "sections": [
+        "deep-ideas"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "公共领域",
+        "艺术",
+        "文化",
+        "历史"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "aeon",
+          "marginalian"
+        ]
+      },
+      "icon": null,
+      "category": "inspiration"
+    },
+    {
+      "id": "longform",
+      "name": "Longform",
+      "url": "https://longform.org",
+      "description": "精选长篇非虚构文章推荐平台，涵盖新闻特写、报告文学与深度叙事，是深度阅读爱好者的宝藏。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "deep-ideas",
+      "sections": [
+        "deep-ideas"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "长篇",
+        "非虚构",
+        "深度阅读"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "marginalian"
+        ]
+      },
+      "icon": null,
+      "category": "inspiration"
+    },
+    {
+      "id": "nautilus",
+      "name": "Nautilus",
+      "url": "https://nautil.us",
+      "description": "将科学、哲学与文化交织在一起的深度杂志，以优美叙事传递复杂思想，视觉与内容俱佳。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "deep-ideas",
+      "sections": [
+        "deep-ideas"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "科学",
+        "哲学",
+        "文化",
+        "深度"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "aeon",
+          "quanta-magazine"
+        ],
+        "complements": [
+          "pdr"
+        ]
+      },
+      "icon": null,
+      "category": "inspiration"
+    },
+    {
+      "id": "stumblicious",
+      "name": "Stumblicious",
+      "url": "https://stumblicious.com",
+      "description": "精选互联网上最有趣、最奇特、最美妙的页面，每次刷新都是随机的知识之旅。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "serendipity",
+      "sections": [
+        "serendipity"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "随机",
+        "发现",
+        "策展"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "cloudhiker",
+          "useless-web"
+        ],
+        "complements": []
+      },
+      "icon": null,
+      "category": "inspiration"
+    },
+    {
+      "id": "civitai",
+      "name": "Civitai",
+      "url": "https://civitai.com",
+      "description": "AI生成艺术画廊与模型社区，汇聚海量Stable Diffusion模型及作品，中文创作者社区活跃。含NSFW内容，请注意甄别。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "comprehensive-gallery",
+      "sections": [
+        "comprehensive-gallery"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "中文",
+        "英文",
+        "AI艺术",
+        "模型社区"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "artstation"
+        ],
+        "complements": []
+      },
+      "icon": null,
+      "category": "aesthetics",
+      "nsfw": true
+    },
+    {
+      "id": "flickr",
+      "name": "Flickr",
+      "url": "https://www.flickr.com",
+      "description": "全球最老牌摄影社区，汇聚专业摄影师与爱好者的高质量摄影作品库，以CC授权生态闻名。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "photography",
+      "sections": [
+        "photography"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "摄影",
+        "社区"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "500px"
+        ],
+        "complements": [
+          "magnum"
+        ]
+      },
+      "icon": null,
+      "category": "aesthetics"
+    },
+    {
+      "id": "vsco",
+      "name": "VSCO",
+      "url": "https://vsco.co",
+      "description": "摄影编辑与社区平台，以胶片风格滤镜闻名，汇聚大量年轻创作者的风格化摄影作品。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "photography",
+      "sections": [
+        "photography"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "摄影",
+        "滤镜",
+        "社区"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "flickr"
+        ],
+        "complements": []
+      },
+      "icon": null,
+      "category": "aesthetics"
+    },
+    {
+      "id": "lofter",
+      "name": "Lofter 乐乎",
+      "url": "https://www.lofter.com",
+      "description": "网易轻博客社区，国内插画师、摄影师、设计师集中创作平台，中文创作生态活跃。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "illustration",
+      "sections": [
+        "illustration"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "中文",
+        "插画",
+        "摄影",
+        "轻博客"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "gracg",
+          "pixiv"
+        ],
+        "complements": [
+          "zcool"
+        ]
+      },
+      "icon": null,
+      "category": "aesthetics"
+    },
+    {
+      "id": "codepen",
+      "name": "CodePen",
+      "url": "https://codepen.io",
+      "description": "前端创意交互展示平台，CSS/JS动画与创意编码，开发者与设计师的游乐场。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "serendipity",
+      "sections": [
+        "serendipity"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "前端",
+        "创意",
+        "代码",
+        "交互"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "colorhunt"
+        ]
+      },
+      "icon": null,
+      "category": "inspiration"
+    },
+    {
+      "id": "colorhunt",
+      "name": "ColorHunt",
+      "url": "https://colorhunt.co",
+      "description": "每日配色方案灵感库，四色配色组合，设计师常用的快速配色参考。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "serendipity",
+      "sections": [
+        "serendipity"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "配色",
+        "设计",
+        "灵感"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "codepen"
+        ]
+      },
+      "icon": null,
+      "category": "inspiration"
+    },
+    {
+      "id": "farnam-street",
+      "name": "Farnam Street",
+      "url": "https://fs.blog",
+      "description": "思维模型与决策科学博客，深度思想内容，帮助读者更好地思考与学习。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "deep-ideas",
+      "sections": [
+        "deep-ideas"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "思维模型",
+        "决策",
+        "深度"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "marginalian",
+          "aeon"
+        ]
+      },
+      "icon": null,
+      "category": "inspiration"
+    },
+    {
+      "id": "cara",
+      "name": "Cara",
+      "url": "https://cara.app",
+      "description": "艺术家作品集与社交平台，AI 艺术社区活跃，界面极简，以反 AI 爬取态度在创作者中引发讨论。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "illustration",
+      "sections": [
+        "illustration"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "艺术家",
+        "作品集",
+        "插画",
+        "社区"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "artstation",
           "pixiv"
         ],
         "complements": []
       },
       "icon": null,
       "category": "aesthetics"
+    },
+    {
+      "id": "huaban",
+      "name": "花瓣网",
+      "url": "https://huaban.com",
+      "description": "中文视觉灵感采集平台，设计师与创意工作者收集配色、UI、插画、摄影灵感的首选工具。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "serendipity",
+      "sections": [
+        "serendipity"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "中文",
+        "灵感",
+        "采集",
+        "设计",
+        "视觉"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "arena"
+        ]
+      },
+      "icon": null,
+      "category": "inspiration"
+    },
+    {
+      "id": "arena",
+      "name": "Are.na",
+      "url": "https://www.are.na",
+      "description": "知识块收藏与组织平台，以频道（channel）形式整理灵感、图像、链接与想法，类比的 Pinterest。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "serendipity",
+      "sections": [
+        "serendipity"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "知识",
+        "收藏",
+        "灵感",
+        "组织"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "huaban"
+        ]
+      },
+      "icon": null,
+      "category": "inspiration"
+    },
+    {
+      "id": "cloudhiker",
+      "name": "Cloudhiker",
+      "url": "https://cloudhiker.net",
+      "description": "随机发现互联网上最有趣的网站，一次点击一次冒险，StumbleUpon 的精神续作。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "serendipity",
+      "sections": [
+        "serendipity"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "随机",
+        "发现",
+        "有趣"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "stumblicious",
+          "useless-web"
+        ],
+        "complements": []
+      },
+      "icon": null,
+      "category": "inspiration"
+    },
+    {
+      "id": "dandad",
+      "name": "D&AD",
+      "url": "https://www.dandad.org",
+      "description": "全球顶级设计奖项，涵盖平面、广告、数字、产品设计等领域，年鉴级作品展示，中国设计师圈讨论度极高。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "design-showcase",
+      "sections": [
+        "design-showcase"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "设计",
+        "奖项",
+        "策展",
+        "广告"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "awwwards",
+          "cssda"
+        ],
+        "complements": []
+      },
+      "icon": null,
+      "category": "aesthetics"
+    },
+    {
+      "id": "abduzeedo",
+      "name": "Abduzeedo",
+      "url": "https://abduzeedo.com",
+      "description": "2006 年至今的老牌设计灵感博客，涵盖平面设计、UI/UX、插画、摄影，设计师每天刷的灵感源。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "serendipity",
+      "sections": [
+        "serendipity"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "设计",
+        "灵感",
+        "博客",
+        "UI"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "siteinspire"
+        ],
+        "complements": []
+      },
+      "icon": null,
+      "category": "inspiration"
+    },
+    {
+      "id": "art-blocks",
+      "name": "Art Blocks",
+      "url": "https://www.artblocks.io",
+      "description": "以太坊生成式艺术策展平台，收录全球顶尖算法艺术家的链上作品，填补数字/生成艺术子领域空白。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "comprehensive-gallery",
+      "sections": [
+        "comprehensive-gallery"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "生成艺术",
+        "NFT",
+        "策展",
+        "区块链"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "civitai"
+        ],
+        "complements": []
+      },
+      "icon": null,
+      "category": "aesthetics"
+    },
+    {
+      "id": "product-hunt",
+      "name": "Product Hunt",
+      "url": "https://www.producthunt.com",
+      "description": "每日新品发布与发现平台，科技圈每天早上刷的产品雷达，中文社区讨论度极高。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "serendipity",
+      "sections": [
+        "serendipity"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "产品",
+        "发现",
+        "每日",
+        "科技"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      },
+      "icon": null,
+      "category": "inspiration"
+    },
+    {
+      "id": "useless-web",
+      "name": "The Useless Web",
+      "url": "https://theuselessweb.com",
+      "description": "一键跳转到随机有趣/奇怪网站的按钮，每次点开都是一次惊喜，StumbleUpon 精神的最佳继承者。",
+      "type": "official",
+      "weight": 0,
+      "primarySection": "serendipity",
+      "sections": [
+        "serendipity"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "随机",
+        "有趣",
+        "发现"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "stumblicious",
+          "cloudhiker"
+        ],
+        "complements": []
+      },
+      "icon": null,
+      "category": "inspiration"
+    },
+    {
+      "id": "uisdc",
+      "name": "优设网 UISDC",
+      "url": "https://www.uisdc.com",
+      "description": "国内顶尖设计师学习社区，教程+作品展示，与站酷互补",
+      "type": "inspiration",
+      "weight": 0,
+      "primarySection": "",
+      "sections": [],
+      "capabilities": [],
+      "tags": [],
+      "relations": {
+        "alternatives": [
+          "zcool"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "baidu-baike",
+      "name": "百度百科",
+      "url": "https://baike.baidu.com/random",
+      "description": "中文原生百科随机页面——全球最大中文百科，覆盖中文互联网沉淀的海量知识。母语可达的深度知识随机碰撞，与维基族系互补。",
+      "type": "official",
+      "weight": 9,
+      "primarySection": "encyclopedia-random",
+      "sections": [
+        "encyclopedia-random"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "中文",
+        "百科",
+        "随机",
+        "知识"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "wikipedia-zh"
+        ],
+        "complements": [
+          "wikidata",
+          "wikipedia-en"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "radio-garden",
+      "name": "Radio Garden",
+      "url": "https://radio.garden/",
+      "description": "全球电台地图——旋转地球即可收听世界各地实时广播。用声音打开任意门，纯粹的跨界发现体验，从地理空间坠入文化现场。",
+      "type": "official",
+      "weight": 9,
+      "primarySection": "serendipity",
+      "sections": [
+        "serendipity"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "电台",
+        "地图",
+        "随机",
+        "发现",
+        "声音"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "mapcrunch"
+        ],
+        "complements": [
+          "atlas-obscura",
+          "cloudhiker"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "window-swap",
+      "name": "Window Swap",
+      "url": "https://window-swap.com/",
+      "description": "随机打开世界某处窗外风景——最极致的0→1灵感体验。无需目的，只看窗外此刻正在发生的世界。冥想式视觉漫游，与地图探索类站点的理性发现形成互补。",
+      "type": "official",
+      "weight": 8,
+      "primarySection": "serendipity",
+      "sections": [
+        "serendipity"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "随机",
+        "发现",
+        "风景",
+        "冥想",
+        "视觉"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "mapcrunch",
+          "useless-web"
+        ],
+        "complements": [
+          "radio-garden",
+          "atlas-obscura"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "zhihu-daily",
+      "name": "知乎日报",
+      "url": "https://daily.zhihu.com/",
+      "description": "知乎每日深度长文精选——编辑筛选的优质回答与专栏，从科技人文到社会万象。与少数派互补：少数派偏效率工具，知乎日报偏思想发现。",
+      "type": "official",
+      "weight": 8,
+      "primarySection": "deep-ideas",
+      "sections": [
+        "deep-ideas"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "中文",
+        "深度",
+        "每日",
+        "发现",
+        "思想"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "sspai"
+        ],
+        "complements": [
+          "aeon",
+          "farnam-street"
+        ]
+      },
+      "icon": null
     }
   ]
 }

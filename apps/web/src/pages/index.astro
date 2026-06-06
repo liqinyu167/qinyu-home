@@ -4696,14 +4696,13 @@
     }
   /* ===== 个人简介（嵌入页面流的扁面板） ===== */
 .personal-section {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 3rem 2rem;
   position: relative;
-  inset: unset;
-  z-index: unset;
-  padding: 2.5rem 2rem 1.5rem;
-  margin-bottom: 0.5rem;
-  background: linear-gradient(180deg, rgba(192,132,252,0.06) 0%, transparent 100%);
-  border-bottom: 1px solid var(--border-ink);
 }
 .personal-section[hidden] {
   display: none;
@@ -5004,47 +5003,6 @@
   </div>
 
   <main class="main" id="main">
-    <!-- 个人简介（工具箱常驻顶部板块，打开工具箱即见） -->
-    <section class="personal-section" id="personalSection" aria-label="白刀的个人简介">
-      <div class="personal-bg-particles"></div>
-      <div class="personal-container">
-        <div class="personal-avatar">
-          <span class="avatar-kanji">白</span>
-        </div>
-        <h1 class="personal-name">白刀</h1>
-        <p class="personal-tagline">好奇心是唯一的指南针</p>
-        <div class="personal-divider">
-          <span class="divider-dot">◇</span>
-        </div>
-        <p class="personal-bio">
-          把 AI 工具链当乐高玩的全栈选手。<br>
-          从模型部署到前端像素，从 API 中间件到静态站点，
-          相信好工具能撬动好创意。
-        </p>
-        <div class="personal-links">
-          <a class="personal-link-btn" href="https://github.com/liqinyu167" target="_blank" rel="noopener">
-            <span class="link-icon">◆</span>
-            <span>GitHub</span>
-          </a>
-          <a class="personal-link-btn" href="https://curiosity.best" target="_blank" rel="noopener">
-            <span class="link-icon">◇</span>
-            <span>curiosity.best</span>
-          </a>
-          <a class="personal-link-btn" href="https://x.com/White_razors" target="_blank" rel="noopener">
-            <span class="link-icon">𝕏</span>
-            <span>X @White_razors</span>
-          </a>
-        </div>
-        <div class="personal-project">
-          <span class="project-badge">答辩项目</span>
-          <a class="project-link" href="https://github.com/liqinyu167/gesture-showroom-case" target="_blank" rel="noopener">
-            <h2 class="project-title">Gesture Showroom Case</h2>
-            <p class="project-desc">基于手势识别的交互展示系统 — 答辩项目</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
     <section class="filter-bar" aria-label="当前筛选">
       <div class="breadcrumb">BAIDAO AIGC TOOLBOX / <span class="active-filter" id="activeFilter">全部</span></div>
       <div class="result-count" id="resultCount">0 SITES</div>
@@ -5185,6 +5143,47 @@
         </div>
       </div>
     </section>
+
+    <!-- 个人简介视图（侧栏切换） -->
+    <section class="personal-section" id="personalSection" aria-label="白刀的个人简介" hidden>
+      <div class="personal-bg-particles"></div>
+      <div class="personal-container">
+        <div class="personal-avatar">
+          <span class="avatar-kanji">白</span>
+        </div>
+        <h1 class="personal-name">白刀</h1>
+        <p class="personal-tagline">好奇心是唯一的指南针</p>
+        <div class="personal-divider">
+          <span class="divider-dot">◇</span>
+        </div>
+        <p class="personal-bio">
+          把 AI 工具链当乐高玩的全栈选手。<br>
+          从模型部署到前端像素，从 API 中间件到静态站点，
+          相信好工具能撬动好创意。
+        </p>
+        <div class="personal-links">
+          <a class="personal-link-btn" href="https://github.com/liqinyu167" target="_blank" rel="noopener">
+            <span class="link-icon">◆</span>
+            <span>GitHub</span>
+          </a>
+          <a class="personal-link-btn" href="https://curiosity.best" target="_blank" rel="noopener">
+            <span class="link-icon">◇</span>
+            <span>curiosity.best</span>
+          </a>
+          <a class="personal-link-btn" href="https://x.com/White_razors" target="_blank" rel="noopener">
+            <span class="link-icon">𝕏</span>
+            <span>X @White_razors</span>
+          </a>
+        </div>
+        <div class="personal-project">
+          <span class="project-badge">答辩项目</span>
+          <a class="project-link" href="https://github.com/liqinyu167/gesture-showroom-case" target="_blank" rel="noopener">
+            <h2 class="project-title">Gesture Showroom Case</h2>
+            <p class="project-desc">基于手势识别的交互展示系统 — 答辩项目</p>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
   </section>
 
@@ -5235,8 +5234,7 @@
       observationMode: "standard",  // "standard" | "icon-only"
       chartScrollOffset: 0,         // horizontal scroll offset (0 to 160)
       chartZoom: 1.0,               // horizontal scale factor / zoom level (1.0 to 3.0)
-      hasDragged: false,            // track if dragging occurred during current gesture
-      personalDismissed: false      // 个人欢迎卡片是否已关闭
+      hasDragged: false            // track if dragging occurred during current gesture
     };
 
     let sidebarScrollTimer = 0;
@@ -6245,6 +6243,8 @@
     }
 
     function render() {
+      const personalSection = document.getElementById("personalSection");
+
       if (state.activeView === "model-arena") {
         if (els.modelsToggle && els.modelsCollection) {
           els.modelsToggle.setAttribute("aria-expanded", "true");
@@ -6255,6 +6255,7 @@
         els.hotStrip.style.display = "none";
         els.modelArenaSection.hidden = false;
         els.modelArenaSection.style.display = "flex";
+        if (personalSection) personalSection.hidden = true;
 
         renderModelArena();
 
@@ -6269,6 +6270,9 @@
         els.favoritesButton.classList.remove("is-active");
         els.sideFavorites.classList.remove("is-active");
 
+        const personalBtnOff = document.getElementById("personalIntroBtn");
+        if (personalBtnOff) personalBtnOff.classList.remove("is-active");
+
         const modelCatLabel = state.activeModelCategory === "llm" ? "语言模型（LLM）" :
                               state.activeModelCategory === "text-to-image" ? "文生图" :
                               state.activeModelCategory === "image-editing" ? "图像编辑" :
@@ -6277,6 +6281,26 @@
 
         const activeModelsCount = (state.models || []).filter(m => m.category === state.activeModelCategory).length;
         els.resultCount.textContent = `${activeModelsCount} MODELS`;
+      } else if (state.activeView === "personal") {
+        // 个人简介视图
+        els.grid.style.display = "none";
+        els.hotStrip.style.display = "none";
+        els.modelArenaSection.hidden = true;
+        els.modelArenaSection.style.display = "none";
+        els.modelPopover.hidden = true;
+        if (personalSection) personalSection.hidden = false;
+
+        els.activeFilter.textContent = "个人简介";
+        els.resultCount.textContent = "";
+
+        document.querySelectorAll(".model-category-btn").forEach((btn) => {
+          btn.classList.remove("active");
+        });
+
+        const personalBtn = document.getElementById("personalIntroBtn");
+        if (personalBtn) personalBtn.classList.add("is-active");
+        els.favoritesButton.classList.remove("is-active");
+        els.sideFavorites.classList.remove("is-active");
       } else {
         // 网站列表视图（默认）
         if (els.websitesToggle && els.websitesCollection) {
@@ -6289,6 +6313,7 @@
         els.modelArenaSection.hidden = true;
         els.modelArenaSection.style.display = "none";
         els.modelPopover.hidden = true;
+        if (personalSection) personalSection.hidden = true;
 
         const sites = getFilteredSites();
         if (!els.grid.querySelector(".site-card, .empty-state")) buildCards();
@@ -6312,6 +6337,9 @@
         els.clear.classList.toggle("is-visible", Boolean(state.search));
         els.favoritesButton.classList.toggle("is-active", state.favoritesOnly);
         els.sideFavorites.classList.toggle("is-active", state.favoritesOnly);
+
+        const personalBtnOff2 = document.getElementById("personalIntroBtn");
+        if (personalBtnOff2) personalBtnOff2.classList.remove("is-active");
       }
       saveFavorites();
       window.requestAnimationFrame(updateSidebarScrollbar);
@@ -6393,19 +6421,7 @@
         });
       }
 
-      /* ─── 个人简介（内嵌面板，点击侧栏按钮切换显隐） ─── */
-      function showPersonalWelcome() {
-        const ps = document.getElementById("personalSection");
-        if (!ps) return;
-        ps.hidden = !ps.hidden;
-      }
-      function dismissPersonalWelcome() {
-        const ps = document.getElementById("personalSection");
-        if (ps && !ps.hidden) {
-          ps.hidden = true;
-        }
-      }
-
+      /* ─── 个人简介（侧栏视图切换） ─── */
       if (window.location.hash === "#toolbox") {
         dismissHero({ instant: true });
       }
@@ -7098,12 +7114,13 @@
         if (event.target === els.gameDialog) closeGameWindow();
       });
 
-      // 个人介绍 → 弹出欢迎卡片
+      // 个人介绍 → 切换到个人简介视图
       const personalBtn = document.getElementById("personalIntroBtn");
       if (personalBtn) {
         personalBtn.addEventListener("click", () => {
-          state.personalDismissed = false;
-          showPersonalWelcome();
+          state.activeView = "personal";
+          state.favoritesOnly = false;
+          render();
           closeMobileSidebar();
         });
       }
