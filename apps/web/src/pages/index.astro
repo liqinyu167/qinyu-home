@@ -559,9 +559,12 @@
       border: 1px solid var(--border-ink);
       border-radius: 8px;
       background: rgba(255, 255, 255, 0.03);
-      font-family: "JetBrains Mono", monospace;
-      font-size: 20px;
+      padding: 0;
+      color: var(--ink-white);
       transition: transform 0.22s var(--ease-spring), border-color 0.22s, box-shadow 0.22s;
+    }
+    .hamburger svg {
+      display: block;
     }
 
     .hamburger:hover,
@@ -1490,6 +1493,20 @@
 
     .site-card:hover .site-name {
       color: var(--ink-accent);
+    }
+
+    .nsfw-badge {
+      display: inline-block;
+      margin-left: 6px;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 1.4;
+      color: #fff;
+      background: #dc2626;
+      vertical-align: middle;
+      letter-spacing: 0.05em;
     }
 
     .domain {
@@ -4677,13 +4694,23 @@
         transform: translateX(calc(-1 * var(--sidebar-w))) !important;
       }
     }
-  /* ===== 个人简介（工具箱常驻顶部板块） ===== */
+  /* ===== 个人简介（嵌入页面流的扁面板） ===== */
 .personal-section {
+  display: block;
   position: relative;
-  width: 100%;
-  padding: 2.5rem 2rem;
-  background: linear-gradient(180deg, var(--bg-void) 0%, #1a1535 50%, var(--bg-void) 100%);
-  overflow: hidden;
+  inset: unset;
+  z-index: unset;
+  padding: 2.5rem 2rem 1.5rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(180deg, rgba(192,132,252,0.06) 0%, transparent 100%);
+  border-bottom: 1px solid var(--border-ink);
+}
+.personal-section[hidden] {
+  display: none;
+}
+@keyframes personalFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 .personal-bg-particles {
   position: absolute;
@@ -4798,6 +4825,15 @@
   color: var(--ink-white);
   margin: 0 0 0.5rem;
 }
+.project-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s;
+}
+.project-link:hover {
+  opacity: 0.85;
+}
 .project-desc {
   font-size: 0.95rem;
   color: var(--ink-muted);
@@ -4833,7 +4869,11 @@
   <section class="toolbox-section" id="toolbox" aria-label="白刀的AI工具箱">
   <header class="topbar">
     <div class="brand">
-      <button class="hamburger" id="menuButton" type="button" aria-label="切换侧栏" aria-controls="sidebar" aria-expanded="true">☰</button>
+      <button class="hamburger" id="menuButton" type="button" aria-label="切换侧栏" aria-controls="sidebar" aria-expanded="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/>
+        </svg>
+      </button>
       <div class="brand-copy">
         <span class="brand-title">白刀的AI工具箱</span>
         <span class="brand-subtitle">CURIOSITY TOOLBOX</span>
@@ -4949,9 +4989,7 @@
 <button class="side-link" id="dinoGameButton" type="button">
           <span aria-hidden="true">◇</span><span>恐龙游戏</span>
         </button>
-        <a class="side-link" href="https://grok.curiosity.best/webui/chat" target="_blank" rel="noopener">
-          <span aria-hidden="true">◆</span><span>AI 聊天</span>
-        </a>
+        
         <a class="side-link" href="mailto:submit@example.com">
           <span aria-hidden="true">◆</span><span>投稿入口</span>
         </a>
@@ -4992,11 +5030,17 @@
             <span class="link-icon">◇</span>
             <span>curiosity.best</span>
           </a>
+          <a class="personal-link-btn" href="https://x.com/White_razors" target="_blank" rel="noopener">
+            <span class="link-icon">𝕏</span>
+            <span>X @White_razors</span>
+          </a>
         </div>
         <div class="personal-project">
           <span class="project-badge">答辩项目</span>
-          <h2 class="project-title">NovelSmith</h2>
-          <p class="project-desc">AI 小说生产流水线编辑器 — 把 18 Agent 流程做成可视化节点编辑器</p>
+          <a class="project-link" href="https://github.com/liqinyu167/gesture-showroom-case" target="_blank" rel="noopener">
+            <h2 class="project-title">Gesture Showroom Case</h2>
+            <p class="project-desc">基于手势识别的交互展示系统 — 答辩项目</p>
+          </a>
         </div>
       </div>
     </section>
@@ -5191,7 +5235,8 @@
       observationMode: "standard",  // "standard" | "icon-only"
       chartScrollOffset: 0,         // horizontal scroll offset (0 to 160)
       chartZoom: 1.0,               // horizontal scale factor / zoom level (1.0 to 3.0)
-      hasDragged: false             // track if dragging occurred during current gesture
+      hasDragged: false,            // track if dragging occurred during current gesture
+      personalDismissed: false      // 个人欢迎卡片是否已关闭
     };
 
     let sidebarScrollTimer = 0;
@@ -5456,7 +5501,7 @@
           <header class="detail-top">
             <img class="detail-favicon" src="${faviconPath(site)}" alt="" onerror="this.style.visibility='hidden'">
             <div>
-              <h2 class="detail-title" id="siteDialogTitle">${site.name}</h2>
+              <h2 class="detail-title" id="siteDialogTitle">${site.name}${site.nsfw ? '<span class="nsfw-badge">NSFW</span>' : ''}</h2>
               <div class="detail-domain">${domainFromUrl(site.url)}</div>
             </div>
             <button class="detail-close" type="button" aria-label="关闭详情">×</button>
@@ -5763,7 +5808,7 @@
           <div class="card-head">
             <img class="site-favicon" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'/%3E" data-src="${faviconPath(site)}" alt="" onerror="this.style.display='none'">
             <div>
-              <h2 class="site-name">${site.name}</h2>
+              <h2 class="site-name">${site.name}${site.nsfw ? '<span class="nsfw-badge">NSFW</span>' : ''}</h2>
               <a class="domain" href="${site.url}" target="_blank" rel="noreferrer" aria-label="打开 ${site.name}">${domainFromUrl(site.url)}</a>
             </div>
           </div>
@@ -6346,6 +6391,19 @@
           window.scrollTo(0, 0);
           updatePageScrollbar();
         });
+      }
+
+      /* ─── 个人简介（内嵌面板，点击侧栏按钮切换显隐） ─── */
+      function showPersonalWelcome() {
+        const ps = document.getElementById("personalSection");
+        if (!ps) return;
+        ps.hidden = !ps.hidden;
+      }
+      function dismissPersonalWelcome() {
+        const ps = document.getElementById("personalSection");
+        if (ps && !ps.hidden) {
+          ps.hidden = true;
+        }
       }
 
       if (window.location.hash === "#toolbox") {
@@ -7040,18 +7098,12 @@
         if (event.target === els.gameDialog) closeGameWindow();
       });
 
-      // 个人介绍 → 滚动到常驻顶部板块
+      // 个人介绍 → 弹出欢迎卡片
       const personalBtn = document.getElementById("personalIntroBtn");
       if (personalBtn) {
         personalBtn.addEventListener("click", () => {
-          const section = document.getElementById("personalSection");
-          if (section) {
-            section.scrollIntoView({ behavior: "smooth", block: "start" });
-          }
-          if (!document.body.classList.contains("toolbox-open")) {
-            document.body.classList.add("toolbox-open");
-            document.querySelector(".hero")?.setAttribute("aria-hidden", "true");
-          }
+          state.personalDismissed = false;
+          showPersonalWelcome();
           closeMobileSidebar();
         });
       }
