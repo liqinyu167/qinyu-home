@@ -5232,7 +5232,8 @@
           "wikipedia-en"
         ]
       },
-      "icon": null
+      "icon": null,
+      "category": "inspiration"
     },
     {
       "id": "radio-garden",
@@ -5267,7 +5268,8 @@
           "cloudhiker"
         ]
       },
-      "icon": null
+      "icon": null,
+      "category": "inspiration"
     },
     {
       "id": "window-swap",
@@ -5303,7 +5305,8 @@
           "atlas-obscura"
         ]
       },
-      "icon": null
+      "icon": null,
+      "category": "inspiration"
     },
     {
       "id": "zhihu-daily",
@@ -5337,7 +5340,8 @@
           "farnam-street"
         ]
       },
-      "icon": null
+      "icon": null,
+      "category": "inspiration"
     }
   ]
 }
