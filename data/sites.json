@@ -5342,6 +5342,602 @@
       },
       "icon": null,
       "category": "inspiration"
+    },
+    {
+      "id": "tuchong",
+      "name": "图虫",
+      "url": "https://tuchong.com",
+      "description": "东方IC旗下高品质摄影社区，海量编辑精选摄影作品，含图库授权和摄影师社群。中文摄影作品展示首选。",
+      "type": "official",
+      "category": "aesthetics",
+      "primarySection": "photography",
+      "sections": [
+        "photography"
+      ],
+      "capabilities": [],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "fengniao",
+          "mipai"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "摄影",
+        "社区",
+        "图库"
+      ],
+      "icon": null,
+      "weight": 5
+    },
+    {
+      "id": "fengniao",
+      "name": "蜂鸟网",
+      "url": "https://www.fengniao.com",
+      "description": "中国最大摄影社区之一，2000年创办，图片分享+论坛+器材评测，千万用户级摄影交流平台。",
+      "type": "official",
+      "category": "aesthetics",
+      "primarySection": "photography",
+      "sections": [
+        "photography"
+      ],
+      "capabilities": [],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "tuchong",
+          "mipai"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "摄影",
+        "社区",
+        "器材"
+      ],
+      "icon": null,
+      "weight": 3
+    },
+    {
+      "id": "mipai",
+      "name": "米拍",
+      "url": "https://www.mipai.com.cn",
+      "description": "新锐摄影社区，300万+用户，含摄影比赛、展览、创作营。年轻摄影师聚集地。",
+      "type": "official",
+      "category": "aesthetics",
+      "primarySection": "photography",
+      "sections": [
+        "photography"
+      ],
+      "capabilities": [],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "tuchong",
+          "fengniao"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "摄影",
+        "社区",
+        "比赛"
+      ],
+      "icon": null,
+      "weight": 2
+    },
+    {
+      "id": "mihuashi",
+      "name": "米画师",
+      "url": "https://www.mihuashi.com",
+      "description": "国内插画师约稿与作品展示平台，专业插画/原画/漫画作品集，连接画师与需求方。⚠️ 大陆用户正常访问，HK服务器不可达。",
+      "type": "official",
+      "category": "aesthetics",
+      "primarySection": "illustration",
+      "sections": [
+        "illustration"
+      ],
+      "capabilities": [],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "pixiv",
+          "tuhua-wangguo",
+          "ggac"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "插画",
+        "约稿",
+        "作品集"
+      ],
+      "icon": null,
+      "weight": 3
+    },
+    {
+      "id": "kuaikan",
+      "name": "快看漫画",
+      "url": "https://www.kuaikanmanhua.com",
+      "description": "国内最大原创漫画平台之一，海量国漫/条漫作品，含作者入驻和社区互动，中国漫画产业的旗舰入口。",
+      "type": "official",
+      "category": "aesthetics",
+      "primarySection": "illustration",
+      "sections": [
+        "illustration"
+      ],
+      "capabilities": [],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "pixiv",
+          "tuhua-wangguo",
+          "lofter"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "漫画",
+        "国漫",
+        "原创"
+      ],
+      "icon": null,
+      "weight": 5
+    },
+    {
+      "id": "ishijue",
+      "name": "爱视觉",
+      "url": "https://ishijue.com",
+      "description": "视觉中国旗下设计社区，插画/平面/UI/品牌设计作品展示与赛事平台，连接设计师与商业需求。",
+      "type": "official",
+      "category": "aesthetics",
+      "primarySection": "illustration",
+      "sections": [
+        "illustration"
+      ],
+      "capabilities": [],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "zcool",
+          "dribbble"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "视觉设计",
+        "比赛",
+        "插画"
+      ],
+      "icon": null,
+      "weight": 2
+    },
+    {
+      "id": "design68",
+      "name": "68Design",
+      "url": "https://www.68design.net",
+      "description": "网页/UI设计师作品集社区，独有设计师等级排名体系，500万+设计师。老牌设计作品展示平台。",
+      "type": "official",
+      "category": "aesthetics",
+      "primarySection": "design-showcase",
+      "sections": [
+        "design-showcase"
+      ],
+      "capabilities": [],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "zcool",
+          "ui-china"
+        ],
+        "complements": [
+          "dribbble"
+        ]
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "网页设计",
+        "UI",
+        "作品集"
+      ],
+      "icon": null,
+      "weight": 3
+    },
+    {
+      "id": "ui-china",
+      "name": "UI中国",
+      "url": "https://www.ui.cn",
+      "description": "中国三大设计师社区之一，1500万+用户，界面设计挑战赛、作品集、招聘。中文UI/UX设计核心阵地。⚠️ 大陆用户正常访问，HK服务器不可达。",
+      "type": "official",
+      "category": "aesthetics",
+      "primarySection": "design-showcase",
+      "sections": [
+        "design-showcase"
+      ],
+      "capabilities": [],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "zcool",
+          "design68",
+          "dribbble"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "UI设计",
+        "UX",
+        "社区"
+      ],
+      "icon": null,
+      "weight": 5
+    },
+    {
+      "id": "booooooom",
+      "name": "BOOOOOOOM",
+      "url": "https://www.booooooom.com",
+      "description": "加拿大独立艺术/设计展示平台，2008年创办，专注挖掘新兴艺术家。多元媒介作品画廊。",
+      "type": "official",
+      "category": "aesthetics",
+      "primarySection": "comprehensive-gallery",
+      "sections": [
+        "comprehensive-gallery"
+      ],
+      "capabilities": [],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "artstation",
+          "behance",
+          "cargo"
+        ],
+        "complements": []
+      },
+      "tags": [
+        "免费",
+        "英文",
+        "艺术",
+        "设计",
+        "独立"
+      ],
+      "icon": null,
+      "weight": 0
+    },
+    {
+      "id": "puxiang",
+      "name": "普象网",
+      "url": "https://www.puxiang.com",
+      "description": "中国头部工业/产品设计社区，200万+设计师，海量作品画廊。弥补综合画廊中文平台空白。",
+      "type": "official",
+      "category": "aesthetics",
+      "primarySection": "comprehensive-gallery",
+      "sections": [
+        "comprehensive-gallery"
+      ],
+      "capabilities": [],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "behance",
+          "artstation"
+        ],
+        "complements": [
+          "zcool"
+        ]
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "工业设计",
+        "产品设计",
+        "社区"
+      ],
+      "icon": null,
+      "weight": 5
+    },
+    {
+      "id": "wikihow-zh",
+      "name": "WikiHow 中文",
+      "url": "https://zh.wikihow.com",
+      "description": "实用生活指南随机探索——从烹饪到编程，从心理到手工，每一次随机都是新技能的入口。",
+      "type": "official",
+      "category": "inspiration",
+      "primarySection": "encyclopedia-random",
+      "sections": [
+        "encyclopedia-random"
+      ],
+      "capabilities": [],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "wikipedia-zh",
+          "baidu-baike"
+        ]
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "指南",
+        "随机",
+        "生活"
+      ],
+      "icon": null,
+      "weight": 2
+    },
+    {
+      "id": "moegirl",
+      "name": "萌娘百科",
+      "url": "https://zh.moegirl.org.cn",
+      "description": "中文ACG百科全书——动画、漫画、游戏、轻小说条目全覆盖，随机发现冷门角色与设定。二次元灵感宝库。",
+      "type": "official",
+      "category": "inspiration",
+      "primarySection": "encyclopedia-random",
+      "sections": [
+        "encyclopedia-random"
+      ],
+      "capabilities": [],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "wikipedia-zh",
+          "baidu-baike"
+        ]
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "ACG",
+        "百科",
+        "随机"
+      ],
+      "icon": null,
+      "weight": 2
+    },
+    {
+      "id": "wikisource-zh",
+      "name": "维基文库 (中文)",
+      "url": "https://zh.wikisource.org",
+      "description": "中文自由文本图书馆，130万+文献——古籍、法律、诗歌、译著，随机翻阅人类文字遗产。",
+      "type": "official",
+      "category": "inspiration",
+      "primarySection": "encyclopedia-random",
+      "sections": [
+        "encyclopedia-random"
+      ],
+      "capabilities": [],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "wikipedia-en"
+        ],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "wikipedia-zh",
+          "wikimedia-commons"
+        ]
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "文献",
+        "古籍",
+        "随机"
+      ],
+      "icon": null,
+      "weight": 1
+    },
+    {
+      "id": "gushiwen",
+      "name": "古诗文网",
+      "url": "https://www.gushiwen.cn",
+      "description": "最大中文古典文学数据库——诗词、古文、名句全覆盖，非维基族系的随机探索入口。每次打开都是千年文字的偶遇。",
+      "type": "official",
+      "category": "inspiration",
+      "primarySection": "encyclopedia-random",
+      "sections": [
+        "encyclopedia-random"
+      ],
+      "capabilities": [],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "wikipedia-zh",
+          "baidu-baike"
+        ]
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "诗词",
+        "古典",
+        "文学"
+      ],
+      "icon": null,
+      "weight": 5
+    },
+    {
+      "id": "theinitium",
+      "name": "端传媒",
+      "url": "https://theinitium.com",
+      "description": "香港深度新闻与评论媒体，长篇调查报道、文化评论、国际视野。华文世界最具深度的独立媒体之一。",
+      "type": "official",
+      "category": "inspiration",
+      "primarySection": "deep-ideas",
+      "sections": [
+        "deep-ideas"
+      ],
+      "capabilities": [],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "aeon",
+          "nautilus",
+          "sspai"
+        ],
+        "complements": [
+          "quanta"
+        ]
+      },
+      "tags": [
+        "订阅制",
+        "中文",
+        "新闻",
+        "深度报道",
+        "评论"
+      ],
+      "icon": null,
+      "weight": 5
+    },
+    {
+      "id": "dandu",
+      "name": "单读",
+      "url": "https://www.dandu.org",
+      "description": "单向空间出品的深度阅读平台——文学、思想、访谈、纪录片，中文世界最具质感的人文内容入口。",
+      "type": "official",
+      "category": "inspiration",
+      "primarySection": "deep-ideas",
+      "sections": [
+        "deep-ideas"
+      ],
+      "capabilities": [],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "marginalian",
+          "aeon"
+        ],
+        "complements": [
+          "sspai"
+        ]
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "文学",
+        "思想",
+        "访谈"
+      ],
+      "icon": null,
+      "weight": 4
+    },
+    {
+      "id": "yixi",
+      "name": "一席",
+      "url": "https://yixi.tv",
+      "description": "中国版TED——跨学科演讲平台，科技、人文、艺术、设计等领域深度分享。视频形式的灵感迸发。",
+      "type": "official",
+      "category": "inspiration",
+      "primarySection": "deep-ideas",
+      "sections": [
+        "deep-ideas"
+      ],
+      "capabilities": [],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "aeon"
+        ],
+        "complements": [
+          "quanta",
+          "nautilus"
+        ]
+      },
+      "tags": [
+        "免费",
+        "中文",
+        "演讲",
+        "跨学科",
+        "视频"
+      ],
+      "icon": null,
+      "weight": 3
+    },
+    {
+      "id": "vistopia",
+      "name": "看理想",
+      "url": "https://www.vistopia.com.cn",
+      "description": "梁文道创办的文化平台——哲学、文学、艺术、历史深度内容，音频/视频/文字多形态。中文思想领域标杆。",
+      "type": "official",
+      "category": "inspiration",
+      "primarySection": "deep-ideas",
+      "sections": [
+        "deep-ideas"
+      ],
+      "capabilities": [],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "marginalian",
+          "nautilus"
+        ],
+        "complements": [
+          "theinitium",
+          "dandu"
+        ]
+      },
+      "tags": [
+        "订阅制",
+        "中文",
+        "哲学",
+        "文学",
+        "文化"
+      ],
+      "icon": null,
+      "weight": 5
     }
   ]
 }
