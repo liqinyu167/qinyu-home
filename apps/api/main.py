@@ -180,6 +180,7 @@ class SitePayload(BaseModel):
     description: str = ""
     type: str = "tool"
     weight: int = 0
+    category: str = ""
     primarySection: str = ""
     sections: list[str] = Field(default_factory=list)
     capabilities: list[str] = Field(default_factory=list)

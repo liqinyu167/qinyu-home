@@ -5938,6 +5938,47 @@
       ],
       "icon": null,
       "weight": 5
+    },
+    {
+      "id": "nmc-digital",
+      "name": "国博数字展厅",
+      "url": "https://www.chnmuseum.cn/Portals/0/web/vr/",
+      "description": "中国国家博物馆70+个VR全景数字展览——从甲骨文到卢浮宫、从秦汉文明到列宾特展，跨越8000年文明的沉浸式线上博物馆。随机漫步于历史长河，每一次点击都是一场跨界文明的发现。",
+      "type": "official",
+      "weight": 7,
+      "primarySection": "serendipity",
+      "sections": [
+        "serendipity"
+      ],
+      "capabilities": [],
+      "tags": [
+        "中文",
+        "免费",
+        "博物馆",
+        "VR全景",
+        "历史",
+        "艺术",
+        "文明",
+        "线上展览"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "wikipedia-zh"
+        ],
+        "downstream": [
+          "behance",
+          "artstation"
+        ],
+        "alternatives": [],
+        "complements": [
+          "atlas-obscura",
+          "internet-archive",
+          "gutenberg"
+        ]
+      },
+      "icon": null,
+      "category": "inspiration"
     }
   ]
 }
