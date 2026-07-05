@@ -5979,6 +5979,107 @@
       },
       "icon": null,
       "category": "inspiration"
+    },
+    {
+      "id": "meshy",
+      "name": "Meshy",
+      "url": "https://www.meshy.ai",
+      "description": "全球知名AI 3D模型生成平台，支持文生3D、图生3D、纹理生成，社区活跃。适合游戏开发者和3D创作者快速原型设计。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "3d-gen",
+      "sections": [
+        "3d-gen",
+        "image-gen"
+      ],
+      "capabilities": [
+        "3d-gen",
+        "image-gen"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "3d生成"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "hunyuan-3d"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "tripo",
+      "name": "Tripo",
+      "url": "https://www.tripo3d.ai",
+      "description": "VAST旗下AI 3D生成平台，文生3D、图生3D，支持中文界面，国内社区讨论活跃。适合快速3D资产生成。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "3d-gen",
+      "sections": [
+        "3d-gen"
+      ],
+      "capabilities": [
+        "3d-gen"
+      ],
+      "tags": [
+        "免费",
+        "中文",
+        "英文",
+        "3d生成"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "meshy",
+          "hunyuan-3d"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "rodin",
+      "name": "Rodin",
+      "url": "https://hyperhuman.deemos.com",
+      "description": "Deemos科技旗下AI 3D生成工具，文生3D、图生3D，支持中文，生成质量高。适合3D打印和游戏资产制作。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "3d-gen",
+      "sections": [
+        "3d-gen"
+      ],
+      "capabilities": [
+        "3d-gen"
+      ],
+      "tags": [
+        "免费",
+        "中文",
+        "英文",
+        "3d生成"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "meshy",
+          "tripo",
+          "hunyuan-3d"
+        ],
+        "complements": []
+      },
+      "icon": null
     }
   ]
 }
