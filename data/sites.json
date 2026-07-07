@@ -356,6 +356,7 @@
           "perplexity"
         ],
         "complements": [
+          "elicit",
           "gemini"
         ]
       },
@@ -1756,7 +1757,10 @@
         "products": [],
         "upstream": [],
         "downstream": [],
-        "alternatives": [],
+        "alternatives": [
+          "remini",
+          "topaz-gigapixel"
+        ],
         "complements": []
       },
       "tags": [
@@ -1766,7 +1770,8 @@
         "图像处理"
       ],
       "weight": 135,
-      "category": "tools"
+      "category": "tools",
+      "icon": null
     },
     {
       "id": "deepseek",
@@ -3145,6 +3150,8 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [
+          "consensus",
+          "elicit",
           "notebooklm"
         ],
         "complements": []
@@ -6078,6 +6085,144 @@
           "hunyuan-3d"
         ],
         "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "remini",
+      "name": "Remini",
+      "url": "https://remini.ai",
+      "description": "意大利Bending Spoons旗下AI照片增强工具，支持老照片修复、画质增强、AI写真生成，全球下载量超1亿。",
+      "type": "official",
+      "weight": 0,
+      "category": "",
+      "primarySection": "image-tool",
+      "sections": [
+        "image-tool",
+        "image-gen"
+      ],
+      "capabilities": [
+        "image-gen"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "照片增强",
+        "AI写真"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "koukoutu"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "topaz-gigapixel",
+      "name": "Topaz Gigapixel",
+      "url": "https://www.topazlabs.com/gigapixel",
+      "description": "Topaz Labs旗下专业AI图像放大工具，支持6倍无损放大、面部恢复、噪点消除，摄影后期和游戏素材高清化首选。",
+      "type": "official",
+      "weight": 0,
+      "category": "",
+      "primarySection": "image-tool",
+      "sections": [
+        "image-tool"
+      ],
+      "capabilities": [
+        "image-gen"
+      ],
+      "tags": [
+        "订阅制",
+        "英文",
+        "图像放大",
+        "专业工具"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "koukoutu"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "consensus",
+      "name": "Consensus",
+      "url": "https://consensus.app",
+      "description": "AI驱动的学术论文搜索引擎，输入问题直接提取论文中的研究结论，覆盖2亿篇论文，支持共识/反对度量和引文溯源。",
+      "type": "official",
+      "weight": 0,
+      "category": "",
+      "primarySection": "research",
+      "sections": [
+        "research"
+      ],
+      "capabilities": [
+        "search"
+      ],
+      "tags": [
+        "免费",
+        "英文",
+        "学术搜索",
+        "AI研究"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "perplexity"
+        ],
+        "complements": [
+          "elicit",
+          "notebooklm"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "elicit",
+      "name": "Elicit",
+      "url": "https://elicit.com",
+      "description": "Ought旗下AI研究助手，自动从论文中提取数据、总结发现、生成文献综述，是学术界最活跃的AI工作流工具之一。",
+      "type": "official",
+      "weight": 0,
+      "category": "",
+      "primarySection": "research",
+      "sections": [
+        "research"
+      ],
+      "capabilities": [
+        "search",
+        "writing"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "AI研究",
+        "文献综述"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "perplexity",
+          "consensus"
+        ],
+        "complements": [
+          "notebooklm"
+        ]
       },
       "icon": null
     }
