@@ -1759,7 +1759,8 @@
         "downstream": [],
         "alternatives": [
           "remini",
-          "topaz-gigapixel"
+          "topaz-gigapixel",
+          "remove-bg"
         ],
         "complements": []
       },
@@ -6116,7 +6117,8 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [
-          "koukoutu"
+          "koukoutu",
+          "remove-bg"
         ],
         "complements": []
       },
@@ -6180,7 +6182,8 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [
-          "perplexity"
+          "perplexity",
+          "semantic-scholar"
         ],
         "complements": [
           "elicit",
@@ -6218,11 +6221,77 @@
         "downstream": [],
         "alternatives": [
           "perplexity",
-          "consensus"
+          "consensus",
+          "semantic-scholar"
         ],
         "complements": [
           "notebooklm"
         ]
+      },
+      "icon": null
+    },
+    {
+      "id": "remove-bg",
+      "name": "Remove.bg",
+      "url": "https://www.remove.bg",
+      "description": "AI自动去除图片背景，5秒内完成，支持API批量处理。全球最流行的AI抠图工具。",
+      "type": "official",
+      "weight": 0,
+      "category": "",
+      "primarySection": "image-tool",
+      "sections": [
+        "image-tool"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "API",
+        "抠图"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "koukoutu",
+          "remini"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "semantic-scholar",
+      "name": "Semantic Scholar",
+      "url": "https://www.semanticscholar.org",
+      "description": "Allen AI研究所开发的免费学术文献搜索引擎，覆盖2亿+论文，AI驱动引用分析与推荐。",
+      "type": "official",
+      "weight": 0,
+      "category": "",
+      "primarySection": "research",
+      "sections": [
+        "research"
+      ],
+      "capabilities": [
+        "search"
+      ],
+      "tags": [
+        "免费",
+        "英文",
+        "学术",
+        "AI"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "consensus",
+          "elicit"
+        ],
+        "complements": []
       },
       "icon": null
     }
