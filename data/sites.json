@@ -3213,7 +3213,15 @@
         "开源",
         "免费"
       ],
-      "description": "最大的AI模型开源社区，模型权重、数据集、Demo一键获取"
+      "description": "最大的AI模型开源社区，模型权重、数据集、Demo一键获取",
+      "relations": {
+        "products": [
+          "huggingchat"
+        ],
+        "downstream": [
+          "huggingchat"
+        ]
+      }
     },
     {
       "id": "mistral",
@@ -6291,6 +6299,76 @@
           "consensus",
           "elicit"
         ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "huggingchat",
+      "name": "HuggingChat",
+      "url": "https://huggingface.co/chat",
+      "description": "Hugging Face 开源聊天平台，支持 10+ 开源模型自由切换，完全免费无限制",
+      "type": "official",
+      "weight": 0,
+      "category": "",
+      "primarySection": "chat",
+      "sections": [
+        "chat"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "search"
+      ],
+      "tags": [
+        "免费",
+        "开源",
+        "英文",
+        "Hugging Face"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "huggingface"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "chatgpt",
+          "claude",
+          "mistral"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "pinokio",
+      "name": "Pinokio",
+      "url": "https://pinokio.co",
+      "description": "AI 应用一键安装浏览器，本地运行 Stable Diffusion、LLM 等数百个 AI 工具，无需配置环境",
+      "type": "independent",
+      "weight": 0,
+      "category": "",
+      "primarySection": "misc",
+      "sections": [
+        "misc"
+      ],
+      "capabilities": [
+        "audio-gen",
+        "chat",
+        "image-gen"
+      ],
+      "tags": [
+        "免费",
+        "开源",
+        "英文",
+        "本地运行"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
         "complements": []
       },
       "icon": null
