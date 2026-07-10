@@ -1760,7 +1760,8 @@
         "alternatives": [
           "remini",
           "topaz-gigapixel",
-          "remove-bg"
+          "remove-bg",
+          "photoroom"
         ],
         "complements": []
       },
@@ -6264,7 +6265,8 @@
         "downstream": [],
         "alternatives": [
           "koukoutu",
-          "remini"
+          "remini",
+          "photoroom"
         ],
         "complements": []
       },
@@ -6369,6 +6371,40 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "photoroom",
+      "name": "Photoroom",
+      "url": "https://www.photoroom.com",
+      "description": "法国AI商品图编辑工具，支持AI背景替换、批量抠图、场景生成，全球1.5亿+下载，电商卖家常用。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "image-tool",
+      "sections": [
+        "image-tool"
+      ],
+      "capabilities": [
+        "image-gen"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "AI图像编辑",
+        "电商"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "remove-bg",
+          "koukoutu"
+        ],
         "complements": []
       },
       "icon": null
