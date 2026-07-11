@@ -2914,7 +2914,9 @@
           "hunyuan"
         ],
         "downstream": [],
-        "alternatives": [],
+        "alternatives": [
+          "spline"
+        ],
         "complements": [
           "hunyuan"
         ]
@@ -6025,7 +6027,8 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [
-          "hunyuan-3d"
+          "hunyuan-3d",
+          "spline"
         ],
         "complements": []
       },
@@ -6058,7 +6061,8 @@
         "downstream": [],
         "alternatives": [
           "meshy",
-          "hunyuan-3d"
+          "hunyuan-3d",
+          "spline"
         ],
         "complements": []
       },
@@ -6092,7 +6096,8 @@
         "alternatives": [
           "meshy",
           "tripo",
-          "hunyuan-3d"
+          "hunyuan-3d",
+          "spline"
         ],
         "complements": []
       },
@@ -6404,6 +6409,42 @@
         "alternatives": [
           "remove-bg",
           "koukoutu"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "spline",
+      "name": "Spline",
+      "url": "https://spline.design",
+      "description": "Spline 3D 设计平台，支持 AI 文本生成 3D 模型、材质及场景，社区数百万设计师。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "3d-gen",
+      "sections": [
+        "3d-gen",
+        "infinite-canvas"
+      ],
+      "capabilities": [
+        "3d-gen"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "英文",
+        "AI 3D"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "meshy",
+          "tripo",
+          "rodin"
         ],
         "complements": []
       },
