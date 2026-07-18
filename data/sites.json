@@ -203,7 +203,8 @@
           "qwen",
           "deepseek",
           "zhipu",
-          "wenxin-yiyan"
+          "wenxin-yiyan",
+          "manus"
         ],
         "complements": [
           "sora"
@@ -714,7 +715,8 @@
           "qwen-code",
           "cursor",
           "codegeex",
-          "claude-code"
+          "claude-code",
+          "v0"
         ],
         "complements": [
           "openai-api",
@@ -1723,7 +1725,8 @@
         "downstream": [],
         "alternatives": [
           "codex",
-          "claude-code"
+          "claude-code",
+          "v0"
         ],
         "complements": [
           "qwen-api",
@@ -2357,7 +2360,8 @@
         "alternatives": [
           "codex",
           "codegeex",
-          "claude-code"
+          "claude-code",
+          "v0"
         ],
         "complements": []
       },
@@ -2394,7 +2398,8 @@
           "codex",
           "cursor",
           "qwen-code",
-          "codegeex"
+          "codegeex",
+          "v0"
         ],
         "complements": [
           "anthropic-api",
@@ -2550,7 +2555,8 @@
           "gemini",
           "doubao",
           "grok",
-          "claude"
+          "claude",
+          "manus"
         ],
         "complements": []
       },
@@ -2687,7 +2693,8 @@
           "doubao",
           "qwen",
           "zhipu",
-          "wenxin-yiyan"
+          "wenxin-yiyan",
+          "manus"
         ],
         "complements": []
       },
@@ -5476,7 +5483,7 @@
         "downstream": [],
         "alternatives": [
           "pixiv",
-          "tuhua-wangguo",
+          "gracg",
           "ggac"
         ],
         "complements": []
@@ -5509,7 +5516,7 @@
         "downstream": [],
         "alternatives": [
           "pixiv",
-          "tuhua-wangguo",
+          "gracg",
           "lofter"
         ],
         "complements": []
@@ -5842,7 +5849,7 @@
           "sspai"
         ],
         "complements": [
-          "quanta"
+          "quanta-magazine"
         ]
       },
       "tags": [
@@ -5909,7 +5916,7 @@
           "aeon"
         ],
         "complements": [
-          "quanta",
+          "quanta-magazine",
           "nautilus"
         ]
       },
@@ -6445,6 +6452,83 @@
           "meshy",
           "tripo",
           "rodin"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "manus",
+      "name": "Manus",
+      "url": "https://manus.im/",
+      "description": "通用型 AI 智能体，可自主拆解并执行研究、写作、数据分析与网页操作等多步骤任务。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "chat",
+      "sections": [
+        "chat",
+        "research",
+        "misc"
+      ],
+      "capabilities": [
+        "chat",
+        "search",
+        "workflow",
+        "writing"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "AI智能体"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "minimax-agent",
+          "chatgpt",
+          "kimi"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "v0",
+      "name": "v0",
+      "url": "https://v0.app/",
+      "description": "Vercel 推出的 AI 应用生成与开发平台，可通过自然语言生成界面、全栈应用并直接迭代部署。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "workflow"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "Vercel",
+        "AI编程"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "cursor",
+          "codex",
+          "qwen-code",
+          "claude-code"
         ],
         "complements": []
       },
