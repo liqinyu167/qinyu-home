@@ -124,7 +124,8 @@
           "aistudio",
           "flow",
           "notebooklm",
-          "gemini-api"
+          "gemini-api",
+          "antigravity"
         ],
         "upstream": [
           "google"
@@ -133,7 +134,8 @@
           "aistudio",
           "flow",
           "notebooklm",
-          "gemini-api"
+          "gemini-api",
+          "antigravity"
         ],
         "alternatives": [
           "chatgpt",
@@ -589,7 +591,8 @@
           "bailian"
         ],
         "complements": [
-          "gemini-api"
+          "gemini-api",
+          "antigravity"
         ]
       },
       "tags": [
@@ -716,7 +719,8 @@
           "cursor",
           "codegeex",
           "claude-code",
-          "v0"
+          "v0",
+          "antigravity"
         ],
         "complements": [
           "openai-api",
@@ -2363,7 +2367,8 @@
           "codex",
           "codegeex",
           "claude-code",
-          "v0"
+          "v0",
+          "antigravity"
         ],
         "complements": []
       },
@@ -2401,7 +2406,8 @@
           "cursor",
           "qwen-code",
           "codegeex",
-          "v0"
+          "v0",
+          "antigravity"
         ],
         "complements": [
           "anthropic-api",
@@ -2646,7 +2652,9 @@
           "minimax"
         ],
         "downstream": [],
-        "alternatives": [],
+        "alternatives": [
+          "character-ai"
+        ],
         "complements": []
       },
       "tags": [
@@ -6728,7 +6736,8 @@
         "alternatives": [
           "chatgpt",
           "claude",
-          "huggingchat"
+          "huggingchat",
+          "character-ai"
         ],
         "complements": []
       },
@@ -6765,6 +6774,80 @@
           "claude-design"
         ],
         "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "character-ai",
+      "name": "Character.AI",
+      "url": "https://character.ai/",
+      "description": "美国 Character Technologies 推出的 AI 角色扮演与虚拟陪伴平台，用户可创建并对话个性化 AI 角色。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "chat",
+      "sections": [
+        "chat"
+      ],
+      "capabilities": [
+        "chat",
+        "voice"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "AI角色",
+        "语音"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "talkie",
+          "poe"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "antigravity",
+      "name": "Google Antigravity",
+      "url": "https://antigravity.google/",
+      "description": "Google 推出的 Agent 优先开发平台，把编辑器、终端与浏览器操作整合为可协作的 AI 编程工作流。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code",
+        "workflow"
+      ],
+      "tags": [
+        "英文",
+        "Google",
+        "AI编程",
+        "Agent"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "gemini"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "cursor",
+          "codex",
+          "claude-code"
+        ],
+        "complements": [
+          "aistudio"
+        ]
       },
       "icon": null
     }
