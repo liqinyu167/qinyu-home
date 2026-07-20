@@ -204,7 +204,8 @@
           "deepseek",
           "zhipu",
           "wenxin-yiyan",
-          "manus"
+          "manus",
+          "poe"
         ],
         "complements": [
           "sora"
@@ -280,8 +281,7 @@
       "primarySection": "chat",
       "sections": [
         "chat",
-        "image-gen",
-        "writing"
+        "image-gen"
       ],
       "capabilities": [
         "chat",
@@ -1036,7 +1036,8 @@
           "qwen",
           "deepseek",
           "zhipu",
-          "wenxin-yiyan"
+          "wenxin-yiyan",
+          "poe"
         ],
         "complements": []
       },
@@ -1119,7 +1120,8 @@
         ],
         "downstream": [],
         "alternatives": [
-          "flow"
+          "flow",
+          "gamma"
         ],
         "complements": [
           "claude"
@@ -2865,8 +2867,7 @@
       "type": "official",
       "primarySection": "chat",
       "sections": [
-        "chat",
-        "search"
+        "chat"
       ],
       "capabilities": [
         "chat",
@@ -3068,8 +3069,7 @@
       "weight": 0,
       "primarySection": "audio-gen",
       "sections": [
-        "audio-gen",
-        "tools"
+        "audio-gen"
       ],
       "capabilities": [
         "audio",
@@ -3078,7 +3078,13 @@
         "voice-clone"
       ],
       "tags": [],
-      "relations": {},
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      },
       "category": "tools"
     },
     {
@@ -3230,8 +3236,14 @@
         ],
         "downstream": [
           "huggingchat"
-        ]
-      }
+        ],
+        "upstream": [],
+        "alternatives": [],
+        "complements": []
+      },
+      "sections": [
+        "research"
+      ]
     },
     {
       "id": "mistral",
@@ -3242,7 +3254,17 @@
       "tags": [
         "API"
       ],
-      "description": "欧洲最强AI实验室，Mistral Large / Small / Ministral 系列"
+      "description": "欧洲最强AI实验室，Mistral Large / Small / Ministral 系列",
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      },
+      "sections": [
+        "official-labs"
+      ]
     },
     {
       "id": "meta-ai",
@@ -3253,7 +3275,17 @@
       "tags": [
         "开源"
       ],
-      "description": "Meta AI 研究，Llama 开源模型系列、Muse Spark"
+      "description": "Meta AI 研究，Llama 开源模型系列、Muse Spark",
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      },
+      "sections": [
+        "official-labs"
+      ]
     },
     {
       "id": "microsoft-ai",
@@ -3264,7 +3296,17 @@
       "tags": [
         "API"
       ],
-      "description": "微软 Azure AI 服务，Phi 系列模型、MAI-Image"
+      "description": "微软 Azure AI 服务，Phi 系列模型、MAI-Image",
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      },
+      "sections": [
+        "compute-api"
+      ]
     },
     {
       "id": "nvidia-ai",
@@ -3276,7 +3318,17 @@
         "API",
         "开源"
       ],
-      "description": "NVIDIA AI 平台，Nemotron 系列模型推理"
+      "description": "NVIDIA AI 平台，Nemotron 系列模型推理",
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      },
+      "sections": [
+        "compute-api"
+      ]
     },
     {
       "id": "amazon-ai",
@@ -3287,7 +3339,17 @@
       "tags": [
         "API"
       ],
-      "description": "AWS AI 平台，Nova 系列模型"
+      "description": "AWS AI 平台，Nova 系列模型",
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      },
+      "sections": [
+        "compute-api"
+      ]
     },
     {
       "id": "cohere",
@@ -3299,7 +3361,17 @@
         "API",
         "开源"
       ],
-      "description": "Cohere AI，Command 系列企业级模型"
+      "description": "Cohere AI，Command 系列企业级模型",
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      },
+      "sections": [
+        "official-labs"
+      ]
     },
     {
       "id": "stability-ai",
@@ -3311,7 +3383,17 @@
         "开源",
         "API"
       ],
-      "description": "Stable Diffusion 系列图像模型"
+      "description": "Stable Diffusion 系列图像模型",
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      },
+      "sections": [
+        "image-gen"
+      ]
     },
     {
       "id": "recraft",
@@ -3322,7 +3404,17 @@
       "tags": [
         "API"
       ],
-      "description": "Recraft 图像生成与编辑，专业设计级AI"
+      "description": "Recraft 图像生成与编辑，专业设计级AI",
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      },
+      "sections": [
+        "image-gen"
+      ]
     },
     {
       "id": "hidream",
@@ -3334,7 +3426,17 @@
         "开源",
         "API"
       ],
-      "description": "HiDream 系列图像生成模型"
+      "description": "HiDream 系列图像生成模型",
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      },
+      "sections": [
+        "image-gen"
+      ]
     },
     {
       "id": "pixverse",
@@ -3345,7 +3447,17 @@
       "tags": [
         "API"
       ],
-      "description": "PixVerse AI 视频生成平台"
+      "description": "PixVerse AI 视频生成平台",
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      },
+      "sections": [
+        "video-gen"
+      ]
     },
     {
       "id": "vidu",
@@ -3356,7 +3468,17 @@
       "tags": [
         "API"
       ],
-      "description": "Vidu AI 视频与图像生成"
+      "description": "Vidu AI 视频与图像生成",
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      },
+      "sections": [
+        "video-gen"
+      ]
     },
     {
       "id": "playground",
@@ -3367,7 +3489,17 @@
       "tags": [
         "免费"
       ],
-      "description": "Playground 图像生成与编辑"
+      "description": "Playground 图像生成与编辑",
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      },
+      "sections": [
+        "image-gen"
+      ]
     },
     {
       "id": "krea",
@@ -3378,7 +3510,17 @@
       "tags": [
         "免费"
       ],
-      "description": "Krea AI 实时图像生成"
+      "description": "Krea AI 实时图像生成",
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      },
+      "sections": [
+        "image-gen"
+      ]
     },
     {
       "id": "stitch",
@@ -3390,7 +3532,14 @@
         "image-tool"
       ],
       "type": "official",
-      "description": "Google Labs 推出的 AI 原生 UI/UX 设计工具。通过自然语言描述、手绘线框图或截图即可生成可编辑的移动端和网页端界面，支持导出为 Figma 或 HTML 代码。"
+      "description": "Google Labs 推出的 AI 原生 UI/UX 设计工具。通过自然语言描述、手绘线框图或截图即可生成可编辑的移动端和网页端界面，支持导出为 Figma 或 HTML 代码。",
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": []
+      }
     },
     {
       "id": "wikipedia-en",
@@ -5213,19 +5362,32 @@
       "id": "uisdc",
       "name": "优设网 UISDC",
       "url": "https://www.uisdc.com",
-      "description": "国内顶尖设计师学习社区，教程+作品展示，与站酷互补",
+      "description": "中文设计学习与作品展示社区，覆盖 UI、网页、视觉设计案例与创作教程。",
       "type": "inspiration",
       "weight": 0,
-      "primarySection": "",
-      "sections": [],
+      "primarySection": "design-showcase",
+      "sections": [
+        "design-showcase"
+      ],
       "capabilities": [],
-      "tags": [],
+      "tags": [
+        "免费",
+        "中文",
+        "设计",
+        "教程",
+        "作品展示"
+      ],
       "relations": {
         "alternatives": [
           "zcool"
-        ]
+        ],
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "complements": []
       },
-      "icon": null
+      "icon": null,
+      "category": "aesthetics"
     },
     {
       "id": "baidu-baike",
@@ -6117,7 +6279,7 @@
       "description": "意大利Bending Spoons旗下AI照片增强工具，支持老照片修复、画质增强、AI写真生成，全球下载量超1亿。",
       "type": "official",
       "weight": 0,
-      "category": "",
+      "category": "tools",
       "primarySection": "image-tool",
       "sections": [
         "image-tool",
@@ -6152,7 +6314,7 @@
       "description": "Topaz Labs旗下专业AI图像放大工具，支持6倍无损放大、面部恢复、噪点消除，摄影后期和游戏素材高清化首选。",
       "type": "official",
       "weight": 0,
-      "category": "",
+      "category": "tools",
       "primarySection": "image-tool",
       "sections": [
         "image-tool"
@@ -6184,7 +6346,7 @@
       "description": "AI驱动的学术论文搜索引擎，输入问题直接提取论文中的研究结论，覆盖2亿篇论文，支持共识/反对度量和引文溯源。",
       "type": "official",
       "weight": 0,
-      "category": "",
+      "category": "tools",
       "primarySection": "research",
       "sections": [
         "research"
@@ -6220,7 +6382,7 @@
       "description": "Ought旗下AI研究助手，自动从论文中提取数据、总结发现、生成文献综述，是学术界最活跃的AI工作流工具之一。",
       "type": "official",
       "weight": 0,
-      "category": "",
+      "category": "tools",
       "primarySection": "research",
       "sections": [
         "research"
@@ -6258,7 +6420,7 @@
       "description": "AI自动去除图片背景，5秒内完成，支持API批量处理。全球最流行的AI抠图工具。",
       "type": "official",
       "weight": 0,
-      "category": "",
+      "category": "tools",
       "primarySection": "image-tool",
       "sections": [
         "image-tool"
@@ -6291,7 +6453,7 @@
       "description": "Allen AI研究所开发的免费学术文献搜索引擎，覆盖2亿+论文，AI驱动引用分析与推荐。",
       "type": "official",
       "weight": 0,
-      "category": "",
+      "category": "tools",
       "primarySection": "research",
       "sections": [
         "research"
@@ -6324,7 +6486,7 @@
       "description": "Hugging Face 开源聊天平台，支持 10+ 开源模型自由切换，完全免费无限制",
       "type": "official",
       "weight": 0,
-      "category": "",
+      "category": "tools",
       "primarySection": "chat",
       "sections": [
         "chat"
@@ -6349,7 +6511,8 @@
         "alternatives": [
           "chatgpt",
           "claude",
-          "mistral"
+          "mistral",
+          "poe"
         ],
         "complements": []
       },
@@ -6362,7 +6525,7 @@
       "description": "AI 应用一键安装浏览器，本地运行 Stable Diffusion、LLM 等数百个 AI 工具，无需配置环境",
       "type": "independent",
       "weight": 0,
-      "category": "",
+      "category": "tools",
       "primarySection": "misc",
       "sections": [
         "misc"
@@ -6529,6 +6692,77 @@
           "codex",
           "qwen-code",
           "claude-code"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "poe",
+      "name": "Poe",
+      "url": "https://poe.com/",
+      "description": "Quora 推出的多模型 AI 对话平台，可在同一入口使用多家主流模型并创建自定义机器人。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "chat",
+      "sections": [
+        "chat"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "writing"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "多模型",
+        "Quora"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "chatgpt",
+          "claude",
+          "huggingchat"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "gamma",
+      "name": "Gamma",
+      "url": "https://gamma.app/",
+      "description": "AI 演示文稿、文档与网页生成平台，可由提示词快速生成结构化内容并协作分享。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "misc",
+      "sections": [
+        "misc"
+      ],
+      "capabilities": [
+        "workflow",
+        "writing"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "AI演示",
+        "协作"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "claude-design"
         ],
         "complements": []
       },
