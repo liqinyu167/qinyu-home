@@ -720,7 +720,8 @@
           "codegeex",
           "claude-code",
           "v0",
-          "antigravity"
+          "antigravity",
+          "devin"
         ],
         "complements": [
           "openai-api",
@@ -1984,7 +1985,8 @@
         "alternatives": [
           "codex",
           "cursor",
-          "claude-code"
+          "claude-code",
+          "github-copilot"
         ],
         "complements": [
           "bigmodel-api"
@@ -2368,7 +2370,8 @@
           "codegeex",
           "claude-code",
           "v0",
-          "antigravity"
+          "antigravity",
+          "github-copilot"
         ],
         "complements": []
       },
@@ -2407,7 +2410,9 @@
           "qwen-code",
           "codegeex",
           "v0",
-          "antigravity"
+          "antigravity",
+          "devin",
+          "github-copilot"
         ],
         "complements": [
           "anthropic-api",
@@ -6843,13 +6848,87 @@
         "alternatives": [
           "cursor",
           "codex",
-          "claude-code"
+          "claude-code",
+          "devin"
         ],
         "complements": [
           "aistudio"
         ]
       },
       "icon": null
+    },
+    {
+      "id": "devin",
+      "name": "Devin",
+      "url": "https://devin.ai",
+      "description": "Cognition 推出的自主 AI 软件工程师，可在云端沙箱中规划并执行开发任务、运行终端与测试、处理工单并提交 Pull Request。",
+      "type": "dev-tool",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code",
+        "workflow"
+      ],
+      "tags": [
+        "订阅制",
+        "英文",
+        "编程开发",
+        "Agent",
+        "Cognition"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "codex",
+          "claude-code",
+          "antigravity"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "github-copilot",
+      "name": "GitHub Copilot",
+      "url": "https://github.com/features/copilot",
+      "description": "GitHub 的 AI 编程助手，覆盖代码补全、对话、代码审查与 Agent 模式，可在主流 IDE 和 GitHub 工作流中协助实现、测试和提交代码。",
+      "type": "dev-tool",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code",
+        "workflow"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "编程开发",
+        "Agent",
+        "GitHub"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "cursor",
+          "codegeex",
+          "claude-code"
+        ],
+        "complements": []
+      },
+      "icon": "github_copilot_custom.png"
     }
   ]
 }
