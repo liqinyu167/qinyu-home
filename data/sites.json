@@ -513,7 +513,9 @@
         "products": [],
         "upstream": [],
         "downstream": [],
-        "alternatives": [],
+        "alternatives": [
+          "heygen"
+        ],
         "complements": [
           "jimeng",
           "doubao"
@@ -2267,7 +2269,8 @@
           "sora",
           "kling",
           "luma",
-          "runway"
+          "runway",
+          "higgsfield"
         ],
         "complements": []
       },
@@ -2520,7 +2523,8 @@
           "luma",
           "veo",
           "pika",
-          "runway"
+          "runway",
+          "heygen"
         ],
         "complements": [
           "capcut"
@@ -3096,7 +3100,10 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [],
-        "complements": []
+        "complements": [
+          "higgsfield",
+          "heygen"
+        ]
       },
       "category": "tools"
     },
@@ -3225,7 +3232,9 @@
           "pika",
           "jimeng",
           "hailuo-ai",
-          "hunyuan-video"
+          "hunyuan-video",
+          "higgsfield",
+          "heygen"
         ],
         "complements": []
       },
@@ -3465,7 +3474,9 @@
         "products": [],
         "upstream": [],
         "downstream": [],
-        "alternatives": [],
+        "alternatives": [
+          "higgsfield"
+        ],
         "complements": []
       },
       "sections": [
@@ -3528,7 +3539,9 @@
         "products": [],
         "upstream": [],
         "downstream": [],
-        "alternatives": [],
+        "alternatives": [
+          "higgsfield"
+        ],
         "complements": []
       },
       "sections": [
@@ -6929,6 +6942,88 @@
         "complements": []
       },
       "icon": "github_copilot_custom.png"
+    },
+    {
+      "id": "higgsfield",
+      "name": "Higgsfield AI",
+      "url": "https://higgsfield.ai",
+      "description": "AI 原生视觉创作套件，提供图像、视频与语音内容生成、媒体编辑和创作工作流，尤其面向社交媒体与商业短视频制作。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "video-gen",
+      "sections": [
+        "video-gen",
+        "image-gen",
+        "audio-gen"
+      ],
+      "capabilities": [
+        "audio-gen",
+        "image-gen",
+        "video-gen",
+        "workflow"
+      ],
+      "tags": [
+        "订阅制",
+        "英文",
+        "视频生成",
+        "图像生成",
+        "工作流"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "runway",
+          "krea",
+          "pika",
+          "pixverse"
+        ],
+        "complements": [
+          "elevenlabs"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "heygen",
+      "name": "HeyGen",
+      "url": "https://www.heygen.com",
+      "description": "知名 AI 数字人视频平台，可从文本、图像或音频生成带旁白、字幕与动画的完整视频，并支持多语言视频翻译和数字分身。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "video-gen",
+      "sections": [
+        "video-gen",
+        "audio-gen"
+      ],
+      "capabilities": [
+        "video-gen",
+        "voice"
+      ],
+      "tags": [
+        "订阅制",
+        "中文",
+        "英文",
+        "数字人",
+        "视频生成"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "runway",
+          "capcut",
+          "hailuo-ai"
+        ],
+        "complements": [
+          "elevenlabs"
+        ]
+      },
+      "icon": null
     }
   ]
 }
