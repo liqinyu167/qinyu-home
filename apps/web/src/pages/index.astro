@@ -5139,7 +5139,7 @@
           <div class="arena-footer-pills">
             <a class="footer-pill" href="https://artificialanalysis.ai/leaderboards/" target="_blank" rel="noopener">Artificial Analysis</a>
           </div>
-          <span class="arena-footer-label" style="margin-left: 16px; font-size: 10px; color: var(--ink-muted);">更新于 2026-05-22</span>
+          <span class="arena-footer-label" id="arenaUpdateTime" style="margin-left: 16px; font-size: 10px; color: var(--ink-muted);">更新于 …</span>
         </div>
       </div>
     </section>
@@ -6376,6 +6376,27 @@
         state.categories = data.categories && data.categories.length ? data.categories : MOCK_DATA.categories;
         state.sites = Array.isArray(data.sites) ? data.sites : FALLBACK_SITES;
         state.models = Array.isArray(data.models) ? data.models : [];
+        state.modelsUpdated = data.models_updated || null;
+        // Validate the complete ISO timestamp while preserving its source calendar date.
+        const timeEl = document.getElementById("arenaUpdateTime");
+        if (timeEl) {
+          const rawTimestamp = typeof state.modelsUpdated === "string" ? state.modelsUpdated : "";
+          const isoMatch = rawTimestamp.match(/^(\d{4})-(\d{2})-(\d{2})T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$/);
+          let dateText = "";
+          if (isoMatch) {
+            const year = Number(isoMatch[1]);
+            const month = Number(isoMatch[2]);
+            const day = Number(isoMatch[3]);
+            const calendarDate = new Date(Date.UTC(year, month - 1, day));
+            const validCalendarDate = calendarDate.getUTCFullYear() === year
+              && calendarDate.getUTCMonth() === month - 1
+              && calendarDate.getUTCDate() === day;
+            if (validCalendarDate && !Number.isNaN(Date.parse(rawTimestamp))) {
+              dateText = `${isoMatch[1]}-${isoMatch[2]}-${isoMatch[3]}`;
+            }
+          }
+          timeEl.textContent = dateText ? `更新于 ${dateText}` : "更新时间未知";
+        }
       } catch {
         state.categories = MOCK_DATA.categories;
         state.sites = FALLBACK_SITES;

@@ -318,6 +318,7 @@ async def get_sites(q: str = "", section: str = "", tag: str = ""):
         "categories": nav_data.get("categories", []),
         "sites": sites,
         "models": nav_data.get("models", []),
+        "models_updated": nav_data.get("models_updated", ""),
         "total": len(sites),
     }
 
