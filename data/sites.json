@@ -188,13 +188,11 @@
       ],
       "relations": {
         "products": [
-          "sora",
           "openai-api",
           "codex"
         ],
         "upstream": [],
         "downstream": [
-          "sora",
           "openai-api",
           "codex"
         ],
@@ -209,9 +207,7 @@
           "manus",
           "poe"
         ],
-        "complements": [
-          "sora"
-        ]
+        "complements": []
       },
       "tags": [
         "免费",
@@ -253,7 +249,6 @@
         "downstream": [],
         "alternatives": [
           "flow",
-          "sora",
           "runway"
         ],
         "complements": [
@@ -447,48 +442,6 @@
         "模型"
       ],
       "weight": 525,
-      "icon": null,
-      "category": "tools"
-    },
-    {
-      "id": "sora",
-      "name": "Sora",
-      "url": "https://sora.com",
-      "description": "OpenAI 的 AI 视频生成工具，支持文本和图片生成最长 20 秒的高质量视频，提供多种宽高比和镜头控制选项。",
-      "type": "canvas-native",
-      "primarySection": "video-gen",
-      "sections": [
-        "video-gen"
-      ],
-      "capabilities": [
-        "canvas",
-        "image-gen",
-        "video-gen",
-        "workflow"
-      ],
-      "relations": {
-        "products": [],
-        "upstream": [
-          "chatgpt"
-        ],
-        "downstream": [],
-        "alternatives": [
-          "jimeng",
-          "flow",
-          "runway"
-        ],
-        "complements": [
-          "chatgpt"
-        ]
-      },
-      "tags": [
-        "订阅制",
-        "视频生成",
-        "图像生成",
-        "OpenAI",
-        "子站"
-      ],
-      "weight": 800,
       "icon": null,
       "category": "tools"
     },
@@ -2191,7 +2144,6 @@
         "downstream": [],
         "alternatives": [
           "veo",
-          "sora",
           "luma",
           "pika",
           "runway"
@@ -2230,7 +2182,6 @@
         "downstream": [],
         "alternatives": [
           "veo",
-          "sora",
           "kling",
           "pika",
           "runway"
@@ -2266,7 +2217,6 @@
         "downstream": [],
         "alternatives": [
           "veo",
-          "sora",
           "kling",
           "luma",
           "runway",
@@ -2519,7 +2469,6 @@
         "alternatives": [
           "jimeng",
           "kling",
-          "sora",
           "luma",
           "veo",
           "pika",
@@ -2959,8 +2908,8 @@
     {
       "id": "hunyuan-video",
       "name": "混元AI视频",
-      "url": "https://video.hunyuan.tencent.com",
-      "description": "腾讯混元AI视频生成平台，基于混元视频生成大模型，支持文生视频、图生视频等高质量视频创作能力。",
+      "url": "https://aivideo.hunyuan.tencent.com/",
+      "description": "腾讯混元的AI视频生成入口，支持文本或图片生成高质量视频，面向广告、影视和内容创作场景。",
       "type": "official",
       "primarySection": "video-gen",
       "sections": [
@@ -2979,7 +2928,6 @@
           "jimeng",
           "kling",
           "luma",
-          "sora",
           "runway"
         ],
         "complements": [
@@ -3225,7 +3173,6 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [
-          "sora",
           "veo",
           "kling",
           "luma",
@@ -3966,8 +3913,7 @@
         "complements": [
           "aeon",
           "quanta-magazine",
-          "pdr",
-          "longform"
+          "pdr"
         ]
       },
       "icon": null,
@@ -4773,37 +4719,6 @@
       "category": "inspiration"
     },
     {
-      "id": "longform",
-      "name": "Longform",
-      "url": "https://longform.org",
-      "description": "精选长篇非虚构文章推荐平台，涵盖新闻特写、报告文学与深度叙事，是深度阅读爱好者的宝藏。",
-      "type": "official",
-      "weight": 0,
-      "primarySection": "deep-ideas",
-      "sections": [
-        "deep-ideas"
-      ],
-      "capabilities": [],
-      "tags": [
-        "免费",
-        "英文",
-        "长篇",
-        "非虚构",
-        "深度阅读"
-      ],
-      "relations": {
-        "products": [],
-        "upstream": [],
-        "downstream": [],
-        "alternatives": [],
-        "complements": [
-          "marginalian"
-        ]
-      },
-      "icon": null,
-      "category": "inspiration"
-    },
-    {
       "id": "nautilus",
       "name": "Nautilus",
       "url": "https://nautil.us",
@@ -5416,40 +5331,6 @@
       "category": "aesthetics"
     },
     {
-      "id": "baidu-baike",
-      "name": "百度百科",
-      "url": "https://baike.baidu.com/random",
-      "description": "中文原生百科随机页面——全球最大中文百科，覆盖中文互联网沉淀的海量知识。母语可达的深度知识随机碰撞，与维基族系互补。",
-      "type": "official",
-      "weight": 9,
-      "primarySection": "encyclopedia-random",
-      "sections": [
-        "encyclopedia-random"
-      ],
-      "capabilities": [],
-      "tags": [
-        "免费",
-        "中文",
-        "百科",
-        "随机",
-        "知识"
-      ],
-      "relations": {
-        "products": [],
-        "upstream": [],
-        "downstream": [],
-        "alternatives": [
-          "wikipedia-zh"
-        ],
-        "complements": [
-          "wikidata",
-          "wikipedia-en"
-        ]
-      },
-      "icon": null,
-      "category": "inspiration"
-    },
-    {
       "id": "radio-garden",
       "name": "Radio Garden",
       "url": "https://radio.garden/",
@@ -5903,8 +5784,7 @@
         "downstream": [],
         "alternatives": [],
         "complements": [
-          "wikipedia-zh",
-          "baidu-baike"
+          "wikipedia-zh"
         ]
       },
       "tags": [
@@ -5935,8 +5815,7 @@
         "downstream": [],
         "alternatives": [],
         "complements": [
-          "wikipedia-zh",
-          "baidu-baike"
+          "wikipedia-zh"
         ]
       },
       "tags": [
@@ -6001,8 +5880,7 @@
         "downstream": [],
         "alternatives": [],
         "complements": [
-          "wikipedia-zh",
-          "baidu-baike"
+          "wikipedia-zh"
         ]
       },
       "tags": [
