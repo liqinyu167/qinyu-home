@@ -1084,7 +1084,8 @@
           "gamma"
         ],
         "complements": [
-          "claude"
+          "claude",
+          "napkin-ai"
         ]
       },
       "tags": [
@@ -3137,7 +3138,8 @@
         "alternatives": [
           "consensus",
           "elicit",
-          "notebooklm"
+          "notebooklm",
+          "genspark"
         ],
         "complements": []
       },
@@ -6557,7 +6559,8 @@
         "alternatives": [
           "minimax-agent",
           "chatgpt",
-          "kimi"
+          "kimi",
+          "genspark"
         ],
         "complements": []
       },
@@ -6669,7 +6672,10 @@
         "alternatives": [
           "claude-design"
         ],
-        "complements": []
+        "complements": [
+          "genspark",
+          "napkin-ai"
+        ]
       },
       "icon": null
     },
@@ -6899,6 +6905,84 @@
         ],
         "complements": [
           "elevenlabs"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "genspark",
+      "name": "Genspark",
+      "url": "https://www.genspark.ai/",
+      "description": "MainFunc 推出的通用 AI 工作空间，以超级智能体执行搜索研究、内容创作、演示文稿与多步骤办公任务。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "chat",
+      "sections": [
+        "chat",
+        "research",
+        "misc"
+      ],
+      "capabilities": [
+        "chat",
+        "search",
+        "workflow",
+        "writing"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "AI智能体",
+        "AI办公"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "manus",
+          "perplexity"
+        ],
+        "complements": [
+          "gamma"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "napkin-ai",
+      "name": "Napkin AI",
+      "url": "https://www.napkin.ai/",
+      "description": "面向商业表达的 AI 视觉生成工具，可将文本快速转化为流程图、信息图与演示视觉，并支持编辑和导出。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "image-gen",
+      "sections": [
+        "image-gen",
+        "misc"
+      ],
+      "capabilities": [
+        "image-gen",
+        "workflow",
+        "writing"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "AI可视化",
+        "信息图"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "gamma",
+          "claude-design"
         ]
       },
       "icon": null
