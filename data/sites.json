@@ -291,13 +291,15 @@
         "products": [
           "jimeng",
           "coze",
-          "ark"
+          "ark",
+          "trae"
         ],
         "upstream": [],
         "downstream": [
           "jimeng",
           "coze",
-          "ark"
+          "ark",
+          "trae"
         ],
         "alternatives": [
           "chatgpt",
@@ -1486,7 +1488,8 @@
           "qwen-api",
           "bailian",
           "dashscope",
-          "qwen-code"
+          "qwen-code",
+          "qoder"
         ],
         "upstream": [
           "alibaba-cloud"
@@ -1495,7 +1498,8 @@
           "qwen-api",
           "bailian",
           "dashscope",
-          "qwen-code"
+          "qwen-code",
+          "qoder"
         ],
         "alternatives": [
           "chatgpt",
@@ -1689,7 +1693,8 @@
         "alternatives": [
           "codex",
           "claude-code",
-          "v0"
+          "v0",
+          "qoder"
         ],
         "complements": [
           "qwen-api",
@@ -1942,7 +1947,8 @@
           "codex",
           "cursor",
           "claude-code",
-          "github-copilot"
+          "github-copilot",
+          "qoder"
         ],
         "complements": [
           "bigmodel-api"
@@ -2325,7 +2331,8 @@
           "claude-code",
           "v0",
           "antigravity",
-          "github-copilot"
+          "github-copilot",
+          "trae"
         ],
         "complements": []
       },
@@ -2969,7 +2976,8 @@
         "alternatives": [
           "cursor",
           "claude-code",
-          "qwen-code"
+          "qwen-code",
+          "trae"
         ],
         "complements": [
           "hunyuan"
@@ -6984,6 +6992,83 @@
           "gamma",
           "claude-design"
         ]
+      },
+      "icon": null
+    },
+    {
+      "id": "trae",
+      "name": "TRAE",
+      "url": "https://www.trae.ai/",
+      "description": "字节跳动推出的 AI 原生编程平台，提供 IDE、SOLO Agent 与项目级代码理解，可通过自然语言规划、编写、调试和交付软件。",
+      "type": "dev-tool",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code",
+        "workflow"
+      ],
+      "tags": [
+        "免费",
+        "中文",
+        "编程开发",
+        "Agent",
+        "字节跳动"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "doubao"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "cursor",
+          "codebuddy",
+          "qoder"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "qoder",
+      "name": "Qoder",
+      "url": "https://qoder.com/",
+      "description": "阿里巴巴推出的 Agentic 编程平台，提供代码库级理解、任务规划与自主开发工作流，面向真实项目完成编码、测试和交付。",
+      "type": "dev-tool",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code",
+        "workflow"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "编程开发",
+        "Agent",
+        "阿里巴巴"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "qwen"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "trae",
+          "qwen-code",
+          "codegeex"
+        ],
+        "complements": []
       },
       "icon": null
     }
