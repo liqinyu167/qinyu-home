@@ -3664,7 +3664,9 @@
         "downstream": [],
         "alternatives": [],
         "complements": [
-          "wikipedia-en"
+          "wikipedia-en",
+          "met-collection",
+          "moma-collection"
         ]
       },
       "icon": null,
@@ -4722,7 +4724,9 @@
         "alternatives": [],
         "complements": [
           "aeon",
-          "marginalian"
+          "marginalian",
+          "met-collection",
+          "moma-collection"
         ]
       },
       "icon": null,
@@ -7069,6 +7073,74 @@
           "codegeex"
         ],
         "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "met-collection",
+      "name": "The Met Collection",
+      "url": "https://www.metmuseum.org/art/collection",
+      "description": "纽约大都会艺术博物馆官方在线藏品库，汇集跨越五千年文明的绘画、雕塑与工艺杰作，并提供开放获取图像。",
+      "type": "official",
+      "weight": 0,
+      "category": "aesthetics",
+      "primarySection": "comprehensive-gallery",
+      "sections": [
+        "comprehensive-gallery"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "博物馆",
+        "艺术藏品",
+        "开放获取"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "moma-collection"
+        ],
+        "complements": [
+          "wikimedia-commons",
+          "pdr"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "moma-collection",
+      "name": "MoMA Collection",
+      "url": "https://www.moma.org/collection/",
+      "description": "纽约现代艺术博物馆官方馆藏入口，集中展示现代与当代艺术、摄影、设计及影像领域的代表作品。",
+      "type": "official",
+      "weight": 0,
+      "category": "aesthetics",
+      "primarySection": "comprehensive-gallery",
+      "sections": [
+        "comprehensive-gallery"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "博物馆",
+        "现代艺术",
+        "设计"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "met-collection"
+        ],
+        "complements": [
+          "wikimedia-commons",
+          "pdr"
+        ]
       },
       "icon": null
     }
