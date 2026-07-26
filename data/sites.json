@@ -3593,7 +3593,8 @@
         ],
         "downstream": [],
         "alternatives": [
-          "wikipedia-en"
+          "wikipedia-en",
+          "allhistory"
         ],
         "complements": [
           "wikidata",
@@ -3631,7 +3632,8 @@
         "alternatives": [],
         "complements": [
           "wikipedia-en",
-          "wikipedia-zh"
+          "wikipedia-zh",
+          "allhistory"
         ]
       },
       "icon": null,
@@ -5894,7 +5896,8 @@
         "downstream": [],
         "alternatives": [],
         "complements": [
-          "wikipedia-zh"
+          "wikipedia-zh",
+          "allhistory"
         ]
       },
       "tags": [
@@ -7140,6 +7143,42 @@
         "complements": [
           "wikimedia-commons",
           "pdr"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "allhistory",
+      "name": "全历史",
+      "url": "https://www.allhistory.com/",
+      "description": "中文数字人文探索平台，以 AI 知识图谱串联历史时间、地域、人物与事件，适合从关联脉络中随机发现人文社科知识。",
+      "type": "official",
+      "weight": 0,
+      "category": "inspiration",
+      "primarySection": "encyclopedia-random",
+      "sections": [
+        "encyclopedia-random"
+      ],
+      "capabilities": [
+        "search"
+      ],
+      "tags": [
+        "免费",
+        "中文",
+        "历史",
+        "知识图谱",
+        "探索"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "wikipedia-zh"
+        ],
+        "complements": [
+          "wikidata",
+          "gushiwen"
         ]
       },
       "icon": null
