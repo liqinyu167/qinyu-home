@@ -205,7 +205,8 @@
           "zhipu",
           "wenxin-yiyan",
           "manus",
-          "poe"
+          "poe",
+          "mistral-vibe"
         ],
         "complements": []
       },
@@ -999,7 +1000,8 @@
           "deepseek",
           "zhipu",
           "wenxin-yiyan",
-          "poe"
+          "poe",
+          "mistral-vibe"
         ],
         "complements": []
       },
@@ -3235,9 +3237,13 @@
       ],
       "description": "欧洲最强AI实验室，Mistral Large / Small / Ministral 系列",
       "relations": {
-        "products": [],
+        "products": [
+          "mistral-vibe"
+        ],
         "upstream": [],
-        "downstream": [],
+        "downstream": [
+          "mistral-vibe"
+        ],
         "alternatives": [],
         "complements": []
       },
@@ -6651,7 +6657,8 @@
           "chatgpt",
           "claude",
           "huggingchat",
-          "character-ai"
+          "character-ai",
+          "mistral-vibe"
         ],
         "complements": []
       },
@@ -6957,7 +6964,8 @@
         "downstream": [],
         "alternatives": [
           "manus",
-          "perplexity"
+          "perplexity",
+          "mistral-vibe"
         ],
         "complements": [
           "gamma"
@@ -7180,6 +7188,51 @@
           "wikidata",
           "gushiwen"
         ]
+      },
+      "icon": null
+    },
+    {
+      "id": "mistral-vibe",
+      "name": "Mistral Vibe",
+      "url": "https://chat.mistral.ai",
+      "description": "Mistral 将 Le Chat 升级为 Vibe 的 AI 工作与编程智能体，支持对话、联网搜索、文档创作、自动化与代码开发。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "chat",
+      "sections": [
+        "chat",
+        "code-dev",
+        "research"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "search",
+        "voice",
+        "workflow",
+        "writing"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "Mistral",
+        "Agent"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "mistral"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "chatgpt",
+          "claude",
+          "poe",
+          "genspark"
+        ],
+        "complements": []
       },
       "icon": null
     }
