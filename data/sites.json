@@ -2334,7 +2334,8 @@
           "v0",
           "antigravity",
           "github-copilot",
-          "trae"
+          "trae",
+          "replit-agent"
         ],
         "complements": []
       },
@@ -6619,7 +6620,9 @@
           "cursor",
           "codex",
           "qwen-code",
-          "claude-code"
+          "claude-code",
+          "replit-agent",
+          "lovable"
         ],
         "complements": []
       },
@@ -7231,6 +7234,76 @@
           "claude",
           "poe",
           "genspark"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "replit-agent",
+      "name": "Replit Agent",
+      "url": "https://replit.com/ai",
+      "description": "Replit 推出的 AI 应用开发代理，可通过自然语言创建、调试并部署网站与应用，覆盖从想法到上线的完整流程。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code",
+        "workflow"
+      ],
+      "tags": [
+        "订阅制",
+        "英文",
+        "AI编程",
+        "应用开发"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "lovable",
+          "v0",
+          "cursor"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "lovable",
+      "name": "Lovable",
+      "url": "https://lovable.dev/",
+      "description": "面向非技术用户与产品团队的 AI 应用构建平台，通过对话生成、迭代并发布全栈网站和应用。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code",
+        "workflow"
+      ],
+      "tags": [
+        "免费试用",
+        "订阅制",
+        "英文",
+        "AI编程",
+        "应用开发"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "replit-agent",
+          "v0"
         ],
         "complements": []
       },
