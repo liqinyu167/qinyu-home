@@ -508,7 +508,8 @@
         "downstream": [],
         "alternatives": [
           "suno",
-          "udio"
+          "udio",
+          "mureka"
         ],
         "complements": [
           "gemini"
@@ -2262,7 +2263,8 @@
         "downstream": [],
         "alternatives": [
           "udio",
-          "musicfx"
+          "musicfx",
+          "mureka"
         ],
         "complements": []
       },
@@ -2295,7 +2297,8 @@
         "downstream": [],
         "alternatives": [
           "suno",
-          "musicfx"
+          "musicfx",
+          "mureka"
         ],
         "complements": []
       },
@@ -3059,7 +3062,9 @@
         "products": [],
         "upstream": [],
         "downstream": [],
-        "alternatives": [],
+        "alternatives": [
+          "fish-audio"
+        ],
         "complements": [
           "higgsfield",
           "heygen"
@@ -6929,7 +6934,8 @@
           "hailuo-ai"
         ],
         "complements": [
-          "elevenlabs"
+          "elevenlabs",
+          "fish-audio"
         ]
       },
       "icon": null
@@ -7306,6 +7312,80 @@
           "v0"
         ],
         "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "mureka",
+      "name": "Mureka",
+      "url": "https://www.mureka.ai/",
+      "description": "昆仑万维推出的 AI 音乐创作平台，支持从歌词、风格与参考音频生成完整歌曲，并提供编辑、翻唱与商用授权能力。",
+      "type": "tool",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "audio-gen",
+      "sections": [
+        "audio-gen"
+      ],
+      "capabilities": [
+        "audio-gen"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "英文",
+        "音频生成",
+        "音乐",
+        "昆仑万维"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "suno",
+          "udio",
+          "musicfx"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "fish-audio",
+      "name": "Fish Audio",
+      "url": "https://fish.audio/",
+      "description": "面向创作者的 AI 语音平台，提供多语言文本转语音、情感控制与声音克隆，并拥有可直接试听和使用的语音库。",
+      "type": "tool",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "audio-gen",
+      "sections": [
+        "audio-gen"
+      ],
+      "capabilities": [
+        "audio-gen",
+        "voice"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "英文",
+        "音频生成",
+        "语音克隆"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "elevenlabs"
+        ],
+        "complements": [
+          "heygen"
+        ]
       },
       "icon": null
     }
