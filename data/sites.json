@@ -3155,7 +3155,8 @@
           "consensus",
           "elicit",
           "notebooklm",
-          "genspark"
+          "genspark",
+          "metaso"
         ],
         "complements": []
       },
@@ -6974,7 +6975,8 @@
         "alternatives": [
           "manus",
           "perplexity",
-          "mistral-vibe"
+          "mistral-vibe",
+          "metaso"
         ],
         "complements": [
           "gamma"
@@ -7386,6 +7388,43 @@
         "complements": [
           "heygen"
         ]
+      },
+      "icon": null
+    },
+    {
+      "id": "metaso",
+      "name": "秘塔AI搜索",
+      "url": "https://metaso.cn/",
+      "description": "秘塔科技推出的中文 AI 搜索与知识研究工具，提供无广告的结构化答案、来源引用、学术搜索和长文研究入口。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "research",
+      "sections": [
+        "research",
+        "chat"
+      ],
+      "capabilities": [
+        "chat",
+        "search",
+        "writing"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "AI搜索",
+        "知识研究"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "perplexity",
+          "genspark"
+        ],
+        "complements": []
       },
       "icon": null
     }
