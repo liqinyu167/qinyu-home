@@ -354,7 +354,8 @@
         ],
         "downstream": [],
         "alternatives": [
-          "perplexity"
+          "perplexity",
+          "ima"
         ],
         "complements": [
           "elicit",
@@ -2804,7 +2805,8 @@
           "hunyuan-3d",
           "hunyuan-video",
           "codebuddy",
-          "hunyuan-api"
+          "hunyuan-api",
+          "ima"
         ],
         "upstream": [],
         "downstream": [
@@ -2812,7 +2814,8 @@
           "hunyuan-3d",
           "hunyuan-video",
           "codebuddy",
-          "hunyuan-api"
+          "hunyuan-api",
+          "ima"
         ],
         "alternatives": [
           "qwen",
@@ -2868,7 +2871,8 @@
           "zhipu"
         ],
         "complements": [
-          "hunyuan"
+          "hunyuan",
+          "ima"
         ]
       },
       "tags": [
@@ -3156,7 +3160,8 @@
           "elicit",
           "notebooklm",
           "genspark",
-          "metaso"
+          "metaso",
+          "nano-ai"
         ],
         "complements": []
       },
@@ -6976,7 +6981,8 @@
           "manus",
           "perplexity",
           "mistral-vibe",
-          "metaso"
+          "metaso",
+          "nano-ai"
         ],
         "complements": [
           "gamma"
@@ -7421,6 +7427,89 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [
+          "perplexity",
+          "genspark",
+          "nano-ai"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "ima",
+      "name": "ima",
+      "url": "https://ima.qq.com/",
+      "description": "腾讯推出的 AI 知识管家，以个人知识库为基础提供搜索、阅读、问答与写作的一站式工作台，适合中文资料整理和知识研究。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "research",
+      "sections": [
+        "research",
+        "chat"
+      ],
+      "capabilities": [
+        "chat",
+        "search",
+        "writing"
+      ],
+      "tags": [
+        "免费",
+        "中文",
+        "知识库",
+        "知识研究",
+        "腾讯",
+        "子站"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "hunyuan"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "notebooklm"
+        ],
+        "complements": [
+          "yuanbao"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "nano-ai",
+      "name": "纳米AI",
+      "url": "https://n.cn/",
+      "description": "360 推出的中文 AI 搜索与多智能体工作台，支持深度搜索、报告、PPT、视频生成与个人知识库，提供多模型协作入口。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "research",
+      "sections": [
+        "research",
+        "chat",
+        "misc"
+      ],
+      "capabilities": [
+        "chat",
+        "search",
+        "workflow",
+        "writing"
+      ],
+      "tags": [
+        "免费",
+        "中文",
+        "AI搜索",
+        "AI智能体",
+        "知识研究",
+        "360"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "metaso",
           "perplexity",
           "genspark"
         ],
