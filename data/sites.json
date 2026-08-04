@@ -6305,7 +6305,9 @@
         "downstream": [],
         "alternatives": [
           "perplexity",
-          "semantic-scholar"
+          "semantic-scholar",
+          "scite",
+          "scispace"
         ],
         "complements": [
           "elicit",
@@ -6344,10 +6346,12 @@
         "alternatives": [
           "perplexity",
           "consensus",
-          "semantic-scholar"
+          "semantic-scholar",
+          "scispace"
         ],
         "complements": [
-          "notebooklm"
+          "notebooklm",
+          "scite"
         ]
       },
       "icon": null
@@ -6412,9 +6416,12 @@
         "downstream": [],
         "alternatives": [
           "consensus",
-          "elicit"
+          "elicit",
+          "scite"
         ],
-        "complements": []
+        "complements": [
+          "scispace"
+        ]
       },
       "icon": null
     },
@@ -7514,6 +7521,79 @@
           "genspark"
         ],
         "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "scite",
+      "name": "Scite",
+      "url": "https://scite.ai/",
+      "description": "Research Solutions 旗下科研验证平台，通过 Smart Citations 展示论文被支持、质疑或提及的引用语境，并提供 AI 研究助手。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "research",
+      "sections": [
+        "research"
+      ],
+      "capabilities": [
+        "search",
+        "writing"
+      ],
+      "tags": [
+        "订阅制",
+        "英文",
+        "AI科研",
+        "引文分析"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "consensus",
+          "semantic-scholar"
+        ],
+        "complements": [
+          "elicit"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "scispace",
+      "name": "SciSpace",
+      "url": "https://scispace.com/",
+      "description": "面向科研全流程的 AI 平台，提供论文检索、PDF 对话、文献综述与学术写作辅助。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "research",
+      "sections": [
+        "research"
+      ],
+      "capabilities": [
+        "chat",
+        "search",
+        "writing"
+      ],
+      "tags": [
+        "免费试用",
+        "订阅制",
+        "英文",
+        "AI科研"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "elicit",
+          "consensus"
+        ],
+        "complements": [
+          "semantic-scholar"
+        ]
       },
       "icon": null
     }
