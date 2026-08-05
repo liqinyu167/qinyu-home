@@ -475,7 +475,8 @@
         ],
         "complements": [
           "jimeng",
-          "doubao"
+          "doubao",
+          "viggle"
         ]
       },
       "tags": [
@@ -1987,7 +1988,8 @@
         "alternatives": [
           "imagen",
           "jimeng",
-          "claude-design"
+          "claude-design",
+          "openart"
         ],
         "complements": []
       },
@@ -2022,7 +2024,8 @@
         "alternatives": [
           "midjourney",
           "ideogram",
-          "flux"
+          "flux",
+          "openart"
         ],
         "complements": []
       },
@@ -2157,7 +2160,8 @@
           "veo",
           "luma",
           "pika",
-          "runway"
+          "runway",
+          "viggle"
         ],
         "complements": []
       },
@@ -2231,7 +2235,8 @@
           "kling",
           "luma",
           "runway",
-          "higgsfield"
+          "higgsfield",
+          "viggle"
         ],
         "complements": []
       },
@@ -3450,7 +3455,8 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [
-          "higgsfield"
+          "higgsfield",
+          "viggle"
         ],
         "complements": []
       },
@@ -3515,7 +3521,8 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [
-          "higgsfield"
+          "higgsfield",
+          "openart"
         ],
         "complements": []
       },
@@ -7593,6 +7600,81 @@
         ],
         "complements": [
           "semantic-scholar"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "openart",
+      "name": "OpenArt",
+      "url": "https://openart.ai/",
+      "description": "一站式 AI 视觉创作平台，提供文生图、图像编辑、角色一致性与视频生成工作流，适合从灵感探索到成片制作。",
+      "type": "tool",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "image-gen",
+      "sections": [
+        "image-gen",
+        "image-tool",
+        "video-gen"
+      ],
+      "capabilities": [
+        "image-gen",
+        "video-gen"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "图像生成",
+        "视频生成"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "midjourney",
+          "leonardo-ai",
+          "krea"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "viggle",
+      "name": "Viggle AI",
+      "url": "https://viggle.ai/zh-CN",
+      "description": "面向角色动画与梗视频创作的 AI 视频平台，可用动作模板或参考视频驱动人物，让静态角色快速动起来。",
+      "type": "tool",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "video-gen",
+      "sections": [
+        "video-gen"
+      ],
+      "capabilities": [
+        "video-gen"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "视频生成",
+        "角色动画"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "pika",
+          "kling",
+          "pixverse"
+        ],
+        "complements": [
+          "capcut"
         ]
       },
       "icon": null
