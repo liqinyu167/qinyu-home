@@ -6607,7 +6607,8 @@
           "minimax-agent",
           "chatgpt",
           "kimi",
-          "genspark"
+          "genspark",
+          "skywork"
         ],
         "complements": []
       },
@@ -6720,7 +6721,9 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [
-          "claude-design"
+          "claude-design",
+          "skywork",
+          "wps-ai"
         ],
         "complements": [
           "genspark",
@@ -6996,7 +6999,8 @@
           "perplexity",
           "mistral-vibe",
           "metaso",
-          "nano-ai"
+          "nano-ai",
+          "skywork"
         ],
         "complements": [
           "gamma"
@@ -7676,6 +7680,80 @@
         "complements": [
           "capcut"
         ]
+      },
+      "icon": null
+    },
+    {
+      "id": "skywork",
+      "name": "Skywork",
+      "url": "https://skywork.ai/",
+      "description": "昆仑万维推出的一体化 AI 工作空间，以超级智能体生成文档、演示、表格、网页与播客，并提供深度研究能力。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "misc",
+      "sections": [
+        "misc",
+        "research"
+      ],
+      "capabilities": [
+        "search",
+        "workflow",
+        "writing"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "AI办公",
+        "智能体"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "genspark",
+          "manus",
+          "gamma",
+          "wps-ai"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "wps-ai",
+      "name": "WPS AI",
+      "url": "https://ai.wps.cn/",
+      "description": "金山办公推出的中文 AI 办公入口，覆盖文档写作与润色、PPT 生成、表格处理和智能问答。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "misc",
+      "sections": [
+        "misc"
+      ],
+      "capabilities": [
+        "workflow",
+        "writing"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "AI办公",
+        "金山办公"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "skywork",
+          "gamma"
+        ],
+        "complements": []
       },
       "icon": null
     }
