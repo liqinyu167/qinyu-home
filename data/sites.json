@@ -2344,7 +2344,8 @@
           "antigravity",
           "github-copilot",
           "trae",
-          "replit-agent"
+          "replit-agent",
+          "baidu-comate"
         ],
         "complements": []
       },
@@ -3111,9 +3112,15 @@
         "文心一言"
       ],
       "relations": {
-        "products": [],
+        "products": [
+          "miaoda",
+          "baidu-comate"
+        ],
         "upstream": [],
-        "downstream": [],
+        "downstream": [
+          "miaoda",
+          "baidu-comate"
+        ],
         "alternatives": [
           "chatgpt",
           "qwen",
@@ -6648,7 +6655,8 @@
           "qwen-code",
           "claude-code",
           "replit-agent",
-          "lovable"
+          "lovable",
+          "miaoda"
         ],
         "complements": []
       },
@@ -6874,7 +6882,8 @@
         "alternatives": [
           "cursor",
           "codegeex",
-          "claude-code"
+          "claude-code",
+          "baidu-comate"
         ],
         "complements": []
       },
@@ -7116,7 +7125,8 @@
         "alternatives": [
           "trae",
           "qwen-code",
-          "codegeex"
+          "codegeex",
+          "baidu-comate"
         ],
         "complements": []
       },
@@ -7300,7 +7310,8 @@
         "alternatives": [
           "lovable",
           "v0",
-          "cursor"
+          "cursor",
+          "miaoda"
         ],
         "complements": []
       },
@@ -7335,7 +7346,8 @@
         "downstream": [],
         "alternatives": [
           "replit-agent",
-          "v0"
+          "v0",
+          "miaoda"
         ],
         "complements": []
       },
@@ -7752,6 +7764,83 @@
         "alternatives": [
           "skywork",
           "gamma"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "miaoda",
+      "name": "秒哒",
+      "url": "https://www.miaoda.cn/",
+      "description": "百度推出的 AI 原生无代码应用开发平台，可通过自然语言生成网站、小程序和业务应用，并持续对话修改与发布。",
+      "type": "dev-tool",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code",
+        "workflow"
+      ],
+      "tags": [
+        "免费",
+        "中文",
+        "AI编程",
+        "无代码",
+        "百度"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "wenxin-yiyan"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "v0",
+          "lovable",
+          "replit-agent"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "baidu-comate",
+      "name": "文心快码 Baidu Comate",
+      "url": "https://comate.baidu.com/zh",
+      "description": "百度推出的智能编程平台，提供代码补全、代码库问答、Agent 任务规划与 AI IDE，覆盖开发、调试和测试工作流。",
+      "type": "dev-tool",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code",
+        "workflow"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "AI编程",
+        "Agent",
+        "百度"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "wenxin-yiyan"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "cursor",
+          "github-copilot",
+          "qoder"
         ],
         "complements": []
       },
