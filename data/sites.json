@@ -3700,7 +3700,9 @@
         "complements": [
           "wikipedia-en",
           "met-collection",
-          "moma-collection"
+          "moma-collection",
+          "rijksmuseum-collection",
+          "tate-collection"
         ]
       },
       "icon": null,
@@ -4760,7 +4762,9 @@
           "aeon",
           "marginalian",
           "met-collection",
-          "moma-collection"
+          "moma-collection",
+          "rijksmuseum-collection",
+          "tate-collection"
         ]
       },
       "icon": null,
@@ -7157,7 +7161,9 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [
-          "moma-collection"
+          "moma-collection",
+          "rijksmuseum-collection",
+          "tate-collection"
         ],
         "complements": [
           "wikimedia-commons",
@@ -7191,7 +7197,9 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [
-          "met-collection"
+          "met-collection",
+          "rijksmuseum-collection",
+          "tate-collection"
         ],
         "complements": [
           "wikimedia-commons",
@@ -7843,6 +7851,78 @@
           "qoder"
         ],
         "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "rijksmuseum-collection",
+      "name": "Rijksmuseum Collection",
+      "url": "https://www.rijksmuseum.nl/en/collection",
+      "description": "荷兰国家博物馆官方在线馆藏，高清浏览伦勃朗、维米尔等荷兰黄金时代名作与跨时代艺术珍品。",
+      "type": "official",
+      "weight": 0,
+      "category": "aesthetics",
+      "primarySection": "comprehensive-gallery",
+      "sections": [
+        "comprehensive-gallery"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "博物馆",
+        "艺术藏品",
+        "荷兰"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "tate-collection",
+          "met-collection",
+          "moma-collection"
+        ],
+        "complements": [
+          "wikimedia-commons",
+          "pdr"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "tate-collection",
+      "name": "Tate Collection",
+      "url": "https://www.tate.org.uk/art",
+      "description": "英国泰特美术馆官方艺术入口，系统展示英国艺术及国际现代、当代艺术作品与艺术家档案。",
+      "type": "official",
+      "weight": 0,
+      "category": "aesthetics",
+      "primarySection": "comprehensive-gallery",
+      "sections": [
+        "comprehensive-gallery"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "博物馆",
+        "现代艺术",
+        "当代艺术"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "rijksmuseum-collection",
+          "met-collection",
+          "moma-collection"
+        ],
+        "complements": [
+          "wikimedia-commons",
+          "pdr"
+        ]
       },
       "icon": null
     }
