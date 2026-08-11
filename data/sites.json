@@ -682,7 +682,8 @@
           "claude-code",
           "v0",
           "antigravity",
-          "devin"
+          "devin",
+          "cline"
         ],
         "complements": [
           "openai-api",
@@ -2345,7 +2346,8 @@
           "github-copilot",
           "trae",
           "replit-agent",
-          "baidu-comate"
+          "baidu-comate",
+          "cline"
         ],
         "complements": []
       },
@@ -2386,7 +2388,8 @@
           "v0",
           "antigravity",
           "devin",
-          "github-copilot"
+          "github-copilot",
+          "cline"
         ],
         "complements": [
           "anthropic-api",
@@ -6887,7 +6890,8 @@
           "cursor",
           "codegeex",
           "claude-code",
-          "baidu-comate"
+          "baidu-comate",
+          "cline"
         ],
         "complements": []
       },
@@ -7923,6 +7927,44 @@
           "wikimedia-commons",
           "pdr"
         ]
+      },
+      "icon": null
+    },
+    {
+      "id": "cline",
+      "name": "Cline",
+      "url": "https://cline.bot/",
+      "description": "开源 AI 编程代理，提供 IDE 扩展、CLI 与 SDK，可读取代码库、规划并执行多步骤开发任务，支持自选模型与 MCP 工具。",
+      "type": "dev-tool",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code",
+        "workflow"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "开源",
+        "AI编程",
+        "Agent"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "cursor",
+          "claude-code",
+          "codex",
+          "github-copilot"
+        ],
+        "complements": []
       },
       "icon": null
     }
