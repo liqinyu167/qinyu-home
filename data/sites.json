@@ -471,7 +471,8 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [
-          "heygen"
+          "heygen",
+          "topaz-video"
         ],
         "complements": [
           "jimeng",
@@ -2237,7 +2238,8 @@
           "luma",
           "runway",
           "higgsfield",
-          "viggle"
+          "viggle",
+          "domoai"
         ],
         "complements": []
       },
@@ -3466,7 +3468,8 @@
         "downstream": [],
         "alternatives": [
           "higgsfield",
-          "viggle"
+          "viggle",
+          "domoai"
         ],
         "complements": []
       },
@@ -6295,7 +6298,9 @@
         "alternatives": [
           "koukoutu"
         ],
-        "complements": []
+        "complements": [
+          "topaz-video"
+        ]
       },
       "icon": null
     },
@@ -6975,7 +6980,8 @@
         ],
         "complements": [
           "elevenlabs",
-          "fish-audio"
+          "fish-audio",
+          "topaz-video"
         ]
       },
       "icon": null
@@ -7699,10 +7705,12 @@
         "alternatives": [
           "pika",
           "kling",
-          "pixverse"
+          "pixverse",
+          "domoai"
         ],
         "complements": [
-          "capcut"
+          "capcut",
+          "topaz-video"
         ]
       },
       "icon": null
@@ -7965,6 +7973,80 @@
           "github-copilot"
         ],
         "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "domoai",
+      "name": "DomoAI",
+      "url": "https://www.domoai.app/",
+      "description": "面向动漫与短视频创作者的 AI 视频生成与动画工具，支持图生视频、角色动作迁移、视频风格转换和口型同步。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "video-gen",
+      "sections": [
+        "video-gen",
+        "image-gen"
+      ],
+      "capabilities": [
+        "image-gen",
+        "video-gen"
+      ],
+      "tags": [
+        "订阅制",
+        "英文",
+        "AI动画",
+        "视频生成",
+        "图生视频"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "viggle",
+          "pika",
+          "pixverse"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "topaz-video",
+      "name": "Topaz Video",
+      "url": "https://www.topazlabs.com/topaz-video",
+      "description": "Topaz Labs 的专业 AI 视频画质增强软件，提供超分辨率、降噪、去模糊、插帧与慢动作处理，适合修复和提升成片质量。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "video-gen",
+      "sections": [
+        "video-gen"
+      ],
+      "capabilities": [
+        "video-gen"
+      ],
+      "tags": [
+        "订阅制",
+        "英文",
+        "桌面端",
+        "视频增强",
+        "画质修复"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "capcut"
+        ],
+        "complements": [
+          "heygen",
+          "viggle",
+          "topaz-gigapixel"
+        ]
       },
       "icon": null
     }
