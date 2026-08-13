@@ -374,6 +374,10 @@
       will-change: transform, opacity;
     }
 
+    .hero[hidden] {
+      display: none;
+    }
+
     body.toolbox-open .hero,
     body:has(#toolbox:target) .hero {
       opacity: 0;
@@ -1626,68 +1630,6 @@
       backdrop-filter: blur(10px);
     }
 
-    .game-dialog {
-      width: min(94vw, 980px);
-      padding: 0;
-      border: 1px solid rgba(251, 191, 36, 0.26);
-      border-radius: 14px;
-      background:
-        linear-gradient(140deg, rgba(251, 191, 36, 0.08), transparent 38%),
-        var(--bg-paper);
-      color: var(--ink-white);
-      box-shadow: 0 28px 90px rgba(0, 0, 0, 0.44), 0 0 54px rgba(251, 191, 36, 0.13);
-      overflow: hidden;
-    }
-
-    .game-dialog::backdrop {
-      background: rgba(8, 7, 16, 0.72);
-      backdrop-filter: blur(10px);
-    }
-
-    .game-window {
-      display: grid;
-      grid-template-rows: auto 1fr;
-      min-height: min(72vh, 620px);
-    }
-
-    .game-window-bar {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 40px;
-      gap: 12px;
-      align-items: center;
-      padding: 12px 14px;
-      border-bottom: 1px solid var(--border-ink);
-      background: rgba(8, 7, 16, 0.28);
-    }
-
-    .game-window-title {
-      margin: 0;
-      font-family: "JetBrains Mono", monospace;
-      font-size: 13px;
-    }
-
-    .game-close {
-      display: inline-grid;
-      place-items: center;
-      width: 40px;
-      height: 40px;
-      border: 1px solid var(--border-ink);
-      border-radius: 8px;
-      background: rgba(8, 7, 16, 0.34);
-      color: var(--ink-muted);
-    }
-
-    .game-close:hover {
-      border-color: rgba(251, 113, 133, 0.5);
-      color: var(--ink-coral);
-    }
-
-    .game-frame {
-      width: 100%;
-      height: min(64vh, 560px);
-      border: 0;
-      background: #f7f7f7;
-    }
 
     .site-detail {
       display: grid;
@@ -3589,13 +3531,6 @@
         max-height: min(56vh, 420px);
       }
 
-      .game-window {
-        min-height: min(70vh, 560px);
-      }
-
-      .game-frame {
-        height: min(60vh, 500px);
-      }
 
       .grid {
         grid-template-columns: 1fr;
@@ -4924,15 +4859,6 @@
           <button class="side-link" type="button" id="personalIntroBtn">
             <span aria-hidden="true">◆</span><span>个人介绍</span>
           </button>
-          <button class="side-link" type="button" disabled>
-            <span aria-hidden="true">◆</span><span>笔记</span>
-          </button>
-          <button class="side-link" type="button" disabled>
-            <span aria-hidden="true">◆</span><span>模板</span>
-          </button>
-          <button class="side-link" type="button" disabled>
-            <span aria-hidden="true">◆</span><span>素材</span>
-          </button>
         </div>
       </div>
 
@@ -4985,13 +4911,6 @@
         <button class="side-link" id="sideFavorites" type="button">
           <span aria-hidden="true">◉</span><span>收藏夹</span>
         </button>
-<button class="side-link" id="dinoGameButton" type="button">
-          <span aria-hidden="true">◇</span><span>恐龙游戏</span>
-        </button>
-        
-        <a class="side-link" href="mailto:submit@example.com">
-          <span aria-hidden="true">◆</span><span>投稿入口</span>
-        </a>
       </div>
     </div>
     <div class="sidebar-glass-scrollbar" id="sidebarScrollbar" aria-hidden="true">
@@ -5191,15 +5110,6 @@
     <div class="site-detail" id="siteDetail"></div>
   </dialog>
 
-  <dialog class="game-dialog" id="gameDialog" aria-labelledby="gameDialogTitle">
-    <div class="game-window">
-      <div class="game-window-bar">
-        <h2 class="game-window-title" id="gameDialogTitle">恐龙游戏</h2>
-        <button class="game-close" id="gameClose" type="button" aria-label="关闭恐龙游戏">×</button>
-      </div>
-      <iframe class="game-frame" id="gameFrame" title="恐龙游戏" data-src="games/dino.html"></iframe>
-    </div>
-  </dialog>
 
   <script>
     const MOCK_DATA = {
@@ -5270,10 +5180,7 @@
       backdrop: document.getElementById("backdrop"),
       siteDialog: document.getElementById("siteDialog"),
       siteDetail: document.getElementById("siteDetail"),
-      dinoGameButton: document.getElementById("dinoGameButton"),
-      gameDialog: document.getElementById("gameDialog"),
-      gameClose: document.getElementById("gameClose"),
-      gameFrame: document.getElementById("gameFrame"),
+
       modelArenaSection: document.getElementById("modelArenaSection"),
       chartPlotArea: document.getElementById("chartPlotArea"),
       chartScrollbarContainer: document.getElementById("chartScrollbarContainer"),
@@ -5542,15 +5449,6 @@
       }, 200);
     }
 
-    function openGameWindow() {
-      els.gameFrame.src = els.gameFrame.dataset.src;
-      els.gameDialog.showModal();
-      closeMobileSidebar();
-    }
-
-    function closeGameWindow() {
-      if (els.gameDialog.open) els.gameDialog.close();
-    }
 
     function openRelationDrawer(button) {
       const detail = button.closest(".site-detail");
@@ -7122,18 +7020,12 @@
               !e.target.closest(".axis-control-btn") &&
               !e.target.closest(".control-slider") &&
               !e.target.closest(".mode-toggle-btn") &&
-              !e.target.closest(".site-dialog") &&
-              !e.target.closest(".game-dialog")) {
+              !e.target.closest(".site-dialog")) {
             closeModelPopover();
           }
         }
       });
 
-      els.dinoGameButton.addEventListener("click", openGameWindow);
-      els.gameClose.addEventListener("click", closeGameWindow);
-      els.gameDialog.addEventListener("click", (event) => {
-        if (event.target === els.gameDialog) closeGameWindow();
-      });
 
       // 个人介绍 → 切换到个人简介视图
       const personalBtn = document.getElementById("personalIntroBtn");
