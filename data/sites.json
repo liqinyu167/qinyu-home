@@ -359,7 +359,8 @@
         ],
         "complements": [
           "elicit",
-          "gemini"
+          "gemini",
+          "flowith"
         ]
       },
       "tags": [
@@ -1169,7 +1170,8 @@
         ],
         "downstream": [],
         "alternatives": [
-          "flow"
+          "flow",
+          "flowith"
         ],
         "complements": [
           "runninghub"
@@ -1254,7 +1256,8 @@
         "downstream": [],
         "alternatives": [
           "rhtv",
-          "claude-design"
+          "claude-design",
+          "flowith"
         ],
         "complements": []
       },
@@ -6743,7 +6746,8 @@
         "alternatives": [
           "claude-design",
           "skywork",
-          "wps-ai"
+          "wps-ai",
+          "chatppt"
         ],
         "complements": [
           "genspark",
@@ -7063,7 +7067,8 @@
         "alternatives": [],
         "complements": [
           "gamma",
-          "claude-design"
+          "claude-design",
+          "chatppt"
         ]
       },
       "icon": null
@@ -7783,7 +7788,8 @@
         "downstream": [],
         "alternatives": [
           "skywork",
-          "gamma"
+          "gamma",
+          "chatppt"
         ],
         "complements": []
       },
@@ -8046,6 +8052,86 @@
           "heygen",
           "viggle",
           "topaz-gigapixel"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "flowith",
+      "name": "Flowith",
+      "url": "https://flowith.io/",
+      "description": "骇斯科技推出的画布式 AI 智能体工作区，将知识库、多模型对话与任务编排放在无限画布中，适合深度研究、头脑风暴和内容创作。",
+      "type": "canvas-native",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "infinite-canvas",
+      "sections": [
+        "infinite-canvas",
+        "research",
+        "misc"
+      ],
+      "capabilities": [
+        "canvas",
+        "chat",
+        "search",
+        "workflow",
+        "writing"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "无限画布",
+        "AI智能体",
+        "知识管理"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "rhtv",
+          "lovart"
+        ],
+        "complements": [
+          "notebooklm"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "chatppt",
+      "name": "ChatPPT",
+      "url": "https://www.chatppt.cn/",
+      "description": "必优科技推出的中文 AI 演示文稿工具，支持一句话或大纲生成 PPT、智能排版美化、模板套用与演讲辅助。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "misc",
+      "sections": [
+        "misc"
+      ],
+      "capabilities": [
+        "workflow",
+        "writing"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "AI演示",
+        "AI办公"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "gamma",
+          "wps-ai"
+        ],
+        "complements": [
+          "napkin-ai"
         ]
       },
       "icon": null
