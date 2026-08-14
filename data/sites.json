@@ -478,7 +478,8 @@
         "complements": [
           "jimeng",
           "doubao",
-          "viggle"
+          "viggle",
+          "gaoding-ai"
         ]
       },
       "tags": [
@@ -1742,7 +1743,8 @@
           "remini",
           "topaz-gigapixel",
           "remove-bg",
-          "photoroom"
+          "photoroom",
+          "meitu-design"
         ],
         "complements": []
       },
@@ -3538,7 +3540,8 @@
         "downstream": [],
         "alternatives": [
           "higgsfield",
-          "openart"
+          "openart",
+          "gaoding-ai"
         ],
         "complements": []
       },
@@ -6553,7 +6556,8 @@
         "downstream": [],
         "alternatives": [
           "remove-bg",
-          "koukoutu"
+          "koukoutu",
+          "meitu-design"
         ],
         "complements": []
       },
@@ -7675,7 +7679,8 @@
         "alternatives": [
           "midjourney",
           "leonardo-ai",
-          "krea"
+          "krea",
+          "gaoding-ai"
         ],
         "complements": []
       },
@@ -8131,7 +8136,90 @@
           "wps-ai"
         ],
         "complements": [
-          "napkin-ai"
+          "napkin-ai",
+          "gaoding-ai"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "gaoding-ai",
+      "name": "稿定AI",
+      "url": "https://www.gaoding.art/",
+      "description": "稿定旗下AI创作平台，提供文生图、图像编辑、AI视频与电商视觉工作流，适合中文内容创作者和商家快速制作营销素材。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "image-gen",
+      "sections": [
+        "image-gen",
+        "image-tool",
+        "video-gen"
+      ],
+      "capabilities": [
+        "image-gen",
+        "video-gen",
+        "workflow"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "AI图像",
+        "AI视频",
+        "电商设计"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "openart",
+          "krea"
+        ],
+        "complements": [
+          "capcut",
+          "chatppt",
+          "meitu-design"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "meitu-design",
+      "name": "美图设计室",
+      "url": "https://design.meitu.com/",
+      "description": "美图旗下在线AI设计平台，提供AI商品图、智能抠图换背景、海报模板与批量商拍工作流，面向电商和社媒内容制作。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "image-tool",
+      "sections": [
+        "image-tool",
+        "image-gen"
+      ],
+      "capabilities": [
+        "image-gen",
+        "workflow"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "美图",
+        "电商设计",
+        "智能抠图"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "photoroom",
+          "koukoutu"
+        ],
+        "complements": [
+          "gaoding-ai"
         ]
       },
       "icon": null
