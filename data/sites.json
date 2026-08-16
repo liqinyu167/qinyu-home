@@ -3642,7 +3642,8 @@
         ],
         "complements": [
           "wikidata",
-          "wiktionary-en"
+          "wiktionary-en",
+          "ctext"
         ]
       },
       "icon": null,
@@ -5910,7 +5911,9 @@
           "wikipedia-en"
         ],
         "downstream": [],
-        "alternatives": [],
+        "alternatives": [
+          "ctext"
+        ],
         "complements": [
           "wikipedia-zh",
           "wikimedia-commons"
@@ -5942,7 +5945,9 @@
         "products": [],
         "upstream": [],
         "downstream": [],
-        "alternatives": [],
+        "alternatives": [
+          "ctext"
+        ],
         "complements": [
           "wikipedia-zh",
           "allhistory"
@@ -7258,7 +7263,8 @@
         ],
         "complements": [
           "wikidata",
-          "gushiwen"
+          "gushiwen",
+          "ctext"
         ]
       },
       "icon": null
@@ -8220,6 +8226,41 @@
         ],
         "complements": [
           "gaoding-ai"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "ctext",
+      "name": "中国哲学书电子化计划",
+      "url": "https://ctext.org/zhs",
+      "description": "开放的中国古籍与思想文本数据库，汇集先秦至近代经典、原典互链与检索，让中文哲学、历史和文学知识可持续下钻发现。",
+      "type": "official",
+      "weight": 0,
+      "category": "inspiration",
+      "primarySection": "encyclopedia-random",
+      "sections": [
+        "encyclopedia-random"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "中文",
+        "古籍",
+        "哲学",
+        "知识库"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "wikisource-zh",
+          "gushiwen"
+        ],
+        "complements": [
+          "wikipedia-zh",
+          "allhistory"
         ]
       },
       "icon": null
