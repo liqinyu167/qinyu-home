@@ -6680,7 +6680,8 @@
           "claude-code",
           "replit-agent",
           "lovable",
-          "miaoda"
+          "miaoda",
+          "bolt-new"
         ],
         "complements": []
       },
@@ -7344,7 +7345,8 @@
           "lovable",
           "v0",
           "cursor",
-          "miaoda"
+          "miaoda",
+          "bolt-new"
         ],
         "complements": []
       },
@@ -7380,7 +7382,8 @@
         "alternatives": [
           "replit-agent",
           "v0",
-          "miaoda"
+          "miaoda",
+          "bolt-new"
         ],
         "complements": []
       },
@@ -8262,6 +8265,43 @@
           "wikipedia-zh",
           "allhistory"
         ]
+      },
+      "icon": null
+    },
+    {
+      "id": "bolt-new",
+      "name": "Bolt.new",
+      "url": "https://bolt.new/",
+      "description": "StackBlitz 推出的 AI 全栈应用构建平台，可通过自然语言在浏览器中生成、运行、迭代并部署网站和应用。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code",
+        "workflow"
+      ],
+      "tags": [
+        "免费试用",
+        "订阅制",
+        "英文",
+        "StackBlitz",
+        "AI编程",
+        "应用开发"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "v0",
+          "lovable",
+          "replit-agent"
+        ],
+        "complements": []
       },
       "icon": null
     }
