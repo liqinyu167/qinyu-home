@@ -6495,7 +6495,8 @@
           "chatgpt",
           "claude",
           "mistral",
-          "poe"
+          "poe",
+          "sider"
         ],
         "complements": []
       },
@@ -6720,7 +6721,8 @@
           "claude",
           "huggingchat",
           "character-ai",
-          "mistral-vibe"
+          "mistral-vibe",
+          "sider"
         ],
         "complements": []
       },
@@ -8304,6 +8306,43 @@
         "complements": []
       },
       "icon": null
+    },
+    {
+      "id": "sider",
+      "name": "Sider",
+      "url": "https://sider.ai/zh-CN",
+      "description": "全能 AI 浏览器侧边栏与网页助手，可在同一入口调用多家主流模型，完成对话、阅读总结、翻译与写作。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "chat",
+      "sections": [
+        "chat",
+        "misc"
+      ],
+      "capabilities": [
+        "chat",
+        "search",
+        "writing"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "多模型",
+        "浏览器扩展"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "poe",
+          "huggingchat"
+        ],
+        "complements": []
+      },
+      "icon": "sider_ai.png"
     }
   ]
 }
