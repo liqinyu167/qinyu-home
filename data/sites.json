@@ -2442,14 +2442,16 @@
           "hailuo-ai",
           "minimax-agent",
           "minimax-api",
-          "talkie"
+          "talkie",
+          "minimax-design"
         ],
         "upstream": [],
         "downstream": [
           "hailuo-ai",
           "minimax-agent",
           "minimax-api",
-          "talkie"
+          "talkie",
+          "minimax-design"
         ],
         "alternatives": [
           "doubao",
@@ -2507,7 +2509,8 @@
           "heygen"
         ],
         "complements": [
-          "capcut"
+          "capcut",
+          "minimax-design"
         ]
       },
       "tags": [
@@ -3227,7 +3230,8 @@
           "hailuo-ai",
           "hunyuan-video",
           "higgsfield",
-          "heygen"
+          "heygen",
+          "minimax-design"
         ],
         "complements": []
       },
@@ -6953,7 +6957,8 @@
           "runway",
           "krea",
           "pika",
-          "pixverse"
+          "pixverse",
+          "minimax-design"
         ],
         "complements": [
           "elevenlabs"
@@ -8186,7 +8191,8 @@
         "downstream": [],
         "alternatives": [
           "openart",
-          "krea"
+          "krea",
+          "minimax-design"
         ],
         "complements": [
           "capcut",
@@ -8343,6 +8349,50 @@
         "complements": []
       },
       "icon": "sider_ai.png"
+    },
+    {
+      "id": "minimax-design",
+      "name": "MiniMax Design",
+      "url": "https://design.minimaxi.com/",
+      "description": "MiniMax 推出的多模态创作 Agent，以自然语言编排图像、视频等生成与编辑流程，面向广告、电商和社交内容的一站式商业视觉生产。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "video-gen",
+      "sections": [
+        "video-gen",
+        "image-gen"
+      ],
+      "capabilities": [
+        "image-gen",
+        "video-gen",
+        "workflow"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "图像生成",
+        "视频生成",
+        "工作流",
+        "MiniMax"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "minimax"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "higgsfield",
+          "runway",
+          "gaoding-ai"
+        ],
+        "complements": [
+          "hailuo-ai"
+        ]
+      },
+      "icon": null
     }
   ]
 }
