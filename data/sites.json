@@ -3719,7 +3719,9 @@
           "met-collection",
           "moma-collection",
           "rijksmuseum-collection",
-          "tate-collection"
+          "tate-collection",
+          "louvre-collections",
+          "national-gallery-collection"
         ]
       },
       "icon": null,
@@ -4781,7 +4783,9 @@
           "met-collection",
           "moma-collection",
           "rijksmuseum-collection",
-          "tate-collection"
+          "tate-collection",
+          "louvre-collections",
+          "national-gallery-collection"
         ]
       },
       "icon": null,
@@ -7195,7 +7199,9 @@
         "alternatives": [
           "moma-collection",
           "rijksmuseum-collection",
-          "tate-collection"
+          "tate-collection",
+          "louvre-collections",
+          "national-gallery-collection"
         ],
         "complements": [
           "wikimedia-commons",
@@ -7920,7 +7926,8 @@
         "alternatives": [
           "tate-collection",
           "met-collection",
-          "moma-collection"
+          "moma-collection",
+          "louvre-collections"
         ],
         "complements": [
           "wikimedia-commons",
@@ -7956,7 +7963,8 @@
         "alternatives": [
           "rijksmuseum-collection",
           "met-collection",
-          "moma-collection"
+          "moma-collection",
+          "national-gallery-collection"
         ],
         "complements": [
           "wikimedia-commons",
@@ -8390,6 +8398,76 @@
         ],
         "complements": [
           "hailuo-ai"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "louvre-collections",
+      "name": "Louvre Collections",
+      "url": "https://collections.louvre.fr/en/",
+      "description": "法国卢浮宫官方在线藏品库，集中浏览绘画、雕塑、古代文物与装饰艺术等完整馆藏作品。",
+      "type": "official",
+      "weight": 0,
+      "category": "aesthetics",
+      "primarySection": "comprehensive-gallery",
+      "sections": [
+        "comprehensive-gallery"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "官方馆藏",
+        "艺术"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "met-collection",
+          "rijksmuseum-collection",
+          "national-gallery-collection"
+        ],
+        "complements": [
+          "wikimedia-commons",
+          "pdr"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "national-gallery-collection",
+      "name": "National Gallery Collection",
+      "url": "https://www.nationalgallery.org.uk/paintings",
+      "description": "英国国家美术馆官方绘画藏品入口，系统展示欧洲艺术名作，并提供按艺术家、时期与主题浏览。",
+      "type": "official",
+      "weight": 0,
+      "category": "aesthetics",
+      "primarySection": "comprehensive-gallery",
+      "sections": [
+        "comprehensive-gallery"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "官方馆藏",
+        "绘画"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "louvre-collections",
+          "tate-collection",
+          "met-collection"
+        ],
+        "complements": [
+          "wikimedia-commons",
+          "pdr"
         ]
       },
       "icon": null
