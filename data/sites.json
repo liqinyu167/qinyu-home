@@ -2354,7 +2354,8 @@
           "trae",
           "replit-agent",
           "baidu-comate",
-          "cline"
+          "cline",
+          "kiro"
         ],
         "complements": []
       },
@@ -3364,9 +3365,13 @@
       ],
       "description": "AWS AI 平台，Nova 系列模型",
       "relations": {
-        "products": [],
+        "products": [
+          "kiro"
+        ],
         "upstream": [],
-        "downstream": [],
+        "downstream": [
+          "kiro"
+        ],
         "alternatives": [],
         "complements": []
       },
@@ -6843,7 +6848,8 @@
           "cursor",
           "codex",
           "claude-code",
-          "devin"
+          "devin",
+          "kiro"
         ],
         "complements": [
           "aistudio"
@@ -6920,7 +6926,8 @@
           "codegeex",
           "claude-code",
           "baidu-comate",
-          "cline"
+          "cline",
+          "kiro"
         ],
         "complements": []
       },
@@ -7126,7 +7133,8 @@
         "alternatives": [
           "cursor",
           "codebuddy",
-          "qoder"
+          "qoder",
+          "kiro"
         ],
         "complements": []
       },
@@ -8469,6 +8477,46 @@
           "wikimedia-commons",
           "pdr"
         ]
+      },
+      "icon": null
+    },
+    {
+      "id": "kiro",
+      "name": "Kiro",
+      "url": "https://kiro.dev/",
+      "description": "AWS 推出的 Agentic 编程 IDE，以规格驱动开发、Agent Hooks 和项目级上下文把需求、设计、任务与代码实现连成完整工作流。",
+      "type": "dev-tool",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code",
+        "workflow"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "AI编程",
+        "Agent",
+        "AWS"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "amazon-ai"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "cursor",
+          "antigravity",
+          "trae",
+          "github-copilot"
+        ],
+        "complements": []
       },
       "icon": null
     }
