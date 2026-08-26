@@ -2168,7 +2168,8 @@
           "luma",
           "pika",
           "runway",
-          "viggle"
+          "viggle",
+          "pollo-ai"
         ],
         "complements": []
       },
@@ -3087,7 +3088,8 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [
-          "fish-audio"
+          "fish-audio",
+          "adobe-podcast"
         ],
         "complements": [
           "higgsfield",
@@ -3232,7 +3234,8 @@
           "hunyuan-video",
           "higgsfield",
           "heygen",
-          "minimax-design"
+          "minimax-design",
+          "pollo-ai"
         ],
         "complements": []
       },
@@ -6969,7 +6972,8 @@
           "krea",
           "pika",
           "pixverse",
-          "minimax-design"
+          "minimax-design",
+          "pollo-ai"
         ],
         "complements": [
           "elevenlabs"
@@ -7013,7 +7017,8 @@
         "complements": [
           "elevenlabs",
           "fish-audio",
-          "topaz-video"
+          "topaz-video",
+          "adobe-podcast"
         ]
       },
       "icon": null
@@ -7476,7 +7481,8 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [
-          "elevenlabs"
+          "elevenlabs",
+          "adobe-podcast"
         ],
         "complements": [
           "heygen"
@@ -7710,7 +7716,8 @@
           "midjourney",
           "leonardo-ai",
           "krea",
-          "gaoding-ai"
+          "gaoding-ai",
+          "pollo-ai"
         ],
         "complements": []
       },
@@ -8515,6 +8522,84 @@
           "antigravity",
           "trae",
           "github-copilot"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "adobe-podcast",
+      "name": "Adobe Podcast",
+      "url": "https://podcast.adobe.com/",
+      "description": "Adobe 面向播客与语音创作者的 AI 音频工作台，提供录音、降噪、去混响、语音增强与转录编辑，适合快速获得录音棚级人声。",
+      "type": "tool",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "audio-gen",
+      "sections": [
+        "audio-gen"
+      ],
+      "capabilities": [
+        "audio-gen",
+        "voice"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "英文",
+        "AI音频",
+        "语音增强",
+        "Adobe"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "elevenlabs",
+          "fish-audio"
+        ],
+        "complements": [
+          "heygen"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "pollo-ai",
+      "name": "Pollo AI",
+      "url": "https://pollo.ai/zh/home",
+      "description": "面向创作者与营销团队的一站式 AI 图像和视频生成平台，聚合多种模型并提供文生视频、图生视频、角色动画与视觉编辑工作流。",
+      "type": "tool",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "video-gen",
+      "sections": [
+        "video-gen",
+        "image-gen"
+      ],
+      "capabilities": [
+        "image-gen",
+        "video-gen"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "英文",
+        "视频生成",
+        "图像生成"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "runway",
+          "kling",
+          "openart",
+          "higgsfield"
         ],
         "complements": []
       },
