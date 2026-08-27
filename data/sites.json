@@ -6775,7 +6775,8 @@
           "claude-design",
           "skywork",
           "wps-ai",
-          "chatppt"
+          "chatppt",
+          "iflytek-zhiwen"
         ],
         "complements": [
           "genspark",
@@ -7831,9 +7832,12 @@
         "alternatives": [
           "skywork",
           "gamma",
-          "chatppt"
+          "chatppt",
+          "iflytek-zhiwen"
         ],
-        "complements": []
+        "complements": [
+          "wispr-flow"
+        ]
       },
       "icon": null
     },
@@ -8172,7 +8176,8 @@
         "downstream": [],
         "alternatives": [
           "gamma",
-          "wps-ai"
+          "wps-ai",
+          "iflytek-zhiwen"
         ],
         "complements": [
           "napkin-ai",
@@ -8369,7 +8374,9 @@
           "poe",
           "huggingchat"
         ],
-        "complements": []
+        "complements": [
+          "wispr-flow"
+        ]
       },
       "icon": "sider_ai.png"
     },
@@ -8561,7 +8568,8 @@
           "fish-audio"
         ],
         "complements": [
-          "heygen"
+          "heygen",
+          "wispr-flow"
         ]
       },
       "icon": null
@@ -8602,6 +8610,78 @@
           "higgsfield"
         ],
         "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "iflytek-zhiwen",
+      "name": "讯飞智文",
+      "url": "https://zhiwen.xfyun.cn/",
+      "description": "科大讯飞推出的中文 AI 文档创作平台，可由主题、长文本、文件或音视频一键生成并在线编辑 PPT、Word。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "misc",
+      "sections": [
+        "misc"
+      ],
+      "capabilities": [
+        "writing"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "科大讯飞",
+        "PPT",
+        "文档"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "gamma",
+          "chatppt",
+          "wps-ai"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "wispr-flow",
+      "name": "Wispr Flow",
+      "url": "https://wisprflow.ai/",
+      "description": "跨应用 AI 语音输入工具，将自然口述实时整理为清晰文本，适合邮件、文档、聊天与无障碍输入。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "misc",
+      "sections": [
+        "misc"
+      ],
+      "capabilities": [
+        "voice",
+        "writing"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "语音输入",
+        "效率工具"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "wps-ai",
+          "sider",
+          "adobe-podcast"
+        ]
       },
       "icon": null
     }
