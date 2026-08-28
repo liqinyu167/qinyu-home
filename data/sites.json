@@ -360,7 +360,8 @@
         "complements": [
           "elicit",
           "gemini",
-          "flowith"
+          "flowith",
+          "tongyi-tingwu"
         ]
       },
       "tags": [
@@ -1500,7 +1501,8 @@
           "bailian",
           "dashscope",
           "qwen-code",
-          "qoder"
+          "qoder",
+          "tongyi-tingwu"
         ],
         "upstream": [
           "alibaba-cloud"
@@ -1510,7 +1512,8 @@
           "bailian",
           "dashscope",
           "qwen-code",
-          "qoder"
+          "qoder",
+          "tongyi-tingwu"
         ],
         "alternatives": [
           "chatgpt",
@@ -8565,7 +8568,8 @@
         "downstream": [],
         "alternatives": [
           "elevenlabs",
-          "fish-audio"
+          "fish-audio",
+          "iflyrec"
         ],
         "complements": [
           "heygen",
@@ -8645,7 +8649,9 @@
           "chatppt",
           "wps-ai"
         ],
-        "complements": []
+        "complements": [
+          "iflyrec"
+        ]
       },
       "icon": null
     },
@@ -8681,6 +8687,87 @@
           "wps-ai",
           "sider",
           "adobe-podcast"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "tongyi-tingwu",
+      "name": "通义听悟",
+      "url": "https://tingwu.aliyun.com/",
+      "description": "阿里云推出的 AI 音视频工作学习助手，支持实时转写、章节摘要、要点提炼、内容问答与多语种翻译，适合会议、课程和访谈整理。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "research",
+      "sections": [
+        "research",
+        "chat"
+      ],
+      "capabilities": [
+        "chat",
+        "search",
+        "voice",
+        "writing"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "语音转写",
+        "知识研究",
+        "阿里云",
+        "子站"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "qwen"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "iflyrec"
+        ],
+        "complements": [
+          "notebooklm"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "iflyrec",
+      "name": "讯飞听见",
+      "url": "https://www.iflyrec.com/",
+      "description": "科大讯飞的 AI 语音转写与录音整理平台，提供实时录音转文字、多语种翻译、会议纪要和字幕制作，适合会议、采访与课程记录。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "misc",
+      "sections": [
+        "misc"
+      ],
+      "capabilities": [
+        "voice",
+        "writing"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "语音转写",
+        "会议记录",
+        "科大讯飞"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "tongyi-tingwu",
+          "adobe-podcast"
+        ],
+        "complements": [
+          "iflytek-zhiwen"
         ]
       },
       "icon": null
