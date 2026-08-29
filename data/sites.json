@@ -7218,7 +7218,8 @@
           "rijksmuseum-collection",
           "tate-collection",
           "louvre-collections",
-          "national-gallery-collection"
+          "national-gallery-collection",
+          "guggenheim-collection"
         ],
         "complements": [
           "wikimedia-commons",
@@ -7254,7 +7255,9 @@
         "alternatives": [
           "met-collection",
           "rijksmuseum-collection",
-          "tate-collection"
+          "tate-collection",
+          "whitney-collection",
+          "guggenheim-collection"
         ],
         "complements": [
           "wikimedia-commons",
@@ -7986,7 +7989,8 @@
           "rijksmuseum-collection",
           "met-collection",
           "moma-collection",
-          "national-gallery-collection"
+          "national-gallery-collection",
+          "whitney-collection"
         ],
         "complements": [
           "wikimedia-commons",
@@ -8768,6 +8772,78 @@
         ],
         "complements": [
           "iflytek-zhiwen"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "whitney-collection",
+      "name": "Whitney Collection",
+      "url": "https://whitney.org/collection/works",
+      "description": "惠特尼美国艺术博物馆官方在线馆藏，聚焦二十世纪至今的美国现代与当代艺术成品、艺术家与展览档案。",
+      "type": "official",
+      "weight": 0,
+      "category": "aesthetics",
+      "primarySection": "comprehensive-gallery",
+      "sections": [
+        "comprehensive-gallery"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "博物馆",
+        "美国艺术",
+        "当代艺术"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "moma-collection",
+          "tate-collection",
+          "guggenheim-collection"
+        ],
+        "complements": [
+          "wikimedia-commons",
+          "pdr"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "guggenheim-collection",
+      "name": "Guggenheim Collection",
+      "url": "https://www.guggenheim.org/artwork",
+      "description": "所罗门·R·古根海姆博物馆官方在线藏品入口，集中展示现代与当代艺术代表作及全球馆藏档案。",
+      "type": "official",
+      "weight": 0,
+      "category": "aesthetics",
+      "primarySection": "comprehensive-gallery",
+      "sections": [
+        "comprehensive-gallery"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "博物馆",
+        "现代艺术",
+        "当代艺术"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "moma-collection",
+          "met-collection",
+          "whitney-collection"
+        ],
+        "complements": [
+          "wikimedia-commons",
+          "pdr"
         ]
       },
       "icon": null
