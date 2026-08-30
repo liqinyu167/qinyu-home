@@ -3830,7 +3830,8 @@
         "complements": [
           "atlas-obscura",
           "gutenberg",
-          "mapcrunch"
+          "mapcrunch",
+          "shuge"
         ]
       },
       "icon": null,
@@ -5931,7 +5932,8 @@
         ],
         "downstream": [],
         "alternatives": [
-          "ctext"
+          "ctext",
+          "shuge"
         ],
         "complements": [
           "wikipedia-zh",
@@ -5969,7 +5971,8 @@
         ],
         "complements": [
           "wikipedia-zh",
-          "allhistory"
+          "allhistory",
+          "shuge"
         ]
       },
       "tags": [
@@ -8302,7 +8305,8 @@
         "downstream": [],
         "alternatives": [
           "wikisource-zh",
-          "gushiwen"
+          "gushiwen",
+          "shuge"
         ],
         "complements": [
           "wikipedia-zh",
@@ -8844,6 +8848,44 @@
         "complements": [
           "wikimedia-commons",
           "pdr"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "shuge",
+      "name": "书格",
+      "url": "https://www.shuge.org/",
+      "description": "自由开放的中文数字图书馆，精选古籍善本、字画与影像，并提供随机资源集，让读者在古典文本和艺术档案中意外发现。",
+      "type": "official",
+      "weight": 0,
+      "category": "inspiration",
+      "primarySection": "encyclopedia-random",
+      "sections": [
+        "encyclopedia-random"
+      ],
+      "capabilities": [
+        "search"
+      ],
+      "tags": [
+        "免费",
+        "中文",
+        "古籍",
+        "数字图书馆",
+        "随机",
+        "开放资源"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "ctext",
+          "wikisource-zh"
+        ],
+        "complements": [
+          "gushiwen",
+          "internet-archive"
         ]
       },
       "icon": null
