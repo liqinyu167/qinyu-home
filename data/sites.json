@@ -687,7 +687,8 @@
           "v0",
           "antigravity",
           "devin",
-          "cline"
+          "cline",
+          "openhands"
         ],
         "complements": [
           "openai-api",
@@ -6897,7 +6898,8 @@
         "alternatives": [
           "codex",
           "claude-code",
-          "antigravity"
+          "antigravity",
+          "openhands"
         ],
         "complements": []
       },
@@ -8034,7 +8036,8 @@
           "cursor",
           "claude-code",
           "codex",
-          "github-copilot"
+          "github-copilot",
+          "openhands"
         ],
         "complements": []
       },
@@ -8887,6 +8890,43 @@
           "gushiwen",
           "internet-archive"
         ]
+      },
+      "icon": null
+    },
+    {
+      "id": "openhands",
+      "name": "OpenHands",
+      "url": "https://www.openhands.dev/",
+      "description": "开源、模型无关的云端编程代理平台，可在安全工作区中规划并执行真实软件工程任务，支持本地部署与 OpenHands Cloud。",
+      "type": "dev-tool",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code",
+        "workflow"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "开源",
+        "AI编程",
+        "Agent"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "devin",
+          "cline",
+          "codex"
+        ],
+        "complements": []
       },
       "icon": null
     }
