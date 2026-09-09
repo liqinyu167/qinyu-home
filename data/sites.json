@@ -3557,7 +3557,8 @@
         "alternatives": [
           "higgsfield",
           "openart",
-          "gaoding-ai"
+          "gaoding-ai",
+          "magnific"
         ],
         "complements": []
       },
@@ -6330,7 +6331,8 @@
         "upstream": [],
         "downstream": [],
         "alternatives": [
-          "koukoutu"
+          "koukoutu",
+          "magnific"
         ],
         "complements": [
           "topaz-video"
@@ -7729,7 +7731,8 @@
           "leonardo-ai",
           "krea",
           "gaoding-ai",
-          "pollo-ai"
+          "pollo-ai",
+          "magnific"
         ],
         "complements": []
       },
@@ -8925,6 +8928,42 @@
           "devin",
           "cline",
           "codex"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "magnific",
+      "name": "Magnific",
+      "url": "https://www.magnific.com/cn",
+      "description": "AI 视觉创作与图像增强平台，主打智能放大、细节重塑，并提供图像生成和编辑工作流；设有中文入口，适合设计、摄影与电商素材精修。",
+      "type": "tool",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "image-tool",
+      "sections": [
+        "image-tool",
+        "image-gen"
+      ],
+      "capabilities": [
+        "image-gen"
+      ],
+      "tags": [
+        "订阅制",
+        "中文",
+        "英文",
+        "图像增强",
+        "图像生成"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "topaz-gigapixel",
+          "openart",
+          "krea"
         ],
         "complements": []
       },
