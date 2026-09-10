@@ -6785,7 +6785,8 @@
           "skywork",
           "wps-ai",
           "chatppt",
-          "iflytek-zhiwen"
+          "iflytek-zhiwen",
+          "beautiful-ai"
         ],
         "complements": [
           "genspark",
@@ -7112,7 +7113,8 @@
         "complements": [
           "gamma",
           "claude-design",
-          "chatppt"
+          "chatppt",
+          "beautiful-ai"
         ]
       },
       "icon": null
@@ -7847,7 +7849,8 @@
           "skywork",
           "gamma",
           "chatppt",
-          "iflytek-zhiwen"
+          "iflytek-zhiwen",
+          "beautiful-ai"
         ],
         "complements": [
           "wispr-flow"
@@ -8193,7 +8196,8 @@
         "alternatives": [
           "gamma",
           "wps-ai",
-          "iflytek-zhiwen"
+          "iflytek-zhiwen",
+          "beautiful-ai"
         ],
         "complements": [
           "napkin-ai",
@@ -8661,7 +8665,8 @@
         "alternatives": [
           "gamma",
           "chatppt",
-          "wps-ai"
+          "wps-ai",
+          "beautiful-ai"
         ],
         "complements": [
           "iflyrec"
@@ -8966,6 +8971,45 @@
           "krea"
         ],
         "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "beautiful-ai",
+      "name": "Beautiful.ai",
+      "url": "https://www.beautiful.ai/",
+      "description": "面向团队的 AI 演示文稿设计平台，可根据内容自动生成版式、统一品牌风格并协作制作专业幻灯片。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "misc",
+      "sections": [
+        "misc"
+      ],
+      "capabilities": [
+        "workflow",
+        "writing"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "AI演示",
+        "协作"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "gamma",
+          "chatppt",
+          "wps-ai",
+          "iflytek-zhiwen"
+        ],
+        "complements": [
+          "napkin-ai"
+        ]
       },
       "icon": null
     }
