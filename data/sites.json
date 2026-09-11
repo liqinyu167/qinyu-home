@@ -730,7 +730,8 @@
         "downstream": [],
         "alternatives": [
           "aistudio",
-          "bailian"
+          "bailian",
+          "tencent-yuanqi"
         ],
         "complements": [
           "doubao",
@@ -1618,7 +1619,8 @@
         "downstream": [],
         "alternatives": [
           "aistudio",
-          "coze"
+          "coze",
+          "tencent-yuanqi"
         ],
         "complements": [
           "dashscope",
@@ -2831,7 +2833,8 @@
           "hunyuan-video",
           "codebuddy",
           "hunyuan-api",
-          "ima"
+          "ima",
+          "tencent-yuanqi"
         ],
         "upstream": [],
         "downstream": [
@@ -2840,7 +2843,8 @@
           "hunyuan-video",
           "codebuddy",
           "hunyuan-api",
-          "ima"
+          "ima",
+          "tencent-yuanqi"
         ],
         "alternatives": [
           "qwen",
@@ -2897,7 +2901,8 @@
         ],
         "complements": [
           "hunyuan",
-          "ima"
+          "ima",
+          "tencent-yuanqi"
         ]
       },
       "tags": [
@@ -3558,7 +3563,8 @@
           "higgsfield",
           "openart",
           "gaoding-ai",
-          "magnific"
+          "magnific",
+          "whee"
         ],
         "complements": []
       },
@@ -7734,7 +7740,8 @@
           "krea",
           "gaoding-ai",
           "pollo-ai",
-          "magnific"
+          "magnific",
+          "whee"
         ],
         "complements": []
       },
@@ -8240,7 +8247,8 @@
         "alternatives": [
           "openart",
           "krea",
-          "minimax-design"
+          "minimax-design",
+          "whee"
         ],
         "complements": [
           "capcut",
@@ -8284,7 +8292,8 @@
           "koukoutu"
         ],
         "complements": [
-          "gaoding-ai"
+          "gaoding-ai",
+          "whee"
         ]
       },
       "icon": null
@@ -9009,6 +9018,87 @@
         ],
         "complements": [
           "napkin-ai"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "tencent-yuanqi",
+      "name": "腾讯元器",
+      "url": "https://yuanqi.tencent.com/",
+      "description": "腾讯推出的中文智能体创作与分发平台，可通过自然语言、工作流和知识库搭建智能体，并发布到微信、QQ等腾讯生态入口。",
+      "type": "studio",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev",
+        "misc"
+      ],
+      "capabilities": [
+        "chat",
+        "workflow"
+      ],
+      "tags": [
+        "免费",
+        "中文",
+        "AI智能体",
+        "工作流",
+        "腾讯",
+        "子站"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "hunyuan"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "coze",
+          "bailian"
+        ],
+        "complements": [
+          "yuanbao"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "whee",
+      "name": "WHEE",
+      "url": "https://www.wheecn.com/",
+      "description": "美图推出的中文 AI 视觉创作平台，提供文生图、图生图、风格模型训练与智能修图，面向零基础用户和设计创作者。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "image-gen",
+      "sections": [
+        "image-gen",
+        "image-tool"
+      ],
+      "capabilities": [
+        "image-gen",
+        "workflow"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "图像生成",
+        "图像编辑",
+        "美图"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "gaoding-ai",
+          "openart",
+          "krea"
+        ],
+        "complements": [
+          "meitu-design"
         ]
       },
       "icon": null
