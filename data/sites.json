@@ -5679,7 +5679,9 @@
         "alternatives": [
           "pixiv",
           "gracg",
-          "lofter"
+          "lofter",
+          "webtoon",
+          "bilibili-manga"
         ],
         "complements": []
       },
@@ -9100,6 +9102,72 @@
         "complements": [
           "meitu-design"
         ]
+      },
+      "icon": null
+    },
+    {
+      "id": "webtoon",
+      "name": "LINE WEBTOON",
+      "url": "https://www.webtoons.com/zh-hant/",
+      "description": "NAVER 旗下全球数字漫画平台，繁体中文入口提供连载条漫与原创完整作品，是国际网络漫画的重要成品橱窗。",
+      "type": "official",
+      "weight": 0,
+      "category": "aesthetics",
+      "primarySection": "illustration",
+      "sections": [
+        "illustration"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "中文",
+        "英文",
+        "漫画",
+        "条漫",
+        "原创"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "kuaikan",
+          "bilibili-manga"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "bilibili-manga",
+      "name": "哔哩哔哩漫画",
+      "url": "https://manga.bilibili.com/",
+      "description": "哔哩哔哩旗下中文漫画平台，集中展示国漫、日漫及原创连载完整作品，是国内大众熟悉的漫画成品入口。",
+      "type": "official",
+      "weight": 0,
+      "category": "aesthetics",
+      "primarySection": "illustration",
+      "sections": [
+        "illustration"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "漫画",
+        "国漫",
+        "原创"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "kuaikan",
+          "webtoon"
+        ],
+        "complements": []
       },
       "icon": null
     }
