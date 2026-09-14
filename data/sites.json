@@ -8407,7 +8407,8 @@
           "huggingchat"
         ],
         "complements": [
-          "wispr-flow"
+          "wispr-flow",
+          "raycast"
         ]
       },
       "icon": "sider_ai.png"
@@ -8716,7 +8717,8 @@
         "complements": [
           "wps-ai",
           "sider",
-          "adobe-podcast"
+          "adobe-podcast",
+          "raycast"
         ]
       },
       "icon": null
@@ -9168,6 +9170,45 @@
           "webtoon"
         ],
         "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "raycast",
+      "name": "Raycast",
+      "url": "https://www.raycast.com/",
+      "description": "面向 macOS 与 Windows 的 AI 效率入口，将应用启动、搜索、写作、翻译、问答和扩展工作流整合进统一命令面板。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "misc",
+      "sections": [
+        "misc"
+      ],
+      "capabilities": [
+        "chat",
+        "code",
+        "search",
+        "writing"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "AI助手",
+        "效率工具",
+        "macOS",
+        "Windows"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [],
+        "complements": [
+          "wispr-flow",
+          "sider"
+        ]
       },
       "icon": null
     }
