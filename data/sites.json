@@ -6417,7 +6417,8 @@
           "perplexity",
           "consensus",
           "semantic-scholar",
-          "scispace"
+          "scispace",
+          "researchrabbit"
         ],
         "complements": [
           "notebooklm",
@@ -6487,7 +6488,8 @@
         "alternatives": [
           "consensus",
           "elicit",
-          "scite"
+          "scite",
+          "researchrabbit"
         ],
         "complements": [
           "scispace"
@@ -7699,7 +7701,8 @@
         "downstream": [],
         "alternatives": [
           "elicit",
-          "consensus"
+          "consensus",
+          "researchrabbit"
         ],
         "complements": [
           "semantic-scholar"
@@ -9209,6 +9212,42 @@
           "wispr-flow",
           "sider"
         ]
+      },
+      "icon": null
+    },
+    {
+      "id": "researchrabbit",
+      "name": "ResearchRabbit",
+      "url": "https://www.researchrabbit.ai/",
+      "description": "AI文献发现与关系可视化工具，可基于种子论文追踪作者、引用与相似研究，适合构建文献地图和持续跟进课题。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "research",
+      "sections": [
+        "research"
+      ],
+      "capabilities": [
+        "search",
+        "workflow"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "AI研究",
+        "文献图谱"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "elicit",
+          "scispace",
+          "semantic-scholar"
+        ],
+        "complements": []
       },
       "icon": null
     }
