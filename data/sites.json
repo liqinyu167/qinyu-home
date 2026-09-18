@@ -2834,7 +2834,8 @@
           "codebuddy",
           "hunyuan-api",
           "ima",
-          "tencent-yuanqi"
+          "tencent-yuanqi",
+          "workbuddy"
         ],
         "upstream": [],
         "downstream": [
@@ -2844,7 +2845,8 @@
           "codebuddy",
           "hunyuan-api",
           "ima",
-          "tencent-yuanqi"
+          "tencent-yuanqi",
+          "workbuddy"
         ],
         "alternatives": [
           "qwen",
@@ -3020,7 +3022,8 @@
           "trae"
         ],
         "complements": [
-          "hunyuan"
+          "hunyuan",
+          "workbuddy"
         ]
       },
       "tags": [
@@ -6675,7 +6678,8 @@
           "chatgpt",
           "kimi",
           "genspark",
-          "skywork"
+          "skywork",
+          "workbuddy"
         ],
         "complements": []
       },
@@ -7082,7 +7086,8 @@
           "mistral-vibe",
           "metaso",
           "nano-ai",
-          "skywork"
+          "skywork",
+          "workbuddy"
         ],
         "complements": [
           "gamma"
@@ -7824,7 +7829,8 @@
           "genspark",
           "manus",
           "gamma",
-          "wps-ai"
+          "wps-ai",
+          "workbuddy"
         ],
         "complements": []
       },
@@ -9248,6 +9254,50 @@
           "semantic-scholar"
         ],
         "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "workbuddy",
+      "name": "WorkBuddy",
+      "url": "https://www.workbuddy.cn/",
+      "description": "腾讯推出的 AI 办公智能体，可在电脑端自主执行资料搜索、文档与演示制作、数据分析及多步骤办公任务。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "misc",
+      "sections": [
+        "misc",
+        "research"
+      ],
+      "capabilities": [
+        "search",
+        "workflow",
+        "writing"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "AI办公",
+        "智能体",
+        "腾讯",
+        "子站"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "hunyuan"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "manus",
+          "genspark",
+          "skywork"
+        ],
+        "complements": [
+          "codebuddy"
+        ]
       },
       "icon": null
     }
