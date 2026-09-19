@@ -7243,7 +7243,8 @@
           "tate-collection",
           "louvre-collections",
           "national-gallery-collection",
-          "guggenheim-collection"
+          "guggenheim-collection",
+          "namoc-collection"
         ],
         "complements": [
           "wikimedia-commons",
@@ -8492,7 +8493,8 @@
         "alternatives": [
           "met-collection",
           "rijksmuseum-collection",
-          "national-gallery-collection"
+          "national-gallery-collection",
+          "namoc-collection"
         ],
         "complements": [
           "wikimedia-commons",
@@ -8527,7 +8529,8 @@
         "alternatives": [
           "louvre-collections",
           "tate-collection",
-          "met-collection"
+          "met-collection",
+          "namoc-collection"
         ],
         "complements": [
           "wikimedia-commons",
@@ -9297,6 +9300,42 @@
         ],
         "complements": [
           "codebuddy"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "namoc-collection",
+      "name": "中国美术馆典藏",
+      "url": "https://www.namoc.cn/namoc/diancang/dc.shtml",
+      "description": "中国美术馆官方典藏入口，集中展示十万余件中国近现代美术作品及明清、民国艺术精品。",
+      "type": "official",
+      "weight": 0,
+      "category": "aesthetics",
+      "primarySection": "comprehensive-gallery",
+      "sections": [
+        "comprehensive-gallery"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "中文",
+        "官方馆藏",
+        "中国美术",
+        "博物馆"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "met-collection",
+          "louvre-collections",
+          "national-gallery-collection"
+        ],
+        "complements": [
+          "wikimedia-commons",
+          "pdr"
         ]
       },
       "icon": null
