@@ -4874,7 +4874,8 @@
         "downstream": [],
         "alternatives": [
           "cloudhiker",
-          "useless-web"
+          "useless-web",
+          "neal-fun"
         ],
         "complements": []
       },
@@ -5038,7 +5039,8 @@
         "downstream": [],
         "alternatives": [],
         "complements": [
-          "colorhunt"
+          "colorhunt",
+          "neal-fun"
         ]
       },
       "icon": null,
@@ -5388,7 +5390,8 @@
         "downstream": [],
         "alternatives": [
           "stumblicious",
-          "cloudhiker"
+          "cloudhiker",
+          "neal-fun"
         ],
         "complements": []
       },
@@ -9336,6 +9339,41 @@
         "complements": [
           "wikimedia-commons",
           "pdr"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "neal-fun",
+      "name": "Neal.fun",
+      "url": "https://neal.fun/",
+      "description": "由 Neal Agarwal 创作的互动网页实验集合，涵盖游戏、可视化与脑洞体验；无需推荐算法，适合随机探索与灵感触发。",
+      "type": "official",
+      "weight": 0,
+      "category": "inspiration",
+      "primarySection": "serendipity",
+      "sections": [
+        "serendipity"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "互动",
+        "游戏",
+        "可视化",
+        "发现"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "useless-web",
+          "stumblicious"
+        ],
+        "complements": [
+          "codepen"
         ]
       },
       "icon": null
