@@ -125,7 +125,10 @@
           "flow",
           "notebooklm",
           "gemini-api",
-          "antigravity"
+          "antigravity",
+          "imagen",
+          "veo",
+          "musicfx"
         ],
         "upstream": [
           "google"
@@ -135,7 +138,10 @@
           "flow",
           "notebooklm",
           "gemini-api",
-          "antigravity"
+          "antigravity",
+          "imagen",
+          "veo",
+          "musicfx"
         ],
         "alternatives": [
           "chatgpt",
@@ -3619,7 +3625,8 @@
           "wikidata",
           "wikimedia-commons",
           "wikiquote",
-          "wiktionary-en"
+          "wiktionary-en",
+          "wikisource-zh"
         ],
         "upstream": [],
         "downstream": [
@@ -3627,7 +3634,8 @@
           "wikidata",
           "wikimedia-commons",
           "wikiquote",
-          "wiktionary-en"
+          "wiktionary-en",
+          "wikisource-zh"
         ],
         "alternatives": [],
         "complements": [
@@ -6163,13 +6171,8 @@
       ],
       "relations": {
         "products": [],
-        "upstream": [
-          "wikipedia-zh"
-        ],
-        "downstream": [
-          "behance",
-          "artstation"
-        ],
+        "upstream": [],
+        "downstream": [],
         "alternatives": [],
         "complements": [
           "atlas-obscura",
@@ -7161,11 +7164,15 @@
         "字节跳动"
       ],
       "relations": {
-        "products": [],
+        "products": [
+          "traework"
+        ],
         "upstream": [
           "doubao"
         ],
-        "downstream": [],
+        "downstream": [
+          "traework"
+        ],
         "alternatives": [
           "cursor",
           "codebuddy",
@@ -7834,7 +7841,8 @@
           "manus",
           "gamma",
           "wps-ai",
-          "workbuddy"
+          "workbuddy",
+          "traework"
         ],
         "complements": []
       },
@@ -9299,7 +9307,8 @@
         "alternatives": [
           "manus",
           "genspark",
-          "skywork"
+          "skywork",
+          "traework"
         ],
         "complements": [
           "codebuddy"
@@ -9375,6 +9384,45 @@
         "complements": [
           "codepen"
         ]
+      },
+      "icon": null
+    },
+    {
+      "id": "traework",
+      "name": "TraeWork",
+      "url": "https://work.trae.cn/",
+      "description": "字节跳动旗下 TRAE 推出的 AI 办公平台，可生成 PPT、文档、数据分析与深度调研，并以智能体执行多步骤办公任务。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "misc",
+      "sections": [
+        "misc",
+        "research"
+      ],
+      "capabilities": [
+        "search",
+        "workflow",
+        "writing"
+      ],
+      "tags": [
+        "中文",
+        "AI办公",
+        "智能体",
+        "字节跳动",
+        "子站"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "trae"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "workbuddy",
+          "skywork"
+        ],
+        "complements": []
       },
       "icon": null
     }
