@@ -6177,7 +6177,8 @@
         "complements": [
           "atlas-obscura",
           "internet-archive",
-          "gutenberg"
+          "gutenberg",
+          "dpm-digital-collection"
         ]
       },
       "icon": null,
@@ -7254,7 +7255,8 @@
           "louvre-collections",
           "national-gallery-collection",
           "guggenheim-collection",
-          "namoc-collection"
+          "namoc-collection",
+          "dpm-digital-collection"
         ],
         "complements": [
           "wikimedia-commons",
@@ -8505,7 +8507,8 @@
           "met-collection",
           "rijksmuseum-collection",
           "national-gallery-collection",
-          "namoc-collection"
+          "namoc-collection",
+          "dpm-digital-collection"
         ],
         "complements": [
           "wikimedia-commons",
@@ -8932,7 +8935,8 @@
         ],
         "complements": [
           "gushiwen",
-          "internet-archive"
+          "internet-archive",
+          "dpm-digital-collection"
         ]
       },
       "icon": null
@@ -9343,7 +9347,8 @@
         "alternatives": [
           "met-collection",
           "louvre-collections",
-          "national-gallery-collection"
+          "national-gallery-collection",
+          "dpm-digital-collection"
         ],
         "complements": [
           "wikimedia-commons",
@@ -9423,6 +9428,42 @@
           "skywork"
         ],
         "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "dpm-digital-collection",
+      "name": "故宫博物院数字文物库",
+      "url": "https://digicol.dpm.org.cn/",
+      "description": "故宫博物院官方数字文物库，在线浏览院藏书画、器物与宫廷文物档案，适合从中国历代经典藏品中学习传统审美。",
+      "type": "official",
+      "weight": 0,
+      "category": "aesthetics",
+      "primarySection": "comprehensive-gallery",
+      "sections": [
+        "comprehensive-gallery"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "中文",
+        "官方馆藏",
+        "故宫博物院",
+        "中国艺术"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "namoc-collection",
+          "met-collection",
+          "louvre-collections"
+        ],
+        "complements": [
+          "shuge",
+          "nmc-digital"
+        ]
       },
       "icon": null
     }
