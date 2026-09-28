@@ -212,7 +212,8 @@
           "wenxin-yiyan",
           "manus",
           "poe",
-          "mistral-vibe"
+          "mistral-vibe",
+          "muse"
         ],
         "complements": []
       },
@@ -3322,9 +3323,13 @@
       ],
       "description": "Meta AI 研究，Llama 开源模型系列、Muse Spark",
       "relations": {
-        "products": [],
+        "products": [
+          "muse"
+        ],
         "upstream": [],
-        "downstream": [],
+        "downstream": [
+          "muse"
+        ],
         "alternatives": [],
         "complements": []
       },
@@ -6686,7 +6691,8 @@
           "kimi",
           "genspark",
           "skywork",
-          "workbuddy"
+          "workbuddy",
+          "muse"
         ],
         "complements": []
       },
@@ -7094,7 +7100,8 @@
           "metaso",
           "nano-ai",
           "skywork",
-          "workbuddy"
+          "workbuddy",
+          "muse"
         ],
         "complements": [
           "gamma"
@@ -8427,7 +8434,8 @@
         "downstream": [],
         "alternatives": [
           "poe",
-          "huggingchat"
+          "huggingchat",
+          "superhuman-go"
         ],
         "complements": [
           "wispr-flow",
@@ -9231,7 +9239,9 @@
         "products": [],
         "upstream": [],
         "downstream": [],
-        "alternatives": [],
+        "alternatives": [
+          "superhuman-go"
+        ],
         "complements": [
           "wispr-flow",
           "sider"
@@ -9312,7 +9322,8 @@
           "manus",
           "genspark",
           "skywork",
-          "traework"
+          "traework",
+          "superhuman-go"
         ],
         "complements": [
           "codebuddy"
@@ -9464,6 +9475,83 @@
           "shuge",
           "nmc-digital"
         ]
+      },
+      "icon": null
+    },
+    {
+      "id": "muse",
+      "name": "Muse",
+      "url": "https://muse.ai",
+      "description": "Meta 推出的个人 AI 智能体，可在云端安全环境中持续处理邮件、行程、购物与长期目标，并在关键操作前请求确认。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "chat",
+      "sections": [
+        "chat",
+        "misc"
+      ],
+      "capabilities": [
+        "chat",
+        "workflow"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "Meta",
+        "智能体"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "meta-ai"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "manus",
+          "genspark",
+          "chatgpt"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "superhuman-go",
+      "name": "Superhuman Go",
+      "url": "https://superhuman.com/go",
+      "description": "Superhuman 推出的跨应用 AI 工作助手，可在浏览器和办公场景中提供写作、搜索、日程与任务协作。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "misc",
+      "sections": [
+        "misc",
+        "chat"
+      ],
+      "capabilities": [
+        "chat",
+        "search",
+        "workflow",
+        "writing"
+      ],
+      "tags": [
+        "订阅制",
+        "英文",
+        "智能体",
+        "办公"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "raycast",
+          "sider",
+          "workbuddy"
+        ],
+        "complements": []
       },
       "icon": null
     }
