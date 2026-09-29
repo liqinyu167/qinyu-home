@@ -2369,7 +2369,8 @@
           "replit-agent",
           "baidu-comate",
           "cline",
-          "kiro"
+          "kiro",
+          "augment-code"
         ],
         "complements": []
       },
@@ -7225,7 +7226,8 @@
           "trae",
           "qwen-code",
           "codegeex",
-          "baidu-comate"
+          "baidu-comate",
+          "augment-code"
         ],
         "complements": []
       },
@@ -8595,7 +8597,8 @@
           "cursor",
           "antigravity",
           "trae",
-          "github-copilot"
+          "github-copilot",
+          "augment-code"
         ],
         "complements": []
       },
@@ -9550,6 +9553,42 @@
           "raycast",
           "sider",
           "workbuddy"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "augment-code",
+      "name": "Augment Code",
+      "url": "https://www.augmentcode.com/",
+      "description": "面向大型代码库与团队的软件开发智能体平台，提供代码库级上下文、IDE与云端代理、任务规划和自动化开发工作流。",
+      "type": "dev-tool",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code",
+        "workflow"
+      ],
+      "tags": [
+        "订阅制",
+        "英文",
+        "AI编程",
+        "Agent",
+        "团队协作"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "cursor",
+          "qoder",
+          "kiro"
         ],
         "complements": []
       },
