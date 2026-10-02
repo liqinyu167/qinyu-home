@@ -2843,7 +2843,9 @@
           "hunyuan-api",
           "ima",
           "tencent-yuanqi",
-          "workbuddy"
+          "workbuddy",
+          "marvis",
+          "tusi"
         ],
         "upstream": [],
         "downstream": [
@@ -2854,7 +2856,9 @@
           "hunyuan-api",
           "ima",
           "tencent-yuanqi",
-          "workbuddy"
+          "workbuddy",
+          "marvis",
+          "tusi"
         ],
         "alternatives": [
           "qwen",
@@ -6735,7 +6739,8 @@
           "replit-agent",
           "lovable",
           "miaoda",
-          "bolt-new"
+          "bolt-new",
+          "tusi"
         ],
         "complements": []
       },
@@ -7462,7 +7467,8 @@
           "replit-agent",
           "v0",
           "miaoda",
-          "bolt-new"
+          "bolt-new",
+          "tusi"
         ],
         "complements": []
       },
@@ -7931,7 +7937,8 @@
         "alternatives": [
           "v0",
           "lovable",
-          "replit-agent"
+          "replit-agent",
+          "tusi"
         ],
         "complements": []
       },
@@ -9326,7 +9333,8 @@
           "genspark",
           "skywork",
           "traework",
-          "superhuman-go"
+          "superhuman-go",
+          "marvis"
         ],
         "complements": [
           "codebuddy"
@@ -9439,7 +9447,8 @@
         "downstream": [],
         "alternatives": [
           "workbuddy",
-          "skywork"
+          "skywork",
+          "marvis"
         ],
         "complements": []
       },
@@ -9552,7 +9561,8 @@
         "alternatives": [
           "raycast",
           "sider",
-          "workbuddy"
+          "workbuddy",
+          "marvis"
         ],
         "complements": []
       },
@@ -9591,6 +9601,92 @@
           "kiro"
         ],
         "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "marvis",
+      "name": "Marvis 马维斯",
+      "url": "https://marvis.qq.com/",
+      "description": "腾讯推出的操作系统级 AI 管家，可用自然语言操控电脑、搜索本地文件并跨手机与电脑执行任务，支持端云协同和本地隐私模式。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "misc",
+      "sections": [
+        "misc",
+        "research"
+      ],
+      "capabilities": [
+        "chat",
+        "search",
+        "workflow"
+      ],
+      "tags": [
+        "免费",
+        "中文",
+        "AI助手",
+        "智能体",
+        "跨端协同",
+        "腾讯",
+        "子站"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "hunyuan"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "workbuddy",
+          "traework",
+          "superhuman-go"
+        ],
+        "complements": [
+          "ima"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "tusi",
+      "name": "腾讯吐司",
+      "url": "https://tusi.qq.com/",
+      "description": "腾讯推出的 AI 原生应用生成工具，可通过自然语言生成并多轮编辑移动应用，支持导出安卓 APK、分享作品与基于模板共创。",
+      "type": "dev-tool",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code",
+        "workflow"
+      ],
+      "tags": [
+        "免费",
+        "中文",
+        "AI编程",
+        "应用开发",
+        "无代码",
+        "腾讯",
+        "子站"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "hunyuan"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "miaoda",
+          "v0",
+          "lovable"
+        ],
+        "complements": [
+          "tencent-yuanqi"
+        ]
       },
       "icon": null
     }
