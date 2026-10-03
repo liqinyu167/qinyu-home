@@ -3761,7 +3761,8 @@
           "rijksmuseum-collection",
           "tate-collection",
           "louvre-collections",
-          "national-gallery-collection"
+          "national-gallery-collection",
+          "art-institute-chicago"
         ]
       },
       "icon": null,
@@ -4826,7 +4827,8 @@
           "rijksmuseum-collection",
           "tate-collection",
           "louvre-collections",
-          "national-gallery-collection"
+          "national-gallery-collection",
+          "art-institute-chicago"
         ]
       },
       "icon": null,
@@ -7270,7 +7272,8 @@
           "national-gallery-collection",
           "guggenheim-collection",
           "namoc-collection",
-          "dpm-digital-collection"
+          "dpm-digital-collection",
+          "art-institute-chicago"
         ],
         "complements": [
           "wikimedia-commons",
@@ -7308,7 +7311,8 @@
           "rijksmuseum-collection",
           "tate-collection",
           "whitney-collection",
-          "guggenheim-collection"
+          "guggenheim-collection",
+          "art-institute-chicago"
         ],
         "complements": [
           "wikimedia-commons",
@@ -8011,7 +8015,8 @@
           "tate-collection",
           "met-collection",
           "moma-collection",
-          "louvre-collections"
+          "louvre-collections",
+          "art-institute-chicago"
         ],
         "complements": [
           "wikimedia-commons",
@@ -8561,7 +8566,8 @@
           "louvre-collections",
           "tate-collection",
           "met-collection",
-          "namoc-collection"
+          "namoc-collection",
+          "art-institute-chicago"
         ],
         "complements": [
           "wikimedia-commons",
@@ -9686,6 +9692,43 @@
         ],
         "complements": [
           "tencent-yuanqi"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "art-institute-chicago",
+      "name": "Art Institute of Chicago Collection",
+      "url": "https://www.artic.edu/collection",
+      "description": "芝加哥艺术博物馆官方在线馆藏，开放浏览绘画、雕塑、摄影与设计作品，并提供大量可自由使用的高清公共领域图像。",
+      "type": "official",
+      "weight": 0,
+      "category": "aesthetics",
+      "primarySection": "comprehensive-gallery",
+      "sections": [
+        "comprehensive-gallery"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "英文",
+        "博物馆",
+        "艺术藏品",
+        "开放获取"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "met-collection",
+          "moma-collection",
+          "national-gallery-collection",
+          "rijksmuseum-collection"
+        ],
+        "complements": [
+          "wikimedia-commons",
+          "pdr"
         ]
       },
       "icon": null
