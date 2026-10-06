@@ -2370,7 +2370,8 @@
           "baidu-comate",
           "cline",
           "kiro",
-          "augment-code"
+          "augment-code",
+          "jetbrains-junie"
         ],
         "complements": []
       },
@@ -6511,7 +6512,8 @@
           "consensus",
           "elicit",
           "scite",
-          "researchrabbit"
+          "researchrabbit",
+          "connected-papers"
         ],
         "complements": [
           "scispace"
@@ -6977,7 +6979,8 @@
           "claude-code",
           "baidu-comate",
           "cline",
-          "kiro"
+          "kiro",
+          "jetbrains-junie"
         ],
         "complements": []
       },
@@ -7739,7 +7742,8 @@
         "alternatives": [
           "elicit",
           "consensus",
-          "researchrabbit"
+          "researchrabbit",
+          "connected-papers"
         ],
         "complements": [
           "semantic-scholar"
@@ -9295,7 +9299,8 @@
         "alternatives": [
           "elicit",
           "scispace",
-          "semantic-scholar"
+          "semantic-scholar",
+          "connected-papers"
         ],
         "complements": []
       },
@@ -9604,7 +9609,8 @@
         "alternatives": [
           "cursor",
           "qoder",
-          "kiro"
+          "kiro",
+          "jetbrains-junie"
         ],
         "complements": []
       },
@@ -9730,6 +9736,78 @@
           "wikimedia-commons",
           "pdr"
         ]
+      },
+      "icon": null
+    },
+    {
+      "id": "jetbrains-junie",
+      "name": "JetBrains Junie",
+      "url": "https://www.jetbrains.com/junie/",
+      "description": "JetBrains 推出的 AI 编程智能体，可在 IntelliJ 系列 IDE 与命令行中理解项目、规划任务、编写和测试代码。",
+      "type": "dev-tool",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "code-dev",
+      "sections": [
+        "code-dev"
+      ],
+      "capabilities": [
+        "code",
+        "workflow"
+      ],
+      "tags": [
+        "订阅制",
+        "英文",
+        "AI编程",
+        "Agent",
+        "JetBrains"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "cursor",
+          "github-copilot",
+          "augment-code"
+        ],
+        "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "connected-papers",
+      "name": "Connected Papers",
+      "url": "https://www.connectedpapers.com/",
+      "description": "学术论文关系图谱工具，可从种子论文生成相似研究网络，追溯先前与后续工作，辅助文献发现和综述。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "research",
+      "sections": [
+        "research"
+      ],
+      "capabilities": [
+        "search",
+        "workflow"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "英文",
+        "学术研究",
+        "文献图谱"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "researchrabbit",
+          "semantic-scholar",
+          "scispace"
+        ],
+        "complements": []
       },
       "icon": null
     }
