@@ -195,12 +195,14 @@
       "relations": {
         "products": [
           "openai-api",
-          "codex"
+          "codex",
+          "sora"
         ],
         "upstream": [],
         "downstream": [
           "openai-api",
-          "codex"
+          "codex",
+          "sora"
         ],
         "alternatives": [
           "gemini",
@@ -257,7 +259,8 @@
         "downstream": [],
         "alternatives": [
           "flow",
-          "runway"
+          "runway",
+          "wanxiang"
         ],
         "complements": [
           "doubao",
@@ -441,7 +444,8 @@
           "flow"
         ],
         "alternatives": [
-          "runway"
+          "runway",
+          "sora"
         ],
         "complements": [
           "imagen",
@@ -1511,7 +1515,8 @@
           "dashscope",
           "qwen-code",
           "qoder",
-          "tongyi-tingwu"
+          "tongyi-tingwu",
+          "wanxiang"
         ],
         "upstream": [
           "alibaba-cloud"
@@ -1522,7 +1527,8 @@
           "dashscope",
           "qwen-code",
           "qoder",
-          "tongyi-tingwu"
+          "tongyi-tingwu",
+          "wanxiang"
         ],
         "alternatives": [
           "chatgpt",
@@ -2182,7 +2188,9 @@
           "pika",
           "runway",
           "viggle",
-          "pollo-ai"
+          "pollo-ai",
+          "sora",
+          "wanxiang"
         ],
         "complements": []
       },
@@ -2220,7 +2228,8 @@
           "veo",
           "kling",
           "pika",
-          "runway"
+          "runway",
+          "sora"
         ],
         "complements": []
       },
@@ -3260,7 +3269,8 @@
           "higgsfield",
           "heygen",
           "minimax-design",
-          "pollo-ai"
+          "pollo-ai",
+          "sora"
         ],
         "complements": []
       },
@@ -3537,7 +3547,9 @@
         "products": [],
         "upstream": [],
         "downstream": [],
-        "alternatives": [],
+        "alternatives": [
+          "wanxiang"
+        ],
         "complements": []
       },
       "sections": [
@@ -7787,7 +7799,8 @@
           "gaoding-ai",
           "pollo-ai",
           "magnific",
-          "whee"
+          "whee",
+          "wanxiang"
         ],
         "complements": []
       },
@@ -9810,6 +9823,90 @@
         "complements": []
       },
       "icon": null
+    },
+    {
+      "id": "sora",
+      "name": "Sora",
+      "url": "https://sora.com/",
+      "description": "OpenAI 的独立 AI 视频创作入口，支持文本或图像生成视频、镜头延展与故事板式创作，是 ChatGPT / OpenAI 生态中的视频产品。",
+      "type": "official",
+      "weight": 780,
+      "category": "tools",
+      "primarySection": "video-gen",
+      "sections": [
+        "video-gen"
+      ],
+      "capabilities": [
+        "video-gen"
+      ],
+      "tags": [
+        "订阅制",
+        "英文",
+        "视频生成",
+        "OpenAI"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "chatgpt"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "runway",
+          "kling",
+          "veo",
+          "luma"
+        ],
+        "complements": [
+          "chatgpt"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "wanxiang",
+      "name": "通义万相",
+      "url": "https://tongyi.aliyun.com/wan/",
+      "description": "阿里巴巴通义旗下 AI 创意创作平台，提供文生图、图像编辑、文生视频与图生视频等一站式视觉生成能力。",
+      "type": "official",
+      "weight": 710,
+      "category": "tools",
+      "primarySection": "image-gen",
+      "sections": [
+        "image-gen",
+        "video-gen"
+      ],
+      "capabilities": [
+        "image-gen",
+        "video-gen"
+      ],
+      "tags": [
+        "免费",
+        "订阅制",
+        "中文",
+        "图像生成",
+        "视频生成",
+        "阿里巴巴",
+        "通义"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "qwen"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "jimeng",
+          "kling",
+          "vidu",
+          "openart"
+        ],
+        "complements": [
+          "qwen",
+          "bailian"
+        ]
+      },
+      "icon": "qwen_ai.png"
     }
   ]
 }
