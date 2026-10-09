@@ -3164,12 +3164,14 @@
       "relations": {
         "products": [
           "miaoda",
-          "baidu-comate"
+          "baidu-comate",
+          "baidu-dumate"
         ],
         "upstream": [],
         "downstream": [
           "miaoda",
-          "baidu-comate"
+          "baidu-comate",
+          "baidu-dumate"
         ],
         "alternatives": [
           "chatgpt",
@@ -6713,7 +6715,8 @@
           "genspark",
           "skywork",
           "workbuddy",
-          "muse"
+          "muse",
+          "baidu-dumate"
         ],
         "complements": []
       },
@@ -7880,7 +7883,8 @@
           "gamma",
           "wps-ai",
           "workbuddy",
-          "traework"
+          "traework",
+          "baidu-dumate"
         ],
         "complements": []
       },
@@ -9358,7 +9362,8 @@
           "skywork",
           "traework",
           "superhuman-go",
-          "marvis"
+          "marvis",
+          "baidu-dumate"
         ],
         "complements": [
           "codebuddy"
@@ -9472,7 +9477,8 @@
         "alternatives": [
           "workbuddy",
           "skywork",
-          "marvis"
+          "marvis",
+          "baidu-dumate"
         ],
         "complements": []
       },
@@ -9907,6 +9913,48 @@
         ]
       },
       "icon": "qwen_ai.png"
+    },
+    {
+      "id": "baidu-dumate",
+      "name": "百度搭子 DuMate",
+      "url": "https://www.dumate.cn/",
+      "description": "百度推出的通用 AI 办公智能体，可在电脑和手机端自主完成资料检索、报告与演示制作、数据分析及多步骤任务。",
+      "type": "official",
+      "weight": 0,
+      "category": "tools",
+      "primarySection": "misc",
+      "sections": [
+        "misc",
+        "research"
+      ],
+      "capabilities": [
+        "search",
+        "workflow",
+        "writing"
+      ],
+      "tags": [
+        "免费",
+        "中文",
+        "AI办公",
+        "智能体",
+        "百度",
+        "子站"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [
+          "wenxin-yiyan"
+        ],
+        "downstream": [],
+        "alternatives": [
+          "workbuddy",
+          "traework",
+          "skywork",
+          "manus"
+        ],
+        "complements": []
+      },
+      "icon": null
     }
   ]
 }
