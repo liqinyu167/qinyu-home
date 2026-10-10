@@ -4267,7 +4267,8 @@
           "gracg"
         ],
         "complements": [
-          "lofter"
+          "lofter",
+          "damcaa-digital-museum"
         ]
       },
       "icon": null,
@@ -7291,7 +7292,8 @@
           "guggenheim-collection",
           "namoc-collection",
           "dpm-digital-collection",
-          "art-institute-chicago"
+          "art-institute-chicago",
+          "npm-collection"
         ],
         "complements": [
           "wikimedia-commons",
@@ -8981,7 +8983,8 @@
         "complements": [
           "gushiwen",
           "internet-archive",
-          "dpm-digital-collection"
+          "dpm-digital-collection",
+          "npm-collection"
         ]
       },
       "icon": null
@@ -9399,7 +9402,9 @@
           "met-collection",
           "louvre-collections",
           "national-gallery-collection",
-          "dpm-digital-collection"
+          "dpm-digital-collection",
+          "npm-collection",
+          "damcaa-digital-museum"
         ],
         "complements": [
           "wikimedia-commons",
@@ -9511,7 +9516,9 @@
         "alternatives": [
           "namoc-collection",
           "met-collection",
-          "louvre-collections"
+          "louvre-collections",
+          "npm-collection",
+          "damcaa-digital-museum"
         ],
         "complements": [
           "shuge",
@@ -9953,6 +9960,77 @@
           "manus"
         ],
         "complements": []
+      },
+      "icon": null
+    },
+    {
+      "id": "npm-collection",
+      "name": "国立故宫博物院典藏检索",
+      "url": "https://digitalarchive.npm.gov.tw/",
+      "description": "国立故宫博物院官方典藏检索入口，在线浏览书画、器物、图书文献等院藏精品，适合系统欣赏中华艺术与文物审美。",
+      "type": "official",
+      "weight": 0,
+      "category": "aesthetics",
+      "primarySection": "comprehensive-gallery",
+      "sections": [
+        "comprehensive-gallery"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "中文",
+        "官方馆藏",
+        "中华艺术",
+        "博物馆"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "dpm-digital-collection",
+          "namoc-collection",
+          "met-collection",
+          "damcaa-digital-museum"
+        ],
+        "complements": [
+          "shuge"
+        ]
+      },
+      "icon": null
+    },
+    {
+      "id": "damcaa-digital-museum",
+      "name": "中国美协数字美术馆",
+      "url": "https://www.damcaanet.cn/exhibition",
+      "description": "中国美术家协会官方数字美术馆，汇集全国性美术展览与完整作品线上展陈，聚焦当代中国美术创作成果。",
+      "type": "official",
+      "weight": 0,
+      "category": "aesthetics",
+      "primarySection": "comprehensive-gallery",
+      "sections": [
+        "comprehensive-gallery"
+      ],
+      "capabilities": [],
+      "tags": [
+        "免费",
+        "中文",
+        "官方展览",
+        "中国美术",
+        "数字美术馆"
+      ],
+      "relations": {
+        "products": [],
+        "upstream": [],
+        "downstream": [],
+        "alternatives": [
+          "namoc-collection",
+          "dpm-digital-collection",
+          "npm-collection"
+        ],
+        "complements": [
+          "zcool"
+        ]
       },
       "icon": null
     }
